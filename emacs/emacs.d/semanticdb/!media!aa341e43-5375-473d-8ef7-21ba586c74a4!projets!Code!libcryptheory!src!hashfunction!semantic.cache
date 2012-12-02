@@ -1,0 +1,18 @@
+;; Object hashfunction/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "hashfunction/"
+  :tables (list 
+   (semanticdb-table "hashfunction.hpp"
+    :major-mode 'c++-mode
+    :tags nil
+    :file "hashfunction.hpp"
+    :pointmax 2395
+    :fsize 2395
+    :lastmodtime '(20600 6497)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!projets!Code!libcryptheory!src!hashfunction!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

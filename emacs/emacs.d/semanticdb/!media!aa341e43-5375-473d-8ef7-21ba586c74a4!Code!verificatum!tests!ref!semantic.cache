@@ -1,0 +1,611 @@
+;; Object ref/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ref/"
+  :tables (list 
+   (semanticdb-table "pgroup.py"
+    :major-mode 'python-mode
+    :tags 
+        '( (""""Implements arithmetic of groups in which each non-trivial element
+has the same prime order. In the simplest case this is a group of
+prime order, but product groups of such groups are also
+implemented."""" code nil nil [736 942])
+            ("eio" include nil nil [944 954])
+            ("large_integer" include nil nil [955 1012])
+            ("pring" include nil nil [1013 1080])
+            ("trans" include nil nil [1081 1093])
+            ("PGroup" type
+               (:superclasses ("object")
+                :members 
+                  ( (""""Abstract base class for a group in which each element has the
+    same prime order."""" code nil (reparse-symbol indented_block_body) [1122 1211])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1230 1234])
+                        ("pring" variable nil (reparse-symbol function_parameters) [1236 1241]))                      ) (reparse-symbol indented_block_body) [1217 1333])
+                    ("__ne__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1349 1353])
+                        ("other" variable nil (reparse-symbol function_parameters) [1355 1360]))                      ) (reparse-symbol indented_block_body) [1338 1512])
+                    ("get_element_order" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1539 1543]))                      ) (reparse-symbol indented_block_body) [1517 1689]))                  
+                :type "class")
+                nil [1095 1689])
+            ("PGroupElement" type
+               (:superclasses ("object")
+                :members 
+                  ( (""""Abstract base class of group elements."""" code nil (reparse-symbol indented_block_body) [1725 1769])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1788 1792])
+                        ("pgroup" variable nil (reparse-symbol function_parameters) [1794 1800]))                      ) (reparse-symbol indented_block_body) [1775 1887])
+                    ("div" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1900 1904])
+                        ("other" variable nil (reparse-symbol function_parameters) [1906 1911]))                      ) (reparse-symbol indented_block_body) [1892 2035]))                  
+                :type "class")
+                nil [1691 2035])
+            ("PGroupElementArray" type
+               (:superclasses ("object")
+                :members 
+                  ( (""""Abstract base class of an array of group elements."""" code nil (reparse-symbol indented_block_body) [2076 2132])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [2151 2155])
+                        ("pgroup" variable nil (reparse-symbol function_parameters) [2157 2163]))                      ) (reparse-symbol indented_block_body) [2138 2266])
+                    ("__ne__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [2282 2286])
+                        ("other" variable nil (reparse-symbol function_parameters) [2288 2293]))                      ) (reparse-symbol indented_block_body) [2271 2429])
+                    ("get_PGroup" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [2449 2453]))                      ) (reparse-symbol indented_block_body) [2434 2549]))                  
+                :type "class")
+                nil [2037 2549])
+            ("ModPGroup" type
+               (:superclasses ("PGroup")
+                :members 
+                  ( (""""Implements the modular group."""" code nil (reparse-symbol indented_block_body) [2581 2616])
+                    ("RO_ENCODING" variable nil (reparse-symbol indented_block_body) [2622 2637])
+                    ("SAFEPRIME_ENCODING" variable nil (reparse-symbol indented_block_body) [2642 2664])
+                    ("SUBGROUP_ENCODING" variable nil (reparse-symbol indented_block_body) [2669 2690])
+                    ("MAXIMAL_COGROUP_BITLENGTH" variable nil (reparse-symbol indented_block_body) [2696 2726])
+                    ("MAX_MODULUS_BYTELENGTH" variable nil (reparse-symbol indented_block_body) [2731 2760])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [2779 2783])
+                        ("rep" variable nil (reparse-symbol function_parameters) [2785 2788])
+                        ("order" variable nil (reparse-symbol function_parameters) [2790 2795])
+                        ("gli" variable nil (reparse-symbol function_parameters) [2804 2807])
+                        ("encoding" variable nil (reparse-symbol function_parameters) [2816 2824]))                      ) (reparse-symbol indented_block_body) [2766 5033])
+                    ("get_ONE" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5050 5054]))                      ) (reparse-symbol indented_block_body) [5038 5161])
+                    ("getg" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5175 5179]))                      ) (reparse-symbol indented_block_body) [5166 5265])
+                    ("__str__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5282 5286]))                      ) (reparse-symbol indented_block_body) [5270 5465])
+                    ("__eq__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5481 5485])
+                        ("other" variable nil (reparse-symbol function_parameters) [5487 5492]))                      ) (reparse-symbol indented_block_body) [5470 5779])
+                    ("to_ByteTree" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5800 5804]))                      ) (reparse-symbol indented_block_body) [5784 6097])
+                    ("to_Element" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [6117 6121])
+                        ("rep" variable nil (reparse-symbol function_parameters) [6123 6126]))                      ) (reparse-symbol indented_block_body) [6102 6324])
+                    ("to_ElementArray" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [6349 6353])
+                        ("size" variable nil (reparse-symbol function_parameters) [6355 6359])
+                        ("rep" variable nil (reparse-symbol function_parameters) [6361 6364]))                      ) (reparse-symbol indented_block_body) [6329 6584])
+                    ("random_ElementArray" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [6613 6617])
+                        ("size" variable nil (reparse-symbol function_parameters) [6619 6623])
+                        ("random_source" variable nil (reparse-symbol function_parameters) [6625 6638])
+                        ("stat_dist" variable nil (reparse-symbol function_parameters) [6640 6649]))                      ) (reparse-symbol indented_block_body) [6589 6990]))                  
+                :type "class")
+                nil [2551 6990])
+            ("ModPGroupElement" type
+               (:superclasses ("PGroupElement")
+                :members 
+                  ( (""""An element in a modular group."""" code nil (reparse-symbol indented_block_body) [7035 7071])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [7090 7094])
+                        ("modpgroup" variable nil (reparse-symbol function_parameters) [7096 7105])
+                        ("rep" variable nil (reparse-symbol function_parameters) [7107 7110]))                      ) (reparse-symbol indented_block_body) [7077 7628])
+                    ("__str__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [7645 7649]))                      ) (reparse-symbol indented_block_body) [7633 7749])
+                    ("__cmp__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [7766 7770])
+                        ("other" variable nil (reparse-symbol function_parameters) [7772 7777]))                      ) (reparse-symbol indented_block_body) [7754 7899])
+                    ("inv" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [7912 7916]))                      ) (reparse-symbol indented_block_body) [7904 8091])
+                    ("mul" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8104 8108])
+                        ("other" variable nil (reparse-symbol function_parameters) [8110 8115]))                      ) (reparse-symbol indented_block_body) [8096 8319])
+                    ("exp" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8333 8337])
+                        ("exponent" variable nil (reparse-symbol function_parameters) [8339 8347]))                      ) (reparse-symbol indented_block_body) [8325 8733])
+                    ("to_ByteTree" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8755 8759]))                      ) (reparse-symbol indented_block_body) [8739 8901])
+                    ("__cmp__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8918 8922])
+                        ("other" variable nil (reparse-symbol function_parameters) [8924 8929]))                      ) (reparse-symbol indented_block_body) [8906 9073]))                  
+                :type "class")
+                nil [6991 9073])
+            ("ModPGroupElementArray" type
+               (:superclasses ("PGroupElementArray")
+                :members 
+                  ( (""""An array of elements in a modular group."""" code nil (reparse-symbol indented_block_body) [9133 9179])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [9198 9202])
+                        ("modpgroup" variable nil (reparse-symbol function_parameters) [9204 9213])
+                        ("size" variable nil (reparse-symbol function_parameters) [9215 9219])
+                        ("rep" variable nil (reparse-symbol function_parameters) [9221 9224]))                      ) (reparse-symbol indented_block_body) [9185 10066])
+                    ("__str__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10083 10087]))                      ) (reparse-symbol indented_block_body) [10071 10187])
+                    ("__eq__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10203 10207])
+                        ("other" variable nil (reparse-symbol function_parameters) [10209 10214]))                      ) (reparse-symbol indented_block_body) [10192 10440])
+                    ("to_ByteTree" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10461 10465]))                      ) (reparse-symbol indented_block_body) [10445 10608])
+                    ("size" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10622 10626]))                      ) (reparse-symbol indented_block_body) [10613 10724])
+                    ("copy_of_range" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10747 10751])
+                        ("start_index" variable nil (reparse-symbol function_parameters) [10753 10764])
+                        ("end_index" variable nil (reparse-symbol function_parameters) [10766 10775]))                      ) (reparse-symbol indented_block_body) [10729 11147])
+                    ("get" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11160 11164])
+                        ("index" variable nil (reparse-symbol function_parameters) [11166 11171]))                      ) (reparse-symbol indented_block_body) [11152 11298])
+                    ("inv" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11311 11315]))                      ) (reparse-symbol indented_block_body) [11303 11569])
+                    ("mul" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11582 11586])
+                        ("other" variable nil (reparse-symbol function_parameters) [11588 11593]))                      ) (reparse-symbol indented_block_body) [11574 11798])
+                    ("exp" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11811 11815])
+                        ("exponent" variable nil (reparse-symbol function_parameters) [11817 11825]))                      ) (reparse-symbol indented_block_body) [11803 12166])
+                    ("prod" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [12180 12184]))                      ) (reparse-symbol indented_block_body) [12171 12377])
+                    ("exp_prod" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [12395 12399])
+                        ("exponents" variable nil (reparse-symbol function_parameters) [12401 12410]))                      ) (reparse-symbol indented_block_body) [12382 12700])
+                    ("shift_push" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [12720 12724])
+                        ("element" variable nil (reparse-symbol function_parameters) [12726 12733]))                      ) (reparse-symbol indented_block_body) [12705 13142])
+                    ("extract" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [13159 13163])
+                        ("keep_list" variable nil (reparse-symbol function_parameters) [13165 13174]))                      ) (reparse-symbol indented_block_body) [13147 13415]))                  
+                :type "class")
+                nil [9079 13415])
+            ("PPGroup_to_str" function (:arguments 
+              ( ("ppgroup" variable nil (reparse-symbol function_parameters) [13436 13443]))              ) nil [13417 13685])
+            ("unpack_structure" function (:arguments 
+              ( ("rep" variable nil (reparse-symbol function_parameters) [13708 13711])
+                ("basic_pgroups" variable nil (reparse-symbol function_parameters) [13713 13726]))              ) nil [13687 13975])
+            ("gen_PPRing" function (:arguments 
+              ( ("group" variable nil (reparse-symbol function_parameters) [13992 13997]))              ) nil [13977 14216])
+            ("PPGroup" type
+               (:superclasses ("PGroup")
+                :members 
+                  ( (""""Creates the direct product of instances of PGroup from a list
+    of instances of PGroup or from a ByteTree instance."""" code nil (reparse-symbol indented_block_body) [14246 14369])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [14388 14392])
+                        ("rep" variable nil (reparse-symbol function_parameters) [14394 14397]))                      ) (reparse-symbol indented_block_body) [14375 14885])
+                    ("__eq__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [14901 14905])
+                        ("other" variable nil (reparse-symbol function_parameters) [14907 14912]))                      ) (reparse-symbol indented_block_body) [14890 15311])
+                    ("__str__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [15328 15332]))                      ) (reparse-symbol indented_block_body) [15316 15437])
+                    ("get_ONE" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [15454 15458]))                      ) (reparse-symbol indented_block_body) [15442 15584])
+                    ("getg" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [15598 15602]))                      ) (reparse-symbol indented_block_body) [15589 15737])
+                    ("to_Element" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [15765 15769])
+                        ("rep" variable nil (reparse-symbol function_parameters) [15771 15774]))                      ) (reparse-symbol indented_block_body) [15750 15962])
+                    ("to_ElementArray" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [15987 15991])
+                        ("size" variable nil (reparse-symbol function_parameters) [15993 15997])
+                        ("rep" variable nil (reparse-symbol function_parameters) [15999 16002]))                      ) (reparse-symbol indented_block_body) [15967 16229])
+                    ("project" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [16246 16250])
+                        ("index" variable nil (reparse-symbol function_parameters) [16252 16257]))                      ) (reparse-symbol indented_block_body) [16234 16391]))                  
+                :type "class")
+                nil [14218 16391])
+            ("PPGroupElement_to_str" function (:arguments 
+              ( ("element" variable nil (reparse-symbol function_parameters) [16419 16426]))              ) nil [16393 16689])
+            ("PPGroupElement" type
+               (:superclasses ("PGroupElement")
+                :members 
+                  ( (""""Element of the direct product of some prime order groups."""" code nil (reparse-symbol indented_block_body) [16733 16796])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [16815 16819])
+                        ("pgroup" variable nil (reparse-symbol function_parameters) [16821 16827])
+                        ("rep" variable nil (reparse-symbol function_parameters) [16829 16832]))                      ) (reparse-symbol indented_block_body) [16802 17307])
+                    ("to_ByteTree" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [17328 17332]))                      ) (reparse-symbol indented_block_body) [17312 17486])
+                    ("__str__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [17503 17507]))                      ) (reparse-symbol indented_block_body) [17491 17619])
+                    ("__cmp__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [17636 17640])
+                        ("other" variable nil (reparse-symbol function_parameters) [17642 17647]))                      ) (reparse-symbol indented_block_body) [17624 17918])
+                    ("mul" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [17931 17935])
+                        ("other" variable nil (reparse-symbol function_parameters) [17937 17942]))                      ) (reparse-symbol indented_block_body) [17923 18692])
+                    ("inv" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [18705 18709]))                      ) (reparse-symbol indented_block_body) [18697 18871])
+                    ("exp" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [18884 18888])
+                        ("exponent" variable nil (reparse-symbol function_parameters) [18890 18898]))                      ) (reparse-symbol indented_block_body) [18876 19460])
+                    ("project" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [19477 19481])
+                        ("index" variable nil (reparse-symbol function_parameters) [19483 19488]))                      ) (reparse-symbol indented_block_body) [19465 19587]))                  
+                :type "class")
+                nil [16691 19587])
+            ("PPGroupElementArray_to_str" function (:arguments 
+              ( ("element_array" variable nil (reparse-symbol function_parameters) [19620 19633]))              ) nil [19589 19924])
+            ("PPGroupElementArray" type
+               (:superclasses ("PGroupElementArray")
+                :members 
+                  ( (""""An array of elements of the product group of some group."""" code nil (reparse-symbol indented_block_body) [19978 20040])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [20059 20063])
+                        ("pgroup" variable nil (reparse-symbol function_parameters) [20065 20071])
+                        ("size" variable nil (reparse-symbol function_parameters) [20073 20077])
+                        ("rep" variable nil (reparse-symbol function_parameters) [20079 20082]))                      ) (reparse-symbol indented_block_body) [20046 20545])
+                    ("size" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [20559 20563]))                      ) (reparse-symbol indented_block_body) [20550 20665])
+                    ("get" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [20678 20682])
+                        ("index" variable nil (reparse-symbol function_parameters) [20684 20689]))                      ) (reparse-symbol indented_block_body) [20670 20821])
+                    ("to_ByteTree" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [20842 20846]))                      ) (reparse-symbol indented_block_body) [20826 20981])
+                    ("__str__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [20998 21002]))                      ) (reparse-symbol indented_block_body) [20986 21119])
+                    ("mul" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [21132 21136])
+                        ("other" variable nil (reparse-symbol function_parameters) [21138 21143]))                      ) (reparse-symbol indented_block_body) [21124 21873])
+                    ("exp_prod" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [21891 21895])
+                        ("exponents" variable nil (reparse-symbol function_parameters) [21897 21906]))                      ) (reparse-symbol indented_block_body) [21878 22431])
+                    ("inv" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [22444 22448]))                      ) (reparse-symbol indented_block_body) [22436 22633])
+                    ("project" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [22650 22654])
+                        ("index" variable nil (reparse-symbol function_parameters) [22656 22661]))                      ) (reparse-symbol indented_block_body) [22638 22760]))                  
+                :type "class")
+                nil [19926 22760]))          
+    :file "pgroup.py"
+    :pointmax 22760
+    :fsize 22759
+    :lastmodtime '(20530 47103)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "large_integer.py"
+    :major-mode 'python-mode
+    :tags 
+        '( (""""LargeInteger is simply a wrapper of the builtin bit integers of
+Python. LargeIntegerArray provides an abstraction for performing
+operations of arrays of integers."""" code nil nil [736 904])
+            ("binascii" include nil nil [906 921])
+            ("eio" include nil nil [922 932])
+            ("random" include nil nil [933 946])
+            ("struct" include nil nil [947 960])
+            ("clean_hex" function (:arguments 
+              ( ("number" variable nil (reparse-symbol function_parameters) [976 982]))              ) nil [962 1320])
+            ("int_to_bytearray" function (:arguments 
+              ( ("number" variable nil (reparse-symbol function_parameters) [1343 1349])
+                ("byte_length" variable nil (reparse-symbol function_parameters) [1351 1362]))              ) nil [1322 1661])
+            ("bytearray_to_int" function (:arguments 
+              ( ("barray" variable nil (reparse-symbol function_parameters) [1684 1690]))              ) nil [1663 1793])
+            ("miller_rabin_test" function (:arguments 
+              ( ("alpha" variable nil (reparse-symbol function_parameters) [1817 1822])
+                ("s" variable nil (reparse-symbol function_parameters) [1824 1825])
+                ("d" variable nil (reparse-symbol function_parameters) [1827 1828])
+                ("number" variable nil (reparse-symbol function_parameters) [1830 1836]))              ) nil [1795 2109])
+            ("miller_rabin" function (:arguments 
+              ( ("number" variable nil (reparse-symbol function_parameters) [2197 2203]))              ) nil [2180 2820])
+            ("extended_gcd" function (:arguments 
+              ( ("number1" variable nil (reparse-symbol function_parameters) [2839 2846])
+                ("number2" variable nil (reparse-symbol function_parameters) [2848 2855]))              ) nil [2822 3227])
+            ("LargeInteger" type
+               (:superclasses ("object")
+                :members 
+                  ( (""""Wrapper class for integers of arbitrary size."""" code nil (reparse-symbol indented_block_body) [3262 3313])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [3332 3336])
+                        ("rep" variable nil (reparse-symbol function_parameters) [3338 3341]))                      ) (reparse-symbol indented_block_body) [3319 3798])
+                    ("toBytearray" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [3819 3823])
+                        ("byte_length" variable nil (reparse-symbol function_parameters) [3825 3836]))                      ) (reparse-symbol indented_block_body) [3803 3969])
+                    ("to_ByteTree" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [3990 3994])
+                        ("byte_length" variable nil (reparse-symbol function_parameters) [3996 4007]))                      ) (reparse-symbol indented_block_body) [3974 4137])
+                    ("__str__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [4154 4158]))                      ) (reparse-symbol indented_block_body) [4142 4334])
+                    ("__cmp__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [4351 4355])
+                        ("other" variable nil (reparse-symbol function_parameters) [4357 4362]))                      ) (reparse-symbol indented_block_body) [4339 4548])
+                    ("add" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [4561 4565])
+                        ("other" variable nil (reparse-symbol function_parameters) [4567 4572]))                      ) (reparse-symbol indented_block_body) [4553 4714])
+                    ("sub" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [4727 4731])
+                        ("other" variable nil (reparse-symbol function_parameters) [4733 4738]))                      ) (reparse-symbol indented_block_body) [4719 4887])
+                    ("mul" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [4900 4904])
+                        ("other" variable nil (reparse-symbol function_parameters) [4906 4911]))                      ) (reparse-symbol indented_block_body) [4892 5057])
+                    ("div" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5070 5074])
+                        ("other" variable nil (reparse-symbol function_parameters) [5076 5081]))                      ) (reparse-symbol indented_block_body) [5062 5236])
+                    ("mod" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5249 5253])
+                        ("other" variable nil (reparse-symbol function_parameters) [5255 5260]))                      ) (reparse-symbol indented_block_body) [5241 5419])
+                    ("mod_pow" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5436 5440])
+                        ("other" variable nil (reparse-symbol function_parameters) [5442 5447])
+                        ("modulus" variable nil (reparse-symbol function_parameters) [5449 5456]))                      ) (reparse-symbol indented_block_body) [5424 6019])
+                    ("mod_inv" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [6036 6040])
+                        ("modulus" variable nil (reparse-symbol function_parameters) [6042 6049]))                      ) (reparse-symbol indented_block_body) [6024 6363])
+                    ("is_probable_prime" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [6394 6398]))                      ) (reparse-symbol indented_block_body) [6372 6551])
+                    ("bit_length" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [6571 6575]))                      ) (reparse-symbol indented_block_body) [6556 6902])
+                    ("random" function (:arguments 
+                      ( ("bit_length" variable nil (reparse-symbol function_parameters) [6918 6928])
+                        ("prg" variable nil (reparse-symbol function_parameters) [6930 6933]))                      ) (reparse-symbol indented_block_body) [6907 7470])
+                    ("random" variable nil (reparse-symbol indented_block_body) [7475 7504]))                  
+                :type "class")
+                nil [3229 7505])
+            ("LargeIntegerArray" type
+               (:superclasses ("object")
+                :members 
+                  ( (""""An array of LargeInteger."""" code nil (reparse-symbol indented_block_body) [7545 7576])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [7595 7599])
+                        ("rep" variable nil (reparse-symbol function_parameters) [7601 7604]))                      ) (reparse-symbol indented_block_body) [7582 8064])
+                    ("to_ByteTree" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8085 8089])
+                        ("byte_length" variable nil (reparse-symbol function_parameters) [8091 8102]))                      ) (reparse-symbol indented_block_body) [8069 8263])
+                    ("__str__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8280 8284]))                      ) (reparse-symbol indented_block_body) [8268 8458])
+                    ("__eq__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8474 8478])
+                        ("other" variable nil (reparse-symbol function_parameters) [8480 8485]))                      ) (reparse-symbol indented_block_body) [8463 8839])
+                    ("mod_inv" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8856 8860])
+                        ("modulus" variable nil (reparse-symbol function_parameters) [8862 8869]))                      ) (reparse-symbol indented_block_body) [8844 9055])
+                    ("get" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [9068 9072])
+                        ("index" variable nil (reparse-symbol function_parameters) [9074 9079]))                      ) (reparse-symbol indented_block_body) [9060 9186])
+                    ("extract" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [9203 9207])
+                        ("keep_list" variable nil (reparse-symbol function_parameters) [9209 9218]))                      ) (reparse-symbol indented_block_body) [9191 9527])
+                    ("copy_of_range" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [9550 9554])
+                        ("start_index" variable nil (reparse-symbol function_parameters) [9556 9567])
+                        ("end_index" variable nil (reparse-symbol function_parameters) [9569 9578]))                      ) (reparse-symbol indented_block_body) [9532 9759])
+                    ("size" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [9773 9777]))                      ) (reparse-symbol indented_block_body) [9764 9877])
+                    ("process" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [9894 9898])
+                        ("other" variable nil (reparse-symbol function_parameters) [9900 9905])
+                        ("func" variable nil (reparse-symbol function_parameters) [9907 9911]))                      ) (reparse-symbol indented_block_body) [9882 10314])
+                    ("add" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10327 10331])
+                        ("other" variable nil (reparse-symbol function_parameters) [10333 10338]))                      ) (reparse-symbol indented_block_body) [10319 10518])
+                    ("mul" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10531 10535])
+                        ("other" variable nil (reparse-symbol function_parameters) [10537 10542]))                      ) (reparse-symbol indented_block_body) [10523 10726])
+                    ("mod" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10739 10743])
+                        ("modulus" variable nil (reparse-symbol function_parameters) [10745 10752]))                      ) (reparse-symbol indented_block_body) [10731 10939])
+                    ("mod_pow" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10956 10960])
+                        ("other" variable nil (reparse-symbol function_parameters) [10962 10967])
+                        ("modulus" variable nil (reparse-symbol function_parameters) [10969 10976]))                      ) (reparse-symbol indented_block_body) [10944 11226])
+                    ("mod_sum" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11243 11247])
+                        ("modulus" variable nil (reparse-symbol function_parameters) [11249 11256]))                      ) (reparse-symbol indented_block_body) [11231 11426])
+                    ("mod_prod" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11444 11448])
+                        ("modulus" variable nil (reparse-symbol function_parameters) [11450 11457]))                      ) (reparse-symbol indented_block_body) [11431 11631])
+                    ("mod_pow_prod" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11653 11657])
+                        ("other" variable nil (reparse-symbol function_parameters) [11659 11664])
+                        ("modulus" variable nil (reparse-symbol function_parameters) [11666 11673]))                      ) (reparse-symbol indented_block_body) [11636 11897])
+                    ("random" function (:arguments 
+                      ( ("size" variable nil (reparse-symbol function_parameters) [11913 11917])
+                        ("bit_length" variable nil (reparse-symbol function_parameters) [11919 11929])
+                        ("prg" variable nil (reparse-symbol function_parameters) [11931 11934]))                      ) (reparse-symbol indented_block_body) [11902 12236])
+                    ("random" variable nil (reparse-symbol indented_block_body) [12241 12270]))                  
+                :type "class")
+                nil [7507 12271])
+            ("LargeInteger" variable nil nil [12272 12307])
+            ("LargeInteger" variable nil nil [12308 12342])
+            ("LargeInteger" variable nil nil [12343 12377]))          
+    :file "large_integer.py"
+    :pointmax 12378
+    :fsize 12377
+    :lastmodtime '(20486 48339)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "pring.py"
+    :major-mode 'python-mode
+    :tags 
+        '( (""""Implements arithmetic of prime order fields and direct products of
+such fields or rings that themselves are formed in this way."""" code nil nil [736 869])
+            ("eio" include nil nil [871 881])
+            ("large_integer" include nil nil [883 958])
+            ("PRing" type
+               (:superclasses ("object")
+                :members 
+                  ( (""""Abstract base class for a ring of prime characteristic."""" code nil (reparse-symbol indented_block_body) [986 1047])
+                    ("__ne__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1064 1068])
+                        ("other" variable nil (reparse-symbol function_parameters) [1070 1075]))                      ) (reparse-symbol indented_block_body) [1053 1226]))                  
+                :type "class")
+                nil [960 1226])
+            ("PRingElement" type
+               (:superclasses ("object")
+                :members 
+                  ( (""""Abstract base class for a ring element."""" code nil (reparse-symbol indented_block_body) [1261 1306])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1325 1329])
+                        ("pring" variable nil (reparse-symbol function_parameters) [1331 1336]))                      ) (reparse-symbol indented_block_body) [1312 1366]))                  
+                :type "class")
+                nil [1228 1366])
+            ("PRingElementArray" type
+               (:superclasses ("object")
+                :members 
+                  ( (""""Abstract base class for an array of ring elements."""" code nil (reparse-symbol indented_block_body) [1406 1462])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1481 1485])
+                        ("pring" variable nil (reparse-symbol function_parameters) [1487 1492]))                      ) (reparse-symbol indented_block_body) [1468 1522]))                  
+                :type "class")
+                nil [1368 1522])
+            ("PField" type
+               (:superclasses ("PRing")
+                :members 
+                  ( (""""Prime order field."""" code nil (reparse-symbol indented_block_body) [1550 1574])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1593 1597])
+                        ("order" variable nil (reparse-symbol function_parameters) [1599 1604]))                      ) (reparse-symbol indented_block_body) [1580 1870])
+                    ("__str__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1887 1891]))                      ) (reparse-symbol indented_block_body) [1875 1998])
+                    ("__eq__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [2014 2018])
+                        ("other" variable nil (reparse-symbol function_parameters) [2020 2025]))                      ) (reparse-symbol indented_block_body) [2003 2205])
+                    ("to_Element" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [2225 2229])
+                        ("rep" variable nil (reparse-symbol function_parameters) [2231 2234]))                      ) (reparse-symbol indented_block_body) [2210 2426])
+                    ("to_ElementArray" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [2451 2455])
+                        ("size" variable nil (reparse-symbol function_parameters) [2457 2461])
+                        ("rep" variable nil (reparse-symbol function_parameters) [2463 2466]))                      ) (reparse-symbol indented_block_body) [2431 2675]))                  
+                :type "class")
+                nil [1524 2675])
+            ("PFieldElement" type
+               (:superclasses ("PRingElement")
+                :members 
+                  ( (""""Element of a prime order field."""" code nil (reparse-symbol indented_block_body) [2717 2754])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [2773 2777])
+                        ("pfield" variable nil (reparse-symbol function_parameters) [2779 2785])
+                        ("rep" variable nil (reparse-symbol function_parameters) [2787 2790]))                      ) (reparse-symbol indented_block_body) [2760 3133])
+                    ("to_ByteTree" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [3154 3158]))                      ) (reparse-symbol indented_block_body) [3138 3316])
+                    ("__str__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [3333 3337]))                      ) (reparse-symbol indented_block_body) [3321 3445])
+                    ("add" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [3458 3462])
+                        ("other" variable nil (reparse-symbol function_parameters) [3464 3469]))                      ) (reparse-symbol indented_block_body) [3450 3657])
+                    ("neg" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [3670 3674]))                      ) (reparse-symbol indented_block_body) [3662 3807])
+                    ("mul" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [3820 3824])
+                        ("other" variable nil (reparse-symbol function_parameters) [3826 3831]))                      ) (reparse-symbol indented_block_body) [3812 4023]))                  
+                :type "class")
+                nil [2677 4023])
+            ("PFieldElementArray" type
+               (:superclasses ("PRingElementArray")
+                :members 
+                  ( (""""Implements an array of field elements."""" code nil (reparse-symbol indented_block_body) [4075 4119])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [4138 4142])
+                        ("pfield" variable nil (reparse-symbol function_parameters) [4144 4150])
+                        ("size" variable nil (reparse-symbol function_parameters) [4152 4156])
+                        ("rep" variable nil (reparse-symbol function_parameters) [4158 4161]))                      ) (reparse-symbol indented_block_body) [4125 4781])
+                    ("to_ByteTree" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [4802 4806]))                      ) (reparse-symbol indented_block_body) [4786 4945])
+                    ("__str__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [4962 4966]))                      ) (reparse-symbol indented_block_body) [4950 5066])
+                    ("add" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5079 5083])
+                        ("other" variable nil (reparse-symbol function_parameters) [5085 5090]))                      ) (reparse-symbol indented_block_body) [5071 5344])
+                    ("mul" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5356 5360])
+                        ("other" variable nil (reparse-symbol function_parameters) [5362 5367]))                      ) (reparse-symbol indented_block_body) [5348 5625])
+                    ("prod" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5639 5643]))                      ) (reparse-symbol indented_block_body) [5630 5796])
+                    ("inner_product" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5819 5823])
+                        ("other" variable nil (reparse-symbol function_parameters) [5825 5830]))                      ) (reparse-symbol indented_block_body) [5801 6022])
+                    ("size" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [6036 6040]))                      ) (reparse-symbol indented_block_body) [6027 6141]))                  
+                :type "class")
+                nil [4025 6141])
+            ("PPRing_to_str" function (:arguments 
+              ( ("ppring" variable nil (reparse-symbol function_parameters) [6161 6167]))              ) nil [6143 6402])
+            ("PPRing" type
+               (:superclasses ("object")
+                :members 
+                  ( (""""Represents the direct product of instances of PRing."""" code nil (reparse-symbol indented_block_body) [6431 6489])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [6508 6512])
+                        ("rep" variable nil (reparse-symbol function_parameters) [6514 6517]))                      ) (reparse-symbol indented_block_body) [6495 6670])
+                    ("__str__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [6687 6691]))                      ) (reparse-symbol indented_block_body) [6675 6795])
+                    ("__eq__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [6811 6815])
+                        ("other" variable nil (reparse-symbol function_parameters) [6817 6822]))                      ) (reparse-symbol indented_block_body) [6800 7215])
+                    ("to_Element" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [7235 7239])
+                        ("rep" variable nil (reparse-symbol function_parameters) [7241 7244]))                      ) (reparse-symbol indented_block_body) [7220 7429])
+                    ("to_ElementArray" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [7454 7458])
+                        ("rep" variable nil (reparse-symbol function_parameters) [7460 7463]))                      ) (reparse-symbol indented_block_body) [7434 7681]))                  
+                :type "class")
+                nil [6404 7681])
+            ("PPRingElement_to_str" function (:arguments 
+              ( ("element" variable nil (reparse-symbol function_parameters) [7708 7715]))              ) nil [7683 7975])
+            ("PPRingElement" type
+               (:superclasses ("PRingElement")
+                :members 
+                  ( (""""Element of the direct product of some rings."""" code nil (reparse-symbol indented_block_body) [8017 8067])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8086 8090])
+                        ("pring" variable nil (reparse-symbol function_parameters) [8092 8097])
+                        ("rep" variable nil (reparse-symbol function_parameters) [8099 8102]))                      ) (reparse-symbol indented_block_body) [8073 8571])
+                    ("to_ByteTree" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8592 8596]))                      ) (reparse-symbol indented_block_body) [8576 8750])
+                    ("__str__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8767 8771]))                      ) (reparse-symbol indented_block_body) [8755 8882])
+                    ("add" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8895 8899])
+                        ("other" variable nil (reparse-symbol function_parameters) [8901 8906]))                      ) (reparse-symbol indented_block_body) [8887 9640])
+                    ("mul" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [9653 9657])
+                        ("other" variable nil (reparse-symbol function_parameters) [9659 9664]))                      ) (reparse-symbol indented_block_body) [9645 10402]))                  
+                :type "class")
+                nil [7977 10402])
+            ("PPRingElementArray_to_str" function (:arguments 
+              ( ("element" variable nil (reparse-symbol function_parameters) [10434 10441]))              ) nil [10404 10711])
+            ("PPRingElementArray" type
+               (:superclasses ("PRingElementArray")
+                :members 
+                  ( (""""An array of elements of the product ring of some prime order
+    fields."""" code nil (reparse-symbol indented_block_body) [10763 10841])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10860 10864])
+                        ("pring" variable nil (reparse-symbol function_parameters) [10866 10871])
+                        ("rep" variable nil (reparse-symbol function_parameters) [10873 10876]))                      ) (reparse-symbol indented_block_body) [10847 11329])
+                    ("to_ByteTree" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11350 11354]))                      ) (reparse-symbol indented_block_body) [11334 11489])
+                    ("__str__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11506 11510]))                      ) (reparse-symbol indented_block_body) [11494 11626])
+                    ("add" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11639 11643])
+                        ("other" variable nil (reparse-symbol function_parameters) [11645 11650]))                      ) (reparse-symbol indented_block_body) [11631 12327])
+                    ("mul" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [12340 12344])
+                        ("other" variable nil (reparse-symbol function_parameters) [12346 12351]))                      ) (reparse-symbol indented_block_body) [12332 13051])
+                    ("inner_product" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [13074 13078])
+                        ("other" variable nil (reparse-symbol function_parameters) [13080 13085]))                      ) (reparse-symbol indented_block_body) [13056 13750]))                  
+                :type "class")
+                nil [10713 13750]))          
+    :file "pring.py"
+    :pointmax 13750
+    :fsize 13749
+    :lastmodtime '(20181 24142)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!Code!verificatum!tests!ref!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

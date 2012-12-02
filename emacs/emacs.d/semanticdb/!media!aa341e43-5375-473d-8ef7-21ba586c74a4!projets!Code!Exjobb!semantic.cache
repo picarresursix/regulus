@@ -1,0 +1,255 @@
+;; Object Exjobb/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Exjobb/"
+  :tables (list 
+   (semanticdb-table "gflib.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("sys" include nil nil [26 36])
+            ("sage.all" include nil nil [37 59])
+            ("gflib_init" function (:arguments 
+              ( ("n" variable nil (reparse-symbol function_parameters) [149 150]))              ) nil [134 327])
+            ("solutions" function (:arguments 
+              ( ("poly" variable nil (reparse-symbol function_parameters) [413 417])
+                ("b" variable nil (reparse-symbol function_parameters) [418 419]))              ) nil [399 620])
+            ("restricted_spectrum" function (:arguments 
+              ( ("poly" variable nil (reparse-symbol function_parameters) [646 650]))              ) nil [622 1124])
+            ("Kloosterman_1" function nil nil [1126 1296])
+            ("g3_spectrum" function nil nil [1298 1627])
+            ("B" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [1707 1708])
+                ("d" variable nil (reparse-symbol function_parameters) [1709 1710]))              ) nil [1701 1756])
+            ("W" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [1763 1764])
+                ("a" variable nil (reparse-symbol function_parameters) [1765 1766]))              ) nil [1757 1800])
+            ("phi" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [1809 1810]))              ) nil [1801 1854])
+            ("nu" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [1862 1863]))              ) nil [1855 1893])
+            ("m" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [1900 1901]))              ) nil [1894 1935])
+            ("Q" function (:arguments 
+              ( ("y" variable nil (reparse-symbol function_parameters) [1942 1943])
+                ("X" variable nil (reparse-symbol function_parameters) [1944 1945]))              ) nil [1936 1997])
+            ("Wa" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [2005 2006])
+                ("a" variable nil (reparse-symbol function_parameters) [2007 2008]))              ) nil [1998 2042])
+            ("VaB" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [2051 2052])
+                ("a" variable nil (reparse-symbol function_parameters) [2053 2054])
+                ("B" variable nil (reparse-symbol function_parameters) [2055 2056]))              ) nil [2043 2104])
+            ("Va" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [2112 2113])
+                ("a" variable nil (reparse-symbol function_parameters) [2114 2115]))              ) nil [2105 2162])
+            ("Da" function (:arguments 
+              ( ("a" variable nil (reparse-symbol function_parameters) [2170 2171]))              ) nil [2163 2241])
+            ("Ua" function (:arguments 
+              ( ("a" variable nil (reparse-symbol function_parameters) [2249 2250]))              ) nil [2242 2308])
+            ("num" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [2386 2387]))              ) nil [2378 2410])
+            ("elm" function (:arguments 
+              ( ("k" variable nil (reparse-symbol function_parameters) [2419 2420]))              ) nil [2411 2439]))          
+    :file "gflib.py"
+    :pointmax 2440
+    :fsize 2439
+    :lastmodtime '(20634 22536)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "new-idea.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("sys" include nil nil [26 36])
+            ("sage.all" include nil nil [37 59])
+            ("gflib" include nil nil [60 79])
+            ("global" code nil nil [116 141])
+            ("Tr" function (:arguments 
+              ( ("a" variable nil (reparse-symbol function_parameters) [150 151]))              ) nil [143 220])
+            ("theta" function (:arguments 
+              ( ("a" variable nil (reparse-symbol function_parameters) [231 232]))              ) nil [221 296])
+            ("if" code nil nil [298 776]))          
+    :file "new-idea.py"
+    :pointmax 776
+    :fsize 775
+    :lastmodtime '(20605 15514)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "phi-study.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("sys" include nil nil [26 36])
+            ("sage.all" include nil nil [37 59])
+            ("gflib" include nil nil [60 79])
+            ("global" code nil nil [116 141])
+            ("Lambda" function (:arguments 
+              ( ("l" variable nil (reparse-symbol function_parameters) [155 156]))              ) nil [144 209])
+            ("Wa_comp_lambda" function (:arguments 
+              ( ("l" variable nil (reparse-symbol function_parameters) [229 230])
+                ("a" variable nil (reparse-symbol function_parameters) [231 232]))              ) nil [210 283])
+            ("C" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [290 291])
+                ("d" variable nil (reparse-symbol function_parameters) [292 293]))              ) nil [284 353])
+            ("nu" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [362 363]))              ) nil [355 393])
+            ("if" code nil nil [395 1542]))          
+    :file "phi-study.py"
+    :pointmax 1542
+    :fsize 1541
+    :lastmodtime '(20644 54655)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "n3.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("sys" include nil nil [26 36])
+            ("sage.all" include nil nil [37 59])
+            ("gflib" include nil nil [60 79])
+            ("global" code nil nil [116 141])
+            ("dif" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [152 153]))              ) nil [144 197])
+            ("E" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [204 205])
+                ("b" variable nil (reparse-symbol function_parameters) [206 207]))              ) nil [198 230])
+            ("H" function (:arguments 
+              ( ("y" variable nil (reparse-symbol function_parameters) [341 342])
+                ("b" variable nil (reparse-symbol function_parameters) [343 344]))              ) nil [335 511])
+            ("Ci" function (:arguments 
+              ( ("l" variable nil (reparse-symbol function_parameters) [520 521]))              ) nil [513 971])
+            ("Zi" function (:arguments 
+              ( ("c_array" variable nil (reparse-symbol function_parameters) [980 987]))              ) nil [973 1165])
+            ("poly_format" function (:arguments 
+              ( ("poly" variable nil (reparse-symbol function_parameters) [1187 1191]))              ) nil [1171 1444])
+            ("pretty_factorization" function (:arguments 
+              ( ("poly" variable nil (reparse-symbol function_parameters) [1471 1475]))              ) nil [1446 2100])
+            ("Lambda" function (:arguments 
+              ( ("l" variable nil (reparse-symbol function_parameters) [2114 2115]))              ) nil [2103 2295])
+            ("intersection" function (:arguments 
+              ( ("l" variable nil (reparse-symbol function_parameters) [2314 2315])
+                ("m" variable nil (reparse-symbol function_parameters) [2316 2317]))              ) nil [2297 2512])
+            ("if" code nil nil [2514 5858]))          
+    :file "n3.py"
+    :pointmax 11777
+    :fsize 11776
+    :lastmodtime '(20655 11934)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "celine_intuition.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("sys" include nil nil [26 36])
+            ("sage.all" include nil nil [37 59])
+            ("gflib" include nil nil [60 79])
+            ("global" code nil nil [116 141])
+            ("coeff" function (:arguments 
+              ( ("m" variable nil (reparse-symbol function_parameters) [154 155]))              ) nil [144 334])
+            ("Dm" function (:arguments 
+              ( ("c" variable nil (reparse-symbol function_parameters) [347 348])
+                ("x" variable nil (reparse-symbol function_parameters) [349 350])
+                ("alpha" variable nil (reparse-symbol function_parameters) [351 356]))              ) nil [340 558])
+            ("Dm_repr" function (:arguments 
+              ( ("c" variable nil (reparse-symbol function_parameters) [572 573])
+                ("alpha" variable nil (reparse-symbol function_parameters) [574 579]))              ) nil [560 762])
+            ("pretty_spectrum_repr" function (:arguments 
+              ( ("spectrum" variable nil (reparse-symbol function_parameters) [789 797]))              ) nil [764 1057])
+            ("poly_format" function (:arguments 
+              ( ("poly" variable nil (reparse-symbol function_parameters) [1075 1079]))              ) nil [1059 1373])
+            ("if" code nil nil [1376 4482]))          
+    :file "celine_intuition.py"
+    :pointmax 4482
+    :fsize 4481
+    :lastmodtime '(20643 16934)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "ci-study.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("sys" include nil nil [26 36])
+            ("sage.all" include nil nil [37 59])
+            ("gflib" include nil nil [60 79])
+            ("simplify_poly_mod_2" function (:arguments 
+              ( ("poly" variable nil (reparse-symbol function_parameters) [107 111]))              ) nil [83 343])
+            ("C_array" function (:arguments 
+              ( ("n_C" variable nil (reparse-symbol function_parameters) [357 360]))              ) nil [345 819])
+            ("A_array" function (:arguments 
+              ( ("n_A" variable nil (reparse-symbol function_parameters) [834 837]))              ) nil [822 1337])
+            ("B_array" function (:arguments 
+              ( ("n_B" variable nil (reparse-symbol function_parameters) [1351 1354]))              ) nil [1339 1854])
+            ("tr" function nil nil [1857 1913])
+            ("if" code nil nil [1914 2449]))          
+    :file "ci-study.py"
+    :pointmax 3019
+    :fsize 3018
+    :lastmodtime '(20643 46876)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "ideas.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("sys" include nil nil [26 36])
+            ("sage.all" include nil nil [37 59])
+            ("gflib" include nil nil [60 79])
+            ("global" code nil nil [116 141])
+            ("intersection" function (:arguments 
+              ( ("l" variable nil (reparse-symbol function_parameters) [162 163])
+                ("m" variable nil (reparse-symbol function_parameters) [164 165]))              ) nil [145 360])
+            ("Q" function (:arguments 
+              ( ("y" variable nil (reparse-symbol function_parameters) [368 369])
+                ("b" variable nil (reparse-symbol function_parameters) [370 371]))              ) nil [362 427])
+            ("det" function (:arguments 
+              ( ("b" variable nil (reparse-symbol function_parameters) [437 438]))              ) nil [429 7669])
+            ("kloost" function (:arguments 
+              ( ("a" variable nil (reparse-symbol function_parameters) [7682 7683]))              ) nil [7671 7874])
+            ("Kloost_Blondeau_1" function nil nil [7876 8050])
+            ("alpha" function (:arguments 
+              ( ("y" variable nil (reparse-symbol function_parameters) [8063 8064]))              ) nil [8053 8274])
+            ("if" code nil nil [8277 8772]))          
+    :file "ideas.py"
+    :pointmax 10648
+    :fsize 10647
+    :lastmodtime '(20664 45035)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "walsh.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("sys" include nil nil [26 36])
+            ("sage.all" include nil nil [37 59])
+            ("sage.crypto.boolean_function" include nil nil [60 102])
+            ("global" code nil nil [139 164])
+            ("pretty_print_spectrum" function (:arguments 
+              ( ("w" variable nil (reparse-symbol function_parameters) [193 194]))              ) nil [167 367])
+            ("treat_t" function (:arguments 
+              ( ("n" variable nil (reparse-symbol function_parameters) [381 382])
+                ("t" variable nil (reparse-symbol function_parameters) [383 384])
+                ("type" variable nil (reparse-symbol function_parameters) [385 389]))              ) nil [369 770])
+            ("non_uniformity" function (:arguments 
+              ( ("n" variable nil (reparse-symbol function_parameters) [791 792])
+                ("w" variable nil (reparse-symbol function_parameters) [793 794]))              ) nil [772 889])
+            ("if" code nil nil [891 2285]))          
+    :file "walsh.py"
+    :pointmax 2063
+    :fsize 2284
+    :lastmodtime '(20664 39246)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "all-t.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("sys" include nil nil [26 36])
+            ("sage.all" include nil nil [37 59])
+            ("alpha" function (:arguments 
+              ( ("t" variable nil (reparse-symbol function_parameters) [72 73])
+                ("y" variable nil (reparse-symbol function_parameters) [74 75]))              ) nil [62 127])
+            ("mu_0" function (:arguments 
+              ( ("image" variable nil (reparse-symbol function_parameters) [137 142]))              ) nil [128 330])
+            ("if" code nil nil [332 879]))          
+    :file "all-t.py"
+    :pointmax 855
+    :fsize 878
+    :lastmodtime '(20664 45949)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!projets!Code!Exjobb!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

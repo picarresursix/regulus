@@ -1,0 +1,329 @@
+;; Object sha/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "sha/"
+  :tables (list 
+   (semanticdb-table "sha1.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("sha1.hpp" include nil nil [181 200])
+            ("cryptheory" using (:type ("cryptheory" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [203 230])
+            ("cryptheory::hash" using (:type ("cryptheory::hash" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [231 264])
+            ("Sha1" function
+               (:constructor-flag t
+                :parent "Sha1"
+                :type ("Sha1" type (:type "class") nil nil))
+                nil [267 316])
+            ("initialize" function
+               (:parent "Sha1"
+                :type "void")
+                nil [319 502])
+            ("update" function
+               (:parent "Sha1"
+                :arguments 
+                  ( ("message" variable (:type ("byteVector" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [523 542]))                  
+                :type "void")
+                nil [505 1544])
+            ("getHash" function
+               (:parent "Sha1"
+                :type ("byteVector" type (:type "class") nil nil))
+                nil [1547 1611])
+            ("hash" function
+               (:parent "Sha1"
+                :arguments 
+                  ( ("message" variable (:type ("byteVector" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1636 1655]))                  
+                :type ("byteVector" type (:type "class") nil nil))
+                nil [1614 1693])
+            ("getType" function
+               (:parent "Sha1"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [1696 1750])
+            ("getHashLength" function
+               (:parent "Sha1"
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [1753 1807]))          
+    :file "sha1.cpp"
+    :pointmax 1808
+    :fsize 1808
+    :lastmodtime '(20613 2590)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "sha.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("sha.hpp" include nil nil [179 197])
+            ("cryptheory" using (:type ("cryptheory" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [199 226])
+            ("cryptheory::hash" using (:type ("cryptheory::hash" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [227 260])
+            ("Sha" function
+               (:constructor-flag t
+                :parent "Sha"
+                :arguments 
+                  ( ("bSize" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [271 290]))                  
+                :type ("Sha" type (:type "class") nil nil))
+                nil [262 316]))          
+    :file "sha.cpp"
+    :pointmax 317
+    :fsize 317
+    :lastmodtime '(20610 40562)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "sha.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_SHA_H_" variable (:constant-flag t) nil [198 205])
+            ("_SHA_H_" variable (:constant-flag t) nil [198 205])
+            ("../hashfunction.hpp" include nil nil [208 238])
+            ("cryptheory" type
+               (:members 
+                  ( ("hash" type
+                       (:members 
+                          ( ("Sha" type
+                               (:superclasses 
+                                  ( ("Hashfunction" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("private" label nil (reparse-symbol classsubparts) [508 516])
+                                    ("N" variable (:type "unsigned int") (reparse-symbol classsubparts) [635 650])
+                                    ("public" label nil (reparse-symbol classsubparts) [651 658])
+                                    ("Sha" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("bSize" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [766 785]))                                          
+                                        :type ("Sha" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [762 786])
+                                    ("shr32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("x" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1071 1082])
+                                            ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1083 1098]))                                          
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1049 1149])
+                                    ("rotr32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("x" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1407 1418])
+                                            ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1419 1434]))                                          
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1384 1501])
+                                    ("ch32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("x" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1687 1698])
+                                            ("y" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1699 1710])
+                                            ("z" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1711 1722]))                                          
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1666 1784])
+                                    ("parity32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("x" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1958 1969])
+                                            ("y" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1970 1981])
+                                            ("z" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1982 1993]))                                          
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1933 2047])
+                                    ("maj32" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("x" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2250 2261])
+                                            ("y" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2262 2273])
+                                            ("z" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2274 2285]))                                          
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2228 2357])
+                                    ("bigSigma0_256" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("x" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2575 2586]))                                          
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2545 2672])
+                                    ("bigSigma1_256" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("x" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2890 2901]))                                          
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2860 2987])
+                                    ("smallSigma0_256" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("x" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3192 3203]))                                          
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3160 3287])
+                                    ("smallSigma1_256" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("x" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3509 3520]))                                          
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3477 3605])
+                                    ("shr64" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("x" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3901 3912])
+                                            ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3913 3928]))                                          
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3879 3979])
+                                    ("rotr64" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("x" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4245 4256])
+                                            ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [4257 4272]))                                          
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [4222 4339])
+                                    ("ch64" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("x" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4516 4527])
+                                            ("y" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4528 4539])
+                                            ("z" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4540 4551]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [4504 4613])
+                                    ("maj64" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("x" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4816 4827])
+                                            ("y" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4828 4839])
+                                            ("z" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4840 4851]))                                          
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [4794 4923])
+                                    ("bigSigma0_512" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("x" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5144 5155]))                                          
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5114 5242])
+                                    ("bigSigma1_512" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("x" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5463 5474]))                                          
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5433 5561])
+                                    ("smallSigma0_512" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("x" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5765 5776]))                                          
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5733 5859])
+                                    ("smallSigma1_512" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("x" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6080 6091]))                                          
+                                        :type ("uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [6048 6176]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [474 6195]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [264 6199]))                  
+                :type "namespace")
+                nil [240 6201]))          
+    :file "sha.hpp"
+    :pointmax 6232
+    :fsize 6232
+    :lastmodtime '(20610 61768)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_SHA_H_")
+          )
+
+    )
+   (semanticdb-table "sha1.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_SHA1_H_" variable (:constant-flag t) nil [201 209])
+            ("sha.hpp" include nil nil [211 229])
+            ("cryptheory" type
+               (:members 
+                  ( ("hash" type
+                       (:members 
+                          ( ("Sha1" type
+                               (:superclasses 
+                                  ( ("Sha" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("private" label nil (reparse-symbol classsubparts) [353 361])
+                                    ("H" variable
+                                       (:dereference 1
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [405 419])
+                                    ("a" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [487 498])
+                                    ("b" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [507 518])
+                                    ("c" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [527 538])
+                                    ("d" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [547 558])
+                                    ("e" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [567 578])
+                                    ("public" label nil (reparse-symbol classsubparts) [596 603])
+                                    ("Sha1" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :type ("Sha1" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [612 619])
+                                    ("ft" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("x" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [640 642])
+                                            ("" variable (:type ("y" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [642 644])
+                                            ("" variable (:type ("z" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [644 646])
+                                            ("" variable (:type ("t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [646 648]))                                          
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [628 649])
+                                    ("initialize" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [658 676])
+                                    ("update" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("message" variable (:type ("byteVector" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [697 716]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [685 717])
+                                    ("getHash" function
+                                       (:prototype-flag t
+                                        :type ("byteVector" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [726 747])
+                                    ("hash" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("message" variable (:type ("byteVector" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [772 791]))                                          
+                                        :type ("byteVector" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [756 792])
+                                    ("getType" function
+                                       (:prototype-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [801 823])
+                                    ("getHashLength" function
+                                       (:prototype-flag t
+                                        :type ("uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [832 857]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [327 877]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [256 880]))                  
+                :type "namespace")
+                nil [232 882]))          
+    :file "sha1.hpp"
+    :pointmax 912
+    :fsize 912
+    :lastmodtime '(20610 40562)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_SHA1_H_")
+          )
+
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!projets!Code!libcryptheory!src!hash!sha!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

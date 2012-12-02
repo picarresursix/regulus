@@ -1,0 +1,613 @@
+;; Object modpgrp/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "modpgrp/"
+  :tables (list 
+   (semanticdb-table "modpgrp.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("../ring/ringelmt.hpp" include nil nil [177 208])
+            ("modpgrp.hpp" include nil nil [209 231])
+            ("arithm" using (:type ("arithm" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [234 257])
+            ("ModPGrp" function
+               (:constructor-flag t
+                :parent "ModPGrp"
+                :arguments 
+                  ( ("q" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [277 289])
+                    ("p" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [290 302])
+                    ("g" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [303 315])
+                    ("e" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [316 326]))                  
+                :type ("ModPGrp" type (:type "class") nil nil))
+                nil [260 367])
+            ("ModPGrp" function
+               (:constructor-flag t
+                :parent "ModPGrp"
+                :arguments 
+                  ( ("bt" variable
+                       (:pointer 1
+                        :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [387 416]))                  
+                :type ("ModPGrp" type (:type "class") nil nil))
+                nil [370 1307])
+            ("toByteTree" function
+               (:pointer 1
+                :parent "ModPGrp"
+                :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                nil [1311 1783])
+            ("getGenerator" function
+               (:pointer 1
+                :parent "ModPGrp"
+                :type ("RingElmt" type (:type "class") nil nil))
+                nil [1860 1946])
+            ("getMultInverse" function
+               (:pointer 1
+                :parent "ModPGrp"
+                :arguments 
+                  ( ("elm" variable
+                       (:pointer 1
+                        :type ("RingElmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1984 1999]))                  
+                :type ("RingElmt" type (:type "class") nil nil))
+                nil [1949 2242])
+            ("getElmt" function
+               (:pointer 1
+                :parent "ModPGrp"
+                :arguments 
+                  ( ("bt" variable
+                       (:pointer 1
+                        :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2273 2302]))                  
+                :type ("RingElmt" type (:type "class") nil nil))
+                nil [2245 2652])
+            ("getArrayOfElmts" function
+               (:pointer 1
+                :parent "ModPGrp"
+                :type ("ArrayOfRingElmts" type (:type "class") nil nil))
+                nil [2655 2748])
+            ("isInField" function
+               (:parent "ModPGrp"
+                :arguments 
+                  ( ("number" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2842 2859]))                  
+                :type "bool")
+                nil [2818 3049])
+            ("getType" function
+               (:parent "ModPGrp"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [3053 3113]))          
+    :file "modpgrp.cpp"
+    :pointmax 3115
+    :fsize 3117
+    :lastmodtime '(20529 24249)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "modpgrpelmt.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("../arithm.hpp" include nil nil [188 212])
+            ("arithm" using (:type ("arithm" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [216 239])
+            ("ModPGrpElmt" function
+               (:constructor-flag t
+                :parent "ModPGrpElmt"
+                :arguments 
+                  ( ("repr" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [267 282])
+                    ("f" variable
+                       (:pointer 1
+                        :type ("Field" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [308 318]))                  
+                :type ("ModPGrpElmt" type (:type "class") nil nil))
+                nil [242 927])
+            ("toByteTree" function
+               (:pointer 1
+                :parent "ModPGrpElmt"
+                :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                nil [930 1112])
+            ("ModPGrpElmt" function
+               (:constructor-flag t
+                :parent "ModPGrpElmt"
+                :arguments 
+                  ( ("message" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("uint8_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [1140 1169])
+                    ("f" variable
+                       (:pointer 1
+                        :type ("Field" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1195 1205]))                  
+                :type ("ModPGrpElmt" type (:type "class") nil nil))
+                nil [1115 1262])
+            ("ModPGrpElmt" function
+               (:constructor-flag t
+                :parent "ModPGrpElmt"
+                :arguments 
+                  ( ("bt" variable
+                       (:pointer 1
+                        :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1290 1319])
+                    ("f" variable
+                       (:pointer 1
+                        :type ("Field" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1320 1330]))                  
+                :type ("ModPGrpElmt" type (:type "class") nil nil))
+                nil [1265 1360])
+            ("getType" function
+               (:parent "ModPGrpElmt"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [1363 1431])
+            ("encode0" function
+               (:parent "ModPGrpElmt"
+                :arguments 
+                  ( ("message" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("uint8_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [1460 1489]))                  
+                :type "void")
+                nil [1434 2829])
+            ("encode1" function
+               (:parent "ModPGrpElmt"
+                :arguments 
+                  ( ("message" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("uint8_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [2858 2887]))                  
+                :type "void")
+                nil [2832 3865])
+            ("encode2" function
+               (:parent "ModPGrpElmt"
+                :arguments 
+                  ( ("message" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("uint8_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [3895 3924]))                  
+                :type "void")
+                nil [3869 5031])
+            ("encode" function
+               (:parent "ModPGrpElmt"
+                :arguments 
+                  ( ("message" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("uint8_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [5060 5089]))                  
+                :type "void")
+                nil [5035 5586])
+            ("decode" function
+               (:parent "ModPGrpElmt"
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("uint8_t" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [5732 6244])
+            ("decode0" function
+               (:parent "ModPGrpElmt"
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("uint8_t" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [6247 6581])
+            ("decode1" function
+               (:parent "ModPGrpElmt"
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("uint8_t" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [6584 7263])
+            ("decode2" function
+               (:parent "ModPGrpElmt"
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("uint8_t" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [7266 8057]))          
+    :file "modpgrpelmt.cpp"
+    :pointmax 8197
+    :fsize 8058
+    :lastmodtime '(20529 13877)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "arrayofmodpgrpelmts.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("vector" include (:system-flag t) nil [211 228])
+            ("cstdlib" include (:system-flag t) nil [229 247])
+            ("iostream" include (:system-flag t) nil [248 267])
+            ("../arithm.hpp" include nil nil [270 294])
+            ("arithm" using (:type ("arithm" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [297 320])
+            ("ArrayOfModPGrpElmts" function
+               (:constructor-flag t
+                :parent "ArrayOfModPGrpElmts"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("Ring" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [365 374]))                  
+                :type ("ArrayOfModPGrpElmts" type (:type "class") nil nil))
+                nil [324 765])
+            ("ArrayOfModPGrpElmts" function
+               (:constructor-flag t
+                :parent "ArrayOfModPGrpElmts"
+                :arguments 
+                  ( ("bt" variable
+                       (:pointer 1
+                        :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [809 838])
+                    ("r" variable
+                       (:pointer 1
+                        :type ("Ring" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [880 889]))                  
+                :type ("ArrayOfModPGrpElmts" type (:type "class") nil nil))
+                nil [768 2297])
+            ("deriveRandElmts" function
+               (:parent "ArrayOfModPGrpElmts"
+                :arguments 
+                  ( ("prg" variable
+                       (:pointer 1
+                        :type ("cryptoTools::PRG" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2342 2365])
+                    ("nr" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2407 2423])
+                    ("n0" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2465 2481]))                  
+                :type "void")
+                nil [2300 3629]))          
+    :file "arrayofmodpgrpelmts.cpp"
+    :pointmax 3680
+    :fsize 3631
+    :lastmodtime '(20529 24817)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "modpgrpelmt.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_MODPPGRPELMT_H_" variable (:constant-flag t) nil [261 277])
+            ("_MODPPGRPELMT_H_" variable (:constant-flag t) nil [261 277])
+            ("_MODPPGRPELMT_H_" variable (:constant-flag t) nil [261 277])
+            ("_MODPPGRPELMT_H_" variable (:constant-flag t) nil [261 277])
+            ("../field/fieldelmt.hpp" include nil nil [280 313])
+            ("../modring/modringelmt.hpp" include nil nil [314 351])
+            ("arithm" type
+               (:members 
+                  ( ("ModPGrpElmt" type
+                       (:superclasses 
+                          ( ("FieldElmt" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil)
+                            ("ModRingElmt" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [711 718])
+                            ("ModPGrpElmt" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("repr" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1149 1164])
+                                    ("f" variable
+                                       (:pointer 1
+                                        :type ("Field" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1165 1175]))                                  
+                                :type ("ModPGrpElmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1137 1176])
+                            ("ModPGrpElmt" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("message" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("uint8_t" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [1198 1227])
+                                    ("f" variable
+                                       (:pointer 1
+                                        :type ("Field" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1228 1238]))                                  
+                                :type ("ModPGrpElmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1186 1239])
+                            ("ModPGrpElmt" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("bt" variable
+                                       (:pointer 1
+                                        :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1261 1290])
+                                    ("f" variable
+                                       (:pointer 1
+                                        :type ("Field" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1291 1301]))                                  
+                                :type ("ModPGrpElmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1249 1302])
+                            ("toByteTree" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1312 1351])
+                            ("getType" function
+                               (:prototype-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1484 1506])
+                            ("encode" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("message" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("uint8_t" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [2019 2048]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2006 2049])
+                            ("encode0" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("message" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("uint8_t" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [2251 2280]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2238 2281])
+                            ("encode1" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("message" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("uint8_t" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [2500 2529]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2487 2530])
+                            ("encode2" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("message" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("uint8_t" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [2749 2778]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2736 2779])
+                            ("decode" function
+                               (:prototype-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("uint8_t" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [2975 3005])
+                            ("decode0" function
+                               (:prototype-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("uint8_t" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [3468 3499])
+                            ("decode1" function
+                               (:prototype-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("uint8_t" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [3701 3732])
+                            ("decode2" function
+                               (:prototype-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("uint8_t" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [3934 3965]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [652 3984]))                  
+                :type "namespace")
+                nil [354 3987]))          
+    :file "modpgrpelmt.hpp"
+    :pointmax 3995
+    :fsize 3995
+    :lastmodtime '(20529 13340)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_MODPPGRPELMT_H_")
+          )
+
+    )
+   (semanticdb-table "modpgrp.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_MODPGRP_H_" variable (:constant-flag t) nil [288 299])
+            ("_MODPGRP_H_" variable (:constant-flag t) nil [288 299])
+            ("_MODPGRP_H_" variable (:constant-flag t) nil [288 299])
+            ("_MODPGRP_H_" variable (:constant-flag t) nil [288 299])
+            ("_MODPGRP_H_" variable (:constant-flag t) nil [288 299])
+            ("_MODPGRP_H_" variable (:constant-flag t) nil [288 299])
+            ("_MODPGRP_H_" variable (:constant-flag t) nil [288 299])
+            ("../../cryptotools/cryptotools.hpp" include nil nil [302 346])
+            ("../../verifierutils/verifierutils.hpp" include nil nil [347 395])
+            ("../field/field.hpp" include nil nil [397 426])
+            ("../modring/modring.hpp" include nil nil [427 460])
+            ("modpgrpelmt.hpp" include nil nil [461 487])
+            ("arrayofmodpgrpelmts.hpp" include nil nil [488 522])
+            ("arithm" type
+               (:members 
+                  ( ("ModPGrp" type
+                       (:superclasses 
+                          ( ("Field" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil)
+                            ("ModRing" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1071 1078])
+                            ("ModPGrp" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("q" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1644 1656])
+                                    ("p" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1657 1669])
+                                    ("g" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1670 1682])
+                                    ("e" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1683 1693]))                                  
+                                :type ("ModPGrp" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1636 1694])
+                            ("ModPGrp" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("bt" variable
+                                       (:pointer 1
+                                        :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2102 2131]))                                  
+                                :type ("ModPGrp" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2094 2132])
+                            ("toByteTree" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2486 2525])
+                            ("getGenerator" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :type ("RingElmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2666 2692])
+                            ("getMultInverse" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :arguments 
+                                  ( ("elm" variable
+                                       (:pointer 1
+                                        :type ("RingElmt" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3309 3324]))                                  
+                                :type ("RingElmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3283 3325])
+                            ("getArrayOfElmts" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :type ("ArrayOfRingElmts" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3496 3533])
+                            ("getElmt" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :arguments 
+                                  ( ("bt" variable
+                                       (:pointer 1
+                                        :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3904 3933]))                                  
+                                :type ("RingElmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3885 3934])
+                            ("isInField" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("number" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4338 4355]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [4323 4356])
+                            ("getType" function
+                               (:prototype-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4484 4506]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1024 4525]))                  
+                :type "namespace")
+                nil [525 4528]))          
+    :file "modpgrp.hpp"
+    :pointmax 4554
+    :fsize 4554
+    :lastmodtime '(20529 24210)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_MODPGRP_H_")
+          )
+
+    )
+   (semanticdb-table "arrayofmodpgrpelmts.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_ARRAYOFMODPGRPELMTS_H_" variable (:constant-flag t) nil [289 312])
+            ("_ARRAYOFMODPGRPELMTS_H_" variable (:constant-flag t) nil [289 312])
+            ("_ARRAYOFMODPGRPELMTS_H_" variable (:constant-flag t) nil [289 312])
+            ("_ARRAYOFMODPGRPELMTS_H_" variable (:constant-flag t) nil [289 312])
+            ("_ARRAYOFMODPGRPELMTS_H_" variable (:constant-flag t) nil [289 312])
+            ("../../cryptotools/cryptotools.hpp" include nil nil [314 358])
+            ("../ring/ringelmt.hpp" include nil nil [360 391])
+            ("modpgrp.hpp" include nil nil [392 414])
+            ("arithm" type
+               (:members 
+                  ( ("ArrayOfModPGrpElmts" type
+                       (:superclasses 
+                          ( ("ArrayOfRingElmts" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [695 702])
+                            ("ArrayOfModPGrpElmts" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("r" variable
+                                       (:pointer 1
+                                        :type ("Ring" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1002 1011]))                                  
+                                :type ("ArrayOfModPGrpElmts" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [982 1012])
+                            ("ArrayOfModPGrpElmts" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("bt" variable
+                                       (:pointer 1
+                                        :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1560 1589])
+                                    ("r" variable
+                                       (:pointer 1
+                                        :type ("Ring" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1590 1599]))                                  
+                                :type ("ArrayOfModPGrpElmts" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1540 1600])
+                            ("deriveRandElmts" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("prg" variable
+                                       (:pointer 1
+                                        :type ("cryptoTools::PRG" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2164 2187])
+                                    ("nr" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2217 2233])
+                                    ("n0" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2263 2279]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2143 2280]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [641 2283]))                  
+                :type "namespace")
+                nil [418 2286]))          
+    :file "arrayofmodpgrpelmts.hpp"
+    :pointmax 2312
+    :fsize 2312
+    :lastmodtime '(20529 24562)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_ARRAYOFMODPGRPELMTS_H_")
+          )
+
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!Code!verificatum!src!arithm!modpgrp!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

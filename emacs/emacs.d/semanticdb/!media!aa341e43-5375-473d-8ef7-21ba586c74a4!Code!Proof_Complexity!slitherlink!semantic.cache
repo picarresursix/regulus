@@ -1,0 +1,352 @@
+;; Object slitherlink/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "slitherlink/"
+  :tables (list 
+   (semanticdb-table "slitherlink2formula.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [211 230])
+            ("../libcnf/libcnf.h" include nil nil [232 261])
+            ("slitherlink.h" include nil nil [262 286])
+            ("HORIZONTAL" variable (:constant-flag t) nil [298 308])
+            ("VERTICAL" variable (:constant-flag t) nil [319 327])
+            ("HORIZONTAL_EDGE_INDEX" variable (:constant-flag t) nil [338 359])
+            ("VERTICAL_EDGE_INDEX" variable (:constant-flag t) nil [372 391])
+            ("HORIZONTAL_EDGE_SENSE" variable (:constant-flag t) nil [402 423])
+            ("VERTICAL_EDGE_SENSE" variable (:constant-flag t) nil [436 455])
+            ("NUMBERING" variable (:constant-flag t) nil [467 476])
+            ("SENSE" variable (:constant-flag t) nil [487 492])
+            ("coord" type
+               (:members 
+                  ( ("orientation" variable (:type "int") (reparse-symbol classsubparts) [721 737])
+                    ("x" variable (:type "unsigned int") (reparse-symbol classsubparts) [746 761])
+                    ("y" variable (:type "unsigned int") (reparse-symbol classsubparts) [770 785]))                  
+                :type "struct")
+                nil [608 788])
+            ("getHneighbours" function
+               (:arguments 
+                  ( ("sl" variable
+                       (:pointer 1
+                        :type ("Slitherlink" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1422 1439])
+                    ("i" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1460 1475])
+                    ("j" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1476 1491])
+                    ("neighbours1" variable
+                       (:pointer 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("coord" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1512 1545])
+                    ("neighbours2" variable
+                       (:pointer 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("coord" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1566 1600]))                  
+                :type "void")
+                nil [1402 2820])
+            ("getVneighbours" function
+               (:arguments 
+                  ( ("sl" variable
+                       (:pointer 1
+                        :type ("Slitherlink" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3220 3237])
+                    ("i" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3258 3273])
+                    ("j" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3274 3289])
+                    ("neighbours1" variable
+                       (:pointer 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("coord" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3310 3343])
+                    ("neighbours2" variable
+                       (:pointer 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("coord" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3364 3398]))                  
+                :type "void")
+                nil [3200 4652])
+            ("addContinuityAxioms" function
+               (:arguments 
+                  ( ("form" variable
+                       (:pointer 1
+                        :type ("cnf::Formula" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5003 5023])
+                    ("edgeCode" variable (:type "int") (reparse-symbol arg-sub-list) [5024 5037])
+                    ("neighbours" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("coord" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [5063 5093]))                  
+                :type "void")
+                nil [4978 6193])
+            ("hintNeighbours" function
+               (:arguments 
+                  ( ("vars" variable
+                       (:pointer 1
+                        :type ("cnf::VariableSet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6772 6796])
+                    ("i" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [6829 6844])
+                    ("j" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [6845 6860]))                  
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("int" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [6740 7191])
+            ("addHintAxioms0" function
+               (:arguments 
+                  ( ("form" variable
+                       (:pointer 1
+                        :type ("cnf::Formula" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7345 7365])
+                    ("sl" variable
+                       (:pointer 1
+                        :type ("Slitherlink" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7366 7383])
+                    ("vars" variable
+                       (:pointer 1
+                        :type ("cnf::VariableSet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7403 7427])
+                    ("i" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [7428 7443])
+                    ("j" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [7463 7478]))                  
+                :type "void")
+                nil [7325 7732])
+            ("addHintAxioms1" function
+               (:arguments 
+                  ( ("form" variable
+                       (:pointer 1
+                        :type ("cnf::Formula" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7937 7957])
+                    ("sl" variable
+                       (:pointer 1
+                        :type ("Slitherlink" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7958 7975])
+                    ("vars" variable
+                       (:pointer 1
+                        :type ("cnf::VariableSet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7995 8019])
+                    ("i" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [8020 8035])
+                    ("j" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [8055 8070]))                  
+                :type "void")
+                nil [7917 8693])
+            ("addHintAxioms2" function
+               (:arguments 
+                  ( ("form" variable
+                       (:pointer 1
+                        :type ("cnf::Formula" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8898 8918])
+                    ("sl" variable
+                       (:pointer 1
+                        :type ("Slitherlink" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8919 8936])
+                    ("vars" variable
+                       (:pointer 1
+                        :type ("cnf::VariableSet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8956 8980])
+                    ("i" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [8981 8996])
+                    ("j" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [9016 9031]))                  
+                :type "void")
+                nil [8878 10128])
+            ("addHintAxioms3" function
+               (:arguments 
+                  ( ("form" variable
+                       (:pointer 1
+                        :type ("cnf::Formula" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10336 10356])
+                    ("sl" variable
+                       (:pointer 1
+                        :type ("Slitherlink" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10357 10374])
+                    ("vars" variable
+                       (:pointer 1
+                        :type ("cnf::VariableSet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10394 10418])
+                    ("i" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [10419 10434])
+                    ("j" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [10454 10469]))                  
+                :type "void")
+                nil [10316 11118])
+            ("addHintAxioms" function
+               (:arguments 
+                  ( ("form" variable
+                       (:pointer 1
+                        :type ("cnf::Formula" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11140 11160])
+                    ("sl" variable
+                       (:pointer 1
+                        :type ("Slitherlink" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11161 11178])
+                    ("vars" variable
+                       (:pointer 1
+                        :type ("cnf::VariableSet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11198 11222])
+                    ("i" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [11223 11238])
+                    ("j" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [11258 11273]))                  
+                :type "void")
+                nil [11121 11610])
+            ("addContinuityAndNumberingAxioms" function
+               (:arguments 
+                  ( ("form" variable
+                       (:pointer 1
+                        :type ("cnf::Formula" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12231 12251])
+                    ("orientation" variable (:type "int") (reparse-symbol arg-sub-list) [12252 12268])
+                    ("i" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [12306 12321])
+                    ("j" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [12322 12337])
+                    ("maxLoopSize" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [12375 12400]))                  
+                :type "void")
+                nil [12194 13049])
+            ("addIncreasingIndexAxioms" function
+               (:arguments 
+                  ( ("form" variable
+                       (:pointer 1
+                        :type ("cnf::Formula" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13502 13522])
+                    ("orientation" variable (:type "int") (reparse-symbol arg-sub-list) [13523 13539])
+                    ("i" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [13570 13585])
+                    ("j" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [13586 13601])
+                    ("index" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [13632 13651])
+                    ("isNeighboursGreater" variable (:type "bool") (reparse-symbol arg-sub-list) [13682 13707])
+                    ("sense" variable (:type "bool") (reparse-symbol arg-sub-list) [13708 13719])
+                    ("neighbours" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("coord" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [13750 13780]))                  
+                :type "void")
+                nil [13472 14827])
+            ("placeZero" function
+               (:arguments 
+                  ( ("form" variable
+                       (:pointer 1
+                        :type ("cnf::Formula" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15139 15159])
+                    ("sl" variable
+                       (:pointer 1
+                        :type ("Slitherlink" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15160 15177])
+                    ("vars" variable
+                       (:pointer 1
+                        :type ("cnf::VariableSet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15193 15217])
+                    ("i" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [15233 15248])
+                    ("j" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [15249 15264]))                  
+                :type "void")
+                nil [15124 17131])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [17357 17366])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [17367 17381]))                  
+                :type "int")
+                nil [17348 23366]))          
+    :file "slitherlink2formula.cpp"
+    :pointmax 23367
+    :fsize 23367
+    :lastmodtime '(20473 31814)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "slitherlink.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("_SLITHERLINK_H_" variable (:constant-flag t) nil [197 212])
+            ("vector" include (:system-flag t) nil [215 232])
+            ("iostream" include (:system-flag t) nil [233 252])
+            ("Slitherlink" type
+               (:members 
+                  ( ("private" label nil (reparse-symbol classsubparts) [532 540])
+                    ("hVertices" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("std::vector" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [758 800])
+                    ("vVertices" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("std::vector" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1019 1061])
+                    ("width" variable (:type "unsigned int") (reparse-symbol classsubparts) [1165 1184])
+                    ("height" variable (:type "unsigned int") (reparse-symbol classsubparts) [1388 1408])
+                    ("hints" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("std::vector" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1587 1624])
+                    ("public" label nil (reparse-symbol classsubparts) [1627 1634])
+                    ("Slitherlink" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("Slitherlink" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1738 1752])
+                    ("parseInput" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("input" variable
+                               (:pointer 1
+                                :type ("std::istream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1998 2018]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1982 2019])
+                    ("setVertex" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("horizontal" variable (:type "bool") (reparse-symbol arg-sub-list) [2524 2540])
+                            ("i" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2541 2556])
+                            ("j" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2580 2595])
+                            ("value" variable (:type "bool") (reparse-symbol arg-sub-list) [2596 2607]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2509 2608])
+                    ("getHint" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("i" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2923 2938])
+                            ("j" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2939 2954]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2911 2955])
+                    ("getWidth" function
+                       (:prototype-flag t
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [2965 2989])
+                    ("getHeight" function
+                       (:prototype-flag t
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [2998 3023])
+                    ("printNonHintLine" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("i" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3358 3373]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3336 3374])
+                    ("printSolution" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3538 3559]))                  
+                :type "class")
+                nil [512 3562]))          
+    :file "slitherlink.h"
+    :pointmax 3572
+    :fsize 3572
+    :lastmodtime '(20406 24985)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_SLITHERLINK_H_")
+          )
+
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!Code!Proof_Complexity!slitherlink!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

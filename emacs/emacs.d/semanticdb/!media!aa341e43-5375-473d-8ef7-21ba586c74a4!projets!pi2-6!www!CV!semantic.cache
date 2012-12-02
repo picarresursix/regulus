@@ -1,0 +1,98 @@
+;; Object CV/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "CV/"
+  :tables (list 
+   (semanticdb-table "en.html"
+    :major-mode 'html-mode
+    :tags 
+        '( ("Pi^2/6 : Léo Perrin's CV (en)" section nil nil [411 464])
+            ("Home" section (:members 
+              ( ("Home" anchor nil nil [499 502])
+                ("Home" anchor nil nil [686 689])
+                ("About" anchor nil nil [835 838])
+                ("Education" anchor nil nil [1061 1064])
+                ("Work Experience" anchor nil nil [1098 1101])
+                ("Associative Activities" anchor nil nil [1142 1145])
+                ("Computer Literacy" anchor nil nil [1187 1190])
+                ("Known Languages and Interests" anchor nil nil [1232 1235])
+                ("[link]" anchor nil nil [1572 1575])
+                ("github" anchor nil nil [1652 1655])
+                ("here" anchor nil nil [1737 1740])
+                ("Engineering and mathematics student" section (:members 
+                  ( ("Education and Diplomas" section (:members 
+                      ( ("Kungliga Tekniska högskolan" anchor nil nil [2349 2352])
+                        ("ECL" anchor nil nil [2829 2832]))                      ) nil [2149 3928])
+                    ("Internships and Work Experience" section (:members 
+                      ( ("cryptography group" anchor nil nil [4057 4060])
+                        ("LIRIS" anchor nil nil [4504 4507])
+                        ("Amazon's Mechanical Turk" anchor nil nil [4741 4744])
+                        ("CrowdFlower" anchor nil nil [4829 4832]))                      ) nil [3928 5586])
+                    ("Academic Projects and  Associative Activity" section (:members 
+                      ( ("verifier" anchor nil nil [5740 5743])
+                        ("Verificatum" anchor nil nil [5854 5857])
+                        ("organizes" anchor nil nil [6361 6364]))                      ) nil [5586 8217])
+                    ("Computer Literacy" section (:members 
+                      ( ("github repository" anchor nil nil [8729 8732])
+                        ("LaTeX" anchor nil nil [9091 9094])
+                        ("Emacs" anchor nil nil [9229 9232]))                      ) nil [8217 9965])
+                    ("Languages" section nil nil [9965 10439])
+                    ("Interests and Hobbies" section (:members 
+                      ( ("www.picarresursix.fr" anchor nil nil [10672 10675])
+                        ("github repository" anchor nil nil [11309 11312])
+                        ("just to keep all the elements inside the footer -->" anchor nil nil [12174 12177]))                      ) nil [10439 12471]))                  ) nil [1954 12471]))              ) nil [464 12471]))          
+    :file "en.html"
+    :pointmax 12471
+    :fsize 12501
+    :lastmodtime '(20628 16437)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "fr.html"
+    :major-mode 'html-mode
+    :tags 
+        '( ("Pi^2/6 : le CV de Léo Perrin (fr)" section nil nil [481 538])
+            ("Accueil" section (:members 
+              ( ("Accueil" anchor nil nil [611 614])
+                ("Accueil" anchor nil nil [758 761])
+                ("À propos" anchor nil nil [898 901])
+                ("Cursus Scolaire" anchor nil nil [1133 1136])
+                ("Expérience professionnelle" anchor nil nil [1176 1179])
+                ("Activités associatives" anchor nil nil [1231 1234])
+                ("Compétences informatiques" anchor nil nil [1276 1279])
+                ("Langues connues et centres d'intérêt" anchor nil nil [1329 1332])
+                ("[lien]" anchor nil nil [1689 1692])
+                ("github" anchor nil nil [1772 1775])
+                ("ici (en)" anchor nil nil [1880 1883])
+                ("Élève Ingénieur Généraliste et Mathématicien" section (:members 
+                  ( ("Cursus Académique et Diplômes" section (:members 
+                      ( ("Kungliga Tekniska högskolan" anchor nil nil [2525 2528])
+                        ("ECL" anchor nil nil [2984 2987]))                      ) nil [2313 4031])
+                    ("Expérience Professionnelle, stages" section (:members 
+                      ( (""cryptography group"" anchor nil nil [4172 4175])
+                        ("LIRIS" anchor nil nil [4700 4703])
+                        ("CrowdSourcing" anchor nil nil [4941 4944])
+                        ("Amazon's Mechanical Turk" anchor nil nil [5013 5016])
+                        ("CrowdFlower" anchor nil nil [5101 5104]))                      ) nil [4031 5794])
+                    ("Projets Scolaires et Activités Associatives" section (:members 
+                      ( ("verifieur" anchor nil nil [5956 5959])
+                        ("Verificatum" anchor nil nil [6084 6087])
+                        ("organise" anchor nil nil [6637 6640]))                      ) nil [5794 8712])
+                    ("Compétences Informatiques" section (:members 
+                      ( ("github" anchor nil nil [9211 9214])
+                        ("LaTeX" anchor nil nil [9584 9587])
+                        ("Emacs" anchor nil nil [9727 9730]))                      ) nil [8712 10423])
+                    ("Compétences linguistiques" section nil nil [10423 10898])
+                    ("Centres d'intérêt" section (:members 
+                      ( ("www.picarresursix.fr" anchor nil nil [11151 11154])
+                        ("github" anchor nil nil [11884 11887])
+                        ("just to keep the elements in the footer -->" anchor nil nil [12696 12699]))                      ) nil [10898 12986]))                  ) nil [2108 12986]))              ) nil [538 12986]))          
+    :file "fr.html"
+    :pointmax 12986
+    :fsize 13247
+    :lastmodtime '(20628 16582)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!projets!pi2-6!www!CV!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

@@ -1,0 +1,3351 @@
+;; Object tinyxml/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "tinyxml/"
+  :tables (list 
+   (semanticdb-table "tinyxml.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("TINYXML_INCLUDED" variable (:constant-flag t) nil [943 959])
+            ("ctype.h" include (:system-flag t) nil [1077 1095])
+            ("stdio.h" include (:system-flag t) nil [1096 1114])
+            ("stdlib.h" include (:system-flag t) nil [1115 1134])
+            ("string.h" include (:system-flag t) nil [1135 1154])
+            ("assert.h" include (:system-flag t) nil [1155 1174])
+            ("DEBUG" variable (:constant-flag t) nil [1248 1253])
+            ("tinystr.h" include nil nil [1385 1406])
+            ("TIXML_STRING" variable (:constant-flag t) nil [1416 1428])
+            ("TIXML_SAFE" variable (:constant-flag t) nil [1722 1732])
+            ("TIXML_SNPRINTF" variable (:constant-flag t) nil [1863 1877])
+            ("TIXML_SSCANF" variable (:constant-flag t) nil [1900 1912])
+            ("TIXML_SNPRINTF" variable (:constant-flag t) nil [2081 2095])
+            ("TIXML_SSCANF" variable (:constant-flag t) nil [2116 2128])
+            ("TIXML_SNPRINTF" variable (:constant-flag t) nil [2264 2278])
+            ("TIXML_SSCANF" variable (:constant-flag t) nil [2298 2310])
+            ("TiXmlDocument" type
+               (:prototype t
+                :type "class")
+                nil [2410 2430])
+            ("TiXmlElement" type
+               (:prototype t
+                :type "class")
+                nil [2431 2450])
+            ("TiXmlComment" type
+               (:prototype t
+                :type "class")
+                nil [2451 2470])
+            ("TiXmlUnknown" type
+               (:prototype t
+                :type "class")
+                nil [2471 2490])
+            ("TiXmlAttribute" type
+               (:prototype t
+                :type "class")
+                nil [2491 2512])
+            ("TiXmlText" type
+               (:prototype t
+                :type "class")
+                nil [2513 2529])
+            ("TiXmlDeclaration" type
+               (:prototype t
+                :type "class")
+                nil [2530 2553])
+            ("TiXmlParsingData" type
+               (:prototype t
+                :type "class")
+                nil [2554 2577])
+            ("TIXML_MAJOR_VERSION" variable
+               (:constant-flag t
+                :type "int")
+                nil [2579 2613])
+            ("TIXML_MINOR_VERSION" variable
+               (:constant-flag t
+                :type "int")
+                nil [2614 2648])
+            ("TIXML_PATCH_VERSION" variable
+               (:constant-flag t
+                :type "int")
+                nil [2649 2683])
+            ("TiXmlCursor" type
+               (:members 
+                  ( ("TiXmlCursor" function
+                       (:constructor-flag t
+                        :type ("TiXmlCursor" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [2782 2809])
+                    ("Clear" function (:type "void") (reparse-symbol classsubparts) [2811 2844])
+                    ("row" variable (:type "int") (reparse-symbol classsubparts) [2847 2855])
+                    ("col" variable (:type "int") (reparse-symbol classsubparts) [2869 2877]))                  
+                :type "struct")
+                nil [2760 2892])
+            ("TiXmlVisitor" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [3779 3786])
+                    ("TiXmlVisitor" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [3788 3814])
+                    ("VisitEnter" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlDocument" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3865 3895]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3840 3914])
+                    ("VisitExit" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlDocument" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3963 3993]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3939 4012])
+                    ("VisitEnter" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlElement" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4063 4095])
+                            ("" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("TiXmlAttribute" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4096 4138]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [4038 4155])
+                    ("VisitExit" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlElement" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4204 4237]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [4180 4255])
+                    ("Visit" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlDeclaration" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4303 4344]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [4283 4361])
+                    ("Visit" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlText" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4406 4433]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [4386 4454])
+                    ("Visit" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlComment" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4502 4535]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [4482 4554])
+                    ("Visit" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlUnknown" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4603 4636]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [4583 4655]))                  
+                :type "class")
+                nil [3758 4658])
+            ("" type
+               (:members 
+                  ( ("TIXML_SUCCESS" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4713 4727])
+                    ("TIXML_NO_ATTRIBUTE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4729 4748])
+                    ("TIXML_WRONG_TYPE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4750 4768]))                  
+                :type "enum")
+                nil [4703 4769])
+            ("TiXmlEncoding" type
+               (:members 
+                  ( ("TIXML_ENCODING_UNKNOWN" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4827 4850])
+                    ("TIXML_ENCODING_UTF8" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4852 4872])
+                    ("TIXML_ENCODING_LEGACY" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4874 4897]))                  
+                :type "enum")
+                nil [4805 4898])
+            ("TIXML_DEFAULT_ENCODING" variable
+               (:constant-flag t
+                :type ("TiXmlEncoding" type (:type "class") nil nil))
+                nil [4900 4968])
+            ("TiXmlBase" type
+               (:members 
+                  ( ("TiXmlNode" friend nil (reparse-symbol classsubparts) [5599 5621])
+                    ("TiXmlElement" friend nil (reparse-symbol classsubparts) [5624 5649])
+                    ("TiXmlDocument" friend nil (reparse-symbol classsubparts) [5652 5678])
+                    ("public" label nil (reparse-symbol classsubparts) [5681 5688])
+                    ("TiXmlBase" function
+                       (:constructor-flag t
+                        :type ("TiXmlBase" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5690 5719])
+                    ("TiXmlBase" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [5721 5746])
+                    ("Print" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("cfile" variable
+                               (:pointer 1
+                                :type ("FILE" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6082 6094])
+                            ("depth" variable (:type "int") (reparse-symbol arg-sub-list) [6095 6106]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [6062 6117])
+                    ("SetCondenseWhiteSpace" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("condense" variable (:type "bool") (reparse-symbol arg-sub-list) [6481 6496]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [6446 6532])
+                    ("IsWhiteSpaceCondensed" function
+                       (:typemodifiers ("static")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [6580 6651])
+                    ("Row" function (:type "int") (reparse-symbol classsubparts) [7525 7571])
+                    ("Column" function (:type "int") (reparse-symbol classsubparts) [7573 7621])
+                    ("SetUserData" function
+                       (:arguments 
+                          ( ("user" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [7658 7670]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [7639 7693])
+                    ("GetUserData" function
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [7738 7783])
+                    ("GetUserData" function
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [7828 7882])
+                    ("utf8ByteTable" variable
+                       (:dereference 1
+                        :typemodifiers ("static")
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [8027 8063])
+                    ("Parse" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("virtual")
+                        :constant-flag t
+                        :arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [8093 8107])
+                            ("data" variable
+                               (:pointer 1
+                                :type ("TiXmlParsingData" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8117 8140])
+                            ("encoding" variable (:type ("TiXmlEncoding" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8150 8204]))                          
+                        :type "char")
+                        (reparse-symbol classsubparts) [8066 8209])
+                    ("EncodeString" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlString" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8377 8401])
+                            ("out" variable
+                               (:pointer 1
+                                :type ("TiXmlString" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8402 8421]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [8351 8422])
+                    ("" type
+                       (:members 
+                          ( ("TIXML_NO_ERROR" variable
+                               (:constant-flag t
+                                :default-value (8452 8453)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8435 8453])
+                            ("TIXML_ERROR" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8457 8469])
+                            ("TIXML_ERROR_OPENING_FILE" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8472 8497])
+                            ("TIXML_ERROR_PARSING_ELEMENT" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8500 8528])
+                            ("TIXML_ERROR_FAILED_TO_READ_ELEMENT_NAME" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8531 8571])
+                            ("TIXML_ERROR_READING_ELEMENT_VALUE" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8574 8608])
+                            ("TIXML_ERROR_READING_ATTRIBUTES" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8611 8642])
+                            ("TIXML_ERROR_PARSING_EMPTY" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8645 8671])
+                            ("TIXML_ERROR_READING_END_TAG" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8674 8702])
+                            ("TIXML_ERROR_PARSING_UNKNOWN" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8705 8733])
+                            ("TIXML_ERROR_PARSING_COMMENT" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8736 8764])
+                            ("TIXML_ERROR_PARSING_DECLARATION" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8767 8799])
+                            ("TIXML_ERROR_DOCUMENT_EMPTY" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8802 8829])
+                            ("TIXML_ERROR_EMBEDDED_NULL" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8832 8858])
+                            ("TIXML_ERROR_PARSING_CDATA" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8861 8887])
+                            ("TIXML_ERROR_DOCUMENT_TOP_ONLY" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8890 8920])
+                            ("TIXML_ERROR_STRING_COUNT" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [8924 8951]))                          
+                        :type "enum")
+                        (reparse-symbol classsubparts) [8425 8952])
+                    ("protected" label nil (reparse-symbol classsubparts) [8954 8964])
+                    ("SkipWhiteSpace" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("static")
+                        :constant-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [9002 9014])
+                            ("encoding" variable (:type ("TiXmlEncoding" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9015 9039]))                          
+                        :type "char")
+                        (reparse-symbol classsubparts) [8967 9040])
+                    ("IsWhiteSpace" function
+                       (:typemodifiers ("inline" "static")
+                        :arguments 
+                          ( ("c" variable (:type "char") (reparse-symbol arg-sub-list) [9076 9084]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [9043 9163])
+                    ("IsWhiteSpace" function
+                       (:typemodifiers ("inline" "static")
+                        :arguments 
+                          ( ("c" variable (:type "int") (reparse-symbol arg-sub-list) [9198 9205]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [9165 9348])
+                    ("ReadName" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("static")
+                        :constant-flag t
+                        :arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [9713 9727])
+                            ("name" variable
+                               (:pointer 1
+                                :type ("TiXmlString" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9728 9747])
+                            ("encoding" variable (:type ("TiXmlEncoding" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9748 9772]))                          
+                        :type "char")
+                        (reparse-symbol classsubparts) [9684 9773])
+                    ("ReadText" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("static")
+                        :constant-flag t
+                        :arguments 
+                          ( ("in" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [9943 9958])
+                            ("text" variable
+                               (:pointer 1
+                                :type ("TiXmlString" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9989 10008])
+                            ("ignoreWhiteSpace" variable (:type "bool") (reparse-symbol arg-sub-list) [10039 10061])
+                            ("endTag" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [10107 10126])
+                            ("ignoreCase" variable (:type "bool") (reparse-symbol arg-sub-list) [10161 10177])
+                            ("encoding" variable (:type ("TiXmlEncoding" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10230 10254]))                          
+                        :type "char")
+                        (reparse-symbol classsubparts) [9914 10255])
+                    ("GetEntity" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("static")
+                        :constant-flag t
+                        :arguments 
+                          ( ("in" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [10376 10391])
+                            ("value" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [10392 10404])
+                            ("length" variable
+                               (:pointer 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [10405 10417])
+                            ("encoding" variable (:type ("TiXmlEncoding" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10418 10442]))                          
+                        :type "char")
+                        (reparse-symbol classsubparts) [10346 10443])
+                    ("GetChar" function
+                       (:pointer 1
+                        :typemodifiers ("inline" "static")
+                        :constant-flag t
+                        :arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [10572 10586])
+                            ("_value" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [10587 10600])
+                            ("length" variable
+                               (:pointer 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [10601 10613])
+                            ("encoding" variable (:type ("TiXmlEncoding" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10614 10638]))                          
+                        :type "char")
+                        (reparse-symbol classsubparts) [10537 11295])
+                    ("StringEqual" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [11558 11572])
+                            ("endTag" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [11581 11600])
+                            ("ignoreCase" variable (:type "bool") (reparse-symbol arg-sub-list) [11609 11625])
+                            ("encoding" variable (:type ("TiXmlEncoding" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11634 11658]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [11533 11659])
+                    ("errorString" variable
+                       (:pointer 1
+                        :dereference 1
+                        :typemodifiers ("static")
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [11662 11721])
+                    ("location" variable (:type ("TiXmlCursor" type (:type "class") nil nil)) (reparse-symbol classsubparts) [11724 11745])
+                    ("userData" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [11796 11813])
+                    ("IsAlpha" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("anyByte" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [11961 11983])
+                            ("encoding" variable (:type ("TiXmlEncoding" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11984 12008]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [11941 12009])
+                    ("IsAlphaNum" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("anyByte" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [12034 12056])
+                            ("encoding" variable (:type ("TiXmlEncoding" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12057 12081]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [12011 12082])
+                    ("ToLower" function
+                       (:typemodifiers ("inline" "static")
+                        :arguments 
+                          ( ("v" variable (:type "int") (reparse-symbol arg-sub-list) [12111 12117])
+                            ("encoding" variable (:type ("TiXmlEncoding" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12118 12142]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [12084 12288])
+                    ("ConvertUTF32ToUTF8" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("input" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [12322 12342])
+                            ("output" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [12343 12356])
+                            ("length" variable
+                               (:pointer 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [12357 12370]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [12290 12371])
+                    ("private" label nil (reparse-symbol classsubparts) [12373 12381])
+                    ("TiXmlBase" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlBase" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12394 12412]))                          
+                        :type ("TiXmlBase" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12383 12413])
+                    ("=" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("base" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlBase" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12454 12477]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [12438 12478])
+                    ("Entity" type
+                       (:members 
+                          ( ("str" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol classsubparts) [12516 12536])
+                            ("strLength" variable (:type "unsigned int") (reparse-symbol classsubparts) [12539 12562])
+                            ("chr" variable (:type "char") (reparse-symbol classsubparts) [12565 12579]))                          
+                        :type "struct")
+                        (reparse-symbol classsubparts) [12497 12583])
+                    ("" type
+                       (:members 
+                          ( ("NUM_ENTITY" variable
+                               (:constant-flag t
+                                :default-value (12608 12609)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [12595 12609])
+                            ("MAX_ENTITY_LENGTH" variable
+                               (:constant-flag t
+                                :default-value (12633 12634)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [12613 12634]))                          
+                        :type "enum")
+                        (reparse-symbol classsubparts) [12585 12639])
+                    ("entity" variable
+                       (:dereference 1
+                        :typemodifiers ("static")
+                        :type ("Entity" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12641 12676])
+                    ("condenseWhiteSpace" variable
+                       (:typemodifiers ("static")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [12678 12709]))                  
+                :type "class")
+                nil [5580 12712])
+            ("TiXmlNode" type
+               (:superclasses 
+                  ( ("TiXmlBase" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("TiXmlDocument" friend nil (reparse-symbol classsubparts) [13031 13057])
+                    ("TiXmlElement" friend nil (reparse-symbol classsubparts) [13060 13085])
+                    ("public" label nil (reparse-symbol classsubparts) [13088 13095])
+                    ("NodeType" type
+                       (:members 
+                          ( ("TINYXML_DOCUMENT" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [14484 14501])
+                            ("TINYXML_ELEMENT" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [14504 14520])
+                            ("TINYXML_COMMENT" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [14523 14539])
+                            ("TINYXML_UNKNOWN" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [14542 14558])
+                            ("TINYXML_TEXT" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [14561 14574])
+                            ("TINYXML_DECLARATION" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [14577 14597])
+                            ("TINYXML_TYPECOUNT" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [14600 14620]))                          
+                        :type "enum")
+                        (reparse-symbol classsubparts) [14465 14621])
+                    ("TiXmlNode" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [14624 14645])
+                    ("Value" function
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [14945 14997])
+                    ("ValueTStr" function
+                       (:constant-flag t
+                        :type ("TiXmlString" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [15232 15287])
+                    ("SetValue" function
+                       (:arguments 
+                          ( ("_value" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [15532 15552]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [15518 15571])
+                    ("Clear" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [15766 15779])
+                    ("Parent" function
+                       (:pointer 1
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [15808 15852])
+                    ("Parent" function
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [15854 15907])
+                    ("FirstChild" function
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [15910 15969])
+                    ("FirstChild" function
+                       (:pointer 1
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [16045 16096])
+                    ("FirstChild" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :constant-flag t
+                        :arguments 
+                          ( ("value" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [16127 16147]))                          
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [16098 16154])
+                    ("FirstChild" function
+                       (:pointer 1
+                        :arguments 
+                          ( ("_value" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [16359 16380]))                          
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [16336 16663])
+                    ("LastChild" function
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [16665 16721])
+                    ("LastChild" function
+                       (:pointer 1
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [16796 16840])
+                    ("LastChild" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :constant-flag t
+                        :arguments 
+                          ( ("value" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [16872 16892]))                          
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [16844 16899])
+                    ("LastChild" function
+                       (:pointer 1
+                        :arguments 
+                          ( ("_value" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [17014 17035]))                          
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [16992 17137])
+                    ("IterateChildren" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :constant-flag t
+                        :arguments 
+                          ( ("previous" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("TiXmlNode" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [18239 18266]))                          
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [18205 18273])
+                    ("IterateChildren" function
+                       (:pointer 1
+                        :arguments 
+                          ( ("previous" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("TiXmlNode" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [18303 18330]))                          
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [18275 18441])
+                    ("IterateChildren" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :constant-flag t
+                        :arguments 
+                          ( ("value" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [18562 18581])
+                            ("previous" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("TiXmlNode" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [18582 18609]))                          
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [18528 18616])
+                    ("IterateChildren" function
+                       (:pointer 1
+                        :arguments 
+                          ( ("_value" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [18646 18666])
+                            ("previous" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("TiXmlNode" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [18667 18694]))                          
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [18618 18813])
+                    ("InsertEndChild" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("addThis" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlNode" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [19364 19390]))                          
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [19337 19391])
+                    ("LinkEndChild" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("addThis" variable
+                               (:pointer 1
+                                :type ("TiXmlNode" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [19778 19798]))                          
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [19753 19799])
+                    ("InsertBeforeChild" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("beforeThis" variable
+                               (:pointer 1
+                                :type ("TiXmlNode" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [19981 20003])
+                            ("addThis" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlNode" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [20004 20030]))                          
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [19951 20031])
+                    ("InsertAfterChild" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("afterThis" variable
+                               (:pointer 1
+                                :type ("TiXmlNode" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [20212 20233])
+                            ("addThis" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlNode" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [20234 20260]))                          
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [20182 20261])
+                    ("ReplaceChild" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("replaceThis" variable
+                               (:pointer 1
+                                :type ("TiXmlNode" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [20395 20418])
+                            ("withThis" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlNode" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [20419 20446]))                          
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [20370 20447])
+                    ("RemoveChild" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("removeThis" variable
+                               (:pointer 1
+                                :type ("TiXmlNode" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [20502 20525]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [20484 20526])
+                    ("PreviousSibling" function
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [20562 20621])
+                    ("PreviousSibling" function
+                       (:pointer 1
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [20623 20673])
+                    ("PreviousSibling" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :constant-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [20743 20757]))                          
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [20709 20764])
+                    ("PreviousSibling" function
+                       (:pointer 1
+                        :arguments 
+                          ( ("_prev" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [20794 20813]))                          
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [20766 20921])
+                    ("NextSibling" function
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [21526 21582])
+                    ("NextSibling" function
+                       (:pointer 1
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [21584 21631])
+                    ("NextSibling" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :constant-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [21720 21734]))                          
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [21690 21741])
+                    ("NextSibling" function
+                       (:pointer 1
+                        :arguments 
+                          ( ("_next" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [21767 21786]))                          
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [21743 21890])
+                    ("NextSiblingElement" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :constant-flag t
+                        :type ("TiXmlElement" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [22061 22108])
+                    ("NextSiblingElement" function
+                       (:pointer 1
+                        :type ("TiXmlElement" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [22110 22251])
+                    ("NextSiblingElement" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :constant-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [22462 22476]))                          
+                        :type ("TiXmlElement" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [22422 22483])
+                    ("NextSiblingElement" function
+                       (:pointer 1
+                        :arguments 
+                          ( ("_next" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [22519 22538]))                          
+                        :type ("TiXmlElement" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [22485 22652])
+                    ("FirstChildElement" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :constant-flag t
+                        :type ("TiXmlElement" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [23031 23077])
+                    ("FirstChildElement" function
+                       (:pointer 1
+                        :type ("TiXmlElement" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [23079 23218])
+                    ("FirstChildElement" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :constant-flag t
+                        :arguments 
+                          ( ("_value" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [23311 23332]))                          
+                        :type ("TiXmlElement" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [23272 23339])
+                    ("FirstChildElement" function
+                       (:pointer 1
+                        :arguments 
+                          ( ("_value" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [23374 23395]))                          
+                        :type ("TiXmlElement" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [23341 23509])
+                    ("Type" function (:type "int") (reparse-symbol classsubparts) [24047 24080])
+                    ("GetDocument" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :constant-flag t
+                        :type ("TiXmlDocument" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [24182 24223])
+                    ("GetDocument" function
+                       (:pointer 1
+                        :type ("TiXmlDocument" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [24225 24354])
+                    ("NoChildren" function (:type "bool") (reparse-symbol classsubparts) [24405 24457])
+                    ("ToDocument" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :constant-flag t
+                        :type ("TiXmlDocument" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [24460 24527])
+                    ("ToElement" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :constant-flag t
+                        :type ("TiXmlElement" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [24610 24677])
+                    ("ToComment" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :constant-flag t
+                        :type ("TiXmlComment" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [24760 24827])
+                    ("ToUnknown" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :constant-flag t
+                        :type ("TiXmlUnknown" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [24910 24977])
+                    ("ToText" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :constant-flag t
+                        :type ("TiXmlText" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [25060 25127])
+                    ("ToDeclaration" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :constant-flag t
+                        :type ("TiXmlDeclaration" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [25210 25277])
+                    ("ToDocument" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :type ("TiXmlDocument" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [25361 25422])
+                    ("ToElement" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :type ("TiXmlElement" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [25505 25566])
+                    ("ToComment" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :type ("TiXmlComment" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [25649 25710])
+                    ("ToUnknown" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :type ("TiXmlUnknown" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [25793 25854])
+                    ("ToText" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :type ("TiXmlText" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [25937 25997])
+                    ("ToDeclaration" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :type ("TiXmlDeclaration" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [26080 26141])
+                    ("Clone" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("virtual")
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [26333 26370])
+                    ("Accept" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("visitor" variable
+                               (:pointer 1
+                                :type ("TiXmlVisitor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [27130 27153]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [27109 27164])
+                    ("protected" label nil (reparse-symbol classsubparts) [27166 27176])
+                    ("TiXmlNode" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("_type" variable (:type ("NodeType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27189 27205]))                          
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [27178 27206])
+                    ("CopyTo" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("target" variable
+                               (:pointer 1
+                                :type ("TiXmlNode" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [27343 27362]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [27330 27369])
+                    ("Identify" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("start" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [27619 27637])
+                            ("encoding" variable (:type ("TiXmlEncoding" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27638 27662]))                          
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [27598 27663])
+                    ("parent" variable
+                       (:pointer 1
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [27666 27685])
+                    ("type" variable (:type ("NodeType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [27687 27702])
+                    ("firstChild" variable
+                       (:pointer 1
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [27705 27728])
+                    ("lastChild" variable
+                       (:pointer 1
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [27730 27752])
+                    ("value" variable (:type ("TiXmlString" type (:type "class") nil nil)) (reparse-symbol classsubparts) [27755 27774])
+                    ("prev" variable
+                       (:pointer 1
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [27777 27794])
+                    ("next" variable
+                       (:pointer 1
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [27796 27813])
+                    ("private" label nil (reparse-symbol classsubparts) [27815 27823])
+                    ("TiXmlNode" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlNode" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [27836 27854]))                          
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [27825 27855])
+                    ("=" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("base" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlNode" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [27896 27919]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [27880 27920]))                  
+                :type "class")
+                nil [12993 27939])
+            ("TiXmlAttribute" type
+               (:superclasses 
+                  ( ("TiXmlBase" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("TiXmlAttributeSet" friend nil (reparse-symbol classsubparts) [28271 28301])
+                    ("public" label nil (reparse-symbol classsubparts) [28304 28311])
+                    ("TiXmlAttribute" function
+                       (:constructor-flag t
+                        :type ("TiXmlAttribute" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [28348 28419])
+                    ("TiXmlAttribute" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("_name" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [28696 28715])
+                            ("_value" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [28716 28737]))                          
+                        :type ("TiXmlAttribute" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [28680 28812])
+                    ("Name" function
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [28815 28867])
+                    ("Value" function
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [28910 28963])
+                    ("IntValue" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [29136 29160])
+                    ("DoubleValue" function
+                       (:prototype-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) [29236 29265])
+                    ("NameTStr" function
+                       (:constant-flag t
+                        :type ("TiXmlString" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [29381 29434])
+                    ("QueryIntValue" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("_value" variable
+                               (:pointer 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [29860 29873]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [29841 29880])
+                    ("QueryDoubleValue" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("_value" variable
+                               (:pointer 1
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [29974 29990]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [29952 29997])
+                    ("SetName" function
+                       (:arguments 
+                          ( ("_name" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [30014 30033]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [30000 30051])
+                    ("SetValue" function
+                       (:arguments 
+                          ( ("_value" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [30108 30128]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [30093 30148])
+                    ("SetIntValue" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("_value" variable (:type "int") (reparse-symbol arg-sub-list) [30192 30204]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [30174 30205])
+                    ("SetDoubleValue" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("_value" variable (:type "double") (reparse-symbol arg-sub-list) [30273 30288]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [30252 30289])
+                    ("Next" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :constant-flag t
+                        :type ("TiXmlAttribute" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [30616 30651])
+                    ("Next" function
+                       (:pointer 1
+                        :type ("TiXmlAttribute" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [30653 30776])
+                    ("Previous" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :constant-flag t
+                        :type ("TiXmlAttribute" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [30858 30897])
+                    ("Previous" function
+                       (:pointer 1
+                        :type ("TiXmlAttribute" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [30899 31030])
+                    ("==" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("rhs" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlAttribute" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [31050 31077]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [31033 31112])
+                    ("<" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("rhs" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlAttribute" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [31130 31157]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [31114 31192])
+                    (">" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("rhs" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlAttribute" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [31210 31237]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [31194 31272])
+                    ("Parse" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("virtual")
+                        :constant-flag t
+                        :arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [31417 31431])
+                            ("data" variable
+                               (:pointer 1
+                                :type ("TiXmlParsingData" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [31432 31455])
+                            ("encoding" variable (:type ("TiXmlEncoding" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [31456 31480]))                          
+                        :type "char")
+                        (reparse-symbol classsubparts) [31390 31481])
+                    ("Print" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("cfile" variable
+                               (:pointer 1
+                                :type ("FILE" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [31548 31560])
+                            ("depth" variable (:type "int") (reparse-symbol arg-sub-list) [31561 31572]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [31528 31611])
+                    ("Print" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("cfile" variable
+                               (:pointer 1
+                                :type ("FILE" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [31625 31637])
+                            ("depth" variable (:type "int") (reparse-symbol arg-sub-list) [31638 31648])
+                            ("str" variable
+                               (:pointer 1
+                                :type ("TiXmlString" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [31649 31668]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [31613 31675])
+                    ("SetDocument" function
+                       (:arguments 
+                          ( ("doc" variable
+                               (:pointer 1
+                                :type ("TiXmlDocument" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [31780 31800]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [31762 31820])
+                    ("private" label nil (reparse-symbol classsubparts) [31822 31830])
+                    ("TiXmlAttribute" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlAttribute" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [31848 31871]))                          
+                        :type ("TiXmlAttribute" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [31832 31872])
+                    ("=" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("base" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlAttribute" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [31913 31941]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [31897 31942])
+                    ("document" variable
+                       (:pointer 1
+                        :type ("TiXmlDocument" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [31961 31985])
+                    ("name" variable (:type ("TiXmlString" type (:type "class") nil nil)) (reparse-symbol classsubparts) [32041 32059])
+                    ("value" variable (:type ("TiXmlString" type (:type "class") nil nil)) (reparse-symbol classsubparts) [32061 32080])
+                    ("prev" variable
+                       (:pointer 1
+                        :type ("TiXmlAttribute" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [32082 32103])
+                    ("next" variable
+                       (:pointer 1
+                        :type ("TiXmlAttribute" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [32105 32126]))                  
+                :type "class")
+                nil [28228 32129])
+            ("TiXmlAttributeSet" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [32689 32696])
+                    ("TiXmlAttributeSet" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("TiXmlAttributeSet" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [32698 32718])
+                    ("TiXmlAttributeSet" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [32720 32741])
+                    ("Add" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("attribute" variable
+                               (:pointer 1
+                                :type ("TiXmlAttribute" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [32754 32781]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [32744 32782])
+                    ("Remove" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("attribute" variable
+                               (:pointer 1
+                                :type ("TiXmlAttribute" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [32797 32824]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [32784 32825])
+                    ("First" function
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("TiXmlAttribute" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [32828 32926])
+                    ("First" function
+                       (:pointer 1
+                        :type ("TiXmlAttribute" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [32928 33018])
+                    ("Last" function
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("TiXmlAttribute" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [33020 33118])
+                    ("Last" function
+                       (:pointer 1
+                        :type ("TiXmlAttribute" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [33120 33209])
+                    ("Find" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("_name" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [33234 33253]))                          
+                        :type ("TiXmlAttribute" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [33212 33260])
+                    ("FindOrCreate" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("_name" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [33292 33311]))                          
+                        :type ("TiXmlAttribute" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [33262 33312])
+                    ("private" label nil (reparse-symbol classsubparts) [33462 33470])
+                    ("TiXmlAttributeSet" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlAttributeSet" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [33656 33682]))                          
+                        :type ("TiXmlAttributeSet" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [33637 33683])
+                    ("=" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlAttributeSet" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [33716 33742]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [33700 33743])
+                    ("sentinel" variable (:type ("TiXmlAttribute" type (:type "class") nil nil)) (reparse-symbol classsubparts) [33781 33805]))                  
+                :type "class")
+                nil [32663 33808])
+            ("TiXmlElement" type
+               (:superclasses 
+                  ( ("TiXmlNode" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [34047 34054])
+                    ("TiXmlElement" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("in_value" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [34097 34119]))                          
+                        :type ("TiXmlElement" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [34083 34120])
+                    ("TiXmlElement" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlElement" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [34242 34263]))                          
+                        :type ("TiXmlElement" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [34228 34264])
+                    ("=" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("base" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlElement" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [34292 34318]))                          
+                        :type ("TiXmlElement" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [34267 34319])
+                    ("TiXmlElement" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [34322 34346])
+                    ("Attribute" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :constant-flag t
+                        :arguments 
+                          ( ("name" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [34494 34512]))                          
+                        :type "char")
+                        (reparse-symbol classsubparts) [34471 34519])
+                    ("Attribute" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :constant-flag t
+                        :arguments 
+                          ( ("name" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [34802 34819])
+                            ("i" variable
+                               (:pointer 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [34820 34828]))                          
+                        :type "char")
+                        (reparse-symbol classsubparts) [34779 34835])
+                    ("Attribute" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :constant-flag t
+                        :arguments 
+                          ( ("name" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [35116 35133])
+                            ("d" variable
+                               (:pointer 1
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [35134 35145]))                          
+                        :type "char")
+                        (reparse-symbol classsubparts) [35093 35152])
+                    ("QueryIntAttribute" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("name" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [35533 35550])
+                            ("_value" variable
+                               (:pointer 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [35551 35564]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [35510 35571])
+                    ("QueryUnsignedAttribute" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("name" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [35679 35696])
+                            ("_value" variable
+                               (:pointer 1
+                                :type "unsigned int")
+                                (reparse-symbol arg-sub-list) [35697 35715]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [35651 35722])
+                    ("QueryBoolAttribute" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("name" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [35934 35951])
+                            ("_value" variable
+                               (:pointer 1
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [35952 35966]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [35910 35973])
+                    ("QueryDoubleAttribute" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("name" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [36077 36094])
+                            ("_value" variable
+                               (:pointer 1
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [36095 36111]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [36051 36118])
+                    ("QueryFloatAttribute" function
+                       (:arguments 
+                          ( ("name" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [36220 36237])
+                            ("_value" variable
+                               (:pointer 1
+                                :type "float")
+                                (reparse-symbol arg-sub-list) [36238 36253]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [36195 36404])
+                    ("SetAttribute" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("name" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [37848 37865])
+                            ("_value" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [37866 37887]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [37829 37888])
+                    ("SetAttribute" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("name" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [38715 38733])
+                            ("value" variable (:type "int") (reparse-symbol arg-sub-list) [38734 38745]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [38696 38746])
+                    ("SetDoubleAttribute" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("name" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [38904 38922])
+                            ("value" variable (:type "double") (reparse-symbol arg-sub-list) [38923 38937]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [38879 38938])
+                    ("RemoveAttribute" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("name" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [39014 39033]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [38992 39034])
+                    ("FirstAttribute" function
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("TiXmlAttribute" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [39183 39260])
+                    ("FirstAttribute" function
+                       (:pointer 1
+                        :type ("TiXmlAttribute" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [39312 39381])
+                    ("LastAttribute" function
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("TiXmlAttribute" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [39383 39459])
+                    ("LastAttribute" function
+                       (:pointer 1
+                        :type ("TiXmlAttribute" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [39510 39577])
+                    ("GetText" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [40705 40733])
+                    ("Clone" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("virtual")
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [40812 40845])
+                    ("Print" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("cfile" variable
+                               (:pointer 1
+                                :type ("FILE" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [40907 40919])
+                            ("depth" variable (:type "int") (reparse-symbol arg-sub-list) [40920 40931]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [40887 40938])
+                    ("Parse" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("virtual")
+                        :constant-flag t
+                        :arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [41056 41070])
+                            ("data" variable
+                               (:pointer 1
+                                :type ("TiXmlParsingData" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [41071 41094])
+                            ("encoding" variable (:type ("TiXmlEncoding" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [41095 41119]))                          
+                        :type "char")
+                        (reparse-symbol classsubparts) [41029 41120])
+                    ("ToElement" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :constant-flag t
+                        :type ("TiXmlElement" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [41123 41193])
+                    ("ToElement" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :type ("TiXmlElement" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [41273 41343])
+                    ("Accept" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("visitor" variable
+                               (:pointer 1
+                                :type ("TiXmlVisitor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [41517 41540]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [41496 41547])
+                    ("protected" label nil (reparse-symbol classsubparts) [41549 41559])
+                    ("CopyTo" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("target" variable
+                               (:pointer 1
+                                :type ("TiXmlElement" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [41575 41597]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [41562 41604])
+                    ("ClearThis" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [41606 41623])
+                    ("ReadValue" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :constant-flag t
+                        :arguments 
+                          ( ("in" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [41971 41986])
+                            ("prevData" variable
+                               (:pointer 1
+                                :type ("TiXmlParsingData" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [41987 42014])
+                            ("encoding" variable (:type ("TiXmlEncoding" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [42015 42039]))                          
+                        :type "char")
+                        (reparse-symbol classsubparts) [41948 42040])
+                    ("private" label nil (reparse-symbol classsubparts) [42042 42050])
+                    ("attributeSet" variable (:type ("TiXmlAttributeSet" type (:type "class") nil nil)) (reparse-symbol classsubparts) [42052 42083]))                  
+                :type "class")
+                nil [34007 42086])
+            ("TiXmlComment" type
+               (:superclasses 
+                  ( ("TiXmlNode" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [42152 42159])
+                    ("TiXmlComment" function
+                       (:constructor-flag t
+                        :type ("TiXmlComment" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [42195 42254])
+                    ("TiXmlComment" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("_value" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [42306 42326]))                          
+                        :type ("TiXmlComment" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [42292 42395])
+                    ("TiXmlComment" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlComment" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [42411 42432]))                          
+                        :type ("TiXmlComment" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [42397 42433])
+                    ("=" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("base" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlComment" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [42460 42486]))                          
+                        :type ("TiXmlComment" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [42435 42487])
+                    ("TiXmlComment" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [42490 42516])
+                    ("Clone" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("virtual")
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [42556 42589])
+                    ("Print" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("cfile" variable
+                               (:pointer 1
+                                :type ("FILE" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [42652 42664])
+                            ("depth" variable (:type "int") (reparse-symbol arg-sub-list) [42665 42676]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [42632 42683])
+                    ("Parse" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("virtual")
+                        :constant-flag t
+                        :arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [42802 42816])
+                            ("data" variable
+                               (:pointer 1
+                                :type ("TiXmlParsingData" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [42817 42840])
+                            ("encoding" variable (:type ("TiXmlEncoding" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [42841 42865]))                          
+                        :type "char")
+                        (reparse-symbol classsubparts) [42775 42866])
+                    ("ToComment" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :constant-flag t
+                        :type ("TiXmlComment" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [42869 42932])
+                    ("ToComment" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :type ("TiXmlComment" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [43012 43067])
+                    ("Accept" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("visitor" variable
+                               (:pointer 1
+                                :type ("TiXmlVisitor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [43241 43264]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [43220 43271])
+                    ("protected" label nil (reparse-symbol classsubparts) [43273 43283])
+                    ("CopyTo" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("target" variable
+                               (:pointer 1
+                                :type ("TiXmlComment" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [43298 43320]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [43285 43327])
+                    ("private" label nil (reparse-symbol classsubparts) [43503 43511]))                  
+                :type "class")
+                nil [42112 43515])
+            ("TiXmlText" type
+               (:superclasses 
+                  ( ("TiXmlNode" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("TiXmlElement" friend nil (reparse-symbol classsubparts) [43833 43858])
+                    ("public" label nil (reparse-symbol classsubparts) [43860 43867])
+                    ("TiXmlText" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("initValue" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [44060 44084]))                          
+                        :type ("TiXmlText" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [44049 44170])
+                    ("TiXmlText" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [44172 44195])
+                    ("TiXmlText" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("copy" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlText" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [44387 44410]))                          
+                        :type ("TiXmlText" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [44376 44474])
+                    ("=" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("base" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlText" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [44498 44521]))                          
+                        :type ("TiXmlText" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [44476 44568])
+                    ("Print" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("cfile" variable
+                               (:pointer 1
+                                :type ("FILE" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [44636 44648])
+                            ("depth" variable (:type "int") (reparse-symbol arg-sub-list) [44649 44660]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [44616 44667])
+                    ("CDATA" function (:type "bool") (reparse-symbol classsubparts) [44735 44774])
+                    ("SetCDATA" function
+                       (:arguments 
+                          ( ("_cdata" variable (:type "bool") (reparse-symbol arg-sub-list) [44844 44857]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [44829 44877])
+                    ("Parse" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("virtual")
+                        :constant-flag t
+                        :arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [44907 44921])
+                            ("data" variable
+                               (:pointer 1
+                                :type ("TiXmlParsingData" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [44922 44945])
+                            ("encoding" variable (:type ("TiXmlEncoding" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [44946 44970]))                          
+                        :type "char")
+                        (reparse-symbol classsubparts) [44880 44971])
+                    ("ToText" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :constant-flag t
+                        :type ("TiXmlText" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [44974 45030])
+                    ("ToText" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :type ("TiXmlText" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [45110 45166])
+                    ("Accept" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("content" variable
+                               (:pointer 1
+                                :type ("TiXmlVisitor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [45340 45363]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [45319 45370])
+                    ("protected" label nil (reparse-symbol classsubparts) [45372 45383])
+                    ("Clone" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("virtual")
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [45444 45477])
+                    ("CopyTo" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("target" variable
+                               (:pointer 1
+                                :type ("TiXmlText" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [45492 45511]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [45479 45518])
+                    ("Blank" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [45521 45540])
+                    ("private" label nil (reparse-symbol classsubparts) [45705 45713])
+                    ("cdata" variable (:type "bool") (reparse-symbol classsubparts) [45715 45726]))                  
+                :type "class")
+                nil [43795 45804])
+            ("TiXmlDeclaration" type
+               (:superclasses 
+                  ( ("TiXmlNode" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [46332 46339])
+                    ("TiXmlDeclaration" function
+                       (:constructor-flag t
+                        :type ("TiXmlDeclaration" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [46378 46447])
+                    ("TiXmlDeclaration" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("_version" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [46655 46676])
+                            ("_encoding" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [46683 46705])
+                            ("_standalone" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [46712 46737]))                          
+                        :type ("TiXmlDeclaration" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [46637 46738])
+                    ("TiXmlDeclaration" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("copy" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlDeclaration" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [46759 46789]))                          
+                        :type ("TiXmlDeclaration" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [46741 46790])
+                    ("=" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("copy" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlDeclaration" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [46821 46851]))                          
+                        :type ("TiXmlDeclaration" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [46792 46852])
+                    ("TiXmlDeclaration" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [46855 46885])
+                    ("Version" function
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [46949 47007])
+                    ("Encoding" function
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [47071 47130])
+                    ("Standalone" function
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [47168 47231])
+                    ("Clone" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("virtual")
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [47290 47323])
+                    ("Print" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("cfile" variable
+                               (:pointer 1
+                                :type ("FILE" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [47390 47402])
+                            ("depth" variable (:type "int") (reparse-symbol arg-sub-list) [47403 47413])
+                            ("str" variable
+                               (:pointer 1
+                                :type ("TiXmlString" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [47414 47433]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [47370 47440])
+                    ("Print" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("cfile" variable
+                               (:pointer 1
+                                :type ("FILE" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [47462 47474])
+                            ("depth" variable (:type "int") (reparse-symbol arg-sub-list) [47475 47486]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [47442 47525])
+                    ("Parse" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("virtual")
+                        :constant-flag t
+                        :arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [47555 47569])
+                            ("data" variable
+                               (:pointer 1
+                                :type ("TiXmlParsingData" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [47570 47593])
+                            ("encoding" variable (:type ("TiXmlEncoding" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [47594 47618]))                          
+                        :type "char")
+                        (reparse-symbol classsubparts) [47528 47619])
+                    ("ToDeclaration" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :constant-flag t
+                        :type ("TiXmlDeclaration" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [47622 47692])
+                    ("ToDeclaration" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :type ("TiXmlDeclaration" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [47772 47842])
+                    ("Accept" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("visitor" variable
+                               (:pointer 1
+                                :type ("TiXmlVisitor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [48016 48039]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [47995 48046])
+                    ("protected" label nil (reparse-symbol classsubparts) [48048 48058])
+                    ("CopyTo" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("target" variable
+                               (:pointer 1
+                                :type ("TiXmlDeclaration" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [48073 48099]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [48060 48106])
+                    ("private" label nil (reparse-symbol classsubparts) [48225 48233])
+                    ("version" variable (:type ("TiXmlString" type (:type "class") nil nil)) (reparse-symbol classsubparts) [48236 48257])
+                    ("encoding" variable (:type ("TiXmlString" type (:type "class") nil nil)) (reparse-symbol classsubparts) [48259 48281])
+                    ("standalone" variable (:type ("TiXmlString" type (:type "class") nil nil)) (reparse-symbol classsubparts) [48283 48307]))                  
+                :type "class")
+                nil [46288 48310])
+            ("TiXmlUnknown" type
+               (:superclasses 
+                  ( ("TiXmlNode" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [48588 48595])
+                    ("TiXmlUnknown" function
+                       (:constructor-flag t
+                        :type ("TiXmlUnknown" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [48597 48656])
+                    ("TiXmlUnknown" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [48658 48684])
+                    ("TiXmlUnknown" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("copy" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlUnknown" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [48701 48727]))                          
+                        :type ("TiXmlUnknown" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [48687 48795])
+                    ("=" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("copy" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlUnknown" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [48822 48848]))                          
+                        :type ("TiXmlUnknown" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [48797 48896])
+                    ("Clone" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("virtual")
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [48951 48984])
+                    ("Print" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("cfile" variable
+                               (:pointer 1
+                                :type ("FILE" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [49047 49059])
+                            ("depth" variable (:type "int") (reparse-symbol arg-sub-list) [49060 49071]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [49027 49078])
+                    ("Parse" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("virtual")
+                        :constant-flag t
+                        :arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [49108 49122])
+                            ("data" variable
+                               (:pointer 1
+                                :type ("TiXmlParsingData" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [49123 49146])
+                            ("encoding" variable (:type ("TiXmlEncoding" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [49147 49171]))                          
+                        :type "char")
+                        (reparse-symbol classsubparts) [49081 49172])
+                    ("ToUnknown" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :constant-flag t
+                        :type ("TiXmlUnknown" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [49175 49245])
+                    ("ToUnknown" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :type ("TiXmlUnknown" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [49325 49388])
+                    ("Accept" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("content" variable
+                               (:pointer 1
+                                :type ("TiXmlVisitor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [49562 49585]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [49541 49592])
+                    ("protected" label nil (reparse-symbol classsubparts) [49594 49604])
+                    ("CopyTo" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("target" variable
+                               (:pointer 1
+                                :type ("TiXmlUnknown" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [49619 49641]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [49606 49648])
+                    ("private" label nil (reparse-symbol classsubparts) [49746 49754]))                  
+                :type "class")
+                nil [48548 49758])
+            ("TiXmlDocument" type
+               (:superclasses 
+                  ( ("TiXmlNode" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [49989 49996])
+                    ("TiXmlDocument" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("TiXmlDocument" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [50047 50063])
+                    ("TiXmlDocument" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("documentName" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [50174 50201]))                          
+                        :type ("TiXmlDocument" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [50159 50202])
+                    ("TiXmlDocument" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("copy" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlDocument" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [50320 50347]))                          
+                        :type ("TiXmlDocument" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [50305 50348])
+                    ("=" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("copy" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlDocument" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [50376 50403]))                          
+                        :type ("TiXmlDocument" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [50350 50404])
+                    ("TiXmlDocument" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [50407 50434])
+                    ("LoadFile" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("encoding" variable (:type ("TiXmlEncoding" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [50594 50618])
+                            ("" variable (:type ("TIXML_DEFAULT_ENCODING" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [50619 50643]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [50579 50644])
+                    ("SaveFile" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [50725 50747])
+                    ("LoadFile" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("filename" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [50835 50857])
+                            ("encoding" variable (:type ("TiXmlEncoding" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [50858 50882])
+                            ("" variable (:type ("TIXML_DEFAULT_ENCODING" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [50883 50907]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [50820 50908])
+                    ("SaveFile" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("filename" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [50996 51019]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [50981 51026])
+                    ("LoadFile" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type ("FILE" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [51338 51344])
+                            ("encoding" variable (:type ("TiXmlEncoding" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [51345 51369])
+                            ("" variable (:type ("TIXML_DEFAULT_ENCODING" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [51370 51394]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [51323 51395])
+                    ("SaveFile" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type ("FILE" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [51480 51487]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [51465 51494])
+                    ("Parse" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("virtual")
+                        :constant-flag t
+                        :arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [52119 52133])
+                            ("data" variable
+                               (:pointer 1
+                                :type ("TiXmlParsingData" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [52134 52158])
+                            ("encoding" variable (:type ("TiXmlEncoding" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [52162 52186])
+                            ("" variable (:type ("TIXML_DEFAULT_ENCODING" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [52187 52211]))                          
+                        :type "char")
+                        (reparse-symbol classsubparts) [52092 52212])
+                    ("RootElement" function
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("TiXmlElement" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [52409 52481])
+                    ("RootElement" function
+                       (:pointer 1
+                        :type ("TiXmlElement" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [52483 52546])
+                    ("Error" function (:type "bool") (reparse-symbol classsubparts) [52861 52902])
+                    ("ErrorDesc" function
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [52979 53040])
+                    ("ErrorId" function (:type "int") (reparse-symbol classsubparts) [53177 53219])
+                    ("ErrorRow" function (:type "int") (reparse-symbol classsubparts) [53557 53609])
+                    ("ErrorCol" function (:type "int") (reparse-symbol classsubparts) [53611 53663])
+                    ("SetTabSize" function
+                       (:arguments 
+                          ( ("_tabsize" variable (:type "int") (reparse-symbol arg-sub-list) [54608 54622]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [54591 54647])
+                    ("TabSize" function (:type "int") (reparse-symbol classsubparts) [54650 54689])
+                    ("ClearError" function (:type "void") (reparse-symbol classsubparts) [54837 55040])
+                    ("Print" function (:type "void") (reparse-symbol classsubparts) [55129 55176])
+                    ("Print" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("cfile" variable
+                               (:pointer 1
+                                :type ("FILE" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [55520 55532])
+                            ("depth" variable (:type "int") (reparse-symbol arg-sub-list) [55533 55544]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [55500 55555])
+                    ("SetError" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("err" variable (:type "int") (reparse-symbol arg-sub-list) [55591 55599])
+                            ("errorLocation" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [55600 55626])
+                            ("prevData" variable
+                               (:pointer 1
+                                :type ("TiXmlParsingData" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [55627 55654])
+                            ("encoding" variable (:type ("TiXmlEncoding" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [55655 55679]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [55576 55680])
+                    ("ToDocument" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :constant-flag t
+                        :type ("TiXmlDocument" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [55683 55753])
+                    ("ToDocument" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :type ("TiXmlDocument" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [55833 55903])
+                    ("Accept" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("content" variable
+                               (:pointer 1
+                                :type ("TiXmlVisitor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [56077 56100]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [56056 56107])
+                    ("protected" label nil (reparse-symbol classsubparts) [56109 56120])
+                    ("Clone" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("virtual")
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [56141 56174])
+                    ("private" label nil (reparse-symbol classsubparts) [56271 56279])
+                    ("CopyTo" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("target" variable
+                               (:pointer 1
+                                :type ("TiXmlDocument" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [56294 56317]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [56281 56324])
+                    ("error" variable (:type "bool") (reparse-symbol classsubparts) [56327 56338])
+                    ("errorId" variable (:type "int") (reparse-symbol classsubparts) [56340 56353])
+                    ("errorDesc" variable (:type ("TiXmlString" type (:type "class") nil nil)) (reparse-symbol classsubparts) [56355 56378])
+                    ("tabsize" variable (:type "int") (reparse-symbol classsubparts) [56380 56392])
+                    ("errorLocation" variable (:type ("TiXmlCursor" type (:type "class") nil nil)) (reparse-symbol classsubparts) [56394 56420])
+                    ("useMicrosoftBOM" variable (:type "bool") (reparse-symbol classsubparts) [56422 56443]))                  
+                :type "class")
+                nil [49948 56515])
+            ("TiXmlHandle" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [58757 58764])
+                    ("TiXmlHandle" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("_node" variable
+                               (:pointer 1
+                                :type ("TiXmlNode" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [58870 58888]))                          
+                        :type ("TiXmlHandle" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [58857 58916])
+                    ("TiXmlHandle" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("ref" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlHandle" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [58953 58977]))                          
+                        :type ("TiXmlHandle" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [58940 59006])
+                    ("=" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("ref" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlHandle" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [59031 59055]))                          
+                        :type ("TiXmlHandle" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [59008 59116])
+                    ("FirstChild" function
+                       (:prototype-flag t
+                        :type ("TiXmlHandle" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [59165 59196])
+                    ("FirstChild" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("value" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [59288 59308]))                          
+                        :type ("TiXmlHandle" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [59264 59315])
+                    ("FirstChildElement" function
+                       (:prototype-flag t
+                        :type ("TiXmlHandle" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [59366 59404])
+                    ("FirstChildElement" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("value" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [59506 59526]))                          
+                        :type ("TiXmlHandle" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [59475 59533])
+                    ("Child" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("value" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [59666 59684])
+                            ("index" variable (:type "int") (reparse-symbol arg-sub-list) [59685 59696]))                          
+                        :type ("TiXmlHandle" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [59647 59703])
+                    ("Child" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("index" variable (:type "int") (reparse-symbol arg-sub-list) [59815 59826]))                          
+                        :type ("TiXmlHandle" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [59796 59833])
+                    ("ChildElement" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("value" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [60061 60079])
+                            ("index" variable (:type "int") (reparse-symbol arg-sub-list) [60080 60091]))                          
+                        :type ("TiXmlHandle" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [60035 60098])
+                    ("ChildElement" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("index" variable (:type "int") (reparse-symbol arg-sub-list) [60306 60317]))                          
+                        :type ("TiXmlHandle" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [60280 60324])
+                    ("ToNode" function
+                       (:pointer 1
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [60874 60918])
+                    ("ToElement" function
+                       (:pointer 1
+                        :type ("TiXmlElement" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [60989 61091])
+                    ("ToText" function
+                       (:pointer 1
+                        :type ("TiXmlText" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [61158 61249])
+                    ("ToUnknown" function
+                       (:pointer 1
+                        :type ("TiXmlUnknown" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [61319 61421])
+                    ("Node" function
+                       (:pointer 1
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [61516 61562])
+                    ("Element" function
+                       (:pointer 1
+                        :type ("TiXmlElement" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [61663 61716])
+                    ("Text" function
+                       (:pointer 1
+                        :type ("TiXmlText" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [61810 61856])
+                    ("Unknown" function
+                       (:pointer 1
+                        :type ("TiXmlUnknown" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [61956 62009])
+                    ("private" label nil (reparse-symbol classsubparts) [62011 62019])
+                    ("node" variable
+                       (:pointer 1
+                        :type ("TiXmlNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [62021 62037]))                  
+                :type "class")
+                nil [58737 62040])
+            ("TiXmlPrinter" type
+               (:superclasses 
+                  ( ("TiXmlVisitor" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [62733 62740])
+                    ("TiXmlPrinter" function
+                       (:constructor-flag t
+                        :type ("TiXmlPrinter" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [62742 62851])
+                    ("VisitEnter" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("doc" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlDocument" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [62879 62905]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [62854 62906])
+                    ("VisitExit" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("doc" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlDocument" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [62932 62958]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [62908 62959])
+                    ("VisitEnter" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("element" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlElement" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [62987 63015])
+                            ("firstAttribute" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("TiXmlAttribute" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [63016 63054]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [62962 63055])
+                    ("VisitExit" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("element" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlElement" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [63081 63110]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [63057 63111])
+                    ("Visit" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("declaration" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlDeclaration" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [63134 63171]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [63114 63172])
+                    ("Visit" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("text" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlText" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [63194 63217]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [63174 63218])
+                    ("Visit" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("comment" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlComment" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [63240 63269]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [63220 63270])
+                    ("Visit" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("unknown" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlUnknown" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [63292 63321]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [63272 63322])
+                    ("SetIndent" function
+                       (:arguments 
+                          ( ("_indent" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [63482 63503]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [63466 63543])
+                    ("Indent" function
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [63578 63631])
+                    ("SetLineBreak" function
+                       (:arguments 
+                          ( ("_lineBreak" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [63834 63858]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [63815 63905])
+                    ("LineBreak" function
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [63952 64011])
+                    ("SetStreamPrinting" function (:type "void") (reparse-symbol classsubparts) [64170 64260])
+                    ("CStr" function
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [64287 64339])
+                    ("Size" function (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [64386 64433])
+                    ("private" label nil (reparse-symbol classsubparts) [64540 64548])
+                    ("DoIndent" function (:type "void") (reparse-symbol classsubparts) [64550 64622])
+                    ("DoLineBreak" function (:type "void") (reparse-symbol classsubparts) [64624 64670])
+                    ("depth" variable (:type "int") (reparse-symbol classsubparts) [64673 64683])
+                    ("simpleTextPrint" variable (:type "bool") (reparse-symbol classsubparts) [64685 64706])
+                    ("buffer" variable (:type ("TiXmlString" type (:type "class") nil nil)) (reparse-symbol classsubparts) [64708 64728])
+                    ("indent" variable (:type ("TiXmlString" type (:type "class") nil nil)) (reparse-symbol classsubparts) [64730 64750])
+                    ("lineBreak" variable (:type ("TiXmlString" type (:type "class") nil nil)) (reparse-symbol classsubparts) [64752 64775]))                  
+                :type "class")
+                nil [62690 64778]))          
+    :file "tinyxml.h"
+    :pointmax 64835
+    :fsize 64834
+    :lastmodtime '(19919 14713)
+    :unmatched-syntax '((number 55545 . 55546) (punctuation 55543 . 55544) (punctuation 52185 . 52186) (number 52159 . 52160) (punctuation 52157 . 52158) (punctuation 51368 . 51369) (punctuation 50881 . 50882) (punctuation 50617 . 50618) (punctuation 43858 . 43859) (punctuation 28301 . 28302) (punctuation 13085 . 13086) (punctuation 13057 . 13058) (punctuation 5678 . 5679) (punctuation 5649 . 5650) (punctuation 5621 . 5622))
+    :lexical-table 
+        '(("TIXML_STRING" . ((symbol "TiXmlString" 1430 . 1441)))
+          ("TIXML_SSCANF" . ((symbol "sscanf" 2313 . 2319)))
+          ("TIXML_SNPRINTF" . ((symbol "snprintf" 2279 . 2287)))
+          ("TIXML_SAFE")
+          ("DEBUG")
+          ("TINYXML_INCLUDED")
+          )
+
+    )
+   (semanticdb-table "tinystr.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("TIXML_STRING_INCLUDED" variable (:constant-flag t) nil [916 937])
+            ("assert.h" include (:system-flag t) nil [939 958])
+            ("string.h" include (:system-flag t) nil [959 978])
+            ("TIXML_EXPLICIT" variable (:constant-flag t) nil [1286 1300])
+            ("TIXML_EXPLICIT" variable (:constant-flag t) nil [1394 1408])
+            ("TiXmlString" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1904 1912])
+                    ("size_type" type
+                       (:typedef ("size_t" type (:type "class") nil nil)
+                        :superclasses "size_t"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [1939 1964])
+                    ("npos" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("size_type" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2002 2030])
+                    ("TiXmlString" function
+                       (:constructor-flag t
+                        :type ("TiXmlString" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2077 2115])
+                    ("TiXmlString" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("copy" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlString" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2165 2190]))                          
+                        :type ("TiXmlString" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2151 2271])
+                    ("TiXmlString" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("copy" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2350 2368]))                          
+                        :type ("explicit" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2321 2468])
+                    ("TiXmlString" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("str" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2547 2564])
+                            ("len" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2565 2579]))                          
+                        :type ("explicit" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2518 2637])
+                    ("TiXmlString" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2667 2698])
+                    ("=" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("copy" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2726 2744]))                          
+                        :type ("TiXmlString" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2701 2799])
+                    ("=" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("copy" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlString" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2827 2852]))                          
+                        :type ("TiXmlString" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2802 2904])
+                    ("+=" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("suffix" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2966 2986]))                          
+                        :type ("TiXmlString" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2940 3059])
+                    ("+=" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("single" variable (:type "char") (reparse-symbol arg-sub-list) [3120 3132]))                          
+                        :type ("TiXmlString" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3094 3167])
+                    ("+=" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("suffix" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlString" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3228 3255]))                          
+                        :type ("TiXmlString" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3202 3310])
+                    ("c_str" function
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [3370 3419])
+                    ("data" function
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [3493 3541])
+                    ("length" function (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3583 3631])
+                    ("size" function (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3657 3703])
+                    ("empty" function (:type "bool") (reparse-symbol classsubparts) [3743 3790])
+                    ("capacity" function (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3823 3877])
+                    ("at" function
+                       (:constant-flag t
+                        :arguments 
+                          ( ("index" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3924 3940]))                          
+                        :type "char")
+                        (reparse-symbol classsubparts) [3908 4011])
+                    ("[]" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("index" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4049 4065]))                          
+                        :type "char")
+                        (reparse-symbol classsubparts) [4030 4136])
+                    ("find" function
+                       (:arguments 
+                          ( ("lookup" variable (:type "char") (reparse-symbol arg-sub-list) [4222 4234]))                          
+                        :type ("size_type" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4206 4272])
+                    ("find" function
+                       (:arguments 
+                          ( ("tofind" variable (:type "char") (reparse-symbol arg-sub-list) [4373 4385])
+                            ("offset" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4386 4403]))                          
+                        :type ("size_type" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4357 4607])
+                    ("clear" function (:type "void") (reparse-symbol classsubparts) [4610 4784])
+                    ("reserve" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("cap" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4969 4983]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4955 4984])
+                    ("assign" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("str" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [5008 5024])
+                            ("len" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5025 5039]))                          
+                        :type ("TiXmlString" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4987 5040])
+                    ("append" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("str" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [5064 5080])
+                            ("len" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5081 5095]))                          
+                        :type ("TiXmlString" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5043 5096])
+                    ("swap" function
+                       (:arguments 
+                          ( ("other" variable
+                               (:reference 1
+                                :type ("TiXmlString" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5110 5129]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5099 5191])
+                    ("private" label nil (reparse-symbol classsubparts) [5195 5203])
+                    ("init" function
+                       (:arguments 
+                          ( ("sz" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5216 5229]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5206 5247])
+                    ("set_size" function
+                       (:arguments 
+                          ( ("sz" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5263 5276]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5249 5317])
+                    ("start" function
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [5319 5360])
+                    ("finish" function
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [5362 5417])
+                    ("Rep" type
+                       (:members 
+                          ( ("capacity" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5436 5461])
+                            ("size" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5436 5461])
+                            ("str" variable
+                               (:dereference 1
+                                :type "char")
+                                (reparse-symbol classsubparts) [5464 5476]))                          
+                        :type "struct")
+                        (reparse-symbol classsubparts) [5420 5480])
+                    ("init" function
+                       (:arguments 
+                          ( ("sz" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5493 5506])
+                            ("cap" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5507 5521]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5483 6127])
+                    ("quit" function (:type "void") (reparse-symbol classsubparts) [6130 6386])
+                    ("rep_" variable
+                       (:pointer 1
+                        :type ("Rep" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6389 6400])
+                    ("nullrep_" variable
+                       (:typemodifiers ("static")
+                        :type ("Rep" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6402 6422]))                  
+                :type "class")
+                nil [1882 6427])
+            ("==" function
+               (:operator-flag t
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("a" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("TiXmlString" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6455 6477])
+                    ("b" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("TiXmlString" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6478 6500]))                  
+                :type "bool")
+                nil [6430 6649])
+            ("<" function
+               (:operator-flag t
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("a" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("TiXmlString" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6674 6696])
+                    ("b" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("TiXmlString" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6697 6719]))                  
+                :type "bool")
+                nil [6650 6765])
+            ("!=" function
+               (:operator-flag t
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("a" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("TiXmlString" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6792 6814])
+                    ("b" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("TiXmlString" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6815 6837]))                  
+                :type "bool")
+                nil [6767 6859])
+            (">" function
+               (:operator-flag t
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("a" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("TiXmlString" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6885 6907])
+                    ("b" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("TiXmlString" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6908 6930]))                  
+                :type "bool")
+                nil [6860 6948])
+            ("<=" function
+               (:operator-flag t
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("a" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("TiXmlString" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6974 6996])
+                    ("b" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("TiXmlString" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6997 7019]))                  
+                :type "bool")
+                nil [6949 7040])
+            (">=" function
+               (:operator-flag t
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("a" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("TiXmlString" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7066 7088])
+                    ("b" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("TiXmlString" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7089 7111]))                  
+                :type "bool")
+                nil [7041 7132])
+            ("==" function
+               (:operator-flag t
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("a" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("TiXmlString" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7159 7181])
+                    ("b" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7182 7196]))                  
+                :type "bool")
+                nil [7134 7234])
+            ("==" function
+               (:operator-flag t
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7260 7274])
+                    ("b" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("TiXmlString" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7275 7297]))                  
+                :type "bool")
+                nil [7235 7316])
+            ("!=" function
+               (:operator-flag t
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("a" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("TiXmlString" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7342 7364])
+                    ("b" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7365 7379]))                  
+                :type "bool")
+                nil [7317 7401])
+            ("!=" function
+               (:operator-flag t
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7427 7441])
+                    ("b" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("TiXmlString" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7442 7464]))                  
+                :type "bool")
+                nil [7402 7486])
+            ("+" function
+               (:prototype-flag t
+                :operator-flag t
+                :arguments 
+                  ( ("a" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("TiXmlString" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7512 7534])
+                    ("b" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("TiXmlString" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7535 7557]))                  
+                :type ("TiXmlString" type (:type "class") nil nil))
+                nil [7488 7558])
+            ("+" function
+               (:prototype-flag t
+                :operator-flag t
+                :arguments 
+                  ( ("a" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("TiXmlString" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7583 7605])
+                    ("b" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7606 7620]))                  
+                :type ("TiXmlString" type (:type "class") nil nil))
+                nil [7559 7621])
+            ("+" function
+               (:prototype-flag t
+                :operator-flag t
+                :arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7646 7660])
+                    ("b" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("TiXmlString" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7661 7683]))                  
+                :type ("TiXmlString" type (:type "class") nil nil))
+                nil [7622 7684])
+            ("TiXmlOutStream" type
+               (:superclasses 
+                  ( ("TiXmlString" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [7885 7893])
+                    ("<<" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("in" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TiXmlString" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7958 7981]))                          
+                        :type ("TiXmlOutStream" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7928 8018])
+                    ("<<" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("in" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [8083 8099]))                          
+                        :type ("TiXmlOutStream" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [8053 8136]))                  
+                :type "class")
+                nil [7841 8141]))          
+    :file "tinystr.h"
+    :pointmax 8199
+    :fsize 8198
+    :lastmodtime '(19919 14713)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("TIXML_EXPLICIT" . ((symbol "explicit" 1409 . 1417)))
+          ("TIXML_STRING_INCLUDED")
+          )
+
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!Code!verificatum!src!xmlconfig!tinyxml!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

@@ -1,0 +1,60 @@
+;; Object articles/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "articles/"
+  :tables (list 
+   (semanticdb-table "020_l_instant_chateaubriand.html"
+    :major-mode 'html-mode
+    :tags 
+        '( ("la chanson originale" anchor nil nil [316 319])
+            ("Retour en Frankrike" section (:members 
+              ( ("[1]" anchor nil nil [1101 1105])
+                ("site principal" anchor nil nil [1424 1427])
+                ("l'université de Aalto" anchor nil nil [1886 1889])
+                ("[2]" anchor nil nil [2543 2547])
+                ("[3]" anchor nil nil [3228 3231]))              ) nil [451 3379])
+            ("Bilan" section (:members 
+              ( ("Bande son de circonstance" anchor nil nil [3398 3401])
+                ("[1]" anchor nil nil [8273 8276])
+                ("[2]" anchor nil nil [8406 8409])
+                ("[3]" anchor nil nil [8788 8791]))              ) nil [3379 9177]))          
+    :file "020_l_instant_chateaubriand.html"
+    :pointmax 4951
+    :fsize 9452
+    :lastmodtime '(20465 28084)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "021_une_pente_glissante.html"
+    :major-mode 'html-mode
+    :tags 
+        '( ("la chanson originale" anchor nil nil [316 319])
+            ("Retour en Frankrike" section (:members 
+              ( ("[1]" anchor nil nil [1102 1105])
+                ("site principal" anchor nil nil [1424 1427])
+                ("l'université de Aalto" anchor nil nil [1886 1889])
+                ("S-boxes" anchor nil nil [2189 2192])
+                ("keepassx" anchor nil nil [2363 2366])
+                ("[2]" anchor nil nil [2544 2547])
+                ("[3]" anchor nil nil [3228 3231]))              ) nil [451 3379])
+            ("Bilan" section (:members 
+              ( ("Bande son de circonstance" anchor nil nil [3398 3401])
+                ("ici" anchor nil nil [5185 5188])
+                ("[4]" anchor nil nil [6395 6398])
+                ("[5]" anchor nil nil [7438 7441])
+                ("On ne s'est pas fait attaqués par des loups. Par contre, c'était un peu boueux…" anchor nil nil [7834 7837]))              ) nil [3379 8099])
+            ("Conclusion" section (:members 
+              ( ("[1]" anchor nil nil [8273 8276])
+                ("[2]" anchor nil nil [8406 8409])
+                ("[3]" anchor nil nil [8666 8669])
+                ("[4]" anchor nil nil [8788 8791])
+                ("[5]" anchor nil nil [8967 8970]))              ) nil [8099 9177]))          
+    :file "021_une_pente_glissante.html"
+    :pointmax 9177
+    :fsize 9452
+    :lastmodtime '(20465 28084)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!pi2-6!blog!articles!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

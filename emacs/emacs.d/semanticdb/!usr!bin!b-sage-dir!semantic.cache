@@ -1,0 +1,21 @@
+;; Object b-sage-dir/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "b-sage-dir/"
+  :tables (list 
+   (semanticdb-table "bpython-init.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("print" code nil nil [194 250])
+            ("sage.all" include nil nil [251 273])
+            ("print" code nil nil [274 312]))          
+    :file "bpython-init.py"
+    :pointmax 313
+    :fsize 312
+    :lastmodtime '(20488 7593)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!usr!bin!b-sage-dir!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

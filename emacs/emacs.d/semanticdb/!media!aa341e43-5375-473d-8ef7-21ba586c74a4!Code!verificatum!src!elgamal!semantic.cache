@@ -1,0 +1,560 @@
+;; Object elgamal/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "elgamal/"
+  :tables (list 
+   (semanticdb-table "elgamal.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("../arithm/arithm.hpp" include nil nil [186 217])
+            ("../verifierutils/verifierutils.hpp" include nil nil [218 263])
+            ("ciphergroup.hpp" include nil nil [308 334])
+            ("ciphertext.hpp" include nil nil [335 360])
+            ("arrayofciphers.hpp" include nil nil [361 390])
+            ("elGamal" type (:type "namespace") nil [504 525]))          
+    :file "elgamal.hpp"
+    :pointmax 416
+    :fsize 526
+    :lastmodtime '(20584 15074)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "ciphergroup.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_CIPHERGROUP_H_" variable (:constant-flag t) nil [250 265])
+            ("elGamal" type
+               (:members 
+                  ( ("CipherText" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [314 331])
+                    ("ArrayOfCiphers" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [332 353])
+                    ("CipherGroup" type
+                       (:members 
+                          ( ("private" label nil (reparse-symbol classsubparts) [507 515])
+                            ("grp" variable
+                               (:pointer 1
+                                :type ("arithm::Group" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [609 629])
+                            ("public" label nil (reparse-symbol classsubparts) [639 646])
+                            ("CipherGroup" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("group" variable
+                                       (:pointer 1
+                                        :type ("arithm::Group" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [790 812]))                                  
+                                :type ("CipherGroup" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [778 813])
+                            ("getGrp" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :type ("arithm::Group" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [919 944])
+                            ("getCipherText" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("bt" variable
+                                       (:pointer 1
+                                        :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1092 1121]))                                  
+                                :type ("CipherText" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1067 1122])
+                            ("getArrayOfCiphers" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("bt" variable
+                                       (:pointer 1
+                                        :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1283 1312]))                                  
+                                :type ("ArrayOfCiphers" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1250 1313])
+                            ("enc" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("y" variable (:type ("arithm::Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1530 1545])
+                                    ("m" variable (:type ("arithm::Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1546 1561])
+                                    ("s" variable (:type ("arithm::Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1562 1577]))                                  
+                                :type ("CipherText" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1515 1578])
+                            ("dec" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("x" variable (:type ("arithm::Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1723 1738])
+                                    ("uv" variable (:type ("CipherText" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1739 1753]))                                  
+                                :type ("arithm::Elmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1706 1754])
+                            ("pdec" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("xl" variable (:type ("arithm::Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1903 1919])
+                                    ("uv" variable (:type ("CipherText" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1920 1934]))                                  
+                                :type ("arithm::Elmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1885 1935])
+                            ("pdec" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("xl" variable (:type ("arithm::Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2105 2121])
+                                    ("uv" variable (:type ("ArrayOfCiphers" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2122 2140]))                                  
+                                :type ("arithm::ArrayOfElmts" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2079 2141])
+                            ("tdec" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("uv" variable (:type ("CipherText" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2288 2302])
+                                    ("f" variable (:type ("arithm::Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2303 2318]))                                  
+                                :type ("arithm::Elmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2270 2319])
+                            ("tdec" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("uv" variable (:type ("ArrayOfCiphers" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2533 2551])
+                                    ("f" variable (:type ("arithm::ArrayOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2552 2575]))                                  
+                                :type ("arithm::ArrayOfElmts" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2507 2576])
+                            ("exponentiation" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("c" variable (:type ("CipherText" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2767 2780])
+                                    ("s" variable (:type ("arithm::Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2781 2796]))                                  
+                                :type ("CipherText" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2741 2797])
+                            ("multiplication" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("c1" variable (:type ("CipherText" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2929 2943])
+                                    ("c2" variable (:type ("CipherText" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2944 2958]))                                  
+                                :type ("CipherText" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2903 2959])
+                            ("exponentiation" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("c" variable (:type ("ArrayOfCiphers" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3105 3122])
+                                    ("s" variable (:type ("arithm::ArrayOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3123 3146]))                                  
+                                :type ("ArrayOfCiphers" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3075 3147])
+                            ("expProduct" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("c" variable (:type ("ArrayOfCiphers" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3272 3289])
+                                    ("s" variable (:type ("arithm::ArrayOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3290 3313]))                                  
+                                :type ("CipherText" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3250 3314])
+                            ("compare" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("c1" variable (:type ("CipherText" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3456 3470])
+                                    ("c2" variable (:type ("CipherText" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3471 3485]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [3443 3486])
+                            ("compare" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("c1" variable (:type ("ArrayOfCiphers" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3645 3663])
+                                    ("c2" variable (:type ("ArrayOfCiphers" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3664 3682]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [3632 3683]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [487 3686]))                  
+                :type "namespace")
+                nil [268 3689]))          
+    :file "ciphergroup.hpp"
+    :pointmax 3698
+    :fsize 3698
+    :lastmodtime '(20540 52174)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_CIPHERGROUP_H_")
+          )
+
+    )
+   (semanticdb-table "ciphergroup.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("ciphertext.hpp" include nil nil [223 248])
+            ("ciphergroup.hpp" include nil nil [249 275])
+            ("arrayofciphers.hpp" include nil nil [276 305])
+            ("elGamal" using (:type ("elGamal" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [307 331])
+            ("CipherGroup" function
+               (:constructor-flag t
+                :parent "CipherGroup"
+                :arguments 
+                  ( ("group" variable
+                       (:pointer 1
+                        :type ("arithm::Group" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [360 382]))                  
+                :type ("CipherGroup" type (:type "class") nil nil))
+                nil [335 407])
+            ("getGrp" function
+               (:pointer 1
+                :parent "CipherGroup"
+                :type ("arithm::Group" type (:type "class") nil nil))
+                nil [410 471])
+            ("getCipherText" function
+               (:parent "CipherGroup"
+                :arguments 
+                  ( ("bt" variable
+                       (:pointer 1
+                        :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [512 541]))                  
+                :type ("CipherText" type (:type "class") nil nil))
+                nil [474 582])
+            ("getArrayOfCiphers" function
+               (:parent "CipherGroup"
+                :arguments 
+                  ( ("bt" variable
+                       (:pointer 1
+                        :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [640 669]))                  
+                :type ("ArrayOfCiphers" type (:type "class") nil nil))
+                nil [585 714])
+            ("enc" function
+               (:parent "CipherGroup"
+                :arguments 
+                  ( ("y" variable (:type ("arithm::Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [818 833])
+                    ("m" variable (:type ("arithm::Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [834 849])
+                    ("s" variable (:type ("arithm::Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [878 893]))                  
+                :type ("CipherText" type (:type "class") nil nil))
+                nil [790 1072])
+            ("dec" function
+               (:parent "CipherGroup"
+                :arguments 
+                  ( ("x" variable (:type ("arithm::Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1105 1120])
+                    ("uv" variable (:type ("CipherText" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1121 1135]))                  
+                :type ("arithm::Elmt" type (:type "class") nil nil))
+                nil [1075 1271])
+            ("pdec" function
+               (:parent "CipherGroup"
+                :arguments 
+                  ( ("xl" variable (:type ("arithm::Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1305 1321])
+                    ("uv" variable (:type ("CipherText" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1322 1336]))                  
+                :type ("arithm::Elmt" type (:type "class") nil nil))
+                nil [1274 1390])
+            ("pdec" function
+               (:parent "CipherGroup"
+                :arguments 
+                  ( ("xl" variable (:type ("arithm::Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1432 1448])
+                    ("uv" variable (:type ("ArrayOfCiphers" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1449 1467]))                  
+                :type ("arithm::ArrayOfElmts" type (:type "class") nil nil))
+                nil [1393 1643])
+            ("tdec" function
+               (:parent "CipherGroup"
+                :arguments 
+                  ( ("uv" variable (:type ("CipherText" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1677 1691])
+                    ("f" variable (:type ("arithm::Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1692 1707]))                  
+                :type ("arithm::Elmt" type (:type "class") nil nil))
+                nil [1646 1778])
+            ("tdec" function
+               (:parent "CipherGroup"
+                :arguments 
+                  ( ("uv" variable (:type ("ArrayOfCiphers" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1820 1838])
+                    ("f" variable (:type ("arithm::ArrayOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1839 1862]))                  
+                :type ("arithm::ArrayOfElmts" type (:type "class") nil nil))
+                nil [1781 2047])
+            ("exponentiation" function
+               (:parent "CipherGroup"
+                :arguments 
+                  ( ("c" variable (:type ("CipherText" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2161 2174])
+                    ("s" variable (:type ("arithm::Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2175 2190]))                  
+                :type ("CipherText" type (:type "class") nil nil))
+                nil [2122 2340])
+            ("multiplication" function
+               (:parent "CipherGroup"
+                :arguments 
+                  ( ("c1" variable (:type ("CipherText" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2382 2396])
+                    ("c2" variable (:type ("CipherText" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2397 2411]))                  
+                :type ("CipherText" type (:type "class") nil nil))
+                nil [2343 2552])
+            ("exponentiation" function
+               (:parent "CipherGroup"
+                :arguments 
+                  ( ("c" variable (:type ("ArrayOfCiphers" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2598 2615])
+                    ("s" variable (:type ("arithm::ArrayOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2659 2682]))                  
+                :type ("ArrayOfCiphers" type (:type "class") nil nil))
+                nil [2555 2823])
+            ("expProduct" function
+               (:parent "CipherGroup"
+                :arguments 
+                  ( ("c" variable (:type ("ArrayOfCiphers" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2861 2878])
+                    ("s" variable (:type ("arithm::ArrayOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2914 2937]))                  
+                :type ("CipherText" type (:type "class") nil nil))
+                nil [2826 3062])
+            ("compare" function
+               (:parent "CipherGroup"
+                :arguments 
+                  ( ("c1" variable (:type ("CipherText" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3091 3105])
+                    ("c2" variable (:type ("CipherText" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3106 3120]))                  
+                :type "bool")
+                nil [3065 3241])
+            ("compare" function
+               (:parent "CipherGroup"
+                :arguments 
+                  ( ("c1" variable (:type ("ArrayOfCiphers" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3270 3288])
+                    ("c2" variable (:type ("ArrayOfCiphers" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3289 3307]))                  
+                :type "bool")
+                nil [3244 3493]))          
+    :file "ciphergroup.cpp"
+    :pointmax 3494
+    :fsize 3494
+    :lastmodtime '(20540 52230)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "ciphertext.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_CIPHERTEXT_H_" variable (:constant-flag t) nil [246 260])
+            ("_CIPHERTEXT_H_" variable (:constant-flag t) nil [246 260])
+            ("_CIPHERTEXT_H_" variable (:constant-flag t) nil [246 260])
+            ("../arithm/arithm.hpp" include nil nil [263 294])
+            ("../verifierutils/verifierutils.hpp" include nil nil [295 340])
+            ("elGamal" type
+               (:members 
+                  ( ("CipherGroup" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [387 405])
+                    ("CipherText" type
+                       (:members 
+                          ( ("private" label nil (reparse-symbol classsubparts) [526 534])
+                            ("u" variable (:type ("arithm::Elmt" type (:type "class") nil nil)) (reparse-symbol classsubparts) [617 632])
+                            ("v" variable (:type ("arithm::Elmt" type (:type "class") nil nil)) (reparse-symbol classsubparts) [725 740])
+                            ("public" label nil (reparse-symbol classsubparts) [742 749])
+                            ("CipherText" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("bt" variable
+                                       (:pointer 1
+                                        :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [921 950])
+                                    ("c" variable (:type ("CipherGroup" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [951 965]))                                  
+                                :type ("CipherText" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [910 966])
+                            ("CipherText" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("left" variable (:type ("arithm::Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1072 1090])
+                                    ("right" variable (:type ("arithm::Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1091 1110]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1061 1111])
+                            ("toByteTree" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1260 1299])
+                            ("getU" function
+                               (:prototype-flag t
+                                :type ("arithm::Elmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1403 1423])
+                            ("getV" function
+                               (:prototype-flag t
+                                :type ("arithm::Elmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1528 1548]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [507 1560]))                  
+                :type "namespace")
+                nil [342 1563]))          
+    :file "ciphertext.hpp"
+    :pointmax 1593
+    :fsize 1593
+    :lastmodtime '(20537 10982)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_CIPHERTEXT_H_")
+          )
+
+    )
+   (semanticdb-table "ciphertext.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("ciphertext.hpp" include nil nil [220 245])
+            ("ciphergroup.hpp" include nil nil [246 272])
+            ("elGamal" using (:type ("elGamal" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [274 298])
+            ("CipherText" function
+               (:constructor-flag t
+                :parent "CipherText"
+                :arguments 
+                  ( ("bt" variable
+                       (:pointer 1
+                        :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [325 354])
+                    ("c" variable (:type ("CipherGroup" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [355 369]))                  
+                :type ("CipherText" type (:type "class") nil nil))
+                nil [302 757])
+            ("CipherText" function
+               (:constructor-flag t
+                :parent "CipherText"
+                :arguments 
+                  ( ("left" variable (:type ("arithm::Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [783 801])
+                    ("right" variable (:type ("arithm::Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [802 821]))                  
+                :type ("CipherText" type (:type "class") nil nil))
+                nil [760 853])
+            ("toByteTree" function
+               (:pointer 1
+                :parent "CipherText"
+                :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                nil [856 1087])
+            ("getU" function
+               (:parent "CipherText"
+                :type ("arithm::Elmt" type (:type "class") nil nil))
+                nil [1090 1143])
+            ("getV" function
+               (:parent "CipherText"
+                :type ("arithm::Elmt" type (:type "class") nil nil))
+                nil [1146 1199]))          
+    :file "ciphertext.cpp"
+    :pointmax 1200
+    :fsize 1200
+    :lastmodtime '(20537 10937)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "arrayofciphers.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_ARRAYOFCIPHERS_H_" variable (:constant-flag t) nil [262 280])
+            ("../arithm/arithm.hpp" include nil nil [282 313])
+            ("../verifierutils/verifierutils.hpp" include nil nil [314 359])
+            ("elGamal" type
+               (:members 
+                  ( ("CipherGroup" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [406 424])
+                    ("CipherText" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [425 442])
+                    ("ArrayOfCiphers" type
+                       (:members 
+                          ( ("private" label nil (reparse-symbol classsubparts) [834 842])
+                            ("u" variable (:type ("arithm::ArrayOfElmts" type (:type "class") nil nil)) (reparse-symbol classsubparts) [965 988])
+                            ("v" variable (:type ("arithm::ArrayOfElmts" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1121 1144])
+                            ("public" label nil (reparse-symbol classsubparts) [1145 1152])
+                            ("ArrayOfCiphers" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("bt" variable
+                                       (:pointer 1
+                                        :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1532 1561])
+                                    ("c" variable (:type ("CipherGroup" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1562 1576]))                                  
+                                :type ("ArrayOfCiphers" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1517 1577])
+                            ("ArrayOfCiphers" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("left" variable (:type ("arithm::ArrayOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1700 1726])
+                                    ("right" variable (:type ("arithm::ArrayOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1727 1754]))                                  
+                                :type ("ArrayOfCiphers" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1685 1755])
+                            ("toByteTree" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1917 1956])
+                            ("getUarray" function
+                               (:prototype-flag t
+                                :type ("arithm::ArrayOfElmts" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2041 2074])
+                            ("getVarray" function
+                               (:prototype-flag t
+                                :type ("arithm::ArrayOfElmts" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2151 2184])
+                            ("getCipherText" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("index" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2392 2411]))                                  
+                                :type ("CipherText" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2367 2412])
+                            ("size" function
+                               (:prototype-flag t
+                                :type "unsigned int")
+                                (reparse-symbol classsubparts) [2495 2515]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [811 2527]))                  
+                :type "namespace")
+                nil [362 2530]))          
+    :file "arrayofciphers.hpp"
+    :pointmax 2560
+    :fsize 2560
+    :lastmodtime '(20539 47370)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_ARRAYOFCIPHERS_H_")
+          )
+
+    )
+   (semanticdb-table "arrayofciphers.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("ciphertext.hpp" include nil nil [232 257])
+            ("ciphergroup.hpp" include nil nil [258 284])
+            ("arrayofciphers.hpp" include nil nil [285 314])
+            ("elGamal" using (:type ("elGamal" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [317 341])
+            ("ArrayOfCiphers" function
+               (:constructor-flag t
+                :parent "ArrayOfCiphers"
+                :arguments 
+                  ( ("bt" variable
+                       (:pointer 1
+                        :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [375 404])
+                    ("c" variable (:type ("CipherGroup" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [405 419]))                  
+                :type ("ArrayOfCiphers" type (:type "class") nil nil))
+                nil [344 899])
+            ("ArrayOfCiphers" function
+               (:constructor-flag t
+                :parent "ArrayOfCiphers"
+                :arguments 
+                  ( ("left" variable (:type ("arithm::ArrayOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [942 968])
+                    ("right" variable (:type ("arithm::ArrayOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [969 996]))                  
+                :type ("ArrayOfCiphers" type (:type "class") nil nil))
+                nil [902 1397])
+            ("toByteTree" function
+               (:pointer 1
+                :parent "ArrayOfCiphers"
+                :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                nil [1400 1635])
+            ("getUarray" function
+               (:parent "ArrayOfCiphers"
+                :type ("arithm::ArrayOfElmts" type (:type "class") nil nil))
+                nil [1638 1708])
+            ("getVarray" function
+               (:parent "ArrayOfCiphers"
+                :type ("arithm::ArrayOfElmts" type (:type "class") nil nil))
+                nil [1711 1781])
+            ("getCipherText" function
+               (:parent "ArrayOfCiphers"
+                :arguments 
+                  ( ("index" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1825 1844]))                  
+                :type ("CipherText" type (:type "class") nil nil))
+                nil [1784 1911])
+            ("size" function
+               (:parent "ArrayOfCiphers"
+                :type "unsigned int")
+                nil [1914 1978]))          
+    :file "arrayofciphers.cpp"
+    :pointmax 1979
+    :fsize 1979
+    :lastmodtime '(20556 40797)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!Code!verificatum!src!elgamal!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

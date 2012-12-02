@@ -1,0 +1,393 @@
+;; Object ellipticcurve/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ellipticcurve/"
+  :tables (list 
+   (semanticdb-table "ellipticcurve.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_ELLIPTICCURVE_H_" variable (:constant-flag t) nil [258 275])
+            ("_ELLIPTICCURVE_H_" variable (:constant-flag t) nil [258 275])
+            ("../group/group.hpp" include nil nil [278 307])
+            ("../field/modfield.hpp" include nil nil [308 340])
+            ("cppVerifier" type
+               (:members 
+                  ( ("arithm" type
+                       (:members 
+                          ( ("EllipticCurve" type
+                               (:superclasses 
+                                  ( ("Group" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("protected" label nil (reparse-symbol classsubparts) [862 872])
+                                    ("baseField" variable
+                                       (:pointer 1
+                                        :type ("Field" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [969 987])
+                                    ("b" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1081 1093])
+                                    ("a" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1185 1197])
+                                    ("leafSize" variable (:type "unsigned int") (reparse-symbol classsubparts) [1341 1363])
+                                    ("public" label nil (reparse-symbol classsubparts) [1365 1372])
+                                    ("EllipticCurve" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("bField" variable
+                                               (:pointer 1
+                                                :type ("Field" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1875 1890])
+                                            ("order" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1891 1907])
+                                            ("coeff0" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1930 1947])
+                                            ("coeff1" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1948 1965])
+                                            ("gen" variable
+                                               (:pointer 1
+                                                :type ("Elmt" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1966 1977]))                                          
+                                        :type ("EllipticCurve" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1861 1978])
+                                    ("getElmt" function
+                                       (:prototype-flag t
+                                        :pointer 1
+                                        :arguments 
+                                          ( ("bt" variable
+                                               (:pointer 1
+                                                :type ("utils::ByteTree" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2031 2052]))                                          
+                                        :type ("Elmt" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2016 2053])
+                                    ("getByteTree" function
+                                       (:prototype-flag t
+                                        :pointer 1
+                                        :arguments 
+                                          ( ("e" variable
+                                               (:pointer 1
+                                                :type ("Elmt" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2100 2109]))                                          
+                                        :type ("utils::ByteTree" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2070 2110])
+                                    ("mult" function
+                                       (:prototype-flag t
+                                        :pointer 1
+                                        :arguments 
+                                          ( ("e1" variable
+                                               (:pointer 1
+                                                :type ("Elmt" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2170 2180])
+                                            ("e2" variable
+                                               (:pointer 1
+                                                :type ("Elmt" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2181 2191]))                                          
+                                        :type ("Elmt" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2158 2192])
+                                    ("square" function
+                                       (:prototype-flag t
+                                        :pointer 1
+                                        :arguments 
+                                          ( ("e" variable
+                                               (:pointer 1
+                                                :type ("Elmt" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2215 2224]))                                          
+                                        :type ("Elmt" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2201 2225])
+                                    ("multInverse" function
+                                       (:prototype-flag t
+                                        :pointer 1
+                                        :arguments 
+                                          ( ("e" variable
+                                               (:pointer 1
+                                                :type ("Elmt" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2253 2262]))                                          
+                                        :type ("Elmt" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2234 2263])
+                                    ("compare" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("e1" variable
+                                               (:pointer 1
+                                                :type ("Elmt" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2285 2295])
+                                            ("e2" variable
+                                               (:pointer 1
+                                                :type ("Elmt" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2296 2306]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [2272 2307])
+                                    ("getOne" function
+                                       (:prototype-flag t
+                                        :pointer 1
+                                        :type ("Elmt" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2345 2361])
+                                    ("getType" function
+                                       (:prototype-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2387 2409]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [825 2412]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [367 2415]))                  
+                :type "namespace")
+                nil [343 2417]))          
+    :file "ellipticcurve.hpp"
+    :pointmax 2448
+    :fsize 2448
+    :lastmodtime '(20657 62908)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_ELLIPTICCURVE_H_")
+          )
+
+    )
+   (semanticdb-table "ellipticcurve.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("ellipticcurve.hpp" include nil nil [229 257])
+            ("cppVerifier" using (:type ("cppVerifier" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [260 288])
+            ("cppVerifier::arithm" using (:type ("cppVerifier::arithm" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [289 325])
+            ("EllipticCurve" function
+               (:constructor-flag t
+                :parent "EllipticCurve"
+                :arguments 
+                  ( ("bField" variable
+                       (:pointer 1
+                        :type ("Field" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [367 382])
+                    ("order" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [391 407])
+                    ("coeff0" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [416 433])
+                    ("coeff1" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [442 459])
+                    ("gen" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [468 479]))                  
+                :type ("EllipticCurve" type (:type "class") nil nil))
+                nil [329 634])
+            ("getElmt" function
+               (:pointer 1
+                :parent "EllipticCurve"
+                :arguments 
+                  ( ("bt" variable
+                       (:pointer 1
+                        :type ("utils::ByteTree" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [740 761]))                  
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [710 1218])
+            ("getByteTree" function
+               (:pointer 1
+                :parent "EllipticCurve"
+                :arguments 
+                  ( ("e" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1266 1275]))                  
+                :type ("utils::ByteTree" type (:type "class") nil nil))
+                nil [1221 1478])
+            ("mult" function
+               (:pointer 1
+                :parent "EllipticCurve"
+                :arguments 
+                  ( ("e1" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1585 1595])
+                    ("e2" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1596 1606]))                  
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [1558 2681])
+            ("square" function
+               (:pointer 1
+                :parent "EllipticCurve"
+                :arguments 
+                  ( ("e" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2713 2722]))                  
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [2684 3744])
+            ("multInverse" function
+               (:pointer 1
+                :parent "EllipticCurve"
+                :arguments 
+                  ( ("e" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3781 3790]))                  
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [3747 3917])
+            ("compare" function
+               (:parent "EllipticCurve"
+                :arguments 
+                  ( ("e1" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3948 3958])
+                    ("e2" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3959 3969]))                  
+                :type "bool")
+                nil [3920 4056])
+            ("getOne" function
+               (:pointer 1
+                :parent "EllipticCurve"
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [4142 4209])
+            ("getType" function
+               (:parent "EllipticCurve"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [4287 4359]))          
+    :file "ellipticcurve.cpp"
+    :pointmax 4362
+    :fsize 4360
+    :lastmodtime '(20657 62899)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "brainpoolp192r1.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_BRAINPOOLP192R1_H_" variable (:constant-flag t) nil [832 851])
+            ("ellipticcurve.hpp" include nil nil [854 882])
+            ("cppVerifier" type
+               (:members 
+                  ( ("arithm" type
+                       (:members 
+                          ( ("brainpoolP192r1" type
+                               (:superclasses 
+                                  ( ("EllipticCurve" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [1659 1666])
+                                    ("brainpoolP192r1" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :type ("brainpoolP192r1" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1816 1834])
+                                    ("getType" function
+                                       (:prototype-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1860 1882]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [1612 1885]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [909 1888]))                  
+                :type "namespace")
+                nil [885 1890]))          
+    :file "brainpoolp192r1.hpp"
+    :pointmax 1921
+    :fsize 1921
+    :lastmodtime '(20657 12236)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_BRAINPOOLP192R1_H_")
+          )
+
+    )
+   (semanticdb-table ""
+    :file ""
+    :fsize 4096
+    :lastmodtime '(20657 62908)
+    )
+   (semanticdb-table "brainpoolp224r1.hpp"
+    :file "brainpoolp224r1.hpp"
+    :fsize 2017
+    :lastmodtime '(20657 12236)
+    )
+   (semanticdb-table "brainpoolp256r1.hpp"
+    :file "brainpoolp256r1.hpp"
+    :fsize 2113
+    :lastmodtime '(20657 12236)
+    )
+   (semanticdb-table "brainpoolp320r1.hpp"
+    :file "brainpoolp320r1.hpp"
+    :fsize 2305
+    :lastmodtime '(20657 12236)
+    )
+   (semanticdb-table "brainpoolp384r1.hpp"
+    :file "brainpoolp384r1.hpp"
+    :fsize 2497
+    :lastmodtime '(20657 12236)
+    )
+   (semanticdb-table "brainpoolp512r1.hpp"
+    :file "brainpoolp512r1.hpp"
+    :fsize 2881
+    :lastmodtime '(20657 12236)
+    )
+   (semanticdb-table "p521.hpp"
+    :file "p521.hpp"
+    :fsize 2440
+    :lastmodtime '(20657 12237)
+    )
+   (semanticdb-table "p384.hpp"
+    :file "p384.hpp"
+    :fsize 2092
+    :lastmodtime '(20657 12237)
+    )
+   (semanticdb-table "p256.hpp"
+    :file "p256.hpp"
+    :fsize 1772
+    :lastmodtime '(20657 12237)
+    )
+   (semanticdb-table "p224.hpp"
+    :file "p224.hpp"
+    :fsize 1692
+    :lastmodtime '(20657 12236)
+    )
+   (semanticdb-table "p192.hpp"
+    :file "p192.hpp"
+    :fsize 1612
+    :lastmodtime '(20657 12236)
+    )
+   (semanticdb-table "secp521r1.hpp"
+    :file "secp521r1.hpp"
+    :fsize 2890
+    :lastmodtime '(20657 12237)
+    )
+   (semanticdb-table "secp381r1.hpp"
+    :file "secp381r1.hpp"
+    :fsize 2458
+    :lastmodtime '(20657 12237)
+    )
+   (semanticdb-table "secp256r1.hpp"
+    :file "secp256r1.hpp"
+    :fsize 2074
+    :lastmodtime '(20657 12237)
+    )
+   (semanticdb-table "secp256k1.hpp"
+    :file "secp256k1.hpp"
+    :fsize 2074
+    :lastmodtime '(20657 12237)
+    )
+   (semanticdb-table "secp224r1.hpp"
+    :file "secp224r1.hpp"
+    :fsize 1978
+    :lastmodtime '(20657 12237)
+    )
+   (semanticdb-table "secp224k1.hpp"
+    :file "secp224k1.hpp"
+    :fsize 1982
+    :lastmodtime '(20657 12237)
+    )
+   (semanticdb-table "secp192r1.hpp"
+    :file "secp192r1.hpp"
+    :fsize 1882
+    :lastmodtime '(20657 12237)
+    )
+   (semanticdb-table "secp192k1.hpp"
+    :file "secp192k1.hpp"
+    :fsize 1882
+    :lastmodtime '(20657 12237)
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!projets!Code!verificatum!src!arithm!ellipticcurve!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

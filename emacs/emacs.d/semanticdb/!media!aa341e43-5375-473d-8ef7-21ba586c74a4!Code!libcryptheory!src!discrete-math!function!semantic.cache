@@ -1,0 +1,88 @@
+;; Object function/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "function/"
+  :tables (list 
+   (semanticdb-table "boolfunc.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_BOOLFUNC_H_" variable (:constant-flag t) nil [238 250])
+            ("../../define.hpp" include nil nil [252 279])
+            ("../galois/gfield.hpp" include nil nil [280 311])
+            ("../galois/gfelmt.hpp" include nil nil [312 343])
+            ("cryptheory" type
+               (:members 
+                  ( ("math" type
+                       (:members 
+                          ( ("BoolFunc" type
+                               (:members 
+                                  ( ("private" label nil (reparse-symbol classsubparts) [497 505])
+                                    ("domain" variable (:type ("GField" type (:type "class") nil nil)) (reparse-symbol classsubparts) [514 528])
+                                    ("public" label nil (reparse-symbol classsubparts) [529 536])
+                                    ("evaluate" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("u" variable (:type ("GFElmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [796 805]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [774 806]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [480 809]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [369 812]))                  
+                :type "namespace")
+                nil [346 814]))          
+    :file "boolfunc.hpp"
+    :pointmax 845
+    :fsize 845
+    :lastmodtime '(20522 43324)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_BOOLFUNC_H_")
+          )
+
+    )
+   (semanticdb-table "vectfunc.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_VECTFUNC_H_" variable (:constant-flag t) nil [247 259])
+            ("../../define.hpp" include nil nil [261 288])
+            ("../galois/gfield.hpp" include nil nil [289 320])
+            ("../galois/gfelmt.hpp" include nil nil [321 352])
+            ("cryptheory" type
+               (:members 
+                  ( ("math" type
+                       (:members 
+                          ( ("VectFunc" type
+                               (:members 
+                                  ( ("private" label nil (reparse-symbol classsubparts) [579 587])
+                                    ("domain" variable (:type ("GField" type (:type "class") nil nil)) (reparse-symbol classsubparts) [668 682])
+                                    ("targetSet" variable (:type ("GField" type (:type "class") nil nil)) (reparse-symbol classsubparts) [766 783])
+                                    ("public" label nil (reparse-symbol classsubparts) [784 791])
+                                    ("evaluate" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("u" variable (:type ("GFElmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1053 1062]))                                          
+                                        :type ("GFElmt" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1029 1063]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [562 1066]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [378 1069]))                  
+                :type "namespace")
+                nil [355 1071]))          
+    :file "vectfunc.hpp"
+    :pointmax 1101
+    :fsize 1101
+    :lastmodtime '(20522 43333)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_VECTFUNC_H_")
+          )
+
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!Code!libcryptheory!src!discrete-math!function!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

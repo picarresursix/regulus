@@ -1,0 +1,641 @@
+;; Object group/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "group/"
+  :tables (list 
+   (semanticdb-table ""
+    :file ""
+    :fsize 4096
+    :lastmodtime '(20662 34725)
+    )
+   (semanticdb-table "group.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_GROUP_H_" variable (:constant-flag t) nil [226 235])
+            ("_GROUP_H_" variable (:constant-flag t) nil [226 235])
+            ("_GROUP_H_" variable (:constant-flag t) nil [226 235])
+            ("vector" include (:system-flag t) nil [238 255])
+            ("cstdint" include (:system-flag t) nil [256 274])
+            ("iostream" include (:system-flag t) nil [275 294])
+            ("gmp.h" include (:system-flag t) nil [295 311])
+            ("gmpxx.h" include (:system-flag t) nil [312 330])
+            ("../../utils/utils.hpp" include nil nil [332 364])
+            ("../../crypto/crypto.hpp" include nil nil [365 399])
+            ("../elmt/elmt.hpp" include nil nil [401 428])
+            ("../elmt/largenumber.hpp" include nil nil [429 463])
+            ("../elmt/ecpoint.hpp" include nil nil [464 494])
+            ("../elmt/collectionofelmts.hpp" include nil nil [495 535])
+            ("cppVerifier" type
+               (:members 
+                  ( ("arithm" type
+                       (:members 
+                          ( ("Group" type
+                               (:members 
+                                  ( ("protected" label nil (reparse-symbol classsubparts) [659 669])
+                                    ("multOrder" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol classsubparts) [761 781])
+                                    ("generator" variable
+                                       (:pointer 1
+                                        :type ("Elmt" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [871 888])
+                                    ("public" label nil (reparse-symbol classsubparts) [890 897])
+                                    ("Group" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("order" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1122 1138])
+                                            ("gen" variable
+                                               (:pointer 1
+                                                :type ("Elmt" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1139 1150]))                                          
+                                        :type ("Group" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1116 1151])
+                                    ("toByteTree" function
+                                       (:prototype-flag t
+                                        :pointer 1
+                                        :typemodifiers ("virtual")
+                                        :type ("utils::ByteTree" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1309 1348])
+                                    ("getElmt" function
+                                       (:prototype-flag t
+                                        :pointer 1
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("bt" variable
+                                               (:pointer 1
+                                                :type ("utils::ByteTree" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1508 1529]))                                          
+                                        :type ("Elmt" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1485 1530])
+                                    ("getByteTree" function
+                                       (:prototype-flag t
+                                        :pointer 1
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("e" variable
+                                               (:pointer 1
+                                                :type ("Elmt" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1681 1690]))                                          
+                                        :type ("utils::ByteTree" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1643 1691])
+                                    ("getCollection" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("bt" variable
+                                               (:pointer 1
+                                                :type ("utils::ByteTree" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1882 1903]))                                          
+                                        :type ("CollectionOfElmts" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1850 1904])
+                                    ("getByteTree" function
+                                       (:prototype-flag t
+                                        :pointer 1
+                                        :arguments 
+                                          ( ("e" variable (:type ("CollectionOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2064 2084]))                                          
+                                        :type ("utils::ByteTree" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2034 2085])
+                                    ("mult" function
+                                       (:prototype-flag t
+                                        :pointer 1
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("e1" variable
+                                               (:pointer 1
+                                                :type ("Elmt" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2268 2278])
+                                            ("e2" variable
+                                               (:pointer 1
+                                                :type ("Elmt" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2279 2289]))                                          
+                                        :type ("Elmt" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2248 2290])
+                                    ("square" function
+                                       (:prototype-flag t
+                                        :pointer 1
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("e" variable
+                                               (:pointer 1
+                                                :type ("Elmt" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2399 2408]))                                          
+                                        :type ("Elmt" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2377 2409])
+                                    ("multInverse" function
+                                       (:prototype-flag t
+                                        :pointer 1
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("e" variable
+                                               (:pointer 1
+                                                :type ("Elmt" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2539 2548]))                                          
+                                        :type ("Elmt" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2512 2549])
+                                    ("div" function
+                                       (:prototype-flag t
+                                        :pointer 1
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("e1" variable
+                                               (:pointer 1
+                                                :type ("Elmt" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2662 2672])
+                                            ("e2" variable
+                                               (:pointer 1
+                                                :type ("Elmt" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2673 2683]))                                          
+                                        :type ("Elmt" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2643 2684])
+                                    ("exp" function
+                                       (:prototype-flag t
+                                        :pointer 1
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("e" variable
+                                               (:pointer 1
+                                                :type ("Elmt" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3033 3042])
+                                            ("s" variable
+                                               (:pointer 1
+                                                :type ("Elmt" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3043 3052]))                                          
+                                        :type ("Elmt" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3014 3053])
+                                    ("compare" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("e1" variable
+                                               (:pointer 1
+                                                :type ("Elmt" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3203 3213])
+                                            ("e2" variable
+                                               (:pointer 1
+                                                :type ("Elmt" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3214 3224]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [3182 3225])
+                                    ("mult" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("e1" variable (:type ("CollectionOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3467 3488])
+                                            ("e2" variable (:type ("CollectionOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3489 3510]))                                          
+                                        :type ("CollectionOfElmts" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3444 3511])
+                                    ("square" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("e" variable (:type ("CollectionOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3687 3707]))                                          
+                                        :type ("CollectionOfElmts" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3662 3708])
+                                    ("multInverse" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("e" variable (:type ("CollectionOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3866 3886]))                                          
+                                        :type ("CollectionOfElmts" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3836 3887])
+                                    ("div" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("e1" variable (:type ("CollectionOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4055 4076])
+                                            ("e2" variable (:type ("CollectionOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4077 4098]))                                          
+                                        :type ("CollectionOfElmts" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [4033 4099])
+                                    ("exp" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("e" variable (:type ("CollectionOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4260 4280])
+                                            ("s" variable (:type ("CollectionOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4281 4301]))                                          
+                                        :type ("CollectionOfElmts" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [4238 4302])
+                                    ("product" function
+                                       (:prototype-flag t
+                                        :pointer 1
+                                        :arguments 
+                                          ( ("e" variable (:type ("CollectionOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4438 4458]))                                          
+                                        :type ("Elmt" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [4423 4459])
+                                    ("expProduct" function
+                                       (:prototype-flag t
+                                        :pointer 1
+                                        :arguments 
+                                          ( ("e" variable (:type ("CollectionOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4604 4624])
+                                            ("s" variable (:type ("CollectionOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4625 4645]))                                          
+                                        :type ("Elmt" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [4586 4646])
+                                    ("compare" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("e1" variable (:type ("CollectionOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4850 4871])
+                                            ("e2" variable (:type ("CollectionOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4872 4893]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [4837 4894])
+                                    ("getOne" function
+                                       (:prototype-flag t
+                                        :pointer 1
+                                        :typemodifiers ("virtual")
+                                        :type ("Elmt" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5098 5122])
+                                    ("getOnes" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [5276 5291]))                                          
+                                        :type ("CollectionOfElmts" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5250 5292])
+                                    ("getRandArray" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("prg" variable
+                                               (:pointer 1
+                                                :type ("crypto::PRG" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5643 5661])
+                                            ("nr" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [5662 5678])
+                                            ("n0" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [5679 5695]))                                          
+                                        :type ("CollectionOfElmts" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5587 5696])
+                                    ("getMultOrder" function
+                                       (:prototype-flag t
+                                        :type ("mpz_class" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5880 5905])
+                                    ("getGenerator" function
+                                       (:prototype-flag t
+                                        :pointer 1
+                                        :type ("Elmt" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [6049 6071])
+                                    ("getGenerators" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [6247 6262]))                                          
+                                        :type ("CollectionOfElmts" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [6215 6263])
+                                    ("isIn" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("e" variable
+                                               (:pointer 1
+                                                :type ("Elmt" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6381 6390]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [6363 6391])
+                                    ("getType" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [6495 6525]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [645 6553]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [562 6556]))                  
+                :type "namespace")
+                nil [538 6558]))          
+    :file "group.hpp"
+    :pointmax 6589
+    :fsize 6589
+    :lastmodtime '(20657 16879)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_GROUP_H_")
+          )
+
+    )
+   (semanticdb-table "group.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("group.hpp" include nil nil [205 225])
+            ("cppVerifier" using (:type ("cppVerifier" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [227 255])
+            ("cppVerifier::arithm" using (:type ("cppVerifier::arithm" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [256 292])
+            ("Group" function
+               (:constructor-flag t
+                :parent "Group"
+                :arguments 
+                  ( ("order" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [309 325])
+                    ("gen" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [326 337]))                  
+                :type ("Group" type (:type "class") nil nil))
+                nil [296 393])
+            ("toByteTree" function
+               (:pointer 1
+                :parent "Group"
+                :type ("utils::ByteTree" type (:type "class") nil nil))
+                nil [614 676])
+            ("getElmt" function
+               (:pointer 1
+                :parent "Group"
+                :arguments 
+                  ( ("bt" variable
+                       (:pointer 1
+                        :type ("utils::ByteTree" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [701 722]))                  
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [679 747])
+            ("getByteTree" function
+               (:pointer 1
+                :parent "Group"
+                :arguments 
+                  ( ("e" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [787 796]))                  
+                :type ("utils::ByteTree" type (:type "class") nil nil))
+                nil [750 821])
+            ("getCollection" function
+               (:parent "Group"
+                :arguments 
+                  ( ("bt" variable
+                       (:pointer 1
+                        :type ("utils::ByteTree" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [863 884]))                  
+                :type ("CollectionOfElmts" type (:type "class") nil nil))
+                nil [824 1351])
+            ("getByteTree" function
+               (:pointer 1
+                :parent "Group"
+                :arguments 
+                  ( ("e" variable (:type ("CollectionOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1391 1411]))                  
+                :type ("utils::ByteTree" type (:type "class") nil nil))
+                nil [1354 1593])
+            ("mult" function
+               (:pointer 1
+                :parent "Group"
+                :arguments 
+                  ( ("e1" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1835 1845])
+                    ("e2" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1846 1856]))                  
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [1816 1881])
+            ("square" function
+               (:pointer 1
+                :parent "Group"
+                :arguments 
+                  ( ("e" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1905 1914]))                  
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [1884 1944])
+            ("multInverse" function
+               (:pointer 1
+                :parent "Group"
+                :arguments 
+                  ( ("e" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1973 1982]))                  
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [1947 2007])
+            ("div" function
+               (:pointer 1
+                :parent "Group"
+                :arguments 
+                  ( ("e1" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2028 2038])
+                    ("e2" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2039 2049]))                  
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [2010 2095])
+            ("exp" function
+               (:pointer 1
+                :parent "Group"
+                :arguments 
+                  ( ("e" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2116 2125])
+                    ("t" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2126 2135]))                  
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [2098 2596])
+            ("compare" function
+               (:parent "Group"
+                :arguments 
+                  ( ("e1" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2619 2629])
+                    ("e2" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2630 2640]))                  
+                :type "bool")
+                nil [2599 2666])
+            ("mult" function
+               (:parent "Group"
+                :arguments 
+                  ( ("e1" variable (:type ("CollectionOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2918 2939])
+                    ("e2" variable (:type ("CollectionOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2940 2961]))                  
+                :type ("CollectionOfElmts" type (:type "class") nil nil))
+                nil [2888 3448])
+            ("multInverse" function
+               (:parent "Group"
+                :arguments 
+                  ( ("e" variable (:type ("CollectionOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3488 3508]))                  
+                :type ("CollectionOfElmts" type (:type "class") nil nil))
+                nil [3451 3668])
+            ("div" function
+               (:parent "Group"
+                :arguments 
+                  ( ("e1" variable (:type ("CollectionOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3701 3722])
+                    ("e2" variable (:type ("CollectionOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3723 3744]))                  
+                :type ("CollectionOfElmts" type (:type "class") nil nil))
+                nil [3672 4229])
+            ("exp" function
+               (:parent "Group"
+                :arguments 
+                  ( ("e" variable (:type ("CollectionOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4261 4281])
+                    ("s" variable (:type ("CollectionOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4282 4302]))                  
+                :type ("CollectionOfElmts" type (:type "class") nil nil))
+                nil [4232 4776])
+            ("product" function
+               (:pointer 1
+                :parent "Group"
+                :arguments 
+                  ( ("e" variable (:type ("CollectionOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4801 4821]))                  
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [4779 4974])
+            ("expProduct" function
+               (:pointer 1
+                :parent "Group"
+                :arguments 
+                  ( ("e" variable (:type ("CollectionOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5002 5022])
+                    ("s" variable (:type ("CollectionOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5023 5043]))                  
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [4977 5525])
+            ("compare" function
+               (:parent "Group"
+                :arguments 
+                  ( ("e1" variable (:type ("CollectionOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5548 5569])
+                    ("e2" variable (:type ("CollectionOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5570 5591]))                  
+                :type "bool")
+                nil [5528 6077])
+            ("getOne" function
+               (:pointer 1
+                :parent "Group"
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [6312 6359])
+            ("getOnes" function
+               (:parent "Group"
+                :arguments 
+                  ( ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [6395 6410]))                  
+                :type ("CollectionOfElmts" type (:type "class") nil nil))
+                nil [6362 6554])
+            ("getRandArray" function
+               (:parent "Group"
+                :arguments 
+                  ( ("prg" variable
+                       (:pointer 1
+                        :type ("crypto::PRG" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6604 6622])
+                    ("nr" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [6631 6647])
+                    ("n0" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [6656 6672]))                  
+                :type ("CollectionOfElmts" type (:type "class") nil nil))
+                nil [6557 6733])
+            ("getMultOrder" function
+               (:parent "Group"
+                :type ("mpz_class" type (:type "class") nil nil))
+                nil [6954 7015])
+            ("getGenerator" function
+               (:pointer 1
+                :parent "Group"
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [7017 7108])
+            ("getGenerators" function
+               (:parent "Group"
+                :arguments 
+                  ( ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [7159 7174]))                  
+                :type ("CollectionOfElmts" type (:type "class") nil nil))
+                nil [7120 7324])
+            ("isIn" function
+               (:parent "Group"
+                :arguments 
+                  ( ("e" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7344 7353]))                  
+                :type "bool")
+                nil [7327 7379])
+            ("getType" function
+               (:parent "Group"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [7382 7438]))          
+    :file "group.cpp"
+    :pointmax 7440
+    :fsize 7440
+    :lastmodtime '(20657 17006)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "productgroup.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_PRODUCTGROUP_H_" variable (:constant-flag t) nil [254 270])
+            ("_PRODUCTGROUP_H_" variable (:constant-flag t) nil [254 270])
+            ("group.hpp" include nil nil [273 293])
+            ("cppVerifier" type
+               (:members 
+                  ( ("arithm" type
+                       (:members 
+                          ( ("ProductGroup" type
+                               (:members 
+                                  ( ("private" label nil (reparse-symbol classsubparts) [495 503])
+                                    ("size" variable (:type "unsigned int") (reparse-symbol classsubparts) [601 619])
+                                    ("baseGroup" variable
+                                       (:pointer 1
+                                        :type ("Group" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [697 715])
+                                    ("private" label nil (reparse-symbol classsubparts) [717 725])
+                                    ("ProductGroup" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("g" variable
+                                               (:pointer 1
+                                                :type ("Group" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1001 1011])
+                                            ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1012 1027]))                                          
+                                        :type ("ProductGroup" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [988 1028])
+                                    ("toByteTree" function
+                                       (:prototype-flag t
+                                        :pointer 1
+                                        :type ("utils::ByteTree" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1110 1141])
+                                    ("getElmt" function
+                                       (:prototype-flag t
+                                        :pointer 1
+                                        :arguments 
+                                          ( ("bt" variable
+                                               (:pointer 1
+                                                :type ("utils::ByteTree" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1277 1298]))                                          
+                                        :type ("ProductElmt" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1255 1299])
+                                    ("getByteTree" function
+                                       (:prototype-flag t
+                                        :pointer 1
+                                        :arguments 
+                                          ( ("e" variable
+                                               (:pointer 1
+                                                :type ("Elmt" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1419 1428]))                                          
+                                        :type ("utils::ByteTree" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1389 1429]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [474 1450]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [320 1453]))                  
+                :type "namespace")
+                nil [296 1455]))          
+    :file "productgroup.hpp"
+    :pointmax 1486
+    :fsize 1486
+    :lastmodtime '(20662 34725)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_PRODUCTGROUP_H_")
+          )
+
+    )
+   (semanticdb-table "productgroup.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("productgroup.hpp" include nil nil [226 253])
+            ("ProductGroup" function
+               (:constructor-flag t
+                :parent "ProductGroup"
+                :arguments 
+                  ( ("g" variable
+                       (:pointer 1
+                        :type ("Group" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [282 292])
+                    ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [293 308]))                  
+                :type ("ProductGroup" type (:type "class") nil nil))
+                nil [255 353]))          
+    :file "productgroup.cpp"
+    :pointmax 354
+    :fsize 354
+    :lastmodtime '(20662 33509)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!projets!Code!verificatum!src!arithm!group!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

@@ -1,0 +1,19 @@
+;; Object sage_intro/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "sage_intro/"
+  :tables (list 
+   (semanticdb-table "test.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("if" code nil nil [18 69]))          
+    :file "test.py"
+    :pointmax 69
+    :fsize 68
+    :lastmodtime '(20549 48525)
+    :unmatched-syntax '(($EOI 49 . 49))
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!Code!Exjobb!sage_intro!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

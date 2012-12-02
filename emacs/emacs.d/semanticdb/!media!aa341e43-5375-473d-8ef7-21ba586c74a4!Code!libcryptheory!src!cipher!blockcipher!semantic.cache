@@ -1,0 +1,314 @@
+;; Object blockcipher/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "blockcipher/"
+  :tables (list 
+   (semanticdb-table "blockcipher.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_BLOCKCIPHER_H_" variable (:constant-flag t) nil [250 265])
+            ("_BLOCKCIPHER_H_" variable (:constant-flag t) nil [250 265])
+            ("_BLOCKCIPHER_H_" variable (:constant-flag t) nil [250 265])
+            ("../cipher.hpp" include nil nil [267 291])
+            ("../../generator/generator.hpp" include nil nil [292 332])
+            ("cryptheory" type
+               (:members 
+                  ( ("cipher" type
+                       (:members 
+                          ( ("BlockCipher" type
+                               (:superclasses 
+                                  ( ("Cipher" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("protected" label nil (reparse-symbol classsubparts) [470 480])
+                                    ("blockSize" variable (:type "unsigned int") (reparse-symbol classsubparts) [548 571])
+                                    ("baseField" variable (:type ("math::GField" type (:type "class") nil nil)) (reparse-symbol classsubparts) [683 706])
+                                    ("roundNumber" variable (:type "unsigned int") (reparse-symbol classsubparts) [773 798])
+                                    ("operatingMode" variable (:type "unsigned int") (reparse-symbol classsubparts) [878 905])
+                                    ("keySchedule" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("math::GFElmt" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [977 1015])
+                                    ("prevBlock" variable (:type ("math::GFElmt" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1120 1143])
+                                    ("public" label nil (reparse-symbol classsubparts) [1153 1160])
+                                    ("BlockCipher" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("bSize" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1577 1596])
+                                            ("rNumber" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1597 1618])
+                                            ("mode" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1639 1657])
+                                            ("kGen" variable
+                                               (:pointer 1
+                                                :type ("gen::Generator" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1658 1680]))                                          
+                                        :type ("BlockCipher" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1565 1681])
+                                    ("setIV" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("block" variable (:type ("math::GFElmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1930 1949]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1919 1950])
+                                    ("encryptionRound" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("message" variable (:type ("math::GFElmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2539 2560])
+                                            ("round" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2606 2625]))                                          
+                                        :type ("math::GFElmt" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2502 2626])
+                                    ("decryptionRound" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("message" variable (:type ("math::GFElmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3211 3232])
+                                            ("round" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3278 3297]))                                          
+                                        :type ("math::GFElmt" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3174 3298])
+                                    ("encryptBlock" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("plaintext" variable (:type ("math::GFElmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3544 3567]))                                          
+                                        :type ("math::GFElmt" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3518 3568])
+                                    ("decryptBlock" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("ciphertext" variable (:type ("math::GFElmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3809 3833]))                                          
+                                        :type ("math::GFElmt" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3783 3834])
+                                    ("encrypt" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("message" variable (:type ("byteVector" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4167 4186])
+                                            ("key" variable (:type ("byteVector" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4187 4202]))                                          
+                                        :type ("byteVector" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [4148 4203])
+                                    ("decrypt" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("message" variable (:type ("byteVector" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4536 4555])
+                                            ("key" variable (:type ("byteVector" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4556 4571]))                                          
+                                        :type ("byteVector" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [4517 4572]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [434 4575]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [358 4578]))                  
+                :type "namespace")
+                nil [335 4580]))          
+    :file "blockcipher.hpp"
+    :pointmax 4610
+    :fsize 4610
+    :lastmodtime '(20526 28127)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_BLOCKCIPHER_H_")
+          )
+
+    )
+   (semanticdb-table "blockcipher.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("blockcipher.hpp" include nil nil [223 249])
+            ("cryptheory" using (:type ("cryptheory" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [251 278])
+            ("cryptheory::cipher" using (:type ("cryptheory::cipher" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [279 314])
+            ("BlockCipher" function
+               (:constructor-flag t
+                :parent "BlockCipher"
+                :arguments 
+                  ( ("bSize" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [343 362])
+                    ("rNumber" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [363 384])
+                    ("mode" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [410 428])
+                    ("kGen" variable
+                       (:pointer 1
+                        :type ("gen::Generator" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [429 451]))                  
+                :type ("BlockCipher" type (:type "class") nil nil))
+                nil [318 799])
+            ("setIV" function
+               (:parent "BlockCipher"
+                :arguments 
+                  ( ("block" variable (:type ("math::GFElmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [826 845]))                  
+                :type "void")
+                nil [802 876])
+            ("encryptionRound" function
+               (:parent "BlockCipher"
+                :arguments 
+                  ( ("message" variable (:type ("math::GFElmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [921 942])
+                    ("counter" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [985 1006]))                  
+                :type ("math::GFElmt" type (:type "class") nil nil))
+                nil [879 1034])
+            ("decryptionRound" function
+               (:parent "BlockCipher"
+                :arguments 
+                  ( ("message" variable (:type ("math::GFElmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1079 1143])
+                    ("counter" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1144 1165]))                  
+                :type ("math::GFElmt" type (:type "class") nil nil))
+                nil [1037 1193])
+            ("decryptBlock" function
+               (:parent "BlockCipher"
+                :arguments 
+                  ( ("ciphertext" variable (:type ("math::GFElmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1235 1259]))                  
+                :type ("math::GFElmt" type (:type "class") nil nil))
+                nil [1196 1460])
+            ("encryptBlock" function
+               (:parent "BlockCipher"
+                :arguments 
+                  ( ("plaintext" variable (:type ("math::GFElmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1502 1525]))                  
+                :type ("math::GFElmt" type (:type "class") nil nil))
+                nil [1463 1729])
+            ("encrypt" function
+               (:parent "BlockCipher"
+                :arguments 
+                  ( ("message" variable (:type ("byteVector" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1764 1783])
+                    ("key" variable (:type ("byteVector" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1784 1799]))                  
+                :type ("byteVector" type (:type "class") nil nil))
+                nil [1732 2730])
+            ("decrypt" function
+               (:parent "BlockCipher"
+                :arguments 
+                  ( ("message" variable (:type ("byteVector" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2765 2784])
+                    ("key" variable (:type ("byteVector" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2785 2800]))                  
+                :type ("byteVector" type (:type "class") nil nil))
+                nil [2733 3732]))          
+    :file "blockcipher.cpp"
+    :pointmax 3733
+    :fsize 3733
+    :lastmodtime '(20526 30618)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "feistelnetwork.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("feistelnetwork.hpp" include nil nil [232 261])
+            ("cryptheory" using (:type ("cryptheory" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [263 290])
+            ("cryptheory::cipher" using (:type ("cryptheory::cipher" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [291 326])
+            ("FeistelNetwork" function
+               (:constructor-flag t
+                :parent "FeistelNetwork"
+                :arguments 
+                  ( ("blockSize" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [369 392])
+                    ("rounds" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [393 413])
+                    ("mode" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [414 432])
+                    ("keyGen" variable
+                       (:pointer 1
+                        :type ("gen::Generator" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [441 465])
+                    ("fFunc" variable
+                       (:pointer 1
+                        :type ("Cipher" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [466 481]))                  
+                :type ("FeistelNetwork" type (:type "class") nil nil))
+                nil [329 569])
+            ("encryptionRound" function
+               (:parent "FeistelNetwork"
+                :arguments 
+                  ( ("message" variable (:type ("math::GFElmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [617 638])
+                    ("round" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [684 703]))                  
+                :type ("math::GFElmt" type (:type "class") nil nil))
+                nil [572 1027])
+            ("decryptionRound" function
+               (:parent "FeistelNetwork"
+                :arguments 
+                  ( ("message" variable (:type ("math::GFElmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1075 1096])
+                    ("round" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1142 1161]))                  
+                :type ("math::GFElmt" type (:type "class") nil nil))
+                nil [1030 1485]))          
+    :file "feistelnetwork.cpp"
+    :pointmax 1486
+    :fsize 1486
+    :lastmodtime '(20526 31773)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "feistelnetwork.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_FEISTELNETWORK_H_" variable (:constant-flag t) nil [262 280])
+            ("_FEISTELNETWORK_H_" variable (:constant-flag t) nil [262 280])
+            ("_FEISTELNETWORK_H_" variable (:constant-flag t) nil [262 280])
+            ("blockcipher.hpp" include nil nil [282 308])
+            ("cryptheory" type
+               (:members 
+                  ( ("cipher" type
+                       (:members 
+                          ( ("FeistelNetwork" type
+                               (:superclasses 
+                                  ( ("BlockCipher" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("protected" label nil (reparse-symbol classsubparts) [456 466])
+                                    ("feistelFunc" variable
+                                       (:pointer 1
+                                        :type ("Cipher" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [603 624])
+                                    ("public" label nil (reparse-symbol classsubparts) [625 632])
+                                    ("FeistelNetwork" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("blockSize" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1145 1168])
+                                            ("rounds" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1169 1189])
+                                            ("mode" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1213 1231])
+                                            ("keyGen" variable
+                                               (:pointer 1
+                                                :type ("gen::Generator" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1232 1256])
+                                            ("fFunc" variable
+                                               (:pointer 1
+                                                :type ("Cipher" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1280 1295]))                                          
+                                        :type ("FeistelNetwork" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1130 1296])
+                                    ("encryptionRound" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("message" variable (:type ("math::GFElmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1815 1836])
+                                            ("round" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1874 1893]))                                          
+                                        :type ("math::GFElmt" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1786 1894])
+                                    ("decryptionRound" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("message" variable (:type ("math::GFElmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2204 2225])
+                                            ("round" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2263 2282]))                                          
+                                        :type ("math::GFElmt" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2175 2283]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [412 2287]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [334 2290]))                  
+                :type "namespace")
+                nil [311 2292]))          
+    :file "feistelnetwork.hpp"
+    :pointmax 2644
+    :fsize 2323
+    :lastmodtime '(20526 30778)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_FEISTELNETWORK_H_")
+          )
+
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!Code!libcryptheory!src!cipher!blockcipher!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

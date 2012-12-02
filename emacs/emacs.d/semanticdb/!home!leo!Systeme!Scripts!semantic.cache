@@ -1,0 +1,19 @@
+;; Object Scripts/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Scripts/"
+  :tables (list 
+   (semanticdb-table "bptyhon-sage-init.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("sage" include nil nil [24 42]))          
+    :file "bptyhon-sage-init.py"
+    :pointmax 43
+    :fsize 42
+    :lastmodtime '(20487 61741)
+    :unmatched-syntax '(($EOI 42 . 42))
+    )
+   )
+  :file "!home!leo!Systeme!Scripts!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

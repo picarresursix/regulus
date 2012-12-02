@@ -1,0 +1,81 @@
+;; Object cipher/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "cipher/"
+  :tables (list 
+   (semanticdb-table "cipher.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_CIPHER_H_" variable (:constant-flag t) nil [238 248])
+            ("_CIPHER_H_" variable (:constant-flag t) nil [238 248])
+            ("cstdint" include (:system-flag t) nil [250 268])
+            ("crpt" type
+               (:members 
+                  ( ("Cipher" type
+                       (:members 
+                          ( ("protected" label nil (reparse-symbol classsubparts) [379 389])
+                            ("securityParamater" variable (:type "int") (reparse-symbol classsubparts) [545 567])
+                            ("public" label nil (reparse-symbol classsubparts) [568 575])
+                            ("Cipher" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("sec" variable (:type "int") (reparse-symbol arg-sub-list) [752 760]))                                  
+                                :type ("Cipher" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [745 761])
+                            ("encrypt" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("message" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("uint8_t" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [1060 1089])
+                                    ("key" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("uint8_t" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [1127 1152]))                                  
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("uint8_t" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [1031 1153])
+                            ("decrypt" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("message" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("uint8_t" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [1452 1481])
+                                    ("key" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("uint8_t" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [1519 1544]))                                  
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("uint8_t" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [1423 1545]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [364 1548]))                  
+                :type "namespace")
+                nil [271 1551]))          
+    :file "cipher.hpp"
+    :pointmax 1527
+    :fsize 1581
+    :lastmodtime '(20521 19601)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_CIPHER_H_")
+          )
+
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!Code!libcryptoprimitives!cipher!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

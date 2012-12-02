@@ -1,0 +1,207 @@
+;; Object boolean-math/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "boolean-math/"
+  :tables (list 
+   (semanticdb-table "sbox.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_SBOX_H_" variable (:constant-flag t) nil [180 188])
+            ("_SBOX_H_" variable (:constant-flag t) nil [180 188])
+            ("crpt" type (:type "namespace") nil [190 401]))          
+    :file "sbox.hpp"
+    :pointmax 431
+    :fsize 431
+    :lastmodtime '(20521 26460)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_SBOX_H_")
+          )
+
+    )
+   (semanticdb-table "sbox.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("sbox.hpp" include nil nil [155 174]))          
+    :file "sbox.cpp"
+    :pointmax 183
+    :fsize 183
+    :lastmodtime '(20521 20459)
+    :unmatched-syntax '((punctuation 181 . 182) (punctuation 180 . 181) (symbol 176 . 180))
+    )
+   (semanticdb-table "vectorialfunction.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_VECTORIALFUNCTION_H_" variable (:constant-flag t) nil [274 295])
+            ("crpt" type
+               (:members 
+                  ( ("VectorialFunction" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [433 440])
+                            ("evaluate" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("u" variable
+                                       (:pointer 1
+                                        :type ("GFElmt" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [475 486]))                                  
+                                :type ("GFElmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [449 487]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [407 490]))                  
+                :type "namespace")
+                nil [298 493]))          
+    :file "vectorialfunction.hpp"
+    :pointmax 523
+    :fsize 523
+    :lastmodtime '(20521 26251)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_VECTORIALFUNCTION_H_")
+          )
+
+    )
+   (semanticdb-table "vectorialfunction.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("vectorialfunction.hpp" include nil nil [238 270])
+            ("crpt" using (:type ("crpt" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [272 293])
+            ("evaluate" function
+               (:pointer 1
+                :parent "VectorialFunction"
+                :arguments 
+                  ( ("u" variable
+                       (:pointer 1
+                        :type ("GFElmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [332 343]))                  
+                :type ("GFElmt" type (:type "class") nil nil))
+                nil [295 368]))          
+    :file "vectorialfunction.cpp"
+    :pointmax 369
+    :fsize 276
+    :lastmodtime '(20521 26276)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "gfield.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_GFIELD_H_" variable (:constant-flag t) nil [226 236])
+            ("_GFIELD_H_" variable (:constant-flag t) nil [226 236])
+            ("crpt" type
+               (:members 
+                  ( ("GFElmt" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [279 292])
+                    ("GField" type
+                       (:members 
+                          ( ("private" label nil (reparse-symbol classsubparts) [406 414])
+                            ("sizeExp" variable (:type "unsigned int") (reparse-symbol classsubparts) [495 516])
+                            ("public" label nil (reparse-symbol classsubparts) [517 524])
+                            ("xor" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("x1" variable (:type ("GFElmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [544 554])
+                                    ("x2" variable (:type ("GFElmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [555 565]))                                  
+                                :type ("GFElmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [533 566]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [391 569]))                  
+                :type "namespace")
+                nil [238 572]))          
+    :file "gfield.hpp"
+    :pointmax 608
+    :fsize 602
+    :lastmodtime '(20521 27517)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_GFIELD_H_")
+          )
+
+    )
+   (semanticdb-table "gfield.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("gfield.hpp" include nil nil [208 229])
+            ("crpt" using (:type ("crpt" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [231 252])
+            ("xor" function
+               (:parent "GField"
+                :arguments 
+                  ( ("x1" variable (:type ("GFElmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [273 283])
+                    ("x2" variable (:type ("GFElmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [284 294]))                  
+                :type ("GFElmt" type (:type "class") nil nil))
+                nil [254 367]))          
+    :file "gfield.cpp"
+    :pointmax 375
+    :fsize 368
+    :lastmodtime '(20521 27679)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "gfelmt.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_GFELMT_H_" variable (:constant-flag t) nil [230 240])
+            ("_GFELMT_H_" variable (:constant-flag t) nil [230 240])
+            ("boost/dynamic_bitset.hpp" include (:system-flag t) nil [242 277])
+            ("GField.hpp" include nil nil [278 299])
+            ("crpt" type
+               (:members 
+                  ( ("GFElmt" type
+                       (:members 
+                          ( ("private" label nil (reparse-symbol classsubparts) [407 415])
+                            ("bits" variable (:type ("boost::dynamic_bitset" type (:type "class") nil nil)) (reparse-symbol classsubparts) [519 546])
+                            ("private" label nil (reparse-symbol classsubparts) [547 555])
+                            ("GFElmt" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("content" variable (:type ("boost::dynamic_bitset" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [765 795]))                                  
+                                :type ("GFElmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [758 796]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [392 799]))                  
+                :type "namespace")
+                nil [301 802]))          
+    :file "gfelmt.hpp"
+    :pointmax 828
+    :fsize 832
+    :lastmodtime '(20521 32963)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_GFELMT_H_")
+          )
+
+    )
+   (semanticdb-table "gfelmt.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("gfelmt.hpp" include nil nil [209 230])
+            ("crpt" using (:type ("crpt" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [232 253])
+            ("GFElmt" function
+               (:constructor-flag t
+                :parent "GFElmt"
+                :arguments 
+                  ( ("content" variable (:type ("boost::dynamic_bitset" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [271 302]))                  
+                :type ("GFElmt" type (:type "class") nil nil))
+                nil [256 330]))          
+    :file "gfelmt.cpp"
+    :pointmax 302
+    :fsize 331
+    :lastmodtime '(20521 33019)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!Code!libcrpt!src!boolean-math!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

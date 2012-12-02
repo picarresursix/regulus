@@ -1,0 +1,72 @@
+;; Object old/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "old/"
+  :tables (list 
+   (semanticdb-table "table.py"
+    :major-mode 'python-mode
+    :tags nil
+    :file "table.py"
+    :pointmax 3496
+    :fsize 3495
+    :lastmodtime '(20596 6680)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "inverse.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("sys" include nil nil [26 36])
+            ("sage.all" include nil nil [37 59])
+            ("solutions" function (:arguments 
+              ( ("poly" variable nil (reparse-symbol function_parameters) [218 222])
+                ("b" variable nil (reparse-symbol function_parameters) [223 224]))              ) nil [204 425])
+            ("restricted_spectrum" function (:arguments 
+              ( ("poly" variable nil (reparse-symbol function_parameters) [451 455]))              ) nil [427 929])
+            ("B" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [1005 1006])
+                ("d" variable nil (reparse-symbol function_parameters) [1007 1008]))              ) nil [999 1054])
+            ("Bprime" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [1066 1067])
+                ("d" variable nil (reparse-symbol function_parameters) [1068 1069]))              ) nil [1055 1103])
+            ("phi" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [1112 1113]))              ) nil [1104 1157])
+            ("nu" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [1165 1166]))              ) nil [1158 1196])
+            ("m" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [1203 1204]))              ) nil [1197 1238])
+            ("Q" function (:arguments 
+              ( ("y" variable nil (reparse-symbol function_parameters) [1245 1246])
+                ("X" variable nil (reparse-symbol function_parameters) [1247 1248]))              ) nil [1239 1300])
+            ("WaB" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [1309 1310])
+                ("a" variable nil (reparse-symbol function_parameters) [1311 1312])
+                ("B" variable nil (reparse-symbol function_parameters) [1313 1314]))              ) nil [1301 1348])
+            ("Wa" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [1356 1357])
+                ("a" variable nil (reparse-symbol function_parameters) [1358 1359]))              ) nil [1349 1406])
+            ("VaB" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [1415 1416])
+                ("a" variable nil (reparse-symbol function_parameters) [1417 1418])
+                ("B" variable nil (reparse-symbol function_parameters) [1419 1420]))              ) nil [1407 1468])
+            ("Va" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [1476 1477])
+                ("a" variable nil (reparse-symbol function_parameters) [1478 1479]))              ) nil [1469 1526])
+            ("Da" function (:arguments 
+              ( ("a" variable nil (reparse-symbol function_parameters) [1534 1535]))              ) nil [1527 1605])
+            ("Ua" function (:arguments 
+              ( ("a" variable nil (reparse-symbol function_parameters) [1613 1614]))              ) nil [1606 1671])
+            ("num" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [1749 1750]))              ) nil [1741 1773])
+            ("elm" function (:arguments 
+              ( ("k" variable nil (reparse-symbol function_parameters) [1782 1783]))              ) nil [1774 1802])
+            ("if" code nil nil [1871 3162]))          
+    :file "inverse.py"
+    :pointmax 3718
+    :fsize 3718
+    :lastmodtime '(20605 19618)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!projets!Code!Exjobb!old!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

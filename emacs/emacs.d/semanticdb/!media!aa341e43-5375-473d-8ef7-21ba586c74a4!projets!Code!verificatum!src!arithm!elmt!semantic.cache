@@ -1,0 +1,405 @@
+;; Object elmt/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "elmt/"
+  :tables (list 
+   (semanticdb-table "elmt.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("elmt.hpp" include nil nil [202 221])
+            ("cppVerifier" using (:type ("cppVerifier" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [223 251])
+            ("cppVerifier::arithm" using (:type ("cppVerifier::arithm" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [252 288])
+            ("Elmt" function
+               (:constructor-flag t
+                :parent "Elmt"
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [291 315])
+            ("getValue" function
+               (:parent "Elmt"
+                :type ("mpz_class" type (:type "class") nil nil))
+                nil [318 365])
+            ("[]" function
+               (:operator-flag t
+                :parent "Elmt"
+                :arguments 
+                  ( ("position" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [395 417]))                  
+                :type ("mpz_class" type (:type "class") nil nil))
+                nil [368 438])
+            ("getType" function
+               (:parent "Elmt"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [441 495]))          
+    :file "elmt.cpp"
+    :pointmax 498
+    :fsize 498
+    :lastmodtime '(20657 15998)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "elmt.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_ELMT_H_" variable (:constant-flag t) nil [222 230])
+            ("_ELMT_H_" variable (:constant-flag t) nil [222 230])
+            ("cstdlib" include (:system-flag t) nil [233 251])
+            ("gmp.h" include (:system-flag t) nil [252 268])
+            ("gmpxx.h" include (:system-flag t) nil [269 287])
+            ("cppVerifier" type
+               (:members 
+                  ( ("arithm" type
+                       (:members 
+                          ( ("Elmt" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [403 410])
+                                    ("Elmt" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :type ("Elmt" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [508 515])
+                                    ("getValue" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :type ("mpz_class" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [619 648])
+                                    ("[]" function
+                                       (:prototype-flag t
+                                        :operator-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("position" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [886 908]))                                          
+                                        :type ("mpz_class" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [857 909])
+                                    ("getType" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [996 1026]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [390 1029]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [315 1032]))                  
+                :type "namespace")
+                nil [291 1034]))          
+    :file "elmt.hpp"
+    :pointmax 1064
+    :fsize 1064
+    :lastmodtime '(20657 15987)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_ELMT_H_")
+          )
+
+    )
+   (semanticdb-table "largenumber.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_LARGENUMBER_H_" variable (:constant-flag t) nil [250 265])
+            ("_LARGENUMBER_H_" variable (:constant-flag t) nil [250 265])
+            ("_LARGENUMBER_H_" variable (:constant-flag t) nil [250 265])
+            ("elmt.hpp" include nil nil [268 287])
+            ("cppVerifier" type
+               (:members 
+                  ( ("arithm" type
+                       (:members 
+                          ( ("LargeNumber" type
+                               (:superclasses 
+                                  ( ("Elmt" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("private" label nil (reparse-symbol classsubparts) [490 498])
+                                    ("value" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol classsubparts) [577 593])
+                                    ("public" label nil (reparse-symbol classsubparts) [594 601])
+                                    ("LargeNumber" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("v" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [783 795]))                                          
+                                        :type ("LargeNumber" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [771 796])
+                                    ("getValue" function
+                                       (:prototype-flag t
+                                        :type ("mpz_class" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [877 898])
+                                    ("getType" function
+                                       (:prototype-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1027 1049]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [456 1052]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [314 1055]))                  
+                :type "namespace")
+                nil [290 1057]))          
+    :file "largenumber.hpp"
+    :pointmax 1088
+    :fsize 1088
+    :lastmodtime '(20657 16050)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_LARGENUMBER_H_")
+          )
+
+    )
+   (semanticdb-table "largenumber.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("largenumber.hpp" include nil nil [223 249])
+            ("cppVerifier" using (:type ("cppVerifier" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [251 279])
+            ("cppVerifier::arithm" using (:type ("cppVerifier::arithm" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [280 316])
+            ("LargeNumber" function
+               (:constructor-flag t
+                :parent "LargeNumber"
+                :arguments 
+                  ( ("v" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [344 356]))                  
+                :type ("LargeNumber" type (:type "class") nil nil))
+                nil [319 379])
+            ("getValue" function
+               (:parent "LargeNumber"
+                :type ("mpz_class" type (:type "class") nil nil))
+                nil [382 441])
+            ("getType" function
+               (:parent "LargeNumber"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [444 512]))          
+    :file "largenumber.cpp"
+    :pointmax 513
+    :fsize 513
+    :lastmodtime '(20657 16015)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "ecpoint.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_ECPOINT_H_" variable (:constant-flag t) nil [234 245])
+            ("elmt.hpp" include nil nil [247 266])
+            ("cppVerifier" type
+               (:members 
+                  ( ("arithm" type
+                       (:members 
+                          ( ("ECPoint" type
+                               (:superclasses 
+                                  ( ("Elmt" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("private" label nil (reparse-symbol classsubparts) [467 475])
+                                    ("x" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol classsubparts) [553 565])
+                                    ("y" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol classsubparts) [645 657])
+                                    ("public" label nil (reparse-symbol classsubparts) [659 666])
+                                    ("ECPoint" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("abscissa" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [878 897])
+                                            ("ordinate" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [898 917]))                                          
+                                        :type ("ECPoint" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [870 918])
+                                    ("[]" function
+                                       (:prototype-flag t
+                                        :operator-flag t
+                                        :arguments 
+                                          ( ("position" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1080 1102]))                                          
+                                        :type ("mpz_class" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1059 1103])
+                                    ("getType" function
+                                       (:prototype-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1228 1250]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [437 1253]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [293 1256]))                  
+                :type "namespace")
+                nil [269 1258]))          
+    :file "ecpoint.hpp"
+    :pointmax 1289
+    :fsize 1289
+    :lastmodtime '(20657 16075)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_ECPOINT_H_")
+          )
+
+    )
+   (semanticdb-table "ecpoint.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("ecpoint.hpp" include nil nil [211 233])
+            ("cppVerifier" using (:type ("cppVerifier" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [235 263])
+            ("cppVerifier::arithm" using (:type ("cppVerifier::arithm" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [264 300])
+            ("ECPoint" function
+               (:constructor-flag t
+                :parent "ECPoint"
+                :arguments 
+                  ( ("abscissa" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [321 340])
+                    ("ordinate" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [341 360]))                  
+                :type ("ECPoint" type (:type "class") nil nil))
+                nil [304 408])
+            ("[]" function
+               (:operator-flag t
+                :parent "ECPoint"
+                :arguments 
+                  ( ("position" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [442 464]))                  
+                :type ("mpz_class" type (:type "class") nil nil))
+                nil [412 617])
+            ("getType" function
+               (:parent "ECPoint"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [620 680]))          
+    :file "ecpoint.cpp"
+    :pointmax 681
+    :fsize 681
+    :lastmodtime '(20657 17437)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "collectionofelmts.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_ARRAYOFELMTS_H_" variable (:constant-flag t) nil [269 285])
+            ("_ARRAYOFELMTS_H_" variable (:constant-flag t) nil [269 285])
+            ("_ARRAYOFELMTS_H_" variable (:constant-flag t) nil [269 285])
+            ("vector" include (:system-flag t) nil [287 304])
+            ("iostream" include (:system-flag t) nil [305 324])
+            ("elmt.hpp" include nil nil [325 344])
+            ("cppVerifier" type
+               (:members 
+                  ( ("arithm" type
+                       (:members 
+                          ( ("CollectionOfElmts" type
+                               (:members 
+                                  ( ("private" label nil (reparse-symbol classsubparts) [765 773])
+                                    ("elmts" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("Elmt" type (:pointer 1) nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [867 892])
+                                    ("public" label nil (reparse-symbol classsubparts) [902 909])
+                                    ("CollectionOfElmts" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :type ("CollectionOfElmts" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [987 1007])
+                                    ("subArray" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("keepList" variable (:type ("std::vector" type
+                                                 (:template-specifier 
+                                                    ( ("bool" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol arg-sub-list) [1268 1295]))                                          
+                                        :type ("CollectionOfElmts" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1241 1296])
+                                    ("addElmt" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("e" variable
+                                               (:pointer 1
+                                                :type ("Elmt" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1419 1428]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1406 1429])
+                                    ("[]" function
+                                       (:prototype-flag t
+                                        :operator-flag t
+                                        :pointer 1
+                                        :arguments 
+                                          ( ("i" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1543 1558]))                                          
+                                        :type ("Elmt" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1525 1559])
+                                    ("size" function
+                                       (:prototype-flag t
+                                        :type "unsigned int")
+                                        (reparse-symbol classsubparts) [1648 1668]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [739 1671]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [371 1675]))                  
+                :type "namespace")
+                nil [347 1677]))          
+    :file "collectionofelmts.hpp"
+    :pointmax 1707
+    :fsize 1707
+    :lastmodtime '(20649 142)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_ARRAYOFELMTS_H_")
+          )
+
+    )
+   (semanticdb-table "collectionofelmts.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("elmt.hpp" include nil nil [241 260])
+            ("collectionofelmts.hpp" include nil nil [261 293])
+            ("cppVerifier" using (:type ("cppVerifier" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [296 324])
+            ("cppVerifier::arithm" using (:type ("cppVerifier::arithm" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [325 361])
+            ("CollectionOfElmts" function
+               (:constructor-flag t
+                :parent "CollectionOfElmts"
+                :type ("CollectionOfElmts" type (:type "class") nil nil))
+                nil [364 406])
+            ("subArray" function
+               (:parent "CollectionOfElmts"
+                :arguments 
+                  ( ("keepList" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("bool" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [455 482]))                  
+                :type ("CollectionOfElmts" type (:type "class") nil nil))
+                nil [409 1083])
+            ("addElmt" function
+               (:parent "CollectionOfElmts"
+                :arguments 
+                  ( ("e" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1118 1127]))                  
+                :type "void")
+                nil [1086 1159])
+            ("[]" function
+               (:operator-flag t
+                :arguments 
+                  ( ("i" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1199 1214]))                  
+                :type "int")
+                nil [1188 1535])
+            ("size" function
+               (:parent "CollectionOfElmts"
+                :type "unsigned int")
+                nil [1538 1609]))          
+    :file "collectionofelmts.cpp"
+    :pointmax 1610
+    :fsize 1610
+    :lastmodtime '(20649 453)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!projets!Code!verificatum!src!arithm!elmt!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

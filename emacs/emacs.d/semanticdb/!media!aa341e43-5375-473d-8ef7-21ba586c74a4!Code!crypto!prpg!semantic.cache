@@ -1,0 +1,56 @@
+;; Object prpg/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "prpg/"
+  :tables (list 
+   (semanticdb-table "prpg.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [216 235])
+            ("time.h" include (:system-flag t) nil [236 253])
+            ("stdbool.h" include (:system-flag t) nil [254 274])
+            ("stdio.h" include (:system-flag t) nil [275 293])
+            ("string.h" include (:system-flag t) nil [294 313])
+            ("gmp.h" include (:system-flag t) nil [314 330])
+            ("SECURITY_PARAMETER" variable (:constant-flag t) nil [341 359])
+            ("display_help" function (:type "void") nil [410 745])
+            ("output" function
+               (:arguments 
+                  ( ("n" variable (:type ("mpz_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [901 909]))                  
+                :type "void")
+                nil [889 967])
+            ("generate_pr_prime" function
+               (:arguments 
+                  ( ("p" variable (:type ("mpz_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1301 1309])
+                    ("l" variable (:type ("mpz_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1310 1318])
+                    ("s" variable (:type ("gmp_randstate_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1319 1337]))                  
+                :type "void")
+                nil [1278 1594])
+            ("generate_pr_primes_t" function
+               (:arguments 
+                  ( ("p" variable (:type ("mpz_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1979 1987])
+                    ("q" variable (:type ("mpz_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1988 1996])
+                    ("t" variable (:type "unsigned long int") (reparse-symbol arg-sub-list) [1997 2017])
+                    ("l" variable (:type ("mpz_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2044 2052])
+                    ("s" variable (:type ("gmp_randstate_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2053 2071]))                  
+                :type "void")
+                nil [1953 2556])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [2700 2709])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2710 2723]))                  
+                :type "int")
+                nil [2691 4237]))          
+    :file "prpg.c"
+    :pointmax 4238
+    :fsize 4238
+    :lastmodtime '(20484 37276)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!Code!crypto!prpg!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

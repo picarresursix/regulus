@@ -1,0 +1,744 @@
+;; Object bytetree/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "bytetree/"
+  :tables (list 
+   (semanticdb-table "leaf.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("iomanip" include (:system-flag t) nil [201 219])
+            ("iostream" include (:system-flag t) nil [220 239])
+            ("sstream" include (:system-flag t) nil [240 258])
+            ("cstdlib" include (:system-flag t) nil [259 277])
+            ("leaf.hpp" include nil nil [279 298])
+            ("../verifierutils.hpp" include nil nil [299 330])
+            ("verifierUtils" using (:type ("verifierUtils" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [333 363])
+            ("Leaf" function
+               (:constructor-flag t
+                :parent "Leaf"
+                :arguments 
+                  ( ("content" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("uint8_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [377 406]))                  
+                :type ("Leaf" type (:type "class") nil nil))
+                nil [366 435])
+            ("Leaf" function
+               (:constructor-flag t
+                :parent "Leaf"
+                :arguments 
+                  ( ("number" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [449 466]))                  
+                :type ("Leaf" type (:type "class") nil nil))
+                nil [438 515])
+            ("Leaf" function
+               (:constructor-flag t
+                :parent "Leaf"
+                :arguments 
+                  ( ("number" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [529 546])
+                    ("size" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [547 565]))                  
+                :type ("Leaf" type (:type "class") nil nil))
+                nil [518 758])
+            ("Leaf" function
+               (:constructor-flag t
+                :parent "Leaf"
+                :arguments 
+                  ( ("s" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [772 787]))                  
+                :type ("Leaf" type (:type "class") nil nil))
+                nil [761 1999])
+            ("Leaf" function
+               (:destructor-flag t
+                :parent "Leaf"
+                :type "void")
+                nil [2002 2042])
+            ("toString" function
+               (:parent "Leaf"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [2045 2314])
+            ("toVector" function
+               (:parent "Leaf"
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("uint8_t" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [2317 2883])
+            ("isNode" function
+               (:parent "Leaf"
+                :type "bool")
+                nil [2885 2930])
+            ("isLeaf" function
+               (:parent "Leaf"
+                :type "bool")
+                nil [2933 2978])
+            ("toInteger" function
+               (:parent "Leaf"
+                :type ("mpz_class" type (:type "class") nil nil))
+                nil [2981 3171])
+            ("toBoolArray" function (:type ("std::vector" type
+                 (:template-specifier 
+                    ( ("bool" type nil nil nil))                    
+                  :type "class")
+                  nil nil)) nil [3174 3377])
+            ("size" function
+               (:parent "Leaf"
+                :type "unsigned int")
+                nil [3380 3438])
+            ("prettyPrint" function
+               (:parent "Leaf"
+                :arguments 
+                  ( ("indent" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3464 3483]))                  
+                :type "void")
+                nil [3441 3658])
+            ("compare" function
+               (:parent "Leaf"
+                :arguments 
+                  ( ("s" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3680 3694]))                  
+                :type "bool")
+                nil [3661 4124]))          
+    :file "leaf.cpp"
+    :pointmax 4126
+    :fsize 4131
+    :lastmodtime '(20530 46713)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "bytetree.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("cstdlib" include (:system-flag t) nil [221 239])
+            ("fstream" include (:system-flag t) nil [240 258])
+            ("bytetree.hpp" include nil nil [260 283])
+            ("leaf.hpp" include nil nil [284 303])
+            ("node.hpp" include nil nil [304 323])
+            ("verifierUtils" using (:type ("verifierUtils" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [325 355])
+            ("ByteTree" function
+               (:constructor-flag t
+                :parent "ByteTree"
+                :type ("ByteTree" type (:type "class") nil nil))
+                nil [358 382])
+            ("ByteTree" function
+               (:destructor-flag t
+                :parent "ByteTree"
+                :type "void")
+                nil [385 410])
+            ("isLeaf" function
+               (:parent "ByteTree"
+                :type "bool")
+                nil [413 462])
+            ("isNode" function
+               (:parent "ByteTree"
+                :type "bool")
+                nil [465 514])
+            ("toString" function
+               (:parent "ByteTree"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [517 614])
+            ("toInteger" function
+               (:parent "ByteTree"
+                :type ("mpz_class" type (:type "class") nil nil))
+                nil [617 670])
+            ("toVector" function
+               (:parent "ByteTree"
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("uint8_t" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [673 788])
+            ("toBoolArray" function
+               (:parent "ByteTree"
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("bool" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [791 1080])
+            ("parseString" function
+               (:pointer 1
+                :parent "ByteTree"
+                :arguments 
+                  ( ("s" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1116 1131]))                  
+                :type ("ByteTree" type (:type "class") nil nil))
+                nil [1083 1604])
+            ("parseVector" function
+               (:pointer 1
+                :parent "ByteTree"
+                :arguments 
+                  ( ("v" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("uint8_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1640 1664]))                  
+                :type ("ByteTree" type (:type "class") nil nil))
+                nil [1607 2560])
+            ("parseFile" function
+               (:pointer 1
+                :parent "ByteTree"
+                :arguments 
+                  ( ("path" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2594 2611]))                  
+                :type ("ByteTree" type (:type "class") nil nil))
+                nil [2563 2985])
+            ("string2ByteTree" function
+               (:pointer 1
+                :parent "ByteTree"
+                :arguments 
+                  ( ("s" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3025 3039]))                  
+                :type ("ByteTree" type (:type "class") nil nil))
+                nil [2988 3208])
+            ("size" function
+               (:parent "ByteTree"
+                :type "unsigned int")
+                nil [3211 3262])
+            ("prettyPrint" function
+               (:parent "ByteTree"
+                :arguments 
+                  ( ("indent" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3292 3311]))                  
+                :type "void")
+                nil [3265 3315])
+            ("compare" function
+               (:parent "ByteTree"
+                :arguments 
+                  ( ("s" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3341 3355]))                  
+                :type "bool")
+                nil [3318 3380])
+            ("addChild" function
+               (:parent "ByteTree"
+                :arguments 
+                  ( ("bt" variable
+                       (:pointer 1
+                        :type ("ByteTree" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3407 3421]))                  
+                :type "void")
+                nil [3383 3663])
+            ("getChild" function
+               (:pointer 1
+                :parent "ByteTree"
+                :arguments 
+                  ( ("i" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3696 3711]))                  
+                :type ("ByteTree" type (:type "class") nil nil))
+                nil [3666 3953]))          
+    :file "bytetree.cpp"
+    :pointmax 3954
+    :fsize 3954
+    :lastmodtime '(20556 40080)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "bytetree.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_BYTE_TREE_H_" variable (:constant-flag t) nil [244 257])
+            ("_BYTE_TREE_H_" variable (:constant-flag t) nil [244 257])
+            ("iostream" include (:system-flag t) nil [259 278])
+            ("gmpxx.h" include (:system-flag t) nil [279 297])
+            ("gmp.h" include (:system-flag t) nil [298 314])
+            ("vector" include (:system-flag t) nil [315 332])
+            ("string" include (:system-flag t) nil [333 350])
+            ("cstdint" include (:system-flag t) nil [351 369])
+            ("verifierUtils" type
+               (:members 
+                  ( ("ByteTree" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [923 930])
+                            ("ByteTree" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("ByteTree" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1016 1027])
+                            ("ByteTree" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1121 1133])
+                            ("parseString" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("s" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1732 1747]))                                  
+                                :type ("ByteTree" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1702 1748])
+                            ("parseVector" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("v" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("uint8_t" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [2399 2423]))                                  
+                                :type ("ByteTree" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2369 2424])
+                            ("parseFile" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("path" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2743 2760]))                                  
+                                :type ("ByteTree" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2715 2761])
+                            ("string2ByteTree" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("s" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3277 3291]))                                  
+                                :type ("ByteTree" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3243 3292])
+                            ("isLeaf" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "bool")
+                                (reparse-symbol classsubparts) [3508 3530])
+                            ("isNode" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "bool")
+                                (reparse-symbol classsubparts) [3746 3768])
+                            ("toString" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3928 3959])
+                            ("toVector" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("uint8_t" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [4204 4244])
+                            ("toInteger" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type ("mpz_class" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4453 4483])
+                            ("toBoolArray" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("bool" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [4705 4745])
+                            ("size" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type "unsigned int")
+                                (reparse-symbol classsubparts) [4943 4971])
+                            ("prettyPrint" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("indent" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5233 5252]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [5208 5253])
+                            ("compare" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("s" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5899 5913]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [5878 5914])
+                            ("addChild" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("bt" variable
+                                       (:pointer 1
+                                        :type ("ByteTree" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6191 6205]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [6169 6206])
+                            ("getChild" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("i" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [6468 6483]))                                  
+                                :type ("ByteTree" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6440 6484]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [906 6487]))                  
+                :type "namespace")
+                nil [372 6491]))          
+    :file "bytetree.hpp"
+    :pointmax 6521
+    :fsize 6521
+    :lastmodtime '(20556 40121)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_BYTE_TREE_H_")
+          )
+
+    )
+   (semanticdb-table "leaf.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_LEAF_H_" variable (:constant-flag t) nil [221 229])
+            ("_LEAF_H_" variable (:constant-flag t) nil [221 229])
+            ("bytetree.hpp" include nil nil [231 254])
+            ("verifierUtils" type
+               (:members 
+                  ( ("Leaf" type
+                       (:superclasses 
+                          ( ("ByteTree" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("private" label nil (reparse-symbol classsubparts) [599 607])
+                            ("bytes" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("uint8_t" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [696 723])
+                            ("public" label nil (reparse-symbol classsubparts) [725 732])
+                            ("Leaf" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("content" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("uint8_t" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [936 965]))                                  
+                                :type ("Leaf" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [931 966])
+                            ("Leaf" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("s" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1509 1524]))                                  
+                                :type ("Leaf" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1504 1525])
+                            ("Leaf" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("number" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1696 1713]))                                  
+                                :type ("Leaf" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1691 1714])
+                            ("Leaf" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("number" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2011 2028])
+                                    ("size" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2029 2047]))                                  
+                                :type ("Leaf" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2006 2048])
+                            ("Leaf" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [2150 2158])
+                            ("toString" function
+                               (:prototype-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2215 2238])
+                            ("toVector" function
+                               (:prototype-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("uint8_t" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [2256 2288])
+                            ("toNumber" function
+                               (:prototype-flag t
+                                :type ("mpz_class" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2306 2327])
+                            ("toBoolArray" function
+                               (:prototype-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("bool" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [2337 2369])
+                            ("isNode" function
+                               (:prototype-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [2387 2401])
+                            ("isLeaf" function
+                               (:prototype-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [2419 2433])
+                            ("toInteger" function
+                               (:prototype-flag t
+                                :type ("mpz_class" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2451 2473])
+                            ("size" function
+                               (:prototype-flag t
+                                :type "unsigned int")
+                                (reparse-symbol classsubparts) [2491 2511])
+                            ("prettyPrint" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("indent" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2546 2565]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2529 2566])
+                            ("compare" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("s" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2597 2611]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [2584 2612]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [568 2615]))                  
+                :type "namespace")
+                nil [256 2618]))          
+    :file "leaf.hpp"
+    :pointmax 2648
+    :fsize 2648
+    :lastmodtime '(20520 1565)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_LEAF_H_")
+          )
+
+    )
+   (semanticdb-table "node.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_NODE_H_" variable (:constant-flag t) nil [220 228])
+            ("_NODE_H_" variable (:constant-flag t) nil [220 228])
+            ("_NODE_H_" variable (:constant-flag t) nil [220 228])
+            ("_NODE_H_" variable (:constant-flag t) nil [220 228])
+            ("bytetree.hpp" include nil nil [230 253])
+            ("verifierUtils" type
+               (:members 
+                  ( ("Node" type
+                       (:superclasses 
+                          ( ("ByteTree" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("private" label nil (reparse-symbol classsubparts) [459 467])
+                            ("children" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("ByteTree" type (:pointer 1) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [613 646])
+                            ("public" label nil (reparse-symbol classsubparts) [648 655])
+                            ("Node" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("Node" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [741 748])
+                            ("Node" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("s" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [999 1014]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [994 1015])
+                            ("Node" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("v" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("uint8_t" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [1300 1324]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1295 1325])
+                            ("Node" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1413 1421])
+                            ("toString" function
+                               (:prototype-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1477 1500])
+                            ("toVector" function
+                               (:prototype-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("uint8_t" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [1510 1542])
+                            ("isNode" function
+                               (:prototype-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [1552 1566])
+                            ("isLeaf" function
+                               (:prototype-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [1576 1590])
+                            ("size" function
+                               (:prototype-flag t
+                                :type "unsigned int")
+                                (reparse-symbol classsubparts) [1600 1620])
+                            ("prettyPrint" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("indent" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1647 1666]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1630 1667])
+                            ("addChild" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("bt" variable
+                                       (:pointer 1
+                                        :type ("ByteTree" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1691 1705]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1677 1706])
+                            ("getChild" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :arguments 
+                                  ( ("i" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1736 1751]))                                  
+                                :type ("ByteTree" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1716 1752]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [428 1755]))                  
+                :type "namespace")
+                nil [255 1758]))          
+    :file "node.hpp"
+    :pointmax 1788
+    :fsize 1788
+    :lastmodtime '(20519 50152)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_NODE_H_")
+          )
+
+    )
+   (semanticdb-table "node.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("sstream" include (:system-flag t) nil [201 219])
+            ("iomanip" include (:system-flag t) nil [220 238])
+            ("cstdlib" include (:system-flag t) nil [239 257])
+            ("node.hpp" include nil nil [259 278])
+            ("../verifierutils.hpp" include nil nil [279 310])
+            ("verifierUtils" using (:type ("verifierUtils" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [312 342])
+            ("Node" function
+               (:constructor-flag t
+                :parent "Node"
+                :type ("Node" type (:type "class") nil nil))
+                nil [346 362])
+            ("Node" function
+               (:destructor-flag t
+                :parent "Node"
+                :type "void")
+                nil [365 472])
+            ("Node" function
+               (:constructor-flag t
+                :parent "Node"
+                :arguments 
+                  ( ("s" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [486 501]))                  
+                :type ("Node" type (:type "class") nil nil))
+                nil [475 1152])
+            ("Node" function
+               (:constructor-flag t
+                :parent "Node"
+                :arguments 
+                  ( ("v" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("uint8_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1166 1190]))                  
+                :type ("Node" type (:type "class") nil nil))
+                nil [1155 1994])
+            ("toString" function
+               (:parent "Node"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [2012 2242])
+            ("toVector" function
+               (:parent "Node"
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("uint8_t" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [2245 2993])
+            ("isNode" function
+               (:parent "Node"
+                :type "bool")
+                nil [2996 3040])
+            ("isLeaf" function
+               (:parent "Node"
+                :type "bool")
+                nil [3043 3088])
+            ("size" function
+               (:parent "Node"
+                :type "unsigned int")
+                nil [3091 3152])
+            ("prettyPrint" function
+               (:parent "Node"
+                :arguments 
+                  ( ("indent" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3178 3197]))                  
+                :type "void")
+                nil [3155 3405])
+            ("addChild" function
+               (:parent "Node"
+                :arguments 
+                  ( ("bt" variable
+                       (:pointer 1
+                        :type ("ByteTree" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3428 3442]))                  
+                :type "void")
+                nil [3408 3478])
+            ("getChild" function
+               (:pointer 1
+                :parent "Node"
+                :arguments 
+                  ( ("i" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3507 3522]))                  
+                :type ("ByteTree" type (:type "class") nil nil))
+                nil [3481 3554]))          
+    :file "node.cpp"
+    :pointmax 3555
+    :fsize 3555
+    :lastmodtime '(20519 50152)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!Code!verificatum!src!verifierutils!bytetree!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

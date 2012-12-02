@@ -1,0 +1,403 @@
+;; Object psubgroup/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "psubgroup/"
+  :tables (list 
+   (semanticdb-table "psubgroup.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_PSUBGROUP_H_" variable (:constant-flag t) nil [243 256])
+            ("_PSUBGROUP_H_" variable (:constant-flag t) nil [243 256])
+            ("_PSUBGROUP_H_" variable (:constant-flag t) nil [243 256])
+            ("../group/group.hpp" include nil nil [259 288])
+            ("cppVerifier" type
+               (:members 
+                  ( ("arithm" type
+                       (:members 
+                          ( ("PSubGroup" type
+                               (:superclasses 
+                                  ( ("Group" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("protected" label nil (reparse-symbol classsubparts) [472 482])
+                                    ("baseGroup" variable
+                                       (:pointer 1
+                                        :type ("Group" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [577 595])
+                                    ("coOrder" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol classsubparts) [699 717])
+                                    ("public" label nil (reparse-symbol classsubparts) [719 726])
+                                    ("PSubGroup" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("bgrp" variable
+                                               (:pointer 1
+                                                :type ("Group" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1006 1019])
+                                            ("order" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1020 1036])
+                                            ("gen" variable
+                                               (:pointer 1
+                                                :type ("Elmt" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1037 1048]))                                          
+                                        :type ("PSubGroup" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [996 1049])
+                                    ("getElmt" function
+                                       (:prototype-flag t
+                                        :pointer 1
+                                        :arguments 
+                                          ( ("bt" variable
+                                               (:pointer 1
+                                                :type ("utils::ByteTree" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1094 1115]))                                          
+                                        :type ("Elmt" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1079 1116])
+                                    ("getByteTree" function
+                                       (:prototype-flag t
+                                        :pointer 1
+                                        :arguments 
+                                          ( ("e" variable
+                                               (:pointer 1
+                                                :type ("Elmt" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1163 1172]))                                          
+                                        :type ("utils::ByteTree" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1133 1173])
+                                    ("mult" function
+                                       (:prototype-flag t
+                                        :pointer 1
+                                        :arguments 
+                                          ( ("e1" variable
+                                               (:pointer 1
+                                                :type ("Elmt" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1233 1243])
+                                            ("e2" variable
+                                               (:pointer 1
+                                                :type ("Elmt" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1244 1254]))                                          
+                                        :type ("Elmt" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1221 1255])
+                                    ("multInverse" function
+                                       (:prototype-flag t
+                                        :pointer 1
+                                        :arguments 
+                                          ( ("e" variable
+                                               (:pointer 1
+                                                :type ("Elmt" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1283 1292]))                                          
+                                        :type ("Elmt" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1264 1293])
+                                    ("exp" function
+                                       (:prototype-flag t
+                                        :pointer 1
+                                        :arguments 
+                                          ( ("e" variable
+                                               (:pointer 1
+                                                :type ("Elmt" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1313 1322])
+                                            ("s" variable
+                                               (:pointer 1
+                                                :type ("Elmt" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1323 1332]))                                          
+                                        :type ("Elmt" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1302 1333])
+                                    ("compare" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("e1" variable
+                                               (:pointer 1
+                                                :type ("Elmt" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1355 1365])
+                                            ("e2" variable
+                                               (:pointer 1
+                                                :type ("Elmt" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1366 1376]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1342 1377])
+                                    ("getOne" function
+                                       (:prototype-flag t
+                                        :pointer 1
+                                        :type ("Elmt" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1406 1422])
+                                    ("isIn" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("r" variable
+                                               (:pointer 1
+                                                :type ("Elmt" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1570 1579]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1560 1580])
+                                    ("getType" function
+                                       (:prototype-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1597 1619]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [439 1622]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [315 1625]))                  
+                :type "namespace")
+                nil [291 1627]))          
+    :file "psubgroup.hpp"
+    :pointmax 1658
+    :fsize 1658
+    :lastmodtime '(20649 4663)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_PSUBGROUP_H_")
+          )
+
+    )
+   (semanticdb-table "modpgrp.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("modpgrp.hpp" include nil nil [211 233])
+            ("../field/modfield.hpp" include nil nil [234 266])
+            ("cppVerifier" using (:type ("cppVerifier" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [268 296])
+            ("cppVerifier::arithm" using (:type ("cppVerifier::arithm" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [297 333])
+            ("ModPGrp" function
+               (:constructor-flag t
+                :parent "ModPGrp"
+                :arguments 
+                  ( ("ord" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [353 367])
+                    ("add" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [368 382])
+                    ("gen" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [400 414])
+                    ("encoding" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [415 432]))                  
+                :type ("ModPGrp" type (:type "class") nil nil))
+                nil [336 691])
+            ("ModPGrp" function
+               (:constructor-flag t
+                :parent "ModPGrp"
+                :arguments 
+                  ( ("bt" variable
+                       (:pointer 1
+                        :type ("utils::ByteTree" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [711 732]))                  
+                :type ("ModPGrp" type (:type "class") nil nil))
+                nil [694 1300])
+            ("toByteTree" function
+               (:pointer 1
+                :parent "ModPGrp"
+                :type ("utils::ByteTree" type (:type "class") nil nil))
+                nil [1303 1673])
+            ("getRandArray" function
+               (:parent "ModPGrp"
+                :arguments 
+                  ( ("prg" variable
+                       (:pointer 1
+                        :type ("crypto::PRG" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1716 1734])
+                    ("nr" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1735 1751])
+                    ("n0" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1778 1794]))                  
+                :type ("CollectionOfElmts" type (:type "class") nil nil))
+                nil [1676 2808]))          
+    :file "modpgrp.cpp"
+    :pointmax 2811
+    :fsize 2811
+    :lastmodtime '(20649 14271)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "modpgrp.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_MODPGRP_H_" variable (:constant-flag t) nil [234 245])
+            ("psubgroup.hpp" include nil nil [247 271])
+            ("cppVerifier" type
+               (:members 
+                  ( ("arithm" type
+                       (:members 
+                          ( ("ModPGrp" type
+                               (:superclasses 
+                                  ( ("PSubGroup" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("private" label nil (reparse-symbol classsubparts) [414 422])
+                                    ("code" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [699 712])
+                                    ("addOrder" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol classsubparts) [805 824])
+                                    ("public" label nil (reparse-symbol classsubparts) [826 833])
+                                    ("ModPGrp" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("ord" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1071 1085])
+                                            ("add" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1086 1100])
+                                            ("gen" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1101 1115])
+                                            ("encoding" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1116 1133]))                                          
+                                        :type ("ModPGrp" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1063 1134])
+                                    ("ModPGrp" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("bt" variable
+                                               (:pointer 1
+                                                :type ("utils::ByteTree" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1434 1455]))                                          
+                                        :type ("ModPGrp" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1426 1456])
+                                    ("toByteTree" function
+                                       (:prototype-flag t
+                                        :pointer 1
+                                        :type ("utils::ByteTree" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1466 1497])
+                                    ("getRandArray" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("prg" variable
+                                               (:pointer 1
+                                                :type ("crypto::PRG" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1538 1556])
+                                            ("nr" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1557 1573])
+                                            ("n0" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1574 1590]))                                          
+                                        :type ("CollectionOfElmts" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1507 1591]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [379 1594]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [297 1597]))                  
+                :type "namespace")
+                nil [273 1599]))          
+    :file "modpgrp.hpp"
+    :pointmax 1629
+    :fsize 1629
+    :lastmodtime '(20649 1113)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_MODPGRP_H_")
+          )
+
+    )
+   (semanticdb-table "psubgroup.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("psubgroup.hpp" include nil nil [217 241])
+            ("cppVerifier" using (:type ("cppVerifier" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [243 271])
+            ("cppVerifier::arithm" using (:type ("cppVerifier::arithm" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [272 308])
+            ("PSubGroup" function
+               (:constructor-flag t
+                :parent "PSubGroup"
+                :arguments 
+                  ( ("bgrp" variable
+                       (:pointer 1
+                        :type ("Group" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [332 345])
+                    ("order" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [346 362])
+                    ("gen" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [363 374]))                  
+                :type ("PSubGroup" type (:type "class") nil nil))
+                nil [311 810])
+            ("getElmt" function
+               (:pointer 1
+                :parent "PSubGroup"
+                :arguments 
+                  ( ("bt" variable
+                       (:pointer 1
+                        :type ("utils::ByteTree" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [913 934]))                  
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [887 977])
+            ("getByteTree" function
+               (:pointer 1
+                :parent "PSubGroup"
+                :arguments 
+                  ( ("e" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1021 1030]))                  
+                :type ("utils::ByteTree" type (:type "class") nil nil))
+                nil [980 1076])
+            ("mult" function
+               (:pointer 1
+                :parent "PSubGroup"
+                :arguments 
+                  ( ("e1" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1176 1186])
+                    ("e2" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1187 1197]))                  
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [1153 1240])
+            ("multInverse" function
+               (:pointer 1
+                :parent "PSubGroup"
+                :arguments 
+                  ( ("e" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1273 1282]))                  
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [1243 1328])
+            ("exp" function
+               (:pointer 1
+                :parent "PSubGroup"
+                :arguments 
+                  ( ("e" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1353 1362])
+                    ("s" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1363 1372]))                  
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [1331 1412])
+            ("compare" function
+               (:parent "PSubGroup"
+                :arguments 
+                  ( ("e1" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1439 1449])
+                    ("e2" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1450 1460]))                  
+                :type "bool")
+                nil [1415 1506])
+            ("getOne" function
+               (:pointer 1
+                :parent "PSubGroup"
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [1582 1648])
+            ("isIn" function
+               (:parent "PSubGroup"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1746 1755]))                  
+                :type "bool")
+                nil [1725 1858])
+            ("getType" function
+               (:parent "PSubGroup"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [1861 1954]))          
+    :file "psubgroup.cpp"
+    :pointmax 1955
+    :fsize 1955
+    :lastmodtime '(20649 19263)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!projets!Code!verificatum!src!arithm!psubgroup!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

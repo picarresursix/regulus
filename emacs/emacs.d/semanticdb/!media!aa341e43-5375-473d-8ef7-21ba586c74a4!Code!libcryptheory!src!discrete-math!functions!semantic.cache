@@ -1,0 +1,127 @@
+;; Object functions/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "functions/"
+  :tables (list 
+   (semanticdb-table "vectfunc.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("vectfunc.hpp" include nil nil [220 243])
+            ("cryptheory::math" using (:type ("cryptheory::math" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [245 278])
+            ("evaluate" function
+               (:parent "VectFunc"
+                :arguments 
+                  ( ("u" variable (:type ("GFElmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [307 316]))                  
+                :type ("GFElmt" type (:type "class") nil nil))
+                nil [281 375]))          
+    :file "vectfunc.cpp"
+    :pointmax 376
+    :fsize 376
+    :lastmodtime '(20522 23700)
+    :unmatched-syntax '((thing 347 . 348) (thing 347 . 348) (thing 347 . 348))
+    )
+   (semanticdb-table "vectfunc.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_VECTFUNC_H_" variable (:constant-flag t) nil [247 259])
+            ("_VECTFUNC_H_" variable (:constant-flag t) nil [247 259])
+            ("../galois/gfield.hpp" include nil nil [261 292])
+            ("../galois/gfelmt.hpp" include nil nil [293 324])
+            ("cryptheory" type
+               (:members 
+                  ( ("math" type
+                       (:members 
+                          ( ("VectFunc" type
+                               (:members 
+                                  ( ("private" label nil (reparse-symbol classsubparts) [551 559])
+                                    ("domain" variable (:type ("GField" type (:type "class") nil nil)) (reparse-symbol classsubparts) [640 654])
+                                    ("targetSet" variable (:type ("GField" type (:type "class") nil nil)) (reparse-symbol classsubparts) [738 755])
+                                    ("public" label nil (reparse-symbol classsubparts) [756 763])
+                                    ("evaluate" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("u" variable (:type ("GFElmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1025 1034]))                                          
+                                        :type ("GFElmt" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1001 1035]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [534 1038]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [350 1041]))                  
+                :type "namespace")
+                nil [327 1043]))          
+    :file "vectfunc.hpp"
+    :pointmax 904
+    :fsize 1073
+    :lastmodtime '(20522 23604)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_VECTFUNC_H_")
+          )
+
+    )
+   (semanticdb-table "boolfunc.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_BOOLFUNC_H_" variable (:constant-flag t) nil [238 250])
+            ("../galois/gfield.hpp" include nil nil [252 283])
+            ("../galois/ghelmt.hpp" include nil nil [284 315])
+            ("cryptheory" type
+               (:members 
+                  ( ("math" type
+                       (:members 
+                          ( ("BoolFunc" type
+                               (:members 
+                                  ( ("private" label nil (reparse-symbol classsubparts) [469 477])
+                                    ("domain" variable (:type ("GField" type (:type "class") nil nil)) (reparse-symbol classsubparts) [486 500])
+                                    ("public" label nil (reparse-symbol classsubparts) [501 508])
+                                    ("evaluate" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("u" variable (:type ("GFElmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [768 777]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [746 778]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [452 781]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [341 784]))                  
+                :type "namespace")
+                nil [318 786]))          
+    :file "boolfunc.hpp"
+    :pointmax 817
+    :fsize 817
+    :lastmodtime '(20522 22908)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_BOOLFUNC_H_")
+          )
+
+    )
+   (semanticdb-table "boolfunc.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("boolfunc.hpp" include nil nil [214 237])
+            ("cryptheory::math" using (:type ("cryptheory::math" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [239 272])
+            ("evaluate" function
+               (:parent "BoolFunc"
+                :arguments 
+                  ( ("u" variable (:type ("GFElmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [299 308]))                  
+                :type "bool")
+                nil [275 334]))          
+    :file "boolfunc.cpp"
+    :pointmax 335
+    :fsize 335
+    :lastmodtime '(20522 23705)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!Code!libcryptheory!src!discrete-math!functions!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

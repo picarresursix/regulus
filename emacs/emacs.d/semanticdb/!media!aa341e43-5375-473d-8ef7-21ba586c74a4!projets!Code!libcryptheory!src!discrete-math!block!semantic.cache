@@ -1,0 +1,271 @@
+;; Object block/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "block/"
+  :tables (list 
+     (semanticdb-table "block.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("gfelmt.hpp" include nil nil [208 229])
+            ("gfield.hpp" include nil nil [230 251])
+            ("cryptheory::math" using (:type ("cryptheory::math" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [254 287])
+            ("Block" function
+               (:constructor-flag t
+                :parent "Block"
+                :type ("Block" type (:type "class") nil nil))
+                nil [325 343])
+            ("Block" function
+               (:constructor-flag t
+                :parent "Block"
+                :arguments 
+                  ( ("content" variable (:type ("boost::dynamic_bitset" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [359 392]))                  
+                :type ("Block" type (:type "class") nil nil))
+                nil [346 421])
+            ("Block" function
+               (:constructor-flag t
+                :parent "Block"
+                :arguments 
+                  ( ("value" variable (:type "bool") (reparse-symbol arg-sub-list) [437 448])
+                    ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [449 464]))                  
+                :type ("Block" type (:type "class") nil nil))
+                nil [424 494])
+            ("Block" function
+               (:constructor-flag t
+                :parent "Block"
+                :arguments 
+                  ( ("value" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [510 529])
+                    ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [530 545]))                  
+                :type ("Block" type (:type "class") nil nil))
+                nil [497 574])
+            ("Block" function
+               (:constructor-flag t
+                :parent "Block"
+                :arguments 
+                  ( ("message" variable (:type ("byteVector" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [590 609])
+                    ("begin" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [610 629])
+                    ("nBytes" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [645 665]))                  
+                :type ("Block" type (:type "class") nil nil))
+                nil [577 707])
+            ("Block" function
+               (:constructor-flag t
+                :parent "Block"
+                :arguments 
+                  ( ("e" variable (:type ("Block" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [723 731])
+                    ("begin" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [732 751])
+                    ("bitlength" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [752 775]))                  
+                :type ("Block" type (:type "class") nil nil))
+                nil [710 814])
+            ("assign" function
+               (:parent "Block"
+                :arguments 
+                  ( ("content" variable (:type ("boost::dynamic_bitset" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [867 900]))                  
+                :type "void")
+                nil [848 928])
+            ("assign" function
+               (:parent "Block"
+                :arguments 
+                  ( ("value" variable (:type "bool") (reparse-symbol arg-sub-list) [950 961])
+                    ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [962 977]))                  
+                :type "void")
+                nil [931 1011])
+            ("assign" function
+               (:parent "Block"
+                :arguments 
+                  ( ("value" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1033 1052])
+                    ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1053 1068]))                  
+                :type "void")
+                nil [1014 1185])
+            ("assign" function
+               (:parent "Block"
+                :arguments 
+                  ( ("message" variable (:type ("byteVector" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1207 1226])
+                    ("begin" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1227 1246])
+                    ("nBytes" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1267 1287]))                  
+                :type "void")
+                nil [1188 1824])
+            ("assign" function
+               (:parent "Block"
+                :arguments 
+                  ( ("e" variable (:type ("Block" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1846 1854])
+                    ("begin" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1855 1874])
+                    ("bitlength" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1875 1898]))                  
+                :type "void")
+                nil [1827 2032])
+            ("toInteger" function
+               (:parent "Block"
+                :type "unsigned int")
+                nil [2071 2138])
+            ("toString" function
+               (:parent "Block"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [2141 2363])
+            ("toByteVector" function
+               (:parent "Block"
+                :type ("byteVector" type (:type "class") nil nil))
+                nil [2366 2918])
+            ("getBit" function
+               (:parent "Block"
+                :arguments 
+                  ( ("i" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2974 2989]))                  
+                :type "bool")
+                nil [2955 3017])
+            ("getSize" function
+               (:parent "Block"
+                :type "unsigned int")
+                nil [3020 3081])
+            ("getValue" function
+               (:parent "Block"
+                :type ("boost::dynamic_bitset" type (:type "class") nil nil))
+                nil [3084 3150]))          
+    :file "block.cpp"
+    :pointmax 3153
+    :fsize 3153
+    :lastmodtime '(20610 48900)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "block.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_GFELMT_H_" variable (:constant-flag t) nil [230 240])
+            ("boost/dynamic_bitset.hpp" include (:system-flag t) nil [242 277])
+            ("../../define.hpp" include nil nil [279 306])
+            ("cryptheory" type
+               (:members 
+                  ( ("math" type
+                       (:members 
+                          ( ("Block" type
+                               (:members 
+                                  ( ("private" label nil (reparse-symbol classsubparts) [438 446])
+                                    ("bits" variable (:type ("boost::dynamic_bitset" type (:type "class") nil nil)) (reparse-symbol classsubparts) [527 556])
+                                    ("public" label nil (reparse-symbol classsubparts) [557 564])
+                                    ("Block" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :type ("Block" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [659 667])
+                                    ("Block" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("content" variable (:type ("boost::dynamic_bitset" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [747 779]))                                          
+                                        :type ("Block" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [741 780])
+                                    ("Block" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("value" variable (:type "bool") (reparse-symbol arg-sub-list) [852 863])
+                                            ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [864 879]))                                          
+                                        :type ("Block" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [846 880])
+                                    ("Block" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("value" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [953 972])
+                                            ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [973 988]))                                          
+                                        :type ("Block" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [947 989])
+                                    ("Block" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("message" variable (:type ("byteVector" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1062 1081])
+                                            ("begin" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1082 1101])
+                                            ("nBytes" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1117 1137]))                                          
+                                        :type ("Block" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1056 1138])
+                                    ("Block" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("e" variable (:type ("Block" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1211 1219])
+                                            ("begin" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1220 1239])
+                                            ("bitlength" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1240 1263]))                                          
+                                        :type ("Block" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1205 1264])
+                                    ("assign" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("content" variable (:type ("boost::dynamic_bitset" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1457 1489]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1445 1490])
+                                    ("assign" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("value" variable (:type "bool") (reparse-symbol arg-sub-list) [1630 1641])
+                                            ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1642 1657]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1618 1658])
+                                    ("assign" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("value" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2070 2089])
+                                            ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2090 2105]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2058 2106])
+                                    ("assign" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("message" variable (:type ("byteVector" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2655 2674])
+                                            ("begin" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2675 2694])
+                                            ("nBytes" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2715 2735]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2643 2736])
+                                    ("assign" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("e" variable (:type ("Block" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3080 3088])
+                                            ("begin" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3089 3108])
+                                            ("bitlength" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3109 3132]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [3068 3133])
+                                    ("toInteger" function
+                                       (:prototype-flag t
+                                        :type "unsigned int")
+                                        (reparse-symbol classsubparts) [3344 3369])
+                                    ("toString" function
+                                       (:prototype-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3447 3470])
+                                    ("toByteVector" function
+                                       (:prototype-flag t
+                                        :type ("byteVector" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3574 3600])
+                                    ("getBit" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("i" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3689 3704]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [3677 3705])
+                                    ("getSize" function
+                                       (:prototype-flag t
+                                        :type "unsigned int")
+                                        (reparse-symbol classsubparts) [3813 3836])
+                                    ("getValue" function
+                                       (:prototype-flag t
+                                        :type ("boost::dynamic_bitset" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3893 3928]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [424 3931]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [332 3934]))                  
+                :type "namespace")
+                nil [309 3936]))          
+    :file "block.hpp"
+    :pointmax 3967
+    :fsize 3967
+    :lastmodtime '(20610 48887)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_GFELMT_H_")
+          )
+
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!projets!Code!libcryptheory!src!discrete-math!block!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

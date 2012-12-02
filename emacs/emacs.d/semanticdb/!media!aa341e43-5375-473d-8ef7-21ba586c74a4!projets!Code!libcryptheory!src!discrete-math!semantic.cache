@@ -1,0 +1,27 @@
+;; Object discrete-math/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "discrete-math/"
+  :tables (list 
+   (semanticdb-table "math_module.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("galois/gfield.hpp" include nil nil [240 268])
+            ("galois/gfelmt.hpp" include nil nil [269 297])
+            ("function/boolfunc.hpp" include nil nil [298 330])
+            ("function/vectfunc.hpp" include nil nil [331 363])
+            ("cryptheory" type
+               (:members 
+                  ( ("math" type (:type "namespace") (reparse-symbol namespacesubparts) [667 685]))                  
+                :type "namespace")
+                nil [365 688]))          
+    :file "math_module.hpp"
+    :pointmax 692
+    :fsize 689
+    :lastmodtime '(20612 3191)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!projets!Code!libcryptheory!src!discrete-math!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

@@ -1,0 +1,367 @@
+;; Object modring/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "modring/"
+  :tables (list 
+   (semanticdb-table "modring.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("modring.hpp" include nil nil [209 231])
+            ("modringelmt.hpp" include nil nil [232 258])
+            ("arithm" using (:type ("arithm" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [260 283])
+            ("ModRing" function
+               (:constructor-flag t
+                :parent "ModRing"
+                :type ("ModRing" type (:type "class") nil nil))
+                nil [286 308])
+            ("ModRing" function
+               (:constructor-flag t
+                :parent "ModRing"
+                :arguments 
+                  ( ("p" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [328 340]))                  
+                :type ("ModRing" type (:type "class") nil nil))
+                nil [311 354])
+            ("multiplication" function
+               (:pointer 1
+                :parent "ModRing"
+                :arguments 
+                  ( ("elm1" variable
+                       (:pointer 1
+                        :type ("RingElmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [465 481])
+                    ("elm2" variable
+                       (:pointer 1
+                        :type ("RingElmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [482 498]))                  
+                :type ("RingElmt" type (:type "class") nil nil))
+                nil [430 708])
+            ("exponentiation" function
+               (:pointer 1
+                :parent "ModRing"
+                :arguments 
+                  ( ("elm" variable
+                       (:pointer 1
+                        :type ("RingElmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [746 761])
+                    ("exponent" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [762 781]))                  
+                :type ("RingElmt" type (:type "class") nil nil))
+                nil [711 1040])
+            ("exponentiation" function
+               (:pointer 1
+                :parent "ModRing"
+                :arguments 
+                  ( ("elm" variable
+                       (:pointer 1
+                        :type ("RingElmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1078 1093])
+                    ("exponent" variable
+                       (:pointer 1
+                        :type ("RingElmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1094 1114]))                  
+                :type ("RingElmt" type (:type "class") nil nil))
+                nil [1043 1394])
+            ("getAddInverse" function
+               (:pointer 1
+                :parent "ModRing"
+                :arguments 
+                  ( ("elm" variable
+                       (:pointer 1
+                        :type ("RingElmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1431 1446]))                  
+                :type ("RingElmt" type (:type "class") nil nil))
+                nil [1397 1546])
+            ("getZero" function
+               (:pointer 1
+                :parent "ModRing"
+                :type ("RingElmt" type (:type "class") nil nil))
+                nil [1632 1705])
+            ("getOne" function
+               (:pointer 1
+                :parent "ModRing"
+                :type ("RingElmt" type (:type "class") nil nil))
+                nil [1708 1780])
+            ("getElmt" function
+               (:pointer 1
+                :parent "ModRing"
+                :arguments 
+                  ( ("bt" variable
+                       (:pointer 1
+                        :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1811 1840]))                  
+                :type ("RingElmt" type (:type "class") nil nil))
+                nil [1783 2126])
+            ("getElmt" function
+               (:pointer 1
+                :parent "ModRing"
+                :arguments 
+                  ( ("repr" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2157 2172]))                  
+                :type ("RingElmt" type (:type "class") nil nil))
+                nil [2129 2219])
+            ("getArrayOfElmts" function
+               (:pointer 1
+                :parent "ModRing"
+                :type ("ArrayOfRingElmts" type (:type "class") nil nil))
+                nil [2222 2314])
+            ("getType" function
+               (:parent "ModRing"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [2370 2430]))          
+    :file "modring.cpp"
+    :pointmax 2431
+    :fsize 2431
+    :lastmodtime '(20530 49776)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "modring.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_MODRING_H_" variable (:constant-flag t) nil [234 245])
+            ("_MODRING_H_" variable (:constant-flag t) nil [234 245])
+            ("../ring/ring.hpp" include nil nil [249 276])
+            ("../ring/ringelmt.hpp" include nil nil [277 308])
+            ("../ring/arrayofringelmts.hpp" include nil nil [309 348])
+            ("arithm" type
+               (:members 
+                  ( ("ModRingElmt" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [396 414])
+                    ("ModRing" type
+                       (:superclasses 
+                          ( ("Ring" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [528 535])
+                            ("ModRing" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("ModRing" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [606 616])
+                            ("ModRing" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("p" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [790 802]))                                  
+                                :type ("ModRing" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [782 803])
+                            ("multiplication" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :arguments 
+                                  ( ("elm1" variable
+                                       (:pointer 1
+                                        :type ("RingElmt" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1249 1265])
+                                    ("elm2" variable
+                                       (:pointer 1
+                                        :type ("RingElmt" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1266 1282]))                                  
+                                :type ("RingElmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1223 1283])
+                            ("exponentiation" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :arguments 
+                                  ( ("elm" variable
+                                       (:pointer 1
+                                        :type ("RingElmt" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1715 1730])
+                                    ("exponent" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1731 1750]))                                  
+                                :type ("RingElmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1689 1751])
+                            ("exponentiation" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :arguments 
+                                  ( ("elm" variable
+                                       (:pointer 1
+                                        :type ("RingElmt" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2183 2198])
+                                    ("exponent" variable
+                                       (:pointer 1
+                                        :type ("RingElmt" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2199 2219]))                                  
+                                :type ("RingElmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2157 2220])
+                            ("getAddInverse" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :arguments 
+                                  ( ("elm" variable
+                                       (:pointer 1
+                                        :type ("RingElmt" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2255 2270]))                                  
+                                :type ("RingElmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2230 2271])
+                            ("getZero" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :type ("RingElmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2348 2369])
+                            ("getOne" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :type ("RingElmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2378 2398])
+                            ("getElmt" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :arguments 
+                                  ( ("bt" variable
+                                       (:pointer 1
+                                        :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2426 2455]))                                  
+                                :type ("RingElmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2407 2456])
+                            ("getElmt" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :arguments 
+                                  ( ("repr" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2484 2499]))                                  
+                                :type ("RingElmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2465 2500])
+                            ("getArrayOfElmts" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :type ("ArrayOfRingElmts" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2509 2546])
+                            ("getType" function
+                               (:prototype-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2733 2755]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [490 2783]))                  
+                :type "namespace")
+                nil [352 2786]))          
+    :file "modring.hpp"
+    :pointmax 2792
+    :fsize 2795
+    :lastmodtime '(20530 49804)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_MODRING_H_")
+          )
+
+    )
+   (semanticdb-table "modringelmt.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("modring.hpp" include nil nil [223 245])
+            ("modringelmt.hpp" include nil nil [246 272])
+            ("arithm" using (:type ("arithm" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [275 298])
+            ("ModRingElmt" function
+               (:constructor-flag t
+                :parent "ModRingElmt"
+                :arguments 
+                  ( ("repr" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [326 341])
+                    ("r" variable
+                       (:pointer 1
+                        :type ("Ring" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [342 351]))                  
+                :type ("ModRingElmt" type (:type "class") nil nil))
+                nil [301 374])
+            ("ModRingElmt" function
+               (:constructor-flag t
+                :parent "ModRingElmt"
+                :arguments 
+                  ( ("bt" variable
+                       (:pointer 1
+                        :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [402 431])
+                    ("r" variable
+                       (:pointer 1
+                        :type ("Ring" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [432 441]))                  
+                :type ("ModRingElmt" type (:type "class") nil nil))
+                nil [377 771])
+            ("toByteTree" function
+               (:pointer 1
+                :parent "ModRingElmt"
+                :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                nil [775 1048]))          
+    :file "modringelmt.cpp"
+    :pointmax 1049
+    :fsize 995
+    :lastmodtime '(20529 13687)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "modringelmt.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_MODRINGELMT_H_" variable (:constant-flag t) nil [254 269])
+            ("../ring/ringelmt.hpp" include nil nil [271 302])
+            ("arithm" type
+               (:members 
+                  ( ("ModRing" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [348 362])
+                    ("ModRingElmt" type
+                       (:superclasses 
+                          ( ("RingElmt" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [501 508])
+                            ("ModRingElmt" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("ModRingElmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [578 592])
+                            ("ModRingElmt" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("repr" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [848 863])
+                                    ("r" variable
+                                       (:pointer 1
+                                        :type ("Ring" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [864 873]))                                  
+                                :type ("ModRingElmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [836 874])
+                            ("ModRingElmt" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("bt" variable
+                                       (:pointer 1
+                                        :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1157 1186])
+                                    ("r" variable
+                                       (:pointer 1
+                                        :type ("Ring" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1187 1196]))                                  
+                                :type ("ModRingElmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1145 1197])
+                            ("toByteTree" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1479 1518]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [455 1521]))                  
+                :type "namespace")
+                nil [305 1524]))          
+    :file "modringelmt.hpp"
+    :pointmax 1532
+    :fsize 1532
+    :lastmodtime '(20529 13394)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_MODRINGELMT_H_")
+          )
+
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!Code!verificatum!src!arithm!modring!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

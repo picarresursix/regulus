@@ -1,0 +1,26 @@
+;; Object test/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "test/"
+  :tables (list 
+   (semanticdb-table "btrtest.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("gmp.h" include (:system-flag t) nil [188 204])
+            ("gmpxx.h" include (:system-flag t) nil [205 223])
+            ("../verifierutils.h" include nil nil [225 254])
+            ("verifierUtils" using (:type ("verifierUtils" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [256 286])
+            ("main" function (:type "int") nil [288 1672]))          
+    :file "btrtest.cpp"
+    :pointmax 1673
+    :fsize 1673
+    :lastmodtime '(20499 62879)
+    :unmatched-syntax '((number 589 . 591) (string 549 . 588) (number 589 . 591) (string 549 . 588) (number 589 . 591) (string 549 . 588) (number 589 . 591) (string 549 . 588) (number 589 . 591) (string 549 . 588) (number 589 . 591) (string 549 . 588) (number 589 . 591) (string 549 . 588))
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!Code!verificatum!src!verifierutils!test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

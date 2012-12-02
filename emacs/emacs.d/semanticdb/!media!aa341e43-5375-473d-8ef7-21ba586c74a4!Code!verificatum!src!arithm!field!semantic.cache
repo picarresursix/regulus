@@ -1,0 +1,330 @@
+;; Object field/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "field/"
+  :tables (list 
+   (semanticdb-table "field.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("field.hpp" include nil nil [205 225])
+            ("arithm" using (:type ("arithm" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [228 251])
+            ("Field" function
+               (:constructor-flag t
+                :parent "Field"
+                :arguments 
+                  ( ("aOrder" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [267 284]))                  
+                :type ("Field" type (:type "class") nil nil))
+                nil [254 328])
+            ("Field" function
+               (:constructor-flag t
+                :parent "Field"
+                :arguments 
+                  ( ("aOrder" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [344 361])
+                    ("mOrder" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [362 379])
+                    ("gen" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [380 394]))                  
+                :type ("Field" type (:type "class") nil nil))
+                nil [331 453])
+            ("addition" function
+               (:parent "Field"
+                :arguments 
+                  ( ("e1" variable (:type ("Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [554 562])
+                    ("e2" variable (:type ("Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [563 571]))                  
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [533 604])
+            ("addInverse" function
+               (:parent "Field"
+                :arguments 
+                  ( ("e" variable (:type ("Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [630 637]))                  
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [607 670])
+            ("addition" function
+               (:parent "Field"
+                :arguments 
+                  ( ("e1" variable (:type ("ArrayOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [778 794])
+                    ("e2" variable (:type ("ArrayOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [795 811]))                  
+                :type ("ArrayOfElmts" type (:type "class") nil nil))
+                nil [749 1305])
+            ("addInverse" function
+               (:parent "Field"
+                :arguments 
+                  ( ("a" variable (:type ("ArrayOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1339 1354]))                  
+                :type ("ArrayOfElmts" type (:type "class") nil nil))
+                nil [1308 1516])
+            ("sum" function
+               (:parent "Field"
+                :arguments 
+                  ( ("a" variable (:type ("ArrayOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1535 1550]))                  
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [1519 1715])
+            ("getZero" function
+               (:parent "Field"
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [1791 1845])
+            ("getZero" function
+               (:parent "Field"
+                :arguments 
+                  ( ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1876 1891]))                  
+                :type ("ArrayOfElmts" type (:type "class") nil nil))
+                nil [1848 2031])
+            ("getAddOrder" function
+               (:parent "Field"
+                :type ("mpz_class" type (:type "class") nil nil))
+                nil [2105 2164])
+            ("getLeafSize" function
+               (:parent "Field"
+                :type "unsigned int")
+                nil [2167 2306])
+            ("getType" function
+               (:parent "Field"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [2309 2365]))          
+    :file "field.cpp"
+    :pointmax 2366
+    :fsize 2366
+    :lastmodtime '(20534 19629)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "field.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_FIELD_H_" variable (:constant-flag t) nil [235 244])
+            ("gmp.h" include (:system-flag t) nil [246 262])
+            ("gmpxx.h" include (:system-flag t) nil [263 281])
+            ("../group/group.hpp" include nil nil [283 312])
+            ("arithm" type
+               (:members 
+                  ( ("Field" type
+                       (:superclasses 
+                          ( ("Group" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("protected" label nil (reparse-symbol classsubparts) [642 652])
+                            ("addOrder" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol classsubparts) [753 772])
+                            ("public" label nil (reparse-symbol classsubparts) [774 781])
+                            ("Field" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("aOrder" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [973 990]))                                  
+                                :type ("Field" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [967 991])
+                            ("Field" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("aOrder" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1148 1165])
+                                    ("mOrder" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1166 1183])
+                                    ("gen" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1184 1198]))                                  
+                                :type ("Field" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1142 1199])
+                            ("addition" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("e1" variable (:type ("Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1389 1397])
+                                    ("e2" variable (:type ("Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1398 1406]))                                  
+                                :type ("Elmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1367 1407])
+                            ("addInverse" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("e" variable (:type ("Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1529 1536]))                                  
+                                :type ("Elmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1505 1537])
+                            ("addition" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("e1" variable (:type ("ArrayOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1790 1806])
+                                    ("e2" variable (:type ("ArrayOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1807 1823]))                                  
+                                :type ("ArrayOfElmts" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1768 1824])
+                            ("addInverse" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("a" variable (:type ("ArrayOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2001 2016]))                                  
+                                :type ("ArrayOfElmts" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1977 2017])
+                            ("sum" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("a" variable (:type ("ArrayOfElmts" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2146 2161]))                                  
+                                :type ("Elmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2137 2162])
+                            ("getZero" function
+                               (:prototype-flag t
+                                :type ("Elmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2331 2346])
+                            ("getZero" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2523 2538]))                                  
+                                :type ("ArrayOfElmts" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2502 2539])
+                            ("getAddOrder" function
+                               (:prototype-flag t
+                                :type ("mpz_class" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2696 2720])
+                            ("getLeafSize" function
+                               (:prototype-flag t
+                                :type "unsigned int")
+                                (reparse-symbol classsubparts) [2730 2757])
+                            ("getType" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2767 2797]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [613 2818]))                  
+                :type "namespace")
+                nil [315 2822]))          
+    :file "field.hpp"
+    :pointmax 2831
+    :fsize 2831
+    :lastmodtime '(20534 19568)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_FIELD_H_")
+          )
+
+    )
+   (semanticdb-table "modfield.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_MODFIELD_H_" variable (:constant-flag t) nil [238 250])
+            ("../field/field.hpp" include nil nil [252 281])
+            ("arithm" type
+               (:members 
+                  ( ("ModField" type
+                       (:superclasses 
+                          ( ("Field" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [426 433])
+                            ("ModField" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("order" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [642 658]))                                  
+                                :type ("ModField" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [633 659])
+                            ("multiplication" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("e1" variable (:type ("Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [689 697])
+                                    ("e2" variable (:type ("Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [698 706]))                                  
+                                :type ("Elmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [669 707])
+                            ("multInverse" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("e" variable (:type ("Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [733 740]))                                  
+                                :type ("Elmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [716 741])
+                            ("exponentiation" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("e" variable (:type ("Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [770 777])
+                                    ("s" variable (:type ("Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [778 785]))                                  
+                                :type ("Elmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [750 786])
+                            ("addition" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("e1" variable (:type ("Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [809 817])
+                                    ("e2" variable (:type ("Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [818 826]))                                  
+                                :type ("Elmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [795 827])
+                            ("addInverse" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("e" variable (:type ("Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [852 859]))                                  
+                                :type ("Elmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [836 860])
+                            ("getType" function
+                               (:prototype-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [869 891]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [394 894]))                  
+                :type "namespace")
+                nil [284 897]))          
+    :file "modfield.hpp"
+    :pointmax 927
+    :fsize 927
+    :lastmodtime '(20534 19707)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_MODFIELD_H_")
+          )
+
+    )
+   (semanticdb-table "modfield.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("modfield.hpp" include nil nil [210 233])
+            ("arithm" using (:type ("arithm" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [236 259])
+            ("ModField" function
+               (:constructor-flag t
+                :parent "ModField"
+                :arguments 
+                  ( ("order" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [281 297]))                  
+                :type ("ModField" type (:type "class") nil nil))
+                nil [262 378])
+            ("multiplication" function
+               (:parent "ModField"
+                :arguments 
+                  ( ("e1" variable (:type ("Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [411 419])
+                    ("e2" variable (:type ("Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [420 428]))                  
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [381 503])
+            ("multInverse" function
+               (:parent "ModField"
+                :arguments 
+                  ( ("e" variable (:type ("Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [533 540]))                  
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [506 748])
+            ("exponentiation" function
+               (:parent "ModField"
+                :arguments 
+                  ( ("e" variable (:type ("Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [781 788])
+                    ("s" variable (:type ("Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [789 796]))                  
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [751 1029])
+            ("addition" function
+               (:parent "ModField"
+                :arguments 
+                  ( ("e1" variable (:type ("Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1056 1064])
+                    ("e2" variable (:type ("Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1065 1073]))                  
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [1032 1148])
+            ("addInverse" function
+               (:parent "ModField"
+                :arguments 
+                  ( ("e" variable (:type ("Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1177 1184]))                  
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [1151 1240])
+            ("getType" function
+               (:parent "ModField"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [1243 1305]))          
+    :file "modfield.cpp"
+    :pointmax 1306
+    :fsize 1306
+    :lastmodtime '(20583 15744)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!Code!verificatum!src!arithm!field!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

@@ -1,0 +1,83 @@
+;; Object prg/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "prg/"
+  :tables (list 
+   (semanticdb-table "prg.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_PRG_H_" variable (:constant-flag t) nil [188 195])
+            ("../sha/shax.hpp" include nil nil [197 223])
+            ("cppVerifier" type
+               (:members 
+                  ( ("crypto" type
+                       (:members 
+                          ( ("PRG" type
+                               (:members 
+                                  ( ("private" label nil (reparse-symbol classsubparts) [440 448])
+                                    ("hashfunction" variable
+                                       (:pointer 1
+                                        :type ("SHAx" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [571 591])
+                                    ("seed" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("uint8_t" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [660 686])
+                                    ("digest" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("uint8_t" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [810 838])
+                                    ("index" variable (:type "unsigned int") (reparse-symbol classsubparts) [942 961])
+                                    ("seedLen" variable (:type "unsigned int") (reparse-symbol classsubparts) [1099 1120])
+                                    ("counter" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1258 1275])
+                                    ("public" label nil (reparse-symbol classsubparts) [1277 1284])
+                                    ("PRG" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("hash" variable
+                                               (:pointer 1
+                                                :type ("SHAx" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1478 1490]))                                          
+                                        :type ("PRG" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1474 1491])
+                                    ("updateDigest" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1649 1669])
+                                    ("initialize" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("newSeed" variable (:type ("std::vector" type
+                                                 (:template-specifier 
+                                                    ( ("uint8_t" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol arg-sub-list) [1922 1951]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1906 1952])
+                                    ("getNextRandByte" function
+                                       (:prototype-flag t
+                                        :type ("uint8_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2110 2136]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [428 2140]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [249 2152]))                  
+                :type "namespace")
+                nil [225 2154]))          
+    :file "prg.hpp"
+    :pointmax 2186
+    :fsize 2186
+    :lastmodtime '(20648 54076)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_PRG_H_")
+          )
+
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!projets!Code!verificatum!src!crypto!prg!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

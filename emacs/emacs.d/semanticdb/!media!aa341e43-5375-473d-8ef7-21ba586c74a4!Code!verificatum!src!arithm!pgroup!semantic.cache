@@ -1,0 +1,86 @@
+;; Object pgroup/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "pgroup/"
+  :tables (list 
+   (semanticdb-table "pgroup.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_PGROUP_H_" variable (:constant-flag t) nil [240 250])
+            ("_PGROUP_H_" variable (:constant-flag t) nil [240 250])
+            ("../group/group.hpp" include nil nil [253 282])
+            ("arithm" type
+               (:members 
+                  ( ("PSubGroup" type
+                       (:superclasses 
+                          ( ("Group" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("private" label nil (reparse-symbol classsubparts) [440 448])
+                            ("Group" variable
+                               (:pointer 1
+                                :type ("baseGroup" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [543 561])
+                            ("coOrder" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol classsubparts) [665 683])
+                            ("public" label nil (reparse-symbol classsubparts) [684 691])
+                            ("PGroup" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("bgrp" variable
+                                       (:pointer 1
+                                        :type ("Group" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [968 981])
+                                    ("order" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [982 998])
+                                    ("gen" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [999 1013]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [961 1014])
+                            ("multiplication" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("e1" variable (:type ("Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1052 1060])
+                                    ("e2" variable (:type ("Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1061 1069]))                                  
+                                :type ("Elmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1032 1070])
+                            ("multInverse" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("e" variable (:type ("Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1096 1103]))                                  
+                                :type ("Elmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1079 1104])
+                            ("exponentiation" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("e" variable (:type ("Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1133 1140])
+                                    ("s" variable (:type ("Elmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1141 1148]))                                  
+                                :type ("Elmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1113 1149])
+                            ("isIn" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("r" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1280 1292]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [1270 1293])
+                            ("getType" function
+                               (:prototype-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1311 1333]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [407 1336]))                  
+                :type "namespace")
+                nil [284 1339]))          
+    :file "pgroup.hpp"
+    :pointmax 1318
+    :fsize 1370
+    :lastmodtime '(20534 19273)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_PGROUP_H_")
+          )
+
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!Code!verificatum!src!arithm!pgroup!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

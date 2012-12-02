@@ -1,0 +1,18 @@
+;; Object old/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "old/"
+  :tables (list 
+   (semanticdb-table "table.py"
+    :major-mode 'python-mode
+    :tags nil
+    :file "table.py"
+    :pointmax 1
+    :fsize 3495
+    :lastmodtime '(20596 6680)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!etudes!master_thesis!code!old!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

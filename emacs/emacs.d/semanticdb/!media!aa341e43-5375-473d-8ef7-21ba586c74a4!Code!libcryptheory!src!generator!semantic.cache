@@ -1,0 +1,202 @@
+;; Object generator/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "generator/"
+  :tables (list 
+   (semanticdb-table "generator.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_GENERATOR_H_" variable (:constant-flag t) nil [242 255])
+            ("_GENERATOR_H_" variable (:constant-flag t) nil [242 255])
+            ("../define.hpp" include nil nil [257 281])
+            ("../discrete-math/math_module.hpp" include nil nil [282 325])
+            ("cryptheory" type
+               (:members 
+                  ( ("gen" type
+                       (:members 
+                          ( ("Generator" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [485 492])
+                                    ("Generator" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :type ("Generator" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [501 513])
+                                    ("initialize" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("seed" variable (:type ("math::GFElmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [546 564]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [522 565])
+                                    ("initialize" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("seed" variable (:type ("byteVector" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [598 614]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [574 615])
+                                    ("getNext" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :type ("math::GFElmt" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [624 655]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [467 658]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [350 662]))                  
+                :type "namespace")
+                nil [327 664]))          
+    :file "generator.hpp"
+    :pointmax 695
+    :fsize 695
+    :lastmodtime '(20525 6122)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_GENERATOR_H_")
+          )
+
+    )
+   (semanticdb-table "generator.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("generator.hpp" include nil nil [217 241])
+            ("cryptheory" using (:type ("cryptheory" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [243 270])
+            ("cryptheory::gen" using (:type ("cryptheory::gen" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [271 303])
+            ("Generator" function
+               (:constructor-flag t
+                :parent "Generator"
+                :type ("Generator" type (:type "class") nil nil))
+                nil [306 332])
+            ("initialize" function
+               (:parent "Generator"
+                :arguments 
+                  ( ("seed" variable (:type ("math::GFElmt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [362 380]))                  
+                :type "void")
+                nil [335 392])
+            ("initialize" function
+               (:parent "Generator"
+                :arguments 
+                  ( ("seed" variable (:type ("byteVector" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [422 438]))                  
+                :type "void")
+                nil [395 450])
+            ("getNext" function
+               (:parent "Generator"
+                :type ("math::GFElmt" type (:type "class") nil nil))
+                nil [453 551]))          
+    :file "generator.cpp"
+    :pointmax 552
+    :fsize 552
+    :lastmodtime '(20523 64453)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "counter.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_COUNTER_H_" variable (:constant-flag t) nil [234 245])
+            ("generator.hpp" include nil nil [247 271])
+            ("cryptheory" type
+               (:members 
+                  ( ("gen" type
+                       (:members 
+                          ( ("Counter" type
+                               (:superclasses 
+                                  ( ("Generator" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("private" label nil (reparse-symbol classsubparts) [444 452])
+                                    ("counter" variable (:type "unsigned int") (reparse-symbol classsubparts) [546 567])
+                                    ("size" variable (:type "unsigned int") (reparse-symbol classsubparts) [632 650])
+                                    ("public" label nil (reparse-symbol classsubparts) [651 658])
+                                    ("Counter" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [838 853]))                                          
+                                        :type ("Counter" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [830 854])
+                                    ("getNext" function
+                                       (:prototype-flag t
+                                        :type ("math::GFElmt" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [933 956]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [409 959]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [297 962]))                  
+                :type "namespace")
+                nil [274 964]))          
+    :file "counter.hpp"
+    :pointmax 995
+    :fsize 995
+    :lastmodtime '(20525 5472)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_COUNTER_H_")
+          )
+
+    )
+   (semanticdb-table "counter.cpp"
+    :major-mode 'c++-mode
+    :tags nil
+    :file "counter.cpp"
+    :pointmax 499
+    :fsize 499
+    :lastmodtime '(20525 5376)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "gen_module.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_GENMODULE_H_" variable (:constant-flag t) nil [228 241])
+            ("generator.hpp" include nil nil [243 267])
+            ("counter.hpp" include nil nil [268 290])
+            ("cryptheory" type
+               (:members 
+                  ( ("gen" type (:type "namespace") (reparse-symbol namespacesubparts) [605 621]))                  
+                :type "namespace")
+                nil [292 623]))          
+    :file "gen_module.hpp"
+    :pointmax 632
+    :fsize 632
+    :lastmodtime '(20525 4593)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_GENMODULE_H_")
+          )
+
+    )
+   (semanticdb-table "test_generator.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("gen_module.hpp" include nil nil [227 252])
+            ("cryptheory" using (:type ("cryptheory" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [254 281])
+            ("cryptheory::gen" using (:type ("cryptheory::gen" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [282 314])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [325 330]))                  
+                :type "int")
+                nil [316 501]))          
+    :file "test_generator.cpp"
+    :pointmax 502
+    :fsize 501
+    :lastmodtime '(20525 6069)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!Code!libcryptheory!src!generator!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

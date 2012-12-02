@@ -1,0 +1,58 @@
+;; Object verifierutils/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "verifierutils/"
+  :tables (list 
+   (semanticdb-table "unitarytests.py"
+    :major-mode 'python-mode
+    :tags 
+        '( (""""@file unitarytests.py
+@date Time-stamp: <2012-08-26 14:35:35 leo>
+@author Leo Perrin <leoperrin@picarresursix.fr>
+
+This file contains unitary tests for the arithmetic functions that
+have to be implemented in a verificatum verifier
+(http://www.verificatum.org/verificatum/vmnv-0.1.pdf). It was
+written to check that *cpp-verifier*, a verifier in C++ worked as
+expected.
+
+A complete specification of the test binary file is given at <b>TODO</b>.
+
+"""" code nil nil [24 475])
+            ("ref.crypto" include nil nil [478 502])
+            ("ref.eio" include nil nil [503 524])
+            ("ref.large_integer" include nil nil [525 567])
+            ("random" include nil nil [568 594])
+            ("sys" include nil nil [595 605])
+            ("os" include nil nil [606 615])
+            ("T_VALUES" variable nil nil [618 632])
+            ("BIN_TO_TEST" variable nil nil [633 658])
+            ("RAND_SOURCE" variable nil nil [659 687])
+            ("INPUT_FILE" variable nil nil [689 715])
+            ("IDEAL_OUTPUT_FILE" variable nil nil [716 756])
+            ("ACTUAL_OUTPUT_FILE" variable nil nil [757 799])
+            ("BT_FOLDER" variable nil nil [801 820])
+            ("N_BYTETREES" variable nil nil [822 838])
+            ("MAX_BYTETREE_CHILDREN" variable nil nil [839 865])
+            ("N_INTEGERS" variable nil nil [866 884])
+            ("MAX_INTEGER" variable nil nil [885 906])
+            ("N_ARRAYS" variable nil nil [907 922])
+            ("naive_diff" function nil nil [1145 2367])
+            ("do_test" function (:arguments 
+              ( ("method" variable nil (reparse-symbol function_parameters) [2381 2387]))              ) nil [2369 2729])
+            ("test_ByteTree_parseString" function nil nil [2953 4418])
+            ("test_ByteTree_parseFile" function nil nil [4420 6217])
+            ("test_Leaf_Integer" function nil nil [6219 6853])
+            ("test_Leaf_boolArray" function nil nil [6855 7886])
+            ("print_help" function nil nil [8114 8618])
+            ("if" code nil nil [8621 9174]))          
+    :file "unitarytests.py"
+    :pointmax 9174
+    :fsize 9173
+    :lastmodtime '(20538 6167)
+    :unmatched-syntax '(($EOI 9174 . 9174) ($EOI 9173 . 9173))
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!Code!verificatum!tests!verifierutils!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

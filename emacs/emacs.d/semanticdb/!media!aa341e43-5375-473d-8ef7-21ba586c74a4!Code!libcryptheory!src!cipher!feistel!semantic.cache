@@ -1,0 +1,90 @@
+;; Object feistel/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "feistel/"
+  :tables (list 
+   (semanticdb-table "feistelnetwork.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_FEISTELNETWORK_H_" variable (:constant-flag t) nil [262 280])
+            ("_FEISTELNETWORK_H_" variable (:constant-flag t) nil [262 280])
+            ("../blockcipher/blockcipher.hpp" include nil nil [282 323])
+            ("cryptheory" type
+               (:members 
+                  ( ("cipher" type
+                       (:members 
+                          ( ("FeistelNetwork" type
+                               (:superclasses 
+                                  ( ("BlockCipher" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("protected" label nil (reparse-symbol classsubparts) [471 481])
+                                    ("feistelFunc" variable
+                                       (:pointer 1
+                                        :type ("Cipher" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [618 639])
+                                    ("public" label nil (reparse-symbol classsubparts) [640 647])
+                                    ("FeistelNetwork" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("sec" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [998 1015])
+                                            ("rounds" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1016 1036])
+                                            ("c" variable
+                                               (:pointer 1
+                                                :type ("Cipher" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1037 1048]))                                          
+                                        :type ("FeistelNetwork" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [983 1049]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [427 1061]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [349 1064]))                  
+                :type "namespace")
+                nil [326 1066]))          
+    :file "feistelnetwork.hpp"
+    :pointmax 1132
+    :fsize 1097
+    :lastmodtime '(20522 32621)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_FEISTELNETWORK_H_")
+          )
+
+    )
+   (semanticdb-table "feistelnetwork.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("feistelnetwork.hpp" include nil nil [232 261])
+            ("cryptheory" using (:type ("cryptheory" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [263 290])
+            ("cryptheory::cipher" using (:type ("cryptheory::cipher" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [291 326])
+            ("FeistelNetwork" function
+               (:constructor-flag t
+                :parent "FeistelNetwork"
+                :arguments 
+                  ( ("sec" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [360 377])
+                    ("rounds" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [378 398])
+                    ("c" variable
+                       (:pointer 1
+                        :type ("Cipher" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [430 441]))                  
+                :type ("FeistelNetwork" type (:type "class") nil nil))
+                nil [329 496]))          
+    :file "feistelnetwork.cpp"
+    :pointmax 497
+    :fsize 497
+    :lastmodtime '(20522 32653)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!Code!libcryptheory!src!cipher!feistel!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

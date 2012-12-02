@@ -1,0 +1,727 @@
+;; Object sha/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "sha/"
+  :tables (list 
+   (semanticdb-table "sha256.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("sha256.hpp" include nil nil [225 246])
+            ("iostream" include (:system-flag t) nil [247 266])
+            ("iomanip" include (:system-flag t) nil [267 285])
+            ("cryptoTools" using (:type ("cryptoTools" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [288 316])
+            ("SHA256" function
+               (:constructor-flag t
+                :parent "SHA256"
+                :type ("SHA256" type (:type "class") nil nil))
+                nil [383 2345])
+            ("preprocess" function
+               (:parent "SHA256"
+                :arguments 
+                  ( ("initialMessage" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("uint8_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [2447 2483]))                  
+                :type "void")
+                nil [2423 3945])
+            ("round" function
+               (:parent "SHA256"
+                :arguments 
+                  ( ("counter" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3967 3988]))                  
+                :type "void")
+                nil [3948 5185])
+            ("hash" function
+               (:parent "SHA256"
+                :arguments 
+                  ( ("initialMessage" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("uint8_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [5206 5242]))                  
+                :type "void")
+                nil [5188 5382])
+            ("getHash" function
+               (:parent "SHA256"
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("uint8_t" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [5385 5768])
+            ("getType" function
+               (:parent "SHA256"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [5771 5830])
+            ("getHashLength" function
+               (:parent "SHA256"
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [5833 5889]))          
+    :file "sha256.cpp"
+    :pointmax 6647
+    :fsize 5891
+    :lastmodtime '(20611 49260)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "sha256.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_SHA256_H_" variable (:constant-flag t) nil [255 265])
+            ("_SHA256_H_" variable (:constant-flag t) nil [255 265])
+            ("_SHA256_H_" variable (:constant-flag t) nil [255 265])
+            ("_SHA256_H_" variable (:constant-flag t) nil [255 265])
+            ("shax.hpp" include nil nil [267 286])
+            ("cryptoTools" type
+               (:members 
+                  ( ("SHA256" type
+                       (:superclasses 
+                          ( ("SHAx" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("private" label nil (reparse-symbol classsubparts) [455 463])
+                            ("H" variable
+                               (:dereference 1
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [531 545])
+                            ("a" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [623 634])
+                            ("b" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [643 654])
+                            ("c" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [663 674])
+                            ("d" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [683 694])
+                            ("e" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [703 714])
+                            ("f" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [723 734])
+                            ("g" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [743 754])
+                            ("h" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [763 774])
+                            ("M" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("uint32_t" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [838 862])
+                            ("l" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [926 937])
+                            ("K" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("uint32_t" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1018 1042])
+                            ("public" label nil (reparse-symbol classsubparts) [1044 1051])
+                            ("SHA256" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("SHA256" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1060 1069])
+                            ("preprocess" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("initialMessage" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("uint8_t" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [1094 1130]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1078 1131])
+                            ("round" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("counter" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1151 1172]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1140 1173])
+                            ("hash" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("initialMessage" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("uint8_t" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [1192 1228]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1182 1229])
+                            ("getHash" function
+                               (:prototype-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("uint8_t" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [1238 1269])
+                            ("getType" function
+                               (:prototype-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1278 1300])
+                            ("getHashLength" function
+                               (:prototype-flag t
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1309 1334])
+                            ("shr" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("x" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1594 1605])
+                                    ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1606 1621]))                                  
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1574 1674])
+                            ("rotr" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("x" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1907 1918])
+                                    ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1919 1934]))                                  
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1886 2001])
+                            ("ch" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("x" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2185 2196])
+                                    ("y" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2197 2208])
+                                    ("z" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2209 2220]))                                  
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2166 2283])
+                            ("maj" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("x" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2484 2495])
+                                    ("y" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2496 2507])
+                                    ("z" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2508 2519]))                                  
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2464 2587])
+                            ("bigSigma0_256" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("x" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2805 2816]))                                  
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2775 2892])
+                            ("bigSigma1_256" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("x" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3110 3121]))                                  
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3080 3197])
+                            ("smallSigma0_256" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("x" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3402 3413]))                                  
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3370 3487])
+                            ("smallSigma1_256" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("x" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3709 3720]))                                  
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3677 3796]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [426 3823]))                  
+                :type "namespace")
+                nil [289 3835]))          
+    :file "sha256.hpp"
+    :pointmax 3900
+    :fsize 3865
+    :lastmodtime '(20611 48537)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_SHA256_H_")
+          )
+
+    )
+   (semanticdb-table "sha384.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("sha384.hpp" include nil nil [227 248])
+            ("cryptoTools" using (:type ("cryptoTools" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [250 278])
+            ("SHA384" function
+               (:constructor-flag t
+                :parent "SHA384"
+                :type ("SHA384" type (:type "class") nil nil))
+                nil [281 629])
+            ("getHash" function
+               (:parent "SHA384"
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("uint8_t" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [632 1310])
+            ("getType" function
+               (:parent "SHA384"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [1313 1372])
+            ("getHashLength" function
+               (:parent "SHA384"
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [1375 1431]))          
+    :file "sha384.cpp"
+    :pointmax 1382
+    :fsize 1432
+    :lastmodtime '(20611 50161)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "sha384.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_SHA384_H_" variable (:constant-flag t) nil [255 265])
+            ("sha2_64bits.hpp" include nil nil [267 293])
+            ("cryptoTools" type
+               (:members 
+                  ( ("SHA384" type
+                       (:superclasses 
+                          ( ("SHA2_64bits" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [468 475])
+                            ("SHA384" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("SHA384" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [484 493])
+                            ("getHash" function
+                               (:prototype-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("uint8_t" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [502 533])
+                            ("getType" function
+                               (:prototype-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [542 564])
+                            ("getHashLength" function
+                               (:prototype-flag t
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [573 598]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [432 601]))                  
+                :type "namespace")
+                nil [296 605]))          
+    :file "sha384.hpp"
+    :pointmax 645
+    :fsize 645
+    :lastmodtime '(20610 63305)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_SHA384_H_")
+          )
+
+    )
+   (semanticdb-table "sha512.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("sha512.hpp" include nil nil [226 247])
+            ("cryptoTools" using (:type ("cryptoTools" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [249 277])
+            ("SHA512" function
+               (:constructor-flag t
+                :parent "SHA512"
+                :type ("SHA512" type (:type "class") nil nil))
+                nil [280 628])
+            ("getHash" function
+               (:parent "SHA512"
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("uint8_t" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [631 1250])
+            ("getType" function
+               (:parent "SHA512"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [1253 1312])
+            ("getHashLength" function
+               (:parent "SHA512"
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [1315 1371]))          
+    :file "sha512.cpp"
+    :pointmax 1253
+    :fsize 1372
+    :lastmodtime '(20611 50143)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "sha512.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_SHA512_H_" variable (:constant-flag t) nil [256 266])
+            ("sha2_64bits.hpp" include nil nil [268 294])
+            ("cryptoTools" type
+               (:members 
+                  ( ("SHA512" type
+                       (:superclasses 
+                          ( ("SHA2_64bits" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [447 454])
+                            ("SHA512" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("SHA512" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [463 472])
+                            ("getHash" function
+                               (:prototype-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("uint8_t" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [481 512])
+                            ("getType" function
+                               (:prototype-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [521 543])
+                            ("getHashLength" function
+                               (:prototype-flag t
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [552 577]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [411 580]))                  
+                :type "namespace")
+                nil [297 584]))          
+    :file "sha512.hpp"
+    :pointmax 616
+    :fsize 616
+    :lastmodtime '(20610 63674)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_SHA512_H_")
+          )
+
+    )
+   (semanticdb-table "shax.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_SHAX_H_" variable (:constant-flag t) nil [330 338])
+            ("_SHAX_H_" variable (:constant-flag t) nil [330 338])
+            ("cstdint" include (:system-flag t) nil [340 358])
+            ("vector" include (:system-flag t) nil [359 376])
+            ("string" include (:system-flag t) nil [377 394])
+            ("cryptoTools" type
+               (:members 
+                  ( ("SHAx" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [756 763])
+                            ("SHAx" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [834 841])
+                            ("preprocess" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("initialMessage" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("uint8_t" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [1389 1425]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1365 1426])
+                            ("round" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("counter" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1709 1730]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1690 1731])
+                            ("hash" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("initialMessage" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("uint8_t" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [2152 2188]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2134 2189])
+                            ("getHash" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("uint8_t" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [2290 2329])
+                            ("getType" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2475 2505])
+                            ("getHashLength" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2673 2706]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [743 2711]))                  
+                :type "namespace")
+                nil [396 2714]))          
+    :file "shax.hpp"
+    :pointmax 2747
+    :fsize 2747
+    :lastmodtime '(20610 61083)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_SHAX_H_")
+          )
+
+    )
+   (semanticdb-table "shax.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("cryptoTools" using (:type ("cryptoTools" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [214 242])
+            ("SHAx" function
+               (:constructor-flag t
+                :parent "SHAx"
+                :type ("SHAx" type (:type "class") nil nil))
+                nil [245 261])
+            ("preprocess" function
+               (:parent "SHAx"
+                :arguments 
+                  ( ("initialMessage" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("uint8_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [286 322]))                  
+                :type "void")
+                nil [264 326])
+            ("round" function
+               (:parent "SHAx"
+                :arguments 
+                  ( ("counter" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [346 367]))                  
+                :type "void")
+                nil [329 371])
+            ("hash" function
+               (:parent "SHAx"
+                :arguments 
+                  ( ("initialMessage" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("uint8_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [390 426]))                  
+                :type "void")
+                nil [374 470])
+            ("getHash" function
+               (:parent "SHAx"
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("uint8_t" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [473 553])
+            ("getType" function
+               (:parent "SHAx"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [564 618])
+            ("getHashLength" function
+               (:parent "SHAx"
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [621 673]))          
+    :file "shax.cpp"
+    :pointmax 674
+    :fsize 656
+    :lastmodtime '(20610 63508)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "sha2_64bits.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_SHA2_64BITS_H_" variable (:constant-flag t) nil [250 265])
+            ("_SHA2_64BITS_H_" variable (:constant-flag t) nil [250 265])
+            ("shax.hpp" include nil nil [267 286])
+            ("cryptoTools" type
+               (:members 
+                  ( ("SHA2_64bits" type
+                       (:superclasses 
+                          ( ("SHAx" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("protected" label nil (reparse-symbol classsubparts) [435 445])
+                            ("H" variable
+                               (:dereference 1
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [513 527])
+                            ("a" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [597 608])
+                            ("b" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [617 628])
+                            ("c" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [637 648])
+                            ("d" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [657 668])
+                            ("e" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [677 688])
+                            ("f" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [697 708])
+                            ("g" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [717 728])
+                            ("h" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [737 748])
+                            ("M" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("uint64_t" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [813 837])
+                            ("l" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [899 910])
+                            ("K" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("uint64_t" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1014 1038])
+                            ("init" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("uint64_t" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1142 1169])
+                            ("public" label nil (reparse-symbol classsubparts) [1171 1178])
+                            ("SHA2_64bits" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("SHA2_64bits" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1187 1201])
+                            ("preprocess" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("initialMessage" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("uint8_t" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [1226 1262]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1210 1263])
+                            ("round" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("counter" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1283 1304]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1272 1305])
+                            ("hash" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("initialMessage" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("uint8_t" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [1324 1360]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1314 1361])
+                            ("shr" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("x" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1639 1650])
+                                    ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1651 1666]))                                  
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1619 1717])
+                            ("rotr" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("x" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1981 1992])
+                                    ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1993 2008]))                                  
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1960 2077])
+                            ("ch" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("x" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2261 2272])
+                                    ("y" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2273 2284])
+                                    ("z" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2285 2296]))                                  
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2242 2361])
+                            ("maj" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("x" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2562 2573])
+                                    ("y" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2574 2585])
+                                    ("z" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2586 2597]))                                  
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2542 2669])
+                            ("bigSigma0_512" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("x" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2890 2901]))                                  
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2860 2982])
+                            ("bigSigma1_512" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("x" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3203 3214]))                                  
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3173 3295])
+                            ("smallSigma0_512" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("x" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3499 3510]))                                  
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3467 3587])
+                            ("smallSigma1_512" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("x" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3808 3819]))                                  
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3776 3898]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [401 3918]))                  
+                :type "namespace")
+                nil [289 3921]))          
+    :file "sha2_64bits.hpp"
+    :pointmax 3951
+    :fsize 3951
+    :lastmodtime '(20611 50204)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_SHA2_64BITS_H_")
+          )
+
+    )
+   (semanticdb-table "sha2_64bits.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("sha2_64bits.hpp" include nil nil [223 249])
+            ("cryptoTools" using (:type ("cryptoTools" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [252 280])
+            ("SHA2_64bits" function
+               (:constructor-flag t
+                :parent "SHA2_64bits"
+                :type ("SHA2_64bits" type (:type "class") nil nil))
+                nil [283 3215])
+            ("preprocess" function
+               (:parent "SHA2_64bits"
+                :arguments 
+                  ( ("initialMessage" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("uint8_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [3247 3283]))                  
+                :type "void")
+                nil [3218 5011])
+            ("round" function
+               (:parent "SHA2_64bits"
+                :arguments 
+                  ( ("counter" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [5038 5059]))                  
+                :type "void")
+                nil [5014 6137])
+            ("hash" function
+               (:parent "SHA2_64bits"
+                :arguments 
+                  ( ("initialMessage" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("uint8_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [6163 6199]))                  
+                :type "void")
+                nil [6140 6347]))          
+    :file "sha2_64bits.cpp"
+    :pointmax 5532
+    :fsize 6348
+    :lastmodtime '(20611 50152)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!projets!Code!verificatum!src!cryptotools!sha!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

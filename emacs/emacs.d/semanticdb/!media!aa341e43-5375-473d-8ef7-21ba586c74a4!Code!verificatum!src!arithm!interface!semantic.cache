@@ -1,0 +1,879 @@
+;; Object interface/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "interface/"
+  :tables (list 
+   (semanticdb-table "field.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_FIELD_H_" variable (:constant-flag t) nil [209 218])
+            ("_FIELD_H_" variable (:constant-flag t) nil [209 218])
+            ("_FIELD_H_" variable (:constant-flag t) nil [209 218])
+            ("iostream" include (:system-flag t) nil [220 239])
+            ("string" include (:system-flag t) nil [240 257])
+            ("gmp.h" include (:system-flag t) nil [258 274])
+            ("gmpxx.h" include (:system-flag t) nil [275 293])
+            ("../../verifierutils/verifierutils.hpp" include nil nil [295 343])
+            ("ring.hpp" include nil nil [344 363])
+            ("elmt.hpp" include nil nil [364 383])
+            ("arithm" type
+               (:members 
+                  ( ("ArrayOfElmts" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [429 448])
+                    ("Field" type
+                       (:members 
+                          ( ("protected" label nil (reparse-symbol classsubparts) [704 714])
+                            ("baseRing" variable
+                               (:pointer 1
+                                :type ("Ring" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [797 813])
+                            ("generator" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol classsubparts) [969 989])
+                            ("multiplicativeOrder" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1125 1155])
+                            ("encodingType" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1539 1560])
+                            ("public" label nil (reparse-symbol classsubparts) [1562 1569])
+                            ("Field" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("r" variable
+                                       (:pointer 1
+                                        :type ("Ring" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1952 1961])
+                                    ("multOrder" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1962 1982])
+                                    ("gen" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1983 1997])
+                                    ("code" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1998 2011]))                                  
+                                :type ("Field" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1945 2012])
+                            ("toByteTree" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2115 2162])
+                            ("multiplication" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("elem1" variable
+                                       (:pointer 1
+                                        :type ("Elmt" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2469 2482])
+                                    ("elem2" variable
+                                       (:pointer 1
+                                        :type ("Elmt" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2483 2496]))                                  
+                                :type ("Elmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2446 2497])
+                            ("exponentiation" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("elem" variable
+                                       (:pointer 1
+                                        :type ("Elmt" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2817 2829])
+                                    ("exponent" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2830 2849]))                                  
+                                :type ("Elmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2794 2850])
+                            ("getZero" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :type ("Elmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2956 2973])
+                            ("getOne" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :type ("Elmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3093 3109])
+                            ("getInverse" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("elem" variable
+                                       (:pointer 1
+                                        :type ("Elmt" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3461 3473]))                                  
+                                :type ("Elmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3435 3474])
+                            ("isInField" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("number" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3825 3842]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [3802 3843])
+                            ("getGenerator" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :type ("Elmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3960 3990])
+                            ("getMultiplicativeOrder" function
+                               (:prototype-flag t
+                                :type ("mpz_class" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4078 4113])
+                            ("getEncodingType" function
+                               (:prototype-flag t
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4202 4228])
+                            ("getType" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4367 4397]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [690 4400]))                  
+                :type "namespace")
+                nil [386 4403]))          
+    :file "field.hpp"
+    :pointmax 4411
+    :fsize 4411
+    :lastmodtime '(20511 50222)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_FIELD_H_")
+          )
+
+    )
+   (semanticdb-table "ring.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_RING_H_" variable (:constant-flag t) nil [231 239])
+            ("_RING_H_" variable (:constant-flag t) nil [231 239])
+            ("gmp.h" include (:system-flag t) nil [241 257])
+            ("gmpxx.h" include (:system-flag t) nil [258 276])
+            ("../../verifierutils/verifierutils.hpp" include nil nil [278 326])
+            ("elmt.hpp" include nil nil [327 346])
+            ("arithm" type
+               (:members 
+                  ( ("ArrayOfElmts" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [392 411])
+                    ("Ring" type
+                       (:members 
+                          ( ("protected" label nil (reparse-symbol classsubparts) [701 711])
+                            ("additiveOrder" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol classsubparts) [812 836])
+                            ("public" label nil (reparse-symbol classsubparts) [838 845])
+                            ("Ring" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("Ring" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [941 948])
+                            ("Ring" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("addOrder" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1206 1225]))                                  
+                                :type ("Ring" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1201 1226])
+                            ("toByteTree" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1328 1375])
+                            ("multiplication" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("elem1" variable
+                                       (:pointer 1
+                                        :type ("Elmt" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1818 1831])
+                                    ("elem2" variable
+                                       (:pointer 1
+                                        :type ("Elmt" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1832 1845]))                                  
+                                :type ("Elmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1787 1846])
+                            ("exponentiation" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("elem" variable
+                                       (:pointer 1
+                                        :type ("Elmt" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2172 2184])
+                                    ("exponent" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2185 2204]))                                  
+                                :type ("Elmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2141 2205])
+                            ("getZero" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :type ("Elmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2299 2324])
+                            ("getOne" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :type ("Elmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2432 2456])
+                            ("getOrderByteSize" function
+                               (:prototype-flag t
+                                :type "unsigned int")
+                                (reparse-symbol classsubparts) [2827 2859])
+                            ("getElmt" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("bt" variable
+                                       (:pointer 1
+                                        :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3208 3237]))                                  
+                                :type ("Elmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3185 3238])
+                            ("getArrayOfElmts" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("bt" variable
+                                       (:pointer 1
+                                        :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3643 3672]))                                  
+                                :type ("ArrayOfElmts" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3587 3673])
+                            ("getAdditiveOrder" function
+                               (:prototype-flag t
+                                :type ("mpz_class" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3755 3784])
+                            ("getType" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3956 3986]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [688 3997]))                  
+                :type "namespace")
+                nil [349 4001]))          
+    :file "ring.hpp"
+    :pointmax 4010
+    :fsize 4010
+    :lastmodtime '(20511 50221)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_RING_H_")
+          )
+
+    )
+   (semanticdb-table "ring.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("ring.hpp" include nil nil [202 221])
+            ("arithm" using (:type ("arithm" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [223 246])
+            ("Ring" function
+               (:constructor-flag t
+                :parent "Ring"
+                :type ("Ring" type (:type "class") nil nil))
+                nil [249 265])
+            ("Ring" function
+               (:constructor-flag t
+                :parent "Ring"
+                :arguments 
+                  ( ("addOrder" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [279 298]))                  
+                :type ("Ring" type (:type "class") nil nil))
+                nil [268 336])
+            ("isInField" function
+               (:parent "Ring"
+                :arguments 
+                  ( ("number" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [360 377]))                  
+                :type "bool")
+                nil [339 403])
+            ("multiplication" function
+               (:pointer 1
+                :parent "Ring"
+                :arguments 
+                  ( ("elem1" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [434 447])
+                    ("elem2" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [448 461]))                  
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [406 486])
+            ("exponentiation" function
+               (:pointer 1
+                :parent "Ring"
+                :arguments 
+                  ( ("elem" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [518 530])
+                    ("exponent" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [531 550]))                  
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [489 575])
+            ("getZero" function
+               (:pointer 1
+                :parent "Ring"
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [578 625])
+            ("getMultInverse" function
+               (:pointer 1
+                :parent "Ring"
+                :arguments 
+                  ( ("elem" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [656 668]))                  
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [628 693])
+            ("getOne" function
+               (:pointer 1
+                :parent "Ring"
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [696 742])
+            ("getElmt" function
+               (:pointer 1
+                :parent "Ring"
+                :arguments 
+                  ( ("bt" variable
+                       (:pointer 1
+                        :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [775 804]))                  
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [745 829])
+            ("getArrayOfElmts" function
+               (:pointer 1
+                :parent "Ring"
+                :arguments 
+                  ( ("bt" variable
+                       (:pointer 1
+                        :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [878 907]))                  
+                :type ("ArrayOfElmts" type (:type "class") nil nil))
+                nil [832 932])
+            ("getAdditiveOrder" function
+               (:parent "Ring"
+                :type ("mpz_class" type (:type "class") nil nil))
+                nil [935 1003])
+            ("getMultiplicativeOrder" function
+               (:parent "Ring"
+                :type ("mpz_class" type (:type "class") nil nil))
+                nil [1006 1086])
+            ("getGenerator" function
+               (:pointer 1
+                :parent "Ring"
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [1089 1141])
+            ("getEncodingType" function
+               (:parent "Ring"
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [1144 1208])
+            ("getOrderByteSize" function
+               (:parent "Ring"
+                :type "unsigned int")
+                nil [1211 1359])
+            ("getType" function
+               (:parent "Ring"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [1362 1416]))          
+    :file "ring.cpp"
+    :pointmax 1417
+    :fsize 1417
+    :lastmodtime '(20511 49417)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "field.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("cstdlib" include (:system-flag t) nil [221 239])
+            ("field.hpp" include nil nil [242 262])
+            ("arithm" using (:type ("arithm" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [264 287])
+            ("Field" function
+               (:constructor-flag t
+                :parent "Field"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("Ring" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [303 312])
+                    ("multOrder" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [313 333])
+                    ("gen" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [334 348])
+                    ("code" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [349 362]))                  
+                :type ("Field" type (:type "class") nil nil))
+                nil [290 483])
+            ("toByteTree" function
+               (:pointer 1
+                :parent "Field"
+                :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                nil [487 557])
+            ("multiplication" function
+               (:pointer 1
+                :parent "Field"
+                :arguments 
+                  ( ("elem1" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [590 603])
+                    ("elem2" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [604 617]))                  
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [560 675])
+            ("exponentiation" function
+               (:pointer 1
+                :parent "Field"
+                :arguments 
+                  ( ("elem" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [708 720])
+                    ("exponent" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [721 740]))                  
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [678 800])
+            ("getZero" function
+               (:pointer 1
+                :parent "Field"
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [803 866])
+            ("getOne" function
+               (:pointer 1
+                :parent "Field"
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [877 938])
+            ("getInverse" function
+               (:pointer 1
+                :parent "Field"
+                :typemodifiers ("virtual")
+                :arguments 
+                  ( ("elem" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [974 986]))                  
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [941 1011])
+            ("isInField" function
+               (:parent "Field"
+                :typemodifiers ("virtual")
+                :arguments 
+                  ( ("number" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1044 1061]))                  
+                :type "bool")
+                nil [1014 1087])
+            ("getGenerator" function
+               (:pointer 1
+                :parent "Field"
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [1090 1163])
+            ("getMultiplicativeOrder" function
+               (:parent "Field"
+                :type ("mpz_class" type (:type "class") nil nil))
+                nil [1166 1247])
+            ("getEncodingType" function
+               (:parent "Field"
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [1250 1315])
+            ("getType" function
+               (:parent "Field"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [1318 1374]))          
+    :file "field.cpp"
+    :pointmax 1375
+    :fsize 1375
+    :lastmodtime '(20511 50208)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "elmt.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_FIELDELMT_H_" variable (:constant-flag t) nil [281 294])
+            ("_FIELDELMT_H_" variable (:constant-flag t) nil [281 294])
+            ("vector" include (:system-flag t) nil [296 313])
+            ("../../verifierutils/verifierutils.hpp" include nil nil [315 363])
+            ("arithm" type
+               (:members 
+                  ( ("Ring" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [409 420])
+                    ("Elmt" type
+                       (:members 
+                          ( ("protected" label nil (reparse-symbol classsubparts) [648 658])
+                            ("representative" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol classsubparts) [882 907])
+                            ("baseRing" variable
+                               (:pointer 1
+                                :type ("Ring" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [988 1004])
+                            ("public" label nil (reparse-symbol classsubparts) [1006 1013])
+                            ("Elmt" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("r" variable
+                                       (:pointer 1
+                                        :type ("Ring" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1242 1251]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1237 1252])
+                            ("Elmt" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("repr" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1521 1536])
+                                    ("r" variable
+                                       (:pointer 1
+                                        :type ("Ring" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1537 1546]))                                  
+                                :type ("Elmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1515 1547])
+                            ("toByteTree" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1717 1764])
+                            ("getType" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1856 1886])
+                            ("encode" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("message" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("uint8_t" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [2109 2138]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2089 2139])
+                            ("decode" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("uint8_t" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [2339 2377])
+                            ("getRepresentative" function
+                               (:prototype-flag t
+                                :type ("mpz_class" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2561 2591])
+                            ("getRing" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :type ("Ring" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2747 2764]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [634 2767]))                  
+                :type "namespace")
+                nil [366 2770]))          
+    :file "elmt.hpp"
+    :pointmax 2778
+    :fsize 2778
+    :lastmodtime '(20511 48542)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_FIELDELMT_H_")
+          )
+
+    )
+   (semanticdb-table "elmt.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("elmt.hpp" include nil nil [218 237])
+            ("arithm" using (:type ("arithm" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [239 262])
+            ("Elmt" function
+               (:constructor-flag t
+                :parent "Elmt"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("Ring" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [277 286]))                  
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [266 312])
+            ("Elmt" function
+               (:constructor-flag t
+                :parent "Elmt"
+                :arguments 
+                  ( ("repr" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [327 342])
+                    ("r" variable
+                       (:pointer 1
+                        :type ("Ring" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [343 352]))                  
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [315 409])
+            ("toByteTree" function
+               (:pointer 1
+                :parent "Elmt"
+                :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                nil [412 481])
+            ("getType" function
+               (:parent "Elmt"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [483 545])
+            ("encode" function
+               (:parent "Elmt"
+                :arguments 
+                  ( ("message" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("uint8_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [566 595]))                  
+                :type "void")
+                nil [548 599])
+            ("decode" function
+               (:parent "Elmt"
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("uint8_t" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [602 711])
+            ("getRepresentative" function
+               (:parent "Elmt"
+                :type ("mpz_class" type (:type "class") nil nil))
+                nil [723 793])
+            ("getRing" function
+               (:pointer 1
+                :parent "Elmt"
+                :type ("Ring" type (:type "class") nil nil))
+                nil [795 846]))          
+    :file "elmt.cpp"
+    :pointmax 847
+    :fsize 847
+    :lastmodtime '(20511 48901)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "arrayofelmts.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("arrayofelmts.hpp" include nil nil [235 262])
+            ("arithm" using (:type ("arithm" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [264 287])
+            ("ArrayOfElmts" function
+               (:constructor-flag t
+                :parent "ArrayOfElmts"
+                :type ("ArrayOfElmts" type (:type "class") nil nil))
+                nil [290 322])
+            ("ArrayOfElmts" function
+               (:constructor-flag t
+                :parent "ArrayOfElmts"
+                :arguments 
+                  ( ("f" variable
+                       (:pointer 1
+                        :type ("Ring" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [352 361]))                  
+                :type ("ArrayOfElmts" type (:type "class") nil nil))
+                nil [325 387])
+            ("ArrayOfElmts" function
+               (:destructor-flag t
+                :parent "ArrayOfElmts"
+                :type "void")
+                nil [390 507])
+            ("toByteTree" function
+               (:pointer 1
+                :parent "ArrayOfElmts"
+                :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                nil [510 769])
+            ("addElmt" function
+               (:parent "ArrayOfElmts"
+                :arguments 
+                  ( ("elmt" variable
+                       (:pointer 1
+                        :type ("Elmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [799 811]))                  
+                :type "void")
+                nil [772 846])
+            ("getElmt" function
+               (:pointer 1
+                :parent "ArrayOfElmts"
+                :arguments 
+                  ( ("i" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [878 893]))                  
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [849 922])
+            ("getSize" function
+               (:parent "ArrayOfElmts"
+                :type "unsigned int")
+                nil [925 994])
+            ("getBaseRing" function
+               (:pointer 1
+                :parent "ArrayOfElmts"
+                :type ("Ring" type (:type "class") nil nil))
+                nil [997 1060])
+            ("product" function
+               (:pointer 1
+                :parent "ArrayOfElmts"
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [1071 1293])
+            ("exponentiationProduct" function
+               (:pointer 1
+                :parent "ArrayOfElmts"
+                :arguments 
+                  ( ("exponents" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("mpz_class" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [1348 1381]))                  
+                :type ("Elmt" type (:type "class") nil nil))
+                nil [1296 2167])
+            ("deriveRandElmts" function
+               (:parent "ArrayOfElmts"
+                :arguments 
+                  ( ("prg" variable
+                       (:pointer 1
+                        :type ("cryptoTools::PRG" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2213 2236])
+                    ("nr" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2266 2282])
+                    ("n0" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2312 2328]))                  
+                :type "void")
+                nil [2178 2332]))          
+    :file "arrayofelmts.cpp"
+    :pointmax 2333
+    :fsize 2333
+    :lastmodtime '(20509 31384)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "arrayofelmts.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_ARRAYOFFIELDELEMENTS_H_" variable (:constant-flag t) nil [288 312])
+            ("cstdlib" include (:system-flag t) nil [314 332])
+            ("vector" include (:system-flag t) nil [333 350])
+            ("../../cryptotools/cryptotools.hpp" include nil nil [352 396])
+            ("field.hpp" include nil nil [397 417])
+            ("PRG" type
+               (:prototype t
+                :type "class")
+                nil [475 485])
+            ("arithm" type
+               (:members 
+                  ( ("ArrayOfElmts" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [742 749])
+                            ("baseRing" variable
+                               (:pointer 1
+                                :type ("Ring" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [848 864])
+                            ("elmts" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("Elmt" type (:pointer 1) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [990 1015])
+                            ("public" label nil (reparse-symbol classsubparts) [1017 1024])
+                            ("ArrayOfElmts" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("ArrayOfElmts" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1117 1132])
+                            ("ArrayOfElmts" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("f" variable
+                                       (:pointer 1
+                                        :type ("Ring" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1343 1352]))                                  
+                                :type ("ArrayOfElmts" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1330 1353])
+                            ("ArrayOfElmts" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1496 1512])
+                            ("toByteTree" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :type ("verifierUtils::ByteTree" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1826 1865])
+                            ("getElmt" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :arguments 
+                                  ( ("i" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2080 2095]))                                  
+                                :type ("Elmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2065 2096])
+                            ("getSize" function
+                               (:prototype-flag t
+                                :type "unsigned int")
+                                (reparse-symbol classsubparts) [2234 2257])
+                            ("getBaseRing" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :type ("Ring" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2428 2449])
+                            ("product" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :type ("Elmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2675 2701])
+                            ("exponentiationProduct" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("exponents" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("mpz_class" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [3302 3335]))                                  
+                                :type ("Elmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3265 3336])
+                            ("addElmt" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("elmt" variable
+                                       (:pointer 1
+                                        :type ("Elmt" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3507 3519]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3485 3520])
+                            ("deriveRandElmts" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("prg" variable
+                                       (:pointer 1
+                                        :type ("cryptoTools::PRG" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4138 4161])
+                                    ("nr" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [4199 4215])
+                                    ("n0" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [4253 4269]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [4109 4270]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [721 4273]))                  
+                :type "namespace")
+                nil [488 4276]))          
+    :file "arrayofelmts.hpp"
+    :pointmax 4305
+    :fsize 4305
+    :lastmodtime '(20509 31539)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_ARRAYOFFIELDELEMENTS_H_")
+          )
+
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!Code!verificatum!src!arithm!interface!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

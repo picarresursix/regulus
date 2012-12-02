@@ -1,0 +1,166 @@
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ansi-color-names-vector ["#2e3436" "#a40000" "#4e9a06" "#c4a000" "#204a87" "#5c3566" "#729fcf" "#eeeeec"])
+ '(custom-enabled-themes nil)
+ '(custom-safe-themes (quote ("5c79498491a4e6218a1961ab331afc97f2939ac63dc8181d847f195fda82e2fa" "71b172ea4aad108801421cc5251edb6c792f3adbaecfa1c52e94e3d99634dee7" "6cfe5b2f818c7b52723f3e121d1157cf9d95ed8923dbc1b47f392da80ef7495d" default)))
+ '(inhibit-startup-buffer-menu t)
+ '(inhibit-startup-screen t)
+ '(initial-buffer-choice "~/org/todo.org")
+ '(initial-scratch-message ";; Scratch buffer")
+ '(safe-local-variable-values (quote ((class-name . 0)))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+
+;  Load emacs.d
+(add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'load-path "~/.emacs.d/elpa")
+
+;  Remove the tool-bar
+(tool-bar-mode -1)
+
+;  Show the column-number in the mode line
+(column-number-mode)
+
+;  Load the github theme
+(load-file "~/.emacs.d/elpa/github-theme-0.0.3/github-theme.el")
+
+;  Default mode is text mode
+(setq default-major-mode 'text-mode)
+
+;  Activate the use of abbreviation
+(setq-default abbrev-mode t)
+(read-abbrev-file "~/.abrev")
+(setq save-abbrevs t)
+
+;  Activate auto-fill by default
+(add-hook 'text-mode-hook
+          '(lambda ()
+            (turn-on-auto-fill)
+            (highlight-parentheses-mode)
+            )
+          )
+
+;  Typing "y" or "n" instead of "yes" or "no"
+(fset 'yes-or-no-p 'y-or-n-p)
+
+;  Replace tabs with spaces
+(setq-default indent-tabs-mode nil)
+
+;  Highlight current line
+(global-hl-line-mode 1)
+
+;  Prevent the cursor from jumping around
+(setq scroll-step 1)
+
+;  Modify the timestamp wherever needed in the file when closing
+(add-hook 'before-save-hook 'time-stamp)
+
+;  Remove scroll-bar
+(scroll-bar-mode -1)
+(menu-bar-mode -1)
+
+;  Activate smart auto-completion when switching buffer
+(iswitchb-mode 1)
+
+;  Kill the window when done with it (even when using the emacs server.
+(add-hook 'server-done-hook (lambda nil (kill-buffer nil)))
+
+;  Configures the cmake-mode
+(add-to-list 'auto-mode-alist '("CMakeLists\\.txt\\'" . cmake-mode))
+
+;  Configures the auto-complete mode
+(add-to-list 'load-path "~/.emacs.d/elpa/auto-complete-1.4")
+(load "auto-complete.el")
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories
+             "~/.emacs.d/elpa/auto-complete-1.4/dict")
+(setq ac-comphist-file "~/.emacs.d/ac-comphist.dat")
+(ac-config-default)
+(add-hook 'text-mode-hook 'auto-complete-mode)
+(setq ac-modes (append '(LaTeX-mode latex-mode) ac-modes))
+
+;  Sets up the package repositories to take into account
+(require 'package)
+(add-to-list 'package-archives
+             '("marmalade" .  "http://marmalade-repo.org/packages/")
+             )
+
+;  Loads all the files in .emacs.d/my-functions.
+(load "my-functions/my-cpp.el")
+(load "my-functions/my-latex.el")
+(load "my-functions/my-org.el")
+(load "my-functions/my-misc.el")
+
+
+
+
+;; ========================= SHORTCUTS =============================
+
+
+;  Sets up ergoemacs.
+(setenv "ERGOEMACS_KEYBOARD_LAYOUT" "us") ; US
+(load "~/.emacs.d/ergoemacs-keybindings-5.3.9/ergoemacs-mode")
+(ergoemacs-mode 1)
+
+;  Adds shortcus used to enlarge to the max (or shrink to the
+;  min) the current frame.
+(global-set-key (kbd "C-x w +"    ) 'larger-window)
+(global-set-key (kbd "C-x w -"    ) 'smaller-window)
+
+;  Adds shortcut to be able to perform a command n times
+(global-set-key (kbd "C-1") 'digit-argument)
+(global-set-key (kbd "C-2") 'digit-argument)
+(global-set-key (kbd "C-3") 'digit-argument)
+(global-set-key (kbd "C-4") 'digit-argument)
+(global-set-key (kbd "C-5") 'digit-argument)
+(global-set-key (kbd "C-6") 'digit-argument)
+(global-set-key (kbd "C-7") 'digit-argument)
+(global-set-key (kbd "C-8") 'digit-argument)
+(global-set-key (kbd "C-9") 'digit-argument)
+
+
+;  Adds shortcuts consistent with ergoemacs to deal with rectangles.
+(global-set-key (kbd "C-x r x") 'kill-rectangle)
+(global-set-key (kbd "C-x r v") 'yank-rectangle)
+(global-set-key (kbd "C-x r n") 'rectangle-number-lines)
+(global-set-key (kbd "C-x r i") 'string-insert-rectangle)
+
+;  Cryptography related shortcuts.
+(global-set-key (kbd "<f7> e") 'epa-encrypt-region)
+(global-set-key (kbd "<f7> d") 'epa-decrypt-armor-in-region)
+(global-set-key (kbd "<f7> s") 'epa-sign-region)
+(global-set-key (kbd "<f7> v") 'epa-verify-region)
+
+;  Programming shortcuts (semantic, etc).
+(global-set-key (kbd "<f5>" ) 'compile)
+(global-set-key (kbd "C-à p") 'semantic-analyze-possible-completions)
+(global-set-key (kbd "C-à a") 'semantic-analyze-current-context)
+(global-set-key (kbd "C-à r") 'semantic-force-refresh)
+
+;   Adds some shortcuts that are not part of ergoemacs and do not
+; fit in any particular category.
+(global-set-key (kbd "C-t") 'transpose-chars)
+(global-set-key (kbd "C-k") 'kill-line)
+(global-set-key (kbd "M-y") 'back-to-indentation)
+(global-set-key (kbd "C-j") 'newline-and-indent)
+(global-set-key (kbd "C-S-j") 'indent-new-comment-line)
+(global-set-key (kbd "M-m") 'end-of-line)
+(global-set-key (kbd "C-x x e") 'eval-and-replace)
+
+;  Define org-mode shorctus available in every modes.
+(global-unset-key (kbd "C-d"))
+(global-set-key (kbd "C-d g") 'goto-line)
+(global-set-key (kbd "C-d l") 'goto-todo-list)
+(global-set-key (kbd "C-d t") 'put-time-stamp)
+(global-set-key (kbd "C-d c") 'org-store-link)
+(global-set-key (kbd "C-d v") 'org-insert-link-global)
+(global-set-key (kbd "C-d m") 'put-mail-address)
+(global-set-key (kbd "C-d o") 'org-open-at-point-global)

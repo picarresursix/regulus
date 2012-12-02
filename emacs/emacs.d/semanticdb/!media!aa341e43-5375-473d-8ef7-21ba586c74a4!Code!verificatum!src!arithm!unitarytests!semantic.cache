@@ -1,0 +1,153 @@
+;; Object unitarytests/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "unitarytests/"
+  :tables (list 
+   (semanticdb-table "tester.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("cstring" include (:system-flag t) nil [1060 1078])
+            ("iostream" include (:system-flag t) nil [1079 1098])
+            ("fstream" include (:system-flag t) nil [1099 1117])
+            ("../arithm.h" include nil nil [1119 1141])
+            ("arithm" using (:type ("arithm" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1143 1166])
+            ("PATH_TO_INPUT_FILE" variable (:constant-flag t) nil [1176 1194])
+            ("PATH_TO_OUTPUT_FILE" variable (:constant-flag t) nil [1218 1237])
+            ("STATISTICAL_ERROR" variable (:constant-flag t) nil [1268 1285])
+            ("N_RAND_ARRAYS" variable (:constant-flag t) nil [1298 1311])
+            ("test_ModPGrp_toByteTree" function
+               (:arguments 
+                  ( ("input" variable
+                       (:reference 1
+                        :type ("std::ifstream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1806 1827])
+                    ("output" variable
+                       (:reference 1
+                        :type ("std::ofstream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1855 1877]))                  
+                :type "void")
+                nil [1777 2251])
+            ("test_ModPGrp_exponentiation" function
+               (:arguments 
+                  ( ("input" variable
+                       (:reference 1
+                        :type ("std::ifstream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2497 2518])
+                    ("output" variable
+                       (:reference 1
+                        :type ("std::ofstream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2550 2572]))                  
+                :type "void")
+                nil [2464 3406])
+            ("test_ModPGrp_multiplication" function
+               (:arguments 
+                  ( ("input" variable
+                       (:reference 1
+                        :type ("std::ifstream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3644 3665])
+                    ("output" variable
+                       (:reference 1
+                        :type ("std::ofstream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3697 3719]))                  
+                :type "void")
+                nil [3611 4614])
+            ("test_ArrayOfModPGrpElmts_deriveRandElmts" function
+               (:arguments 
+                  ( ("input" variable
+                       (:reference 1
+                        :type ("std::ifstream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4874 4895])
+                    ("output" variable
+                       (:reference 1
+                        :type ("std::ofstream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4896 4918]))                  
+                :type "void")
+                nil [4819 6212])
+            ("printHelp" function (:type "void") nil [6326 6885])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [6897 6906])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6907 6920]))                  
+                :type "int")
+                nil [6888 7945]))          
+    :file "tester.cpp"
+    :pointmax 7946
+    :fsize 7946
+    :lastmodtime '(20497 42431)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "unitarytests.py"
+    :major-mode 'python-mode
+    :tags 
+        '( (""""@file unitarytests.py
+@date Time-stamp: <2012-07-26 22:46:23 leo>
+@author Leo Perrin <leoperrin@picarresursix.fr>
+
+This file contains unitary tests for the arithmetic functions that
+have to be implemented in a verificatum verifier
+(http://www.verificatum.org/verificatum/vmnv-0.1.pdf). It was
+written to check that *cpp-verifier*, a verifier in C++ worked as
+expected.
+
+A complete specification of the test binary file is given at <b>TODO</b>.
+
+"""" code nil nil [24 475])
+            ("ref.crypto" include nil nil [478 502])
+            ("ref.pgroup" include nil nil [503 527])
+            ("ref.pring" include nil nil [528 552])
+            ("ref.large_integer" include nil nil [553 595])
+            ("random" include nil nil [596 622])
+            ("sys" include nil nil [623 633])
+            ("os" include nil nil [634 643])
+            ("T_VALUES" variable nil nil [646 660])
+            ("BIN_TO_TEST" variable nil nil [661 685])
+            ("PATH_TO_PRIMES" variable nil nil [686 714])
+            ("RAND_SOURCE" variable nil nil [715 743])
+            ("INPUT_FILE" variable nil nil [745 771])
+            ("IDEAL_OUTPUT_FILE" variable nil nil [772 812])
+            ("ACTUAL_OUTPUT_FILE" variable nil nil [813 855])
+            ("N_RAND_ARRAYS" variable nil nil [857 874])
+            ("MAX_ARRAY_SIZE" variable nil nil [875 894])
+            ("NR" variable nil nil [895 903])
+            ("MAX_MESSAGE_LENGTH" variable nil nil [947 970])
+            ("parse_prime_files" function (:arguments 
+              ( ("primes" variable nil (reparse-symbol function_parameters) [1216 1222]))              ) nil [1194 1653])
+            ("is_integer_in_modPGroup" function (:arguments 
+              ( ("number" variable nil (reparse-symbol function_parameters) [1684 1690])
+                ("modulus" variable nil (reparse-symbol function_parameters) [1692 1699])
+                ("order" variable nil (reparse-symbol function_parameters) [1701 1706]))              ) nil [1656 1929])
+            ("rand_generator" function (:arguments 
+              ( ("modulus" variable nil (reparse-symbol function_parameters) [1950 1957])
+                ("order" variable nil (reparse-symbol function_parameters) [1958 1963]))              ) nil [1931 2601])
+            ("get_modgrp" function (:arguments 
+              ( ("primes" variable nil (reparse-symbol function_parameters) [2618 2624])
+                ("t" variable nil (reparse-symbol function_parameters) [2625 2626])
+                ("index" variable nil (reparse-symbol function_parameters) [2627 2632])
+                ("e" variable nil (reparse-symbol function_parameters) [2633 2634]))              ) nil [2603 2892])
+            ("naive_diff" function nil nil [2894 4116])
+            ("do_test" function (:arguments 
+              ( ("method" variable nil (reparse-symbol function_parameters) [4130 4136]))              ) nil [4118 4478])
+            ("test_ModPGrp_toByteTree" function (:arguments 
+              ( ("primes" variable nil (reparse-symbol function_parameters) [4729 4735]))              ) nil [4701 5618])
+            ("test_ModPGrp_exponentiation" function nil nil [5621 7183])
+            ("test_ModPGrp_multiplication" function nil nil [7186 8744])
+            ("test_ArrayOfModPGrpElmts_deriveRandElmts" function nil nil [8747 10440])
+            ("test_ModPGrpElmt_encode" function nil nil [10443 11696])
+            ("print_help" function nil nil [11920 12504])
+            ("if" code nil nil [12507 13257]))          
+    :file "unitarytests.py"
+    :pointmax 13257
+    :fsize 13256
+    :lastmodtime '(20497 44191)
+    :unmatched-syntax '(($EOI 13257 . 13257))
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!Code!verificatum!src!arithm!unitarytests!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

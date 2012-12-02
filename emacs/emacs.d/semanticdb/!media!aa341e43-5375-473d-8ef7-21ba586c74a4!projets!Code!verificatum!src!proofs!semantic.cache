@@ -1,0 +1,214 @@
+;; Object proofs/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "proofs/"
+  :tables (list 
+    (semanticdb-table "verification.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("verification.hpp" include nil nil [227 254])
+            ("cppVerifier" using (:type ("cppVerifier" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [257 285])
+            ("cppVerifier::proofs" using (:type ("cppVerifier::proofs" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [286 322])
+            ("Verification" function
+               (:constructor-flag t
+                :parent "Verification"
+                :arguments 
+                  ( ("config" variable
+                       (:pointer 1
+                        :type ("XmlConfig" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [352 371])
+                    ("prefix" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("uint8_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [399 427])
+                    ("nZero" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [455 474]))                  
+                :type ("Verification" type (:type "class") nil nil))
+                nil [325 1486])
+            ("randomExponents" function
+               (:parent "Verification"
+                :arguments 
+                  ( ("bts" variable
+                       (:pointer 1
+                        :type ("utils::ByteTree" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1549 1571])
+                    ("s" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("uint8_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1572 1596]))                  
+                :type ("arithm::ArrayOfElmts" type (:type "class") nil nil))
+                nil [1489 2455])
+            ("getChallenge" function
+               (:parent "Verification"
+                :arguments 
+                  ( ("s" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("uint8_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [2498 2521]))                  
+                :type ("arithm::Elmt" type (:type "class") nil nil))
+                nil [2458 3125])
+            ("getGenerators" function
+               (:parent "Verification"
+                :type ("arithm::ArrayOfElmts" type (:type "class") nil nil))
+                nil [3128 3200])
+            ("isEverythingOK" function
+               (:parent "Verification"
+                :type "bool")
+                nil [3203 3264]))          
+    :file "verification.cpp"
+    :pointmax 3266
+    :fsize 3266
+    :lastmodtime '(20648 54076)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "verification.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_VERIFICATION_H_" variable (:constant-flag t) nil [244 260])
+            ("vector" include (:system-flag t) nil [262 279])
+            ("string" include (:system-flag t) nil [280 297])
+            ("iostream" include (:system-flag t) nil [298 317])
+            ("gmp.h" include (:system-flag t) nil [318 334])
+            ("gmpxx.h" include (:system-flag t) nil [335 353])
+            ("../utils/utils.hpp" include nil nil [355 384])
+            ("../crypto/crypto.hpp" include nil nil [385 416])
+            ("../arithm/arithm.hpp" include nil nil [417 448])
+            ("../xmlconfig/xmlconfig.hpp" include nil nil [449 486])
+            ("../elgamal/elgamal.hpp" include nil nil [487 520])
+            ("cppVerifier" type
+               (:members 
+                  ( ("proofs" type
+                       (:members 
+                          ( ("Verification" type
+                               (:members 
+                                  ( ("protected" label nil (reparse-symbol classsubparts) [819 829])
+                                    ("protocolFile" variable
+                                       (:pointer 1
+                                        :type ("XmlConfig" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [953 978])
+                                    ("H" variable
+                                       (:pointer 1
+                                        :type ("crypto::SHAx" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1081 1098])
+                                    ("ROs" variable
+                                       (:pointer 1
+                                        :type ("crypto::RO" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1192 1209])
+                                    ("ROv" variable
+                                       (:pointer 1
+                                        :type ("crypto::RO" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1318 1335])
+                                    ("rho" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("uint8_t" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1450 1475])
+                                    ("n0" variable (:type "unsigned int") (reparse-symbol classsubparts) [1583 1599])
+                                    ("ne" variable (:type "unsigned int") (reparse-symbol classsubparts) [1751 1767])
+                                    ("nr" variable (:type "unsigned int") (reparse-symbol classsubparts) [1918 1934])
+                                    ("nv" variable (:type "unsigned int") (reparse-symbol classsubparts) [2035 2051])
+                                    ("prg" variable
+                                       (:pointer 1
+                                        :type ("crypto::PRG" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2192 2210])
+                                    ("gq" variable
+                                       (:pointer 1
+                                        :type ("arithm::Group" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2340 2359])
+                                    ("zq" variable
+                                       (:pointer 1
+                                        :type ("arithm::Field" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2460 2479])
+                                    ("h" variable (:type ("arithm::ArrayOfElmts" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2608 2631])
+                                    ("tau" variable
+                                       (:pointer 1
+                                        :type ("utils::ByteTree" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2736 2758])
+                                    ("sigma" variable
+                                       (:pointer 1
+                                        :type ("utils::ByteTree" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2860 2884])
+                                    ("public" label nil (reparse-symbol classsubparts) [2886 2893])
+                                    ("Verification" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("config" variable
+                                               (:pointer 1
+                                                :type ("XmlConfig" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3240 3259])
+                                            ("prefix" variable (:type ("std::vector" type
+                                                 (:template-specifier 
+                                                    ( ("uint8_t" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol arg-sub-list) [3260 3288])
+                                            ("nZero" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3310 3329]))                                          
+                                        :type ("Verification" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3227 3330])
+                                    ("randomExponents" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("bts" variable
+                                               (:pointer 1
+                                                :type ("utils::ByteTree" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4121 4143])
+                                            ("s" variable
+                                               (:reference 1
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("uint8_t" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [4144 4168]))                                          
+                                        :type ("arithm::ArrayOfElmts" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [4067 4169])
+                                    ("getChallenge" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("s" variable (:type ("std::vector" type
+                                                 (:template-specifier 
+                                                    ( ("uint8_t" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol arg-sub-list) [4744 4767]))                                          
+                                        :type ("arithm::Elmt" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [4718 4768])
+                                    ("getGenerators" function
+                                       (:prototype-flag t
+                                        :type ("arithm::ArrayOfElmts" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [4846 4883])
+                                    ("isEverythingOK" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [5166 5196]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [798 5200]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [547 5204]))                  
+                :type "namespace")
+                nil [523 5206]))          
+    :file "verification.hpp"
+    :pointmax 5236
+    :fsize 5236
+    :lastmodtime '(20648 54076)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_VERIFICATION_H_")
+          )
+
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!projets!Code!verificatum!src!proofs!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

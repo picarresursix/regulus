@@ -1,0 +1,51 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+    (semanticdb-table "constants.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_DEFINE_CRYPTHEORY_H_" variable (:constant-flag t) nil [247 268])
+            ("cstdint" include (:system-flag t) nil [270 288])
+            ("cstdlib" include (:system-flag t) nil [289 307])
+            ("vector" include (:system-flag t) nil [308 325])
+            ("string" include (:system-flag t) nil [326 343])
+            ("iostream" include (:system-flag t) nil [344 363])
+            ("byteVector" variable (:constant-flag t) nil [420 430])
+            ("ECB_MODE" variable (:constant-flag t) nil [544 552])
+            ("CBC_MODE" variable (:constant-flag t) nil [597 605])
+            ("PCBC_MODE" variable (:constant-flag t) nil [663 672])
+            ("CFB_MODE" variable (:constant-flag t) nil [713 721])
+            ("OFB_MODE" variable (:constant-flag t) nil [762 770])
+            ("BLOCK_XOR_DIFFERENT_SIZES" variable (:constant-flag t) nil [1180 1205])
+            ("BLOCK_OR_DIFFERENT_SIZES" variable (:constant-flag t) nil [1282 1306])
+            ("BLOCK_SUM_DIFFERENT_SIZES" variable (:constant-flag t) nil [1384 1409])
+            ("BLOCK_TOO_SMALL" variable (:constant-flag t) nil [1496 1511])
+            ("HASH_WRONG_MESSAGE_SIZE" variable (:constant-flag t) nil [1596 1619]))          
+    :file "constants.hpp"
+    :pointmax 1646
+    :fsize 1646
+    :lastmodtime '(20610 52469)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("byteVector" . 
+              ((symbol "std" 431 . 434) (punctuation ":" 434 . 435) (punctuation ":" 435 . 436) (symbol "vector" 436 . 442) (punctuation "<" 442 . 443) (symbol "uint8_t" 443 . 450) (punctuation ">" 450 . 451)))
+          ("BLOCK_TOO_SMALL" . ((number "0x0110" 1512 . 1518)))
+          ("CFB_MODE" . ((number "3" 722 . 723)))
+          ("BLOCK_OR_DIFFERENT_SIZES" . ((number "0x0101" 1307 . 1313)))
+          ("BLOCK_SUM_DIFFERENT_SIZES" . ((number "0x0102" 1410 . 1416)))
+          ("ECB_MODE" . ((number "0" 553 . 554)))
+          ("_DEFINE_CRYPTHEORY_H_")
+          ("CBC_MODE" . ((number "1" 606 . 607)))
+          ("BLOCK_XOR_DIFFERENT_SIZES" . ((number "0x0100" 1206 . 1212)))
+          ("HASH_WRONG_MESSAGE_SIZE" . ((number "0x0200" 1620 . 1626)))
+          ("PCBC_MODE" . ((number "2" 673 . 674)))
+          ("OFB_MODE" . ((number "4" 771 . 772)))
+          )
+
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!projets!Code!libcryptheory!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

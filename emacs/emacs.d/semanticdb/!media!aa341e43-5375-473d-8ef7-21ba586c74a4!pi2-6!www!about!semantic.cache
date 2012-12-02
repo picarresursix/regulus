@@ -1,0 +1,102 @@
+;; Object about/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "about/"
+  :tables (list 
+   (semanticdb-table "index.html"
+    :major-mode 'html-mode
+    :tags 
+        '( ("Pi^2/6 : about - qui suis-je ?" section nil nil [367 421])
+            ("Accueil" section (:members 
+              ( ("Accueil" anchor nil nil [493 496])
+                ("Accueil" anchor nil nil [645 648])
+                ("CV" anchor nil nil [832 835])
+                ("GnuPG" anchor nil nil [1004 1007])
+                ("Technologies utilisées" anchor nil nil [1037 1040])
+                ("De l'auteur du présent contenu" section (:members 
+                  ( ("Identité" section (:members 
+                      ( ("KTH" anchor nil nil [1265 1268])
+                        ("Centrale Lyon" anchor nil nil [1372 1375])
+                        ("ici" anchor nil nil [1718 1721]))                      ) nil [1169 2001])
+                    ("Pourquoi ce site ?" section (:members 
+                      ( ("blog" anchor nil nil [2324 2327])
+                        ("d'autres ont décrit" anchor nil nil [2446 2449])
+                        ("" anchor nil nil [3709 3712]))                      ) nil [2001 3997]))                  ) nil [1103 3997]))              ) nil [421 3997]))          
+    :file "index.html"
+    :pointmax 3997
+    :fsize 4091
+    :lastmodtime '(20269 37911)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "index-en.html"
+    :major-mode 'html-mode
+    :tags 
+        '( ("Pi^2/6 : about - who am I?" section nil nil [415 465])
+            ("Home" section (:members 
+              ( ("Home" anchor nil nil [500 503])
+                ("Home" anchor nil nil [690 693])
+                ("CV" anchor nil nil [865 868])
+                ("GnuPG" anchor nil nil [1032 1035])
+                ("Powered by…" anchor nil nil [1068 1071])
+                ("On the author of this website" section (:members 
+                  ( ("Identity" section (:members 
+                      ( ("KTH" anchor nil nil [1327 1330])
+                        ("Ecole Centrale de Lyon" anchor nil nil [1445 1448])
+                        ("here" anchor nil nil [1791 1794]))                      ) nil [1192 2050])
+                    ("Why this website ?" section (:members 
+                      ( ("blog" anchor nil nil [2308 2311])
+                        ("" anchor nil nil [3570 3573]))                      ) nil [2050 3859]))                  ) nil [1126 3859]))              ) nil [465 3859]))          
+    :file "index-en.html"
+    :pointmax 3859
+    :fsize 3870
+    :lastmodtime '(20269 37911)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "gpg.html"
+    :major-mode 'html-mode
+    :tags 
+        '( ("Pi^2/6 : about - Gnu Privacy Guard" section nil nil [415 473])
+            ("Accueil" section (:members 
+              ( ("Accueil" anchor nil nil [545 548])
+                ("Accueil" anchor nil nil [695 698])
+                ("CV" anchor nil nil [882 885])
+                ("Qui suis-je ?" anchor nil nil [1038 1041])
+                ("Technologies utilisées" anchor nil nil [1089 1092])
+                ("Gnu Privacy Guard" section (:members 
+                  ( ("wikipedia" anchor nil nil [1333 1336])
+                    ("enigmail" anchor nil nil [1503 1506])
+                    ("Clef GPG de Léo Perrin" section (:members 
+                      ( ("Download" anchor nil nil [2167 2170])
+                        ("just to keep the elements in the footer -->" anchor nil nil [3236 3239]))                      ) nil [2092 3524]))                  ) nil [1158 3524]))              ) nil [473 3524]))          
+    :file "gpg.html"
+    :pointmax 3524
+    :fsize 3570
+    :lastmodtime '(20502 61429)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "gpg-en.html"
+    :major-mode 'html-mode
+    :tags 
+        '( ("Pi^2/6 : about - Gnu Privacy Guard" section nil nil [415 473])
+            ("Home" section (:members 
+              ( ("Home" anchor nil nil [508 511])
+                ("Home" anchor nil nil [696 699])
+                ("CV" anchor nil nil [871 874])
+                ("Who am I?" anchor nil nil [1026 1029])
+                ("Powered by…" anchor nil nil [1076 1079])
+                ("Gnu Privacy Guard" section (:members 
+                  ( ("wikipedia" anchor nil nil [1328 1331])
+                    ("enigmail" anchor nil nil [1530 1533])
+                    ("Léo Perrin's GPG key" section (:members 
+                      ( ("Download" anchor nil nil [2065 2068])
+                        ("just to keep the elements in the footer -->" anchor nil nil [3111 3114]))                      ) nil [1992 3401]))                  ) nil [1134 3401]))              ) nil [473 3401]))          
+    :file "gpg-en.html"
+    :pointmax 3401
+    :fsize 3408
+    :lastmodtime '(20502 61524)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!pi2-6!www!about!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

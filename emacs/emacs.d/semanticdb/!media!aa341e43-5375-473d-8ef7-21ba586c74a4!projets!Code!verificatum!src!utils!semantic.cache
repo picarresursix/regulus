@@ -1,0 +1,80 @@
+;; Object utils/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "utils/"
+  :tables (list 
+   (semanticdb-table "utils.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_UTILS_H_" variable (:constant-flag t) nil [246 255])
+            ("cstdint" include (:system-flag t) nil [257 275])
+            ("bytetree/bytetree.hpp" include nil nil [321 353])
+            ("bytetree/leaf.hpp" include nil nil [354 382])
+            ("bytetree/node.hpp" include nil nil [383 411])
+            ("cppVerifier" type
+               (:members 
+                  ( ("utils" type
+                       (:members 
+                          ( ("num2str" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("number" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1132 1152]))                                  
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [1112 1153])
+                            ("byte2str" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("b" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1394 1404]))                                  
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [1373 1405])
+                            ("doublon2byte" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("b1" variable (:type "char") (reparse-symbol arg-sub-list) [1850 1858])
+                                    ("b2" variable (:type "char") (reparse-symbol arg-sub-list) [1859 1867]))                                  
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [1829 1868])
+                            ("octuple2num" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("s" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2178 2192]))                                  
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [2157 2193])
+                            ("largeNum2byteVector" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("number" variable (:type ("mpz_class" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2573 2590]))                                  
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("uint8_t" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [2532 2591])
+                            ("file2bytes" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("path" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2874 2891]))                                  
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("uint8_t" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol namespacesubparts) [2842 2892]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [765 2894]))                  
+                :type "namespace")
+                nil [414 2898]))          
+    :file "utils.hpp"
+    :pointmax 2940
+    :fsize 2940
+    :lastmodtime '(20648 54076)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_UTILS_H_")
+          )
+
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!projets!Code!verificatum!src!utils!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

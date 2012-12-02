@@ -1,0 +1,80 @@
+;; Object ro/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ro/"
+  :tables (list 
+   (semanticdb-table "ro.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_RO_H_" variable (:constant-flag t) nil [221 227])
+            ("cstdint" include (:system-flag t) nil [229 247])
+            ("vector" include (:system-flag t) nil [248 265])
+            ("../sha/shax.hpp" include nil nil [267 293])
+            ("../prg/prg.hpp" include nil nil [294 319])
+            ("cppVerifier" type
+               (:members 
+                  ( ("crypto" type
+                       (:members 
+                          ( ("RO" type
+                               (:members 
+                                  ( ("private" label nil (reparse-symbol classsubparts) [520 528])
+                                    ("hashfunction" variable
+                                       (:pointer 1
+                                        :type ("SHAx" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [650 670])
+                                    ("prg" variable
+                                       (:pointer 1
+                                        :type ("PRG" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [774 784])
+                                    ("nout" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [925 939])
+                                    ("vectNout" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("uint8_t" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1273 1303])
+                                    ("public" label nil (reparse-symbol classsubparts) [1305 1312])
+                                    ("RO" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("hash" variable
+                                               (:pointer 1
+                                                :type ("SHAx" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1562 1574])
+                                            ("outlen" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1575 1591]))                                          
+                                        :type ("RO" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1559 1592])
+                                    ("query" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("d" variable (:type ("std::vector" type
+                                                 (:template-specifier 
+                                                    ( ("uint8_t" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol arg-sub-list) [1862 1885]))                                          
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("uint8_t" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol classsubparts) [1835 1886]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [509 1890]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [345 1902]))                  
+                :type "namespace")
+                nil [321 1904]))          
+    :file "ro.hpp"
+    :pointmax 1936
+    :fsize 1936
+    :lastmodtime '(20648 54076)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_RO_H_")
+          )
+
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!projets!Code!verificatum!src!crypto!ro!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

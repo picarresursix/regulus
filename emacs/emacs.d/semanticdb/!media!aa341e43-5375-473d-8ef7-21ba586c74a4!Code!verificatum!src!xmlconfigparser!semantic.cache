@@ -1,0 +1,241 @@
+;; Object xmlconfigparser/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "xmlconfigparser/"
+  :tables (list 
+   (semanticdb-table ""
+    :file ""
+    :fsize 4096
+    :lastmodtime '(20500 20086)
+    )
+   (semanticdb-table "xmlconfig.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("cstring" include (:system-flag t) nil [223 241])
+            ("./tinyxml/tinyxml.h" include nil nil [243 273])
+            ("xmlconfig.hpp" include nil nil [274 298])
+            ("retrieveText" function
+               (:pointer 1
+                :parent "XmlConfig"
+                :constant-flag t
+                :arguments 
+                  ( ("node" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [339 356])
+                    ("hdl" variable (:type ("TiXmlHandle" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [357 373]))                  
+                :type "char")
+                nil [302 775])
+            ("toInteger" function
+               (:parent "XmlConfig"
+                :arguments 
+                  ( ("node" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [811 828])
+                    ("hdl" variable (:type ("TiXmlHandle" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [829 845]))                  
+                :type "int")
+                nil [786 923])
+            ("string2hash" function
+               (:pointer 1
+                :parent "XmlConfig"
+                :arguments 
+                  ( ("hashRepresentation" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [969 1001]))                  
+                :type ("cryptoTools::SHAx" type (:type "class") nil nil))
+                nil [926 1568])
+            ("unmarshalPGroup" function
+               (:pointer 1
+                :parent "XmlConfig"
+                :arguments 
+                  ( ("fieldRepresentation" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1614 1647]))                  
+                :type ("arithm::Field" type (:type "class") nil nil))
+                nil [1571 2933])
+            ("XmlConfig" function
+               (:constructor-flag t
+                :parent "XmlConfig"
+                :arguments 
+                  ( ("path2file" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2957 2979]))                  
+                :type ("XmlConfig" type (:type "class") nil nil))
+                nil [2936 4333])
+            ("getNopart" function
+               (:parent "XmlConfig"
+                :type "unsigned int")
+                nil [4336 4398])
+            ("getThres" function
+               (:parent "XmlConfig"
+                :type "unsigned int")
+                nil [4401 4461])
+            ("getMaxciph" function
+               (:parent "XmlConfig"
+                :type "unsigned int")
+                nil [4464 4528])
+            ("getVbitlenro" function
+               (:parent "XmlConfig"
+                :type "unsigned int")
+                nil [4531 4599])
+            ("getStatdisth" function
+               (:parent "XmlConfig"
+                :type "unsigned int")
+                nil [4602 4670])
+            ("getCbitlenro" function
+               (:parent "XmlConfig"
+                :type "unsigned int")
+                nil [4673 4741])
+            ("getRohash" function
+               (:pointer 1
+                :parent "XmlConfig"
+                :type ("cryptoTools::SHAx" type (:type "class") nil nil))
+                nil [4744 4813])
+            ("getPrghash" function
+               (:pointer 1
+                :parent "XmlConfig"
+                :type ("cryptoTools::SHAx" type (:type "class") nil nil))
+                nil [4816 4887])
+            ("getPgroup" function
+               (:pointer 1
+                :parent "XmlConfig"
+                :type ("arithm::Field" type (:type "class") nil nil))
+                nil [4890 4955]))          
+    :file "xmlconfig.cpp"
+    :pointmax 4966
+    :fsize 4966
+    :lastmodtime '(20500 17178)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "xmlconfig.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_XMLCONFIG_H_" variable (:constant-flag t) nil [205 218])
+            ("_XMLCONFIG_H_" variable (:constant-flag t) nil [205 218])
+            ("string" include (:system-flag t) nil [220 237])
+            ("cstdlib" include (:system-flag t) nil [238 256])
+            ("iostream" include (:system-flag t) nil [257 276])
+            ("./tinyxml/tinyxml.h" include nil nil [279 309])
+            ("../cryptotools/cryptotools.hpp" include nil nil [310 351])
+            ("../arithm/arithm.hpp" include nil nil [352 383])
+            ("../verifierutils/verifierutils.hpp" include nil nil [384 429])
+            ("XmlConfig" type
+               (:members 
+                  ( ("private" label nil (reparse-symbol classsubparts) [1123 1131])
+                    ("doc" variable (:type ("TiXmlDocument" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1270 1288])
+                    ("nopart" variable (:type "unsigned int") (reparse-symbol classsubparts) [1372 1392])
+                    ("thres" variable (:type "unsigned int") (reparse-symbol classsubparts) [1564 1583])
+                    ("maxciph" variable (:type "unsigned int") (reparse-symbol classsubparts) [1684 1705])
+                    ("vbitlenro" variable (:type "unsigned int") (reparse-symbol classsubparts) [1925 1948])
+                    ("statdisth" variable (:type "unsigned int") (reparse-symbol classsubparts) [2090 2113])
+                    ("cbitlenro" variable (:type "unsigned int") (reparse-symbol classsubparts) [2276 2299])
+                    ("rohash" variable
+                       (:pointer 1
+                        :type ("cryptoTools::SHAx" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2487 2514])
+                    ("prghash" variable
+                       (:pointer 1
+                        :type ("cryptoTools::SHAx" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2699 2727])
+                    ("pgroup" variable
+                       (:pointer 1
+                        :type ("arithm::Field" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2885 2908])
+                    ("public" label nil (reparse-symbol classsubparts) [2919 2926])
+                    ("retrieveText" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :constant-flag t
+                        :arguments 
+                          ( ("node" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3434 3451])
+                            ("hdl" variable (:type ("TiXmlHandle" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3452 3468]))                          
+                        :type "char")
+                        (reparse-symbol classsubparts) [3408 3469])
+                    ("toInteger" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("node" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3977 3994])
+                            ("hdl" variable (:type ("TiXmlHandle" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3995 4011]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3963 4012])
+                    ("string2hash" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("hashRepresentation" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [4464 4496]))                          
+                        :type ("cryptoTools::SHAx" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4432 4497])
+                    ("unmarshalPGroup" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("fieldRepresentation" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [5421 5454]))                          
+                        :type ("arithm::Field" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5389 5455])
+                    ("XmlConfig" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("path2file" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5598 5620]))                          
+                        :type ("XmlConfig" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5588 5621])
+                    ("getNopart" function
+                       (:prototype-flag t
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [5631 5656])
+                    ("getThres" function
+                       (:prototype-flag t
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [5666 5690])
+                    ("getMaxciph" function
+                       (:prototype-flag t
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [5700 5726])
+                    ("getVbitlenro" function
+                       (:prototype-flag t
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [5736 5764])
+                    ("getStatdisth" function
+                       (:prototype-flag t
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [5774 5802])
+                    ("getCbitlenro" function
+                       (:prototype-flag t
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [5812 5840])
+                    ("getRohash" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :type ("cryptoTools::SHAx" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5850 5882])
+                    ("getPrghash" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :type ("cryptoTools::SHAx" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5892 5925])
+                    ("getPgroup" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :type ("arithm::Field" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5935 5963]))                  
+                :type "class")
+                nil [1105 5966]))          
+    :file "xmlconfig.hpp"
+    :pointmax 5974
+    :fsize 5975
+    :lastmodtime '(20500 20086)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_XMLCONFIG_H_")
+          )
+
+    )
+   )
+  :file "!media!aa341e43-5375-473d-8ef7-21ba586c74a4!Code!verificatum!src!xmlconfigparser!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )
