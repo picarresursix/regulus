@@ -1,7 +1,9 @@
 #!/bin/bash
-# Time-stamp: <2012-12-02 18:32:47 leo>
+# Time-stamp: <2012-12-02 19:59:40 leo>
 
 # Contains functions used to have a nice prompt.
+
+# dependencies: git
 
 
 # Reset

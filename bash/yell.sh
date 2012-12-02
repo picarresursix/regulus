@@ -4,6 +4,12 @@
 # Contains several bash functions supposed to be useful for me,
 # <leoperrin@picarresursix.fr>.
 
+# dependencies: music123
+
+Tell_Check_Period=1
+Cli_Music_Player=music123
+Beep_File=~/regulus/bash/beep.wav
+
 
 
 function yell
@@ -11,7 +17,7 @@ function yell
 # content and triggers a beep sound as well.
 {
     notify-send $1 "[done]" ;
-    beep -f 400 -l 200 --new -f 600 -l 150 ;
+    $Cli_Music_Player $Beep_File 2>/dev/null
 }
 
 
@@ -20,7 +26,6 @@ function tell_me_when_done
 # Checks every $Tell_Check_Period seconds that a process having the
 # string $1 in its name is still output
 {
-    Tell_Check_Period=1
     processes=$(ps -ef)
     if [[ $(echo $processes | grep $1) == "" ]]; then
         echo "No such process as '"$1"'. Aborting."
