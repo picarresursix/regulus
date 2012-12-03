@@ -1,5 +1,5 @@
 #!/bin/bash
-# Time-stamp: <2012-12-03 09:56:19 leo>
+# Time-stamp: <2012-12-03 13:12:54 leo>
 
 # Contains functions used to have a nice prompt.
 
@@ -117,7 +117,7 @@ function regulus_prompt
         PS1='\n'$PS1'\n-$'
     else
         PS1='\n'$PS1$Color_Off' last commit: ['$(pretty_last_commit_date)']\n'
-        PS1=$PS1'['$Red$branch$Color_Off'] '$(pretty_last_commit_description)
+        PS1=$PS1'['$Red$branch$Color_Off'] '$UBlack$(pretty_last_commit_description)$Color_Off
         PS1=$PS1$Blue'\n-$'
     fi
     PS1=$PS1$Color_Off' '
