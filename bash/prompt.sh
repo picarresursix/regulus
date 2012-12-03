@@ -1,5 +1,5 @@
 #!/bin/bash
-# Time-stamp: <2012-12-02 19:59:40 leo>
+# Time-stamp: <2012-12-03 09:56:19 leo>
 
 # Contains functions used to have a nice prompt.
 
@@ -92,7 +92,8 @@ function pretty_last_commit_description
 # If the current directory is in a git repository, pretty prints the
 # simple description of the last commit.
 {
-    git log -n 1 --oneline | cut -d " " -f 2-
+    description=$(git log -n 1 --oneline | cut -d " " -f 2-)
+    echo $description | sed 's/\$/\\\$/g'
 }
 
 
