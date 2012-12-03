@@ -51,13 +51,29 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-if [ "$color_prompt" = yes ]; then
-   PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-    # PS1='\[\033[0;34m\](\[\033[0;31m\]\u@\h\[\033[0;34m\]) (\[\033[0;31m\]\t\[\033[0;34m\]) [\[\033[0;31m\]\j\[\033[0;34m\]] \w\n\[\033[0;34m\]-\$ \[\033[00m\]'
-else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-fi
-unset color_prompt force_color_prompt
+
+
+
+#---------------------
+# REGULUS is in charge
+
+regulus_bash_dir=~/regulus/bash
+for script in $(ls $regulus_bash_dir"/"*.sh); do
+    . $script
+done
+PROMPT_COMMAND=regulus_prompt
+
+# END REGULUS
+#------------
+
+
+
+# if [ "$color_prompt" = yes ]; then
+#     PS1=$(regulus_prompt)
+# else
+#     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+# fi
+# unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
@@ -85,9 +101,6 @@ alias la='ls -A'
 alias l='ls -CF'
 alias em='emacsclient'
 
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -108,15 +121,3 @@ fi
 
 # verificatum stuff; useless otherwise:
 source ~/.verificatum_env
-
-#---------------------
-# REGULUS is in charge
-
-regulus_bash_dir=~/regulus/bash
-for script in $(ls $regulus_bash_dir"/"*.sh); do
-    . $script
-done
-PROMPT_COMMAND=regulus_prompt
-
-# END REGULUS
-#------------

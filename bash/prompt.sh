@@ -1,5 +1,5 @@
 #!/bin/bash
-# Time-stamp: <2012-12-03 13:12:54 leo>
+# Time-stamp: <2012-12-03 23:44:17 leo>
 
 # Contains functions used to have a nice prompt.
 
@@ -110,15 +110,11 @@ function regulus_prompt
 # A coloured prompt displaying time, directory, current git branch,
 # last commit time and description (if relevant).
 {
-    PS1=$Red'\t '$Blue'\u (\w) '
     branch=$(git_repo_branch)
     if [[ $branch == "" ]]; then
         # not in a git repository
-        PS1='\n'$PS1'\n-$'
+        PS1='\n\['$Red'\]\t \['$Blue'\]\u (\w) \n-$\['$Color_Off'\] '
     else
-        PS1='\n'$PS1$Color_Off' last commit: ['$(pretty_last_commit_date)']\n'
-        PS1=$PS1'['$Red$branch$Color_Off'] '$UBlack$(pretty_last_commit_description)$Color_Off
-        PS1=$PS1$Blue'\n-$'
+        PS1='\n\['$Red'\]\t \['$Blue'\]\u (\w)\['$Color_Off'\] last commit: ['$(pretty_last_commit_date)']\n[\['$Red'\]'$branch'\['$Color_Off'\]] \['$UBlack'\]'$(pretty_last_commit_description)'\['$Color_Off'\]\['$Blue'\n-$\['$Color_Off'\] '
     fi
-    PS1=$PS1$Color_Off' '
 }
