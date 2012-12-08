@@ -1,54 +1,157 @@
-#+ -*-org-*- ; Time-stamp: <2012-12-08 01:22:46 leo>
+#+ -*-org-*- ; Time-stamp: <2012-12-08 23:30:35 leo>
 
-* Constants                                                       :internals:
+              BASH BY REGULUS
+
+* Introduction                                                :documentation:
+  As time goes, I spend more and more time using a terminal. Over time,
+  I write some functions I finally found the courage to store in one
+  place and to document.
+
+  This file is an example of [[http://en.wikipedia.org/wiki/Literate_programming][Literate programming]] done using emacs's
+  org-mode and, in particular [[http://orgmode.org/worg/org-contrib/babel/intro.html#literate-programming][org-babel]]. So the code snippet below *are*
+  the ones loaded by bash!
+
+  Babel actually generates code from the content of this file (an
+  operation called "tangling"). To generate the files, run /M-x
+  org-babel-tangle/ or, much simpler, /C-c C-v t/. To edit a snippet
+  of code, move the cursor into it and press /C-c '/. This will open a
+  small frame in the correct mode to edit it. When done with the
+  frame, press /C-c '/ again.
+* Constants                                              :internals:constant:
 ** Directories
-*** reg_dir                                                        :constant:
+*** reg_DIR
     The path to the root directory of regulus.
     #+begin_src sh :tangle constants.sh
-      reg_dir=~/regulus
+      reg_DIR=~/regulus
     #+end_src
 
-*** reg_dir_bash                                                   :constant:
+*** reg_DIR_bash
     The path to the directory of regulus containing the bash scripts
     and configuration.
     #+begin_src sh :tangle constants.sh
-      reg_dir_bash=$reg_dir/bash
+      reg_DIR_BASH=$reg_DIR/bash
     #+end_src
 
-*** reg_config_bash                                                :constant:
+** Files
+*** reg_BASH_CONFIG_FILE
     The path to this very file.
     #+begin_src sh :tangle constants.sh
-         reg_config_bash=$reg_dir_bash/config.org
+         reg_BASH_CONFIG_FILE=$reg_DIR_BASH/config.org
     #+end_src
-** Colors
-   By enclosing a string between "$reg_XXX" and "reg_RESET_COLOR", one
-   can simply output a string in color XXX in a terminal.
-   #+begin_src sh :tangle constants.sh
-     reg_RED=$(tput setaf 1)
-     reg_GREEN=$(tput setaf 2)
-     reg_RESET_COLOR=$(tput sgr0)
-   #+end_src
-* Dependencies                                                    :internals:
-  The idea is to be able to easily install all the packages necessary
-  for the scripts to work at once.
 
-  It needs each org-babel LP-script to contain a line with the text
+*** reg_SOFTWARE_LIST
+    The path to the file listing the softwares I need.
+    #+begin_src sh :tangle constants.sh
+          reg_SOFTWARE_LIST=$reg_DIR/softwares.org
+    #+end_src
+** Colors                                                          :constant:
+    By enclosing a string between "$reg_XXX" and "reg_RESET_COLOR", one
+    can simply output a string in color XXX in a terminal.
+    #+begin_src sh :tangle constants.sh
+      reg_RED=$(tput setaf 1)
+      reg_GREEN=$(tput setaf 2)
+      reg_YELLOW=$(tput setaf 3)
+      reg_BLUE=$(tput setaf 4)
+      reg_PURPLE=$(tput setaf 5)
+      reg_CYAN=$(tput setaf 6)
+      reg_RESET_COLOR=$(tput sgr0)
+    #+end_src
+* Prompt                                                          :internals:
+  I like having a prompt with colours since I often deal with fairly
+  long outputs: it is easier to spot the command lines. I also find
+  that having a description of the last commit as soon as I am in a
+  git repo is both useful for planning my next move and encouraging
+  for commiting often.
+** Dependencies: git
+** reg_git_current_branch                                          :function:
+   I want to print the name of the current branch, so I ask git to
+   print it. If the command fails, then I am not in a repo: I don't
+   care. Otherwise, if the command work, I can chain another using
+   "&&" which will again ask for the name but this time will keep it.
+   #+begin_src sh :tangle prompt.sh
+        function reg_git_current_branch
+        {
+            git branch >/dev/null 2>/dev/null && echo $(git branch | grep \* | cut -d " " -f 2)
+        }
+   #+end_src
+** reg_last_commit_description                                     :function:
+   When in a git repo, I want to see the short description of the last
+   commit. To do so, when in a git repo, I call /git log/ with the
+   correct parameters and strip the description from the rest using
+   cut.
+   #+begin_src sh :tangle prompt.sh
+        function reg_last_commit_description
+        {
+            description=$(git log -n 1 --oneline | cut -d " " -f 2-)
+            echo $description | sed 's/\$/\\\$/g'
+        }
+   #+end_src
+** reg_last_commit_date                                            :function:
+   In a similar fashion as reg_last_commit_description, strips the
+   last commit date from the command /git log/.
+   #+begin_src sh :tangle prompt.sh
+        function reg_last_commit_date
+        {
+            git log -n 1 --format="%cd" | cut -d " " -f 2-5
+        }
+   #+end_src
+** reg_prompt                                                      :function:
+   This function is supposed to be called *every time* a prompt is to
+   be printed. In other words, you must add it to the /PROMPT_COMMAND/
+   variable. Here there be dragons, I warn you (it works just fine
+   though).  The "\[" and "\]" all over the place *are*
+   important. Remove them and scrolling up your bash history will be a
+   hell. Trust me. Don't do that.
+   It modifies the prompt directly (by changing the /PS1/ variable).
+   #+begin_src sh :tangle prompt.sh
+        function reg_prompt
+        {
+            branch=$(reg_git_current_branch)
+            if [[ $branch == "" ]]; then
+                # not in a git repository
+                PS1='\n\['$reg_RED'\]\t \['$reg_BLUE'\]\u (\w) \n-$\['$reg_RESET_COLOR'\] '
+            else
+                PS1='\n\['$reg_RED'\]\t \['$reg_BLUE'\]\u (\w)\['$reg_RESET_COLOR'\] last commit: ['$(reg_last_commit_date)']\n[\['$reg_RED'\]'$branch'\['$reg_RESET_COLOR'\]] \['$UBlack'\]'$(reg_last_commit_description)'\['$reg_RESET_COLOR'\]\['$reg_BLUE'\n-$\['$reg_RESET_COLOR'\] '
+            fi
+        }     
+   #+end_src
+* Dependencies management                                         :internals:
+  The idea is to be able to easily install at once all the packages
+  necessary not only for the scripts to work but also for *me* to work
+  easily.
+
+  The core idea is to have a function listing the dependencies and
+  outputing them as a simple space separated list which can easily be
+  fed to /apt-get install/.
+
+  It needs each sub-component here to contain a line with the text
   "Dependencies\:" (note the ':') followed by a space separated list of
   the packages needed.
-
 ** reg_list_dependencies                                           :function:
-   Lists the dependencies of the scripts in the $Regulus_Dir directory.
+   Lists the dependencies of the scripts generated from this file and
+   the packages I need to work properly and greps it using the first
+   argument. As a byproduct, lists all of the dependencies if the
+   first argument is absent.
    #+begin_src sh :tangle dependencies.sh
      function reg_list_dependencies
      {
+         files=$reg_BASH_CONFIG_FILE\ $reg_SOFTWARE_LIST
          res=""
-         for dependency in $(grep "Dependencies\:" $reg_config_bash | cut -d ":" -f 2); do
-             res=$res" "$dependency
+         for file in $files; do
+             if (($# < 1)); then
+                 for dependency in $(grep "Dependencies\:" $file | cut -d ":" -f 2); do
+                     res=$res" "$dependency
+                 done
+             else
+                 for dependency in $(grep "Dependencies\:" $file | grep $1 | cut -d ":" -f 2); do
+                     res=$res" "$dependency
+                 done
+             fi
          done
-         echo $res
+         echo $res        
      }
+     
    #+end_src
-
 ** reg_is_installed                                                :function:
    Checks that a package is installed by seeing if it is in the output
    of "dpkg --get-selections".
@@ -81,73 +184,168 @@
      }
      
    #+end_src
-* yell                                                                  :IHM:
-  When running heavy scientific computations, it may be annoying to
-  check the state every minute. The functions here allow to simply
-  point out when a function is done by sending a notification and play
-  a nice "beep".
-** Dependencies: music123
-** reg_yell_CHECKPERIOD                                            :constant:
-   The period (in seconds) with which regulus will check if a process
-   is done.
-   #+begin_src sh :tangle yell.sh
-     reg_yell_CHECKPERIOD=1
-   #+end_src
-
-** reg_yell_MUSICPLAYER                                            :constant:
-   The software to use to play the beep sound.
-   #+begin_src sh :tangle yell.sh
-     reg_yell_MUSICPLAYER=music123
-   #+end_src
-
-** reg_yell_BEEPFILE                                               :constant:
-   The file containing the sound to play when computations are done.
-   I found it at [[http://soundjax.com/beep-3.html]]
-   #+begin_src sh :tangle yell.sh
-     reg_yell_BEEPFILE=~/regulus/bash/beep.wav
-   #+end_src
-
-** yell                                                            :function:
-   When called, sends without further ado a notification with $1 as
-   the title and "[done]" as the content and triggers a beep sound as
-   well. If no title is given, "[done]" will be the title.
-*** Arguments
-    - The title to display in the notification
-*** Usage
-    >-$ Some_long_script with its args && yell
-*** Code
-    #+begin_src sh :tangle yell.sh
-      function yell
+* IO                                                                    :IHM:
+** Message display                                                :internals:
+   Regulus provides some nice functions to easily display nicely
+   formatted info on a terminal. Here are the said functions and the
+   constants they need.
+*** reg_msg_fail                                                   :function:
+    This function displays a red "[FAIL]" and then the text you
+    want. The said text is the content of the first argument.
+    #+begin_src sh :tangle msg.sh
+      function reg_msg_fail
       {
-          notify-send $1 "[done]" ;
-          $reg_yell_MUSICPLAYER $reg_yell_BEEPFILE 2>/dev/null
+          echo $reg_RED"[FAIL]"$reg_RESET_COLOR $1
       }
     #+end_src
-
-** yell_when_done                                                  :function:
-   Checks every reg_yell_CHECKPERIOD seconds that a process having the
-   string $1 in its name is still running.
-*** Usage
-    >-$ some_long_script and its args
-    >-$ yell_when_done "some string matching the name of the long script"
-*** Code
-    #+begin_src sh :tangle yell.sh
-      function yell_when_done
+*** reg_msg_success                                                :function:
+    This function displays a green "[OK]" and then the text you
+    want. The said text is the content of the first argument.
+    #+begin_src sh :tangle msg.sh
+      function reg_msg_success
       {
-          processes=$(ps -ef)
-          if [[ $(echo $processes | grep $1) == "" ]]; then
-              echo "No such process as '"$1"'. Aborting."
-          else
-              keepGoing=0
-              while [[ $keepGoing == 0 ]]; do
-                  processes=$(ps -ef)
-                  if [[ $(echo $processes | grep $1) == "" ]]; then
-                      keepGoing=1
-                  else
-                      sleep $reg_yell_CHECKPERIOD
-                  fi
-              done
-              yell $1
-          fi
+          echo $reg_GREEN"[OK]"$reg_RESET_COLOR $1
       }
     #+end_src
+** Yell                                                               :sound:
+   When running heavy scientific computations, it may be annoying to
+   check the state every minute. The functions here allow to simply
+   point out when a function is done by sending a notification and play
+   a nice "beep".
+*** Dependencies: music123
+*** reg_yell_CHECKPERIOD                                           :constant:
+    The period (in seconds) with which regulus will check if a process
+    is done.
+    #+begin_src sh :tangle yell.sh
+      reg_yell_CHECKPERIOD=1
+    #+end_src
+
+*** reg_yell_MUSICPLAYER                                           :constant:
+    The software to use to play the beep sound.
+    #+begin_src sh :tangle yell.sh
+      reg_yell_MUSICPLAYER=music123
+    #+end_src
+
+*** reg_yell_BEEPFILE                                              :constant:
+    The file containing the sound to play when computations are done.
+    I found it at [[http://soundjax.com/beep-3.html]]
+    #+begin_src sh :tangle yell.sh
+      reg_yell_BEEPFILE=~/regulus/bash/beep.wav
+    #+end_src
+
+*** yell                                                           :function:
+    When called, sends without further ado a notification with $1 as
+    the title and "[done]" as the content and triggers a beep sound as
+    well. If no title is given, "[done]" will be the title.
+**** Arguments
+     - The title to display in the notification
+**** Usage
+     >-$ Some_long_script with its args && yell
+**** Code
+     #+begin_src sh :tangle yell.sh
+       function yell
+       {
+           notify-send $1 "[done]" ;
+           $reg_yell_MUSICPLAYER $reg_yell_BEEPFILE 2>/dev/null
+       }
+     #+end_src
+
+*** yell_when_done                                                 :function:
+    Checks every reg_yell_CHECKPERIOD seconds that a process having the
+    string $1 in its name is still running.
+**** Usage
+     >-$ some_long_script and its args
+     >-$ yell_when_done "some string matching the name of the long script"
+**** Code
+     #+begin_src sh :tangle yell.sh
+       function yell_when_done
+       {
+           processes=$(ps -ef)
+           if [[ $(echo $processes | grep $1) == "" ]]; then
+               echo "No such process as '"$1"'. Aborting."
+           else
+               keepGoing=0
+               while [[ $keepGoing == 0 ]]; do
+                   processes=$(ps -ef)
+                   if [[ $(echo $processes | grep $1) == "" ]]; then
+                       keepGoing=1
+                   else
+                       sleep $reg_yell_CHECKPERIOD
+                   fi
+               done
+               yell $1
+           fi
+       }
+     #+end_src
+
+* Vault                                                              :crypto:
+  The vault folder is actually a symbolic link to an encrypted
+  parition. The following functions are intended to help dealing with
+  in CLI.
+** Dependencies: cryptsetup
+** reg_VAULT_MOUNT_POINT                                           :constant:
+   The vault folder being actually a symbolic link, we must make sure
+   that the encrypted partition is always mounted at the correct
+   point. Since I usually open it using nautilus, this script must put
+   it at the same place (however ugly the name turns out to be).
+   #+begin_src sh :tangle vault.sh
+     reg_VAULT_MOUNT_POINT="/media/aa341e43-5375-473d-8ef7-21ba586c74a4"
+   #+end_src
+** reg_VAULT_FILE_SYSTEM                                           :constant:
+   The file system used in the vault. It is needed for correct mounting.
+   #+begin_src sh :tangle vault.sh
+        reg_VAULT_FILE_SYSTEM="ext4"
+   #+end_src
+** reg_is_vault_open                                               :function:
+   Returns "yes" if the vault is open, "no" otherwise.
+   #+begin_src sh :tangle vault.sh
+     function reg_is_vault_open
+     {
+         if [[ -e ~/vault/.regulus ]]; then
+             echo "yes"
+         else
+             echo "no"
+         fi
+     }
+   #+end_src
+** reg_open_vault                                                  :function:
+   If the vault is not open (it is checked), opens it by mounting the
+   encrypted partition in reg_VAULT_PARTITION_MOUNT_POINT; then checks
+   that the vault *is* open.
+   #+begin_src sh :tangle vault.sh
+     function reg_open_vault
+     {
+         if [[ $(reg_is_vault_open) == "yes" ]]; then
+             reg_msg_fail "vault already open."
+         else
+             sudo cryptsetup luksOpen $reg_VAULT_PARTITION vault
+             sudo mount -t $reg_VAULT_FILE_SYSTEM /dev/mapper/vault $reg_VAULT_MOUNT_POINT
+             if [[ $(reg_is_vault_open) == "yes" ]]; then
+                 reg_msg_success "vault opened successfully."
+             else
+                 reg_msg_fail "vault opening failed. Vault is NOT open."
+             fi
+         fi
+     }
+   #+end_src
+
+** reg_close_vault                                                 :function:
+   If the vault is open (it is checked), closes it by unmounting the
+   encrypted partition in reg_VAULT_PARTITION_MOUNT_POINT; then check
+   that the vault *is* closed.
+   #+begin_src sh :tangle vault.sh
+     function reg_open_vault
+     {
+         if [[ $(reg_is_vault_open) == "no" ]]; then
+             reg_msg_fail "vault already closed."
+         else
+             sudo umount $reg_VAULT_MOUNT_POINT
+             sudo cryptsetup luksClose vault
+             if [[ $(reg_is_vault_open) == "no" ]]; then
+                 reg_msg_success "vault closed successfully."
+             else
+                 reg_msg_fail "vault closing failed. Vault is STILL open."
+             fi
+         fi
+     }
+   #+end_src
