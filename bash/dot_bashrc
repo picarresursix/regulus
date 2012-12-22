@@ -61,7 +61,7 @@ regulus_bash_dir=~/regulus/bash
 for script in $(ls $regulus_bash_dir"/"*.sh); do
     . $script
 done
-PROMPT_COMMAND=regulus_prompt
+PROMPT_COMMAND=reg_prompt
 
 # END REGULUS
 #------------

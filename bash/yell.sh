@@ -1,22 +1,23 @@
 
-reg_yell_CHECKPERIOD=1
+reg_yell_CHECKPERIOD=2
 
 reg_yell_MUSICPLAYER=music123
 
 reg_yell_BEEPFILE=~/regulus/bash/beep.wav
 
-function yell
+function reg_yell
 {
     notify-send $1 "[done]" ;
     $reg_yell_MUSICPLAYER $reg_yell_BEEPFILE 2>/dev/null
 }
 
-function yell_when_done
+function reg_yell_when_done
 {
     processes=$(ps -ef)
     if [[ $(echo $processes | grep $1) == "" ]]; then
         echo "No such process as '"$1"'. Aborting."
     else
+        echo "Process found"
         keepGoing=0
         while [[ $keepGoing == 0 ]]; do
             processes=$(ps -ef)
