@@ -220,5 +220,46 @@ function rod_update
     fi
 }
 
-rod_load_configuration
-rod_update
+function rod_main_roadmap
+{
+    if [[ $# < 1 ]]
+    then
+        current_dir=$(pwd)
+    else
+        current_dir=$1
+    fi
+
+    if [[ $(pwd) == "/" ]]
+    then
+        echo ""
+        cd $current_dir
+    elif [[ -e roadmap.org ]]
+    then
+        echo $(pwd)/roadmap.org
+        cd $current_dir
+    else
+        cd ..
+        rod_main_roadmap $current_dir
+    fi
+}
+
+while getopts ":nuh" option
+do
+    case $option in
+        n)
+            cp ~/regulus/roadmap/roadmap-template.org ./roadmap.org
+            echo "new roadmap created"
+            ;;
+        u)
+            rod_load_configuration
+            echo "Configuration loaded"
+            rod_update
+            ;;
+        h)
+            rod_main_roadmap
+            ;;
+        \?)
+            echo "Invalid option: -$OPTARG"
+            exit 1
+    esac
+done

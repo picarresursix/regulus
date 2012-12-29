@@ -1,4 +1,14 @@
 
+(defun roadmap-reload()
+  (interactive)
+  (shell-command "roadmap -u")
+  (revert-buffer)
+  )
+
+(defun roadmap-go-home()
+  (interactive)
+  (if ())
+
 (define-minor-mode roadmap-mode
     "Toggle roadmap mode.
   Interactively with no argument, this command toggles the mode.
