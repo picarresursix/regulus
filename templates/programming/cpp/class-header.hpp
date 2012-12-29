@@ -15,8 +15,8 @@
 
 /**
  * @brief
- * TODO: write it!
- * TODO: document it!
+ * !TODO! write it!
+ * !TODO! document it!
  */
 class <CLASS>
 {

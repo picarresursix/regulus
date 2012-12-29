@@ -3,5 +3,5 @@
 from sage.all import *
 
 if (__name__ == "__main__"):
-     # TODO: Write it!
-     # TODO: document it!
+     # !TODO! Write it!
+     # !TODO! document it!

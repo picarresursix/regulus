@@ -11,8 +11,8 @@
 /**
  * @brief
  *
- * TODO: write it!
- * TODO: document it!
+ * !TODO! write it!
+ * !TODO! document it!
  * 
  * @param argc The number of CLI arguments.
  * @param argv The CLI arguments themselves.
