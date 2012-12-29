@@ -1,4 +1,4 @@
-<!-- Time-stamp: <2012-12-30 00:22:21 leo> -->
+<!-- Time-stamp: <2012-12-30 00:25:00 leo> -->
 
 
 REGULUS
@@ -11,7 +11,7 @@ is to have a proper version control of all of my configuration files
 as well as doing some tidying.
 
 I had the idea when I saw the
-[sputnik project](https://http://github.com/sputnik/) started by dell.
+[sputnik project](https://github.com/sputnik/) started by dell.
 
 The files in this directory are the ones I actually use, i.e. for
 instance my `.emacs` file is just a symbolic link to the one at
