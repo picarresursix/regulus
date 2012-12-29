@@ -7,7 +7,22 @@
 
 (defun roadmap-go-home()
   (interactive)
-  (if ())
+  (setq old-buffer (current-buffer))
+  (shell-command "roadmap -h")
+  (switch-to-buffer "*Shell Command Output*")
+  (setq cont (buffer-substring-no-properties (point-min) (- (point-max) 1)))
+  (message (number-to-string (length cont)))
+  (if (< 2 (length cont))
+      (progn
+        (find-file cont)
+        (message (concat "Opening " cont))
+        )
+    (progn
+      (message "No roadmap found.")
+      (switch-to-buffer old-buffer)
+      )
+    )
+  )
 
 (define-minor-mode roadmap-mode
     "Toggle roadmap mode.
@@ -15,13 +30,13 @@
   A positive prefix argument enables the mode, any other prefix
   argument disables it.  From Lisp, argument omitted or nil enables
   the mode, `toggle' toggles the state. "
-        ;; The initial value.
-   nil
+   ;; The initial value.
+   :init-value nil
    ;; The indicator for the mode line.
-   " Rod"
-   ;; The minor mode bindings.
-   '(
-     ([C-d r] . roadmap-reload)
-     ([C-d h] . roadmap-go-home)
+   :lighter " Rod"
+   :keymap
+   `(
+     (,(kbd "C-d r") . roadmap-reload)
+     (,(kbd "C-d h") . roadmap-go-home)
      )
    )
