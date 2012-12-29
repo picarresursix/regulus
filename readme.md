@@ -1,4 +1,4 @@
-<!-- Time-stamp: <2012-12-30 00:25:00 leo> -->
+<!-- Time-stamp: <2012-12-30 00:27:16 leo> -->
 
 
 REGULUS
@@ -84,9 +84,9 @@ link to the exact place in the code where it is. Here, that would be:
 
     * Configuration...
     * Items
-    * [/] TODO list
+    ** [/] TODO list
       1. [ ] Fix this part: it needs to be better (foo/bar:3)
-    * [/] IDEA list
+    ** [/] IDEA list
       1. [ ] Using this function might be better (foo/bar:5)
     * Statistics...
       
