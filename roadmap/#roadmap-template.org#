@@ -1,0 +1,18 @@
+             ROADMAP
+
+
+
+* Configuration
+** Directories to exclude
+   The directories whose name contains the following string will not
+   be taken into account when updating the roadmap (both the
+   statistics and the item lists).
+
+   EXCLUDE: 
+* Items
+  + empty
+* Statistics
+  + empty
+
+!IDEA! blablabla.
+!TODO! It would be nice to do something, yeah.

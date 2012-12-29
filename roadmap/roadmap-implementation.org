@@ -1,4 +1,4 @@
-#+ -*-org-*-; Time-stamp: <2012-12-29 02:07:40 leo>
+#+ -*-org-*-; Time-stamp: <2012-12-29 23:34:57 leo>
 
                   ROADMAP
 
@@ -15,21 +15,13 @@
   then back again to what I'm working on).
 
   The basic concept is that of _item_. An item is just a case
-  sensitive word followed by "::" somewhere in a file. Thus, it should
-  be particular (ex: 'the' is a bad item while 'TODO' is a good
-  one). Current items are:
+  sensitive word not containing any space enclosed between exclamation
+  marks anywhere in a file. Thus, it should be particular (ex: 'the'
+  is a bad item while 'TODO' is a good one). Current items are:
     - TODO These correspond to tasks left to be done.
     - IDEA Possible improvement or directions to explore.
 
-  Functions to make it easy to use this roadmap with emacs are
-  provided. They allow to:
-    + IDEA: Add links to compile the project
-    + IDEA: Add a link to open a shell (within emacs) at the current
-      location.
-    + IDEA: Add a list of all the commits' short description.
-      For instance, we could use "grep -v "[^ ]:" <(git log)" or
-      something.
-
+** Usage of the script
   The roadmap script is used as follows:
     + roadmap -n
       Creates a new roadmap at the given point.
@@ -38,6 +30,21 @@
     + roadmap -h
       Prints the path to the roadmap of which the current file depends
       on.
+
+** Minor-mode
+  A minor-mode for roadmap is provided to use it easily with emacs. It
+  gives functions allowing to:
+    + Easily insert items.
+    + Fontify them
+    + Update a roadmap.
+    + Go to the roadmap of which a files depends.
+    + !IDEA! Add links to compile the project
+    + !IDEA! Add a link to open a shell (within emacs) at the current
+      location.
+    + !IDEA! Add a list of all the commits' short description.
+      For instance, we could use "grep -v "[^ ]:" <(git log)" or
+      something.
+
 * Description
 ** Description of the roadmap itself
    A roadmap is made of the following parts.
@@ -63,7 +70,7 @@
       task to generate them. Any modification is thus overriden during
       the next update.
 *** Structure
-    TODO: implement the treeview structure of the folder.
+    !TODO! implement the treeview structure of the folder.
     A simple treeview of the folder structure of the directory where
     each node is a link to what it corresponds to. If two files have
     identical names (ex: class.hpp, class.cpp or report.tex and
@@ -327,7 +334,7 @@
               echo "Argument missing: I need an item to search for!"
           else
               # generating the list of relevant data
-              item_list=$(grep -n $1: $(rod_list_files))
+              item_list=$(grep -n \!$1\! $(rod_list_files))
               old_IFS=$IFS
               IFS=$'\n'
       
@@ -338,7 +345,7 @@
                  ((index=$index+1))
                  file=$(echo $item | cut -d ":" -f 1)
                  line_number=$(echo $item | cut -d ":" -f 2)
-                 description=$(echo $item | cut -d ":" -f 4 | cut -c 2-)
+                 description=$(echo $item | cut -d "!" -f 3 | cut -c 2-)
                  echo "   "$index". [ ] [[file:"$(pwd)"/"$file"::"$line_number"]["$description"]] ("$file":"$line_number")"
               done
           fi
@@ -504,37 +511,80 @@
     "roadmap -u" and then use the "revert-buffer" elisp function to
     reload the buffer to take the changes into account.
     #+begin_src lisp :tangle roadmap.el
-          (defun roadmap-reload()
-            (interactive)
-            (shell-command "roadmap -u")
-            (revert-buffer)
-            )
+      (defun roadmap-reload()
+        "Reload the current roadmap."
+        (interactive)
+        (shell-command "roadmap -u")
+        (revert-buffer)
+        )
     #+end_src
-*** roadmap-go-home
-    This function first goes up in the directory tree until it finds a
-    roadmap.org file in one of the parent directories. Then, it opens
-    the said file in a buffer.
+*** roadmap-find-main
+    This function goes up in the directory tree until it finds a
+    roadmap.org file in one of the parent directories. Then, it
+    returns the path to the said file or an empty string if it didn't
+    find any.
+
+    We use the output of "roadmap -h" but, to retrieve it, we need to
+    get the content of the "*Shell Command Output*" buffer (and remove
+    the last character, a new line). Then, we move to back to the
+    buffer we were and, to be able to do so, we first store the said
+    buffer in a variable.
     #+begin_src lisp :tangle roadmap.el
-            (defun roadmap-go-home()
-              (interactive)
-              (setq old-buffer (current-buffer))
-              (shell-command "roadmap -h")
-              (switch-to-buffer "*Shell Command Output*")
-              (setq cont (buffer-substring-no-properties (point-min) (- (point-max) 1)))
-              (message (number-to-string (length cont)))
-              (if (< 2 (length cont))
-                  (progn
-                    (find-file cont)
-                    (message (concat "Opening " cont))
-                    )
-                (progn
-                  (message "No roadmap found.")
-                  (switch-to-buffer old-buffer)
-                  )
-                )
+      (defun roadmap-find-main()
+        "Returns the path to roadmap of which the current file depends or an
+      empty string if there is no such roadmap."
+        (setq old-buffer (current-buffer))
+        (shell-command "roadmap -h")
+        (switch-to-buffer "*Shell Command Output*")
+        (setq path-to-main-roadmap
+              (buffer-substring-no-properties (point-min) (- (point-max) 1))
               )
+        (switch-to-buffer old-buffer)
+        path-to-main-roadmap
+        )
+    #+end_src
+*** roadmap-open-main
+    Opens the roadmap of which the current file depends using the
+    output of roadmap-find-main. If there is no such buffer, does
+    nothing.
+    #+begin_src lisp :tangle roadmap.el
+      (defun roadmap-open-main()
+        "Open the roadmap of which the current file depends (if any)."
+        (interactive)
+        (setq path-to-main-roadmap (roadmap-find-main))
+        (if (< 2 (length path-to-main-roadmap))
+            (progn
+              (find-file path-to-main-roadmap)
+              (message (concat "Opening " path-to-main-roadmap))
+              )
+            (message "No roadmap found.")
+            )
+        )
+    #+end_src
+*** roadmap-insert-todo
+    We want common items to be easy to insert, so we create a small
+    function to quickly insert them. Nothing fancy, it just an
+    interactive call to "insert". We don't write the item within its
+    exclamation so as not to confused the roadmap script (we of course
+    use it to manage the implementation of itself).
+    #+begin_src lisp :tangle roadmap.el
+      (defun roadmap-insert-todo()
+        "Inserts a TODO roadmap item."
+        (interactive)
+        (insert (concat "!" "TODO! "))
+        )
+    #+end_src
+*** roadmap-insert-idea
+    Exactly the same as above, but for the "IDEA" item.
+    #+begin_src lisp :tangle roadmap.el
+      (defun roadmap-insert-idea()
+        "Inserts a TODO roadmap item."
+        (interactive)
+        (insert (concat "!" "IDEA! "))
+        )
     #+end_src
 ** roadmap-mode
+*** minor-mode declaration
    We want to define a minor-mode granting access to the keybindings
    and the fontifying of known items. To do so, we apply what is
    suggested [[http://www.gnu.org/software/emacs/manual/html_node/elisp/Defining-Minor-Modes.html#Defining-Minor-Modes][here]]. The keymap had to employ a backquote and commas,
@@ -542,6 +592,7 @@
    #+begin_src lisp :tangle roadmap.el
      (define-minor-mode roadmap-mode
          "Toggle roadmap mode.
+
        Interactively with no argument, this command toggles the mode.
        A positive prefix argument enables the mode, any other prefix
        argument disables it.  From Lisp, argument omitted or nil enables
@@ -553,13 +604,35 @@
         :keymap
         `(
           (,(kbd "C-d r") . roadmap-reload)
-          (,(kbd "C-d h") . roadmap-go-home)
+          (,(kbd "C-d h") . roadmap-open-main)
+          (,(kbd "C-d i t") . roadmap-insert-todo)
+          (,(kbd "C-d i i") . roadmap-insert-idea)
           )
         )
    #+end_src
 
-   TODO: Create a hook which checks the value of roadmap-go-home when opening a file and activates (or not) roadmap-mode.
-   TODO: switch to ;ITEM;
+*** Fontifying
+   Now that we have a minor-mode, we add fontifying for the
+   items. Items are strings containing non-space character enclosed
+   between exclamation marks, so we look for this pattern.
+   #+begin_src lisp :tangle roadmap.el
+     (add-hook 'roadmap-mode-hook
+              (lambda ()
+                (font-lock-add-keywords nil '(("!\\([^ ]*\\)!" 1 font-lock-warning-face t)))
+                )
+              )
    #+end_src
-   TODO: add fontifying of known items.
-   IDEA: keep a list of the current items.
+
+*** Adding a hook to turn on the mode
+    We want the roadmap minor-mode to be switched on whenever a file
+    is on the directory tree below a roadmap. To do so, we check that
+    the output of roadmap-find-main has a greater than 1 length.
+    #+begin_src lisp :tangle roadmap.el
+      (add-hook 'find-file-hook
+                (lambda()
+                  (if (< 1 (length (roadmap-find-main)))
+                      (roadmap-mode)
+                    )
+                  )
+                )
+    #+end_src

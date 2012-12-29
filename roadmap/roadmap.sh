@@ -153,7 +153,7 @@ function rod_display_item
         echo "Argument missing: I need an item to search for!"
     else
         # generating the list of relevant data
-        item_list=$(grep -n $1: $(rod_list_files))
+        item_list=$(grep -n \!$1\! $(rod_list_files))
         old_IFS=$IFS
         IFS=$'\n'
 
@@ -164,7 +164,7 @@ function rod_display_item
            ((index=$index+1))
            file=$(echo $item | cut -d ":" -f 1)
            line_number=$(echo $item | cut -d ":" -f 2)
-           description=$(echo $item | cut -d ":" -f 4 | cut -c 2-)
+           description=$(echo $item | cut -d "!" -f 3 | cut -c 2-)
            echo "   "$index". [ ] [[file:"$(pwd)"/"$file"::"$line_number"]["$description"]] ("$file":"$line_number")"
         done
     fi
