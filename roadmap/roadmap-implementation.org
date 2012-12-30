@@ -1,4 +1,4 @@
-#+ -*-org-*-; Time-stamp: <2012-12-29 23:34:57 leo>
+#+ -*-org-*-; Time-stamp: <2012-12-30 14:20:55 leo>
 
                   ROADMAP
 
@@ -39,8 +39,6 @@
     + Update a roadmap.
     + Go to the roadmap of which a files depends.
     + !IDEA! Add links to compile the project
-    + !IDEA! Add a link to open a shell (within emacs) at the current
-      location.
     + !IDEA! Add a list of all the commits' short description.
       For instance, we could use "grep -v "[^ ]:" <(git log)" or
       something.
@@ -51,9 +49,7 @@
 *** Statistics
     + The number of files in the directory (sorted by extension) and
       their length (and total length).
-    + The number of the different items.
-    + Date of last modification of the roadmap.
-    + Date of the last commit and description (if any).
+    + !TODO! Date of the commits and description (if any).
 *** Lists
     Lists of the different items considered. Each line is as follows:
 
@@ -66,9 +62,9 @@
     + TODO list
     + IDEA list
 
-      These part should not be modified by hand: it is this programs
-      task to generate them. Any modification is thus overriden during
-      the next update.
+    These part should not be modified by hand: it is this programs
+    task to generate them. Any modification is thus overriden during
+    the next update.
 *** Structure
     !TODO! implement the treeview structure of the folder.
     A simple treeview of the folder structure of the directory where
@@ -77,7 +73,7 @@
     report.pdf) then a unique link will open both at the same time.
 
 ** Description of the programs used
-   From a technical point of view, the Implementation has several
+   From a technical point of view, the implementation has several
    different aspects. Indeed, while bash functions are used to create
    the file, emacs'org-mode is used to read it and roadmap-mode is
    used to interact with it from other buffers.
@@ -91,6 +87,7 @@
     Provides functions to jump to the roadmap of which the current
     buffer depends and several additional function not in org-mode to
     deal with the roadmap itself.
+    !TODO! Update the description of the minor-mode.
     + (C-d r) (roadmap-reload) checks that the current file is a
       roadmap.org and, if so, updates the file and reverts the
       buffer. tl;dr: updates the roadmap.
@@ -345,7 +342,7 @@
                  ((index=$index+1))
                  file=$(echo $item | cut -d ":" -f 1)
                  line_number=$(echo $item | cut -d ":" -f 2)
-                 description=$(echo $item | cut -d "!" -f 3 | cut -c 2-)
+                 description=$(echo $item | cut -d "!" -f 3- | cut -c 2-)
                  echo "   "$index". [ ] [[file:"$(pwd)"/"$file"::"$line_number"]["$description"]] ("$file":"$line_number")"
               done
           fi
@@ -481,6 +478,7 @@
      directory.
 
    We parse the arguments using getopt.
+   !TODO! Add a --help option.
    #+begin_src sh :tangle roadmap.sh
      while getopts ":nuh" option
      do
@@ -505,7 +503,7 @@
    #+end_src
 
 * Elisp
-** Utils
+** Reloading the roadmap
 *** roadmap-reload
     This function is very straightforward: we run the shell command
     "roadmap -u" and then use the "revert-buffer" elisp function to
@@ -518,6 +516,7 @@
         (revert-buffer)
         )
     #+end_src
+** The main roadmap
 *** roadmap-find-main
     This function goes up in the directory tree until it finds a
     roadmap.org file in one of the parent directories. Then, it
@@ -561,12 +560,17 @@
             )
         )
     #+end_src
+** Interacting with items in a file
+   Items live in "regular" file, i.e. those I actually work with: .c,
+   .cpp, .tex, .py, etc. Thus, I want to interact with items all the
+   time: inserting them and locating them easily.
 *** roadmap-insert-todo
     We want common items to be easy to insert, so we create a small
-    function to quickly insert them. Nothing fancy, it just an
-    interactive call to "insert". We don't write the item within its
-    exclamation so as not to confused the roadmap script (we of course
-    use it to manage the implementation of itself).
+    function to quickly put them where the cursor is. Nothing fancy,
+    it just an interactive call to "insert". We don't write the item
+    within its exclamation marks so as not to confused the roadmap
+    script (we of course use it to manage the implementation of
+    itself).
     #+begin_src lisp :tangle roadmap.el
       (defun roadmap-insert-todo()
         "Inserts a TODO roadmap item."
@@ -582,6 +586,23 @@
         (interactive)
         (insert (concat "!" "IDEA! "))
         )
+    #+end_src
+*** roadmap-go-to-next-item
+    If there is another item further in the file, moves the cursor to
+    it.
+    #+begin_src lisp :tangle roadmap.el
+          (defun roadmap-go-to-next-item()
+            (interactive)
+            (search-forward-regexp "\![^ ]*\!")
+            )
+    #+end_src
+*** roadmap-go-to-previous-item
+    The same as before, but for what is before in the file.
+    #+begin_src lisp :tangle roadmap.el
+          (defun roadmap-go-to-previous-item()
+            (interactive)
+            (search-backward-regexp "\![^ ]*\!")
+            )
     #+end_src
 ** roadmap-mode
 *** minor-mode declaration
@@ -603,10 +624,12 @@
         :lighter " Rod"
         :keymap
         `(
-          (,(kbd "C-d r") . roadmap-reload)
-          (,(kbd "C-d h") . roadmap-open-main)
+          (,(kbd "C-d r")   . roadmap-reload)
+          (,(kbd "C-d h")   . roadmap-open-main)
           (,(kbd "C-d i t") . roadmap-insert-todo)
           (,(kbd "C-d i i") . roadmap-insert-idea)
+          (,(kbd "C-d n")   . roadmap-go-to-next-item)
+          (,(kbd "C-d p")   . roadmap-go-to-previous-item)
           )
         )
    #+end_src

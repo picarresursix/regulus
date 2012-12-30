@@ -164,7 +164,7 @@ function rod_display_item
            ((index=$index+1))
            file=$(echo $item | cut -d ":" -f 1)
            line_number=$(echo $item | cut -d ":" -f 2)
-           description=$(echo $item | cut -d "!" -f 3 | cut -c 2-)
+           description=$(echo $item | cut -d "!" -f 3- | cut -c 2-)
            echo "   "$index". [ ] [[file:"$(pwd)"/"$file"::"$line_number"]["$description"]] ("$file":"$line_number")"
         done
     fi

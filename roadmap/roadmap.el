@@ -44,6 +44,16 @@ empty string if there is no such roadmap."
   (insert (concat "!" "IDEA! "))
   )
 
+(defun roadmap-go-to-next-item()
+  (interactive)
+  (search-forward-regexp "\![^ ]*\!")
+  )
+
+(defun roadmap-go-to-previous-item()
+  (interactive)
+  (search-backward-regexp "\![^ ]*\!")
+  )
+
 (define-minor-mode roadmap-mode
     "Toggle roadmap mode.
 
@@ -57,10 +67,12 @@ empty string if there is no such roadmap."
    :lighter " Rod"
    :keymap
    `(
-     (,(kbd "C-d r") . roadmap-reload)
-     (,(kbd "C-d h") . roadmap-open-main)
+     (,(kbd "C-d r")   . roadmap-reload)
+     (,(kbd "C-d h")   . roadmap-open-main)
      (,(kbd "C-d i t") . roadmap-insert-todo)
      (,(kbd "C-d i i") . roadmap-insert-idea)
+     (,(kbd "C-d n")   . roadmap-go-to-next-item)
+     (,(kbd "C-d p")   . roadmap-go-to-previous-item)
      )
    )
 
