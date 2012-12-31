@@ -243,23 +243,43 @@ function rod_main_roadmap
     fi
 }
 
+function rod_help
+{
+   echo "Usage: roadmap -OPTION"
+   echo ""
+   echo "OPTION has to be one of the following:"
+   echo "   -n: creates an empty roadmap.org file in the current directory."
+   echo "   -u: updates the roadmap.org file in the current directory."
+   echo "   -h: displays the path to the roadmap ruling this directory tree."
+}
+
+happy=0
 while getopts ":nuh" option
 do
     case $option in
         n)
             cp ~/regulus/roadmap/roadmap-template.org ./roadmap.org
             echo "new roadmap created"
+            happy=1
             ;;
         u)
             rod_load_configuration
             echo "Configuration loaded"
             rod_update
+            happy=1
             ;;
         h)
             rod_main_roadmap
+            happy=1
             ;;
         \?)
             echo "Invalid option: -$OPTARG"
+            rod_help
             exit 1
     esac
 done
+
+if [[ $happy == 0 ]]
+then
+    rod_help
+fi

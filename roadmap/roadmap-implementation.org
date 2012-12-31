@@ -1,6 +1,6 @@
-#+ -*-org-*-; Time-stamp: <2012-12-30 14:20:55 leo>
+#+ -*-org-*-; Time-stamp: <2013-01-01 00:25:44 leo>
 
-                  ROADMAP
+              ROADMAP IMPLEMENTATION
 
 
 
@@ -101,7 +101,7 @@
   a file which you simply need to load (. roadmap.sh) to have all the
   functions necessary.
 
-  All the functions and constants use the "rom_" prefix to make sure
+  All the functions and constants use the "rod_" prefix to make sure
   they won't ever collide with any other command.
 ** Base
 *** shebang
@@ -469,6 +469,22 @@
          fi
      }
    #+end_src
+** Displaying help
+   When called with the "--help" argument or with no argument at all,
+   we want the script to display a short help. This is extremely
+   straightforward: we use "echo".
+
+   #+begin_src sh :tangle roadmap.sh
+     function rod_help
+     {
+        echo "Usage: roadmap -OPTION"
+        echo ""
+        echo "OPTION has to be one of the following:"
+        echo "   -n: creates an empty roadmap.org file in the current directory."
+        echo "   -u: updates the roadmap.org file in the current directory."
+        echo "   -h: displays the path to the roadmap ruling this directory tree."
+     }
+   #+end_src
 ** Main function
    Now that we have all the components we need, it is time to write
    the main part of script. Recall that it has the following usage:
@@ -476,30 +492,45 @@
      directory.
    + roadmap -u: updates the roadmap.org file in the current
      directory.
+   + roadmap -h: displays the path to the roadmap ruling this
+     directory tree.
 
-   We parse the arguments using getopt.
-   !TODO! Add a --help option.
+   We parse the arguments using getopt. In order to print the help if
+   no valid argument were given, we initialize a variable "happy"
+   to 0. If a valid was found, happy is set to 1. If happy is still 0
+   in the end or if a none-valid option was given, we display the help.
+
    #+begin_src sh :tangle roadmap.sh
+     happy=0
      while getopts ":nuh" option
      do
          case $option in
              n)
                  cp ~/regulus/roadmap/roadmap-template.org ./roadmap.org
                  echo "new roadmap created"
+                 happy=1
                  ;;
              u)
                  rod_load_configuration
                  echo "Configuration loaded"
                  rod_update
+                 happy=1
                  ;;
              h)
                  rod_main_roadmap
+                 happy=1
                  ;;
              \?)
                  echo "Invalid option: -$OPTARG"
+                 rod_help
                  exit 1
          esac
      done
+     
+     if [[ $happy == 0 ]]
+     then
+         rod_help
+     fi
    #+end_src
 
 * Elisp
