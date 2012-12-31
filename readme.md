@@ -1,4 +1,4 @@
-<!-- Time-stamp: <2013-01-01 00:25:02 leo> -->
+<!-- Time-stamp: <2013-01-01 00:34:18 leo> -->
 
 
 REGULUS
@@ -99,7 +99,7 @@ Thus, if you visit the link on `Fix this part`, you will end up with
 your cursor at the beginning of line 3 in the file `foo/bar`.
 
 An actual example is given by this screen cap:
-![A screen cap of a roadmap.org file](https://github.com/picarresursix/regulus/screen.png "A screen cap of a roadmap")
+![A screen cap of a roadmap.org file](https://github.com/picarresursix/regulus/blob/master/screen.png "A screen cap of a roadmap")
 
 
 ### Bash ###
