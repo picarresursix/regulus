@@ -1,4 +1,4 @@
-#+ -*-org-*-; Time-stamp: <2013-01-01 00:25:44 leo>
+#+ -*-org-*-; Time-stamp: <2013-01-01 16:45:43 leo>
 
               ROADMAP IMPLEMENTATION
 
@@ -87,12 +87,18 @@
     Provides functions to jump to the roadmap of which the current
     buffer depends and several additional function not in org-mode to
     deal with the roadmap itself.
-    !TODO! Update the description of the minor-mode.
-    + (C-d r) (roadmap-reload) checks that the current file is a
-      roadmap.org and, if so, updates the file and reverts the
-      buffer. tl;dr: updates the roadmap.
-    + (C-d h) (roadmap-go-home) go to the first roadmap encountered in
-      a parent directory.
+
+    |-----------+------------------------------------------------------+-----------------------------|
+    | shortcut  | description                                          | elisp function name         |
+    |-----------+------------------------------------------------------+-----------------------------|
+    | `C-d r`   | When the current buffer is a roadmap, updates it.    | roadmap-reload              |
+    | `C-d h`   | Opens the roadmap ruling the current file  (if any). | roadmap-go-home             |
+    | `C-d i t` | Inserts a TODO item.                                 | roadmap-insert-todo         |
+    | `C-d i i` | Inserts an IDEA item.                                | roadmap-insert-idea         |
+    | `C-d n`   | Goes to the next item in the same file               | roadmap-go-to-next-item     |
+    | `C-d p`   | Goes to the previousitem in the same file            | roadmap-go-to-previous-item |
+    |-----------+------------------------------------------------------+-----------------------------|
+
 * Bash
   Here comes the serious stuff. The actual code used to perform the
   tasks mentionned above is written in a literate way using
@@ -104,6 +110,9 @@
   All the functions and constants use the "rod_" prefix to make sure
   they won't ever collide with any other command.
 ** Base
+   !TODO! Add a list of files to accept (and turn the old regexp into a default setting).
+   !IDEA! Integration with anordnakod: settings go in the roadmap.
+   !IDEA! Expanding on the above: add functions to easily retrieve variable value from a roadmap.
 *** shebang
     It all starts with a shebang, always. Thus, we add that
     corresponding to bash on any decent system at the beginning of the
@@ -117,8 +126,6 @@
     going any further. To do so, we grep the keywords on the file and
     assign the corresponding variables accordingly.
 
-    Since the variables are meant to be global, we initialise them to
-    void *before* the declaration of the function.
     #+begin_src sh :tangle roadmap.sh
       function rod_load_configuration
       {
@@ -133,11 +140,59 @@
               echo "No "$rod_file" file here! I can't update a none existing file."
               echo "usage: rod_update roadmap_file (roadmap_file is optionnal; defaults to \"roadmap.org\""
           else
+              rod_ACCEPT_ONLY_FILES=$(grep "INCLUDE_ONLY:" $rod_file | cut -d ":" -f 2 | cut -c 2-)      
               rod_EXCLUDE_FILES=$(grep "EXCLUDE:" $rod_file | cut -d ":" -f 2 | cut -c 2-)
           fi
       }
     #+end_src
-** Updating the file
+*** Listing interesting files
+    First of all, we generate a list of all the files with their
+    extension and path. This is the base from which we shall work
+    later. The default setting is: "we are not interested in backup and
+    hidden files so we remove those ending with "~" and those starting
+    with either "." or "#"". However, this can be overridden.
+
+    In order to accept only the files matching a pattern, we loop over
+    the patterns in rod_ACCEPT_ONLY_FILES and use grep to remove the
+    files not matching each of them.
+
+    In order to remove files matching the patterns in
+    rod_EXCLUDE_FILES, we loop over the patterns and use "grep -v" to
+    remove the files matching each of them from the list.
+
+    Note that in order to keep new-line separated lists, we modify the
+    value of [[http://tldp.org/LDP/abs/html/internalvariables.html#IFS][IFS]] several times. In the for loop, we modify/set it back
+    several times because the $rod_EXCLUDE_FILES is space separated
+    while $rod_result is new_line separated.
+
+    Note also that $pattern has to be enclosed between '"' in order
+    for it to be interpreted as a regexp and not a simple string.
+    #+begin_src sh :tangle roadmap.sh
+      function rod_list_files
+      {
+          old_IFS=$IFS
+          IFS=''
+          rod_result=$(find . -name "[^.^\#]*.*[^~]")
+          IFS=$old_IFS
+          for pattern in $rod_ACCEPT_ONLY_FILES
+          do
+              IFS=''
+              rod_result=$(grep "$pattern" <<< $rod_result)
+              IFS=$old_IFS
+          done
+          for pattern in $rod_EXCLUDE_FILES
+          do
+              IFS=''
+              rod_result=$(grep -v "$pattern" <<< $rod_result)
+              IFS=$old_IFS
+          done
+          IFS=''
+          echo $rod_result #${rod_result//$'\n'/\n/}
+          IFS=$old_IFS
+      }
+      
+    #+end_src
+** Updating the filen
 *** Extensions
     This program can sort files according to their extensions so we
     need to know which goes in which category.
@@ -152,40 +207,6 @@
            rod_EXTENSIONS_CODE="c cpp py sage el html php css sh tex"
      #+end_src
 *** Statistics
-**** Listing interesting files
-    First of all, we generate a list of all the files with their
-    extension and path. This is the base from which we shall work
-    later. We are not interested in backup and hidden files so we
-    remove those ending with "~" and those starting with either "." or
-    "#".
-
-    In order to remove files matching the patterns in
-    rod_EXCLUDE_FILES, we loop over the patterns and use "grep -v" to
-    remove the files matching each of them from the list.
-
-    Note that in order to keep new-line separated lists, we modify the
-    value of [[http://tldp.org/LDP/abs/html/internalvariables.html#IFS][IFS]] several times. In the for loop, we modify/set it back
-    several times because the $rod_EXCLUDE_FILES is space separated
-    while $rod_result is new_line separated.
-    #+begin_src sh :tangle roadmap.sh
-      function rod_list_files
-      {
-          old_IFS=$IFS
-          IFS=''
-          rod_result=$(find . -name "[^.^\#]*.*[^~]")
-          IFS=$old_IFS
-          for pattern in $rod_EXCLUDE_FILES
-          do
-              IFS=''
-              rod_result=$(grep -v $pattern <<< $rod_result)
-              IFS=$old_IFS
-          done
-          IFS=''
-          echo $rod_result #${rod_result//$'\n'/\n/}
-          IFS=$old_IFS
-      }
-    #+end_src
-
 **** Counting
     First, we need to list the files we are interested in.  Once this
     is done, we count the number of files having each extension, sort

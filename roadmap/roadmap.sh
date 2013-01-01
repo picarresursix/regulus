@@ -15,13 +15,10 @@ function rod_load_configuration
         echo "No "$rod_file" file here! I can't update a none existing file."
         echo "usage: rod_update roadmap_file (roadmap_file is optionnal; defaults to \"roadmap.org\""
     else
+        rod_ACCEPT_ONLY_FILES=$(grep "INCLUDE_ONLY:" $rod_file | cut -d ":" -f 2 | cut -c 2-)      
         rod_EXCLUDE_FILES=$(grep "EXCLUDE:" $rod_file | cut -d ":" -f 2 | cut -c 2-)
     fi
 }
-
-rod_EXTENSIONS_HEADERS="hpp h"
-
-rod_EXTENSIONS_CODE="c cpp py sage el html php css sh tex"
 
 function rod_list_files
 {
@@ -29,16 +26,26 @@ function rod_list_files
     IFS=''
     rod_result=$(find . -name "[^.^\#]*.*[^~]")
     IFS=$old_IFS
+    for pattern in $rod_ACCEPT_ONLY_FILES
+    do
+        IFS=''
+        rod_result=$(grep "$pattern" <<< $rod_result)
+        IFS=$old_IFS
+    done
     for pattern in $rod_EXCLUDE_FILES
     do
         IFS=''
-        rod_result=$(grep -v $pattern <<< $rod_result)
+        rod_result=$(grep -v "$pattern" <<< $rod_result)
         IFS=$old_IFS
     done
     IFS=''
     echo $rod_result #${rod_result//$'\n'/\n/}
     IFS=$old_IFS
 }
+
+rod_EXTENSIONS_HEADERS="hpp h"
+
+rod_EXTENSIONS_CODE="c cpp py sage el html php css sh tex"
 
 function rod_display_file_stat
 {
