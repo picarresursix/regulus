@@ -1,0 +1,206 @@
+#+TITLE: VAULT-GHOST
+#+AUTHOR: Léo Perrin
+#+DATE: Time-stamp: <2013-01-06 16:33:58 leo>
+#+DESCRIPTION: Bash functions to open/close the vault and deal with its ghost.
+#+KEYWORDS: bash script internal crypto cryptsetup vault ghost backup
+#+STARTUP: hidestars indent align
+
+
+!TODO! Write the main function of the vault script.
+
+* Introduction
+  The vault folder is actually a symbolic link to an encrypted
+  parition. The following functions are intended to help dealing with
+  it in CLI.
+
+  I also do regularly my backups on an encrypted hard-drive which I
+  call the *ghost* of my computer. Thus, I wrote functions to open it,
+  close it and clone the content of my home directory into it.
+* Dependencies: cryptsetup
+* General functions
+Since I use cryptsetup to encrypt both my hard-drive and my backup,
+here are some general functions to open and close and encrypted
+partition.
+** vg_is_open                                                     :function:
+First, we want to check if the partition actually *is* mounted. To do
+so, we check if the directory given as the first argument contains
+anything (I'm pretty sure both my /home and its backup are not empty).
+#+begin_src sh :tangle vaugho.sh
+  function vg_is_open
+  {
+      if [[ $(ls $1) == "" ]]
+      then
+          echo "no"
+      else
+          echo "yes"
+      fi
+  }
+#+end_src
+** vg_identifier                                                  :function:
+Cryptsetup needs an identifier for the partition: I use the name of
+the partition stripped from every non alphanumeric character. In case
+of collision, I append a counter to the end. The vg_identifier
+function returns this identifier.
+#+begin_src sh :tangle vaugho.sh
+  function vg_identifier
+  {
+      if [[ $# < 1 ]];
+      then
+          echo "[FAIL] I need a string to identify!"
+      else
+          identifier=$(sed "s/[^a-zA-Z0-9]//g" <<< $1)
+          index=0
+          while [[ $(ls /dev/mapper | grep $identifier) != "" ]]
+          do
+              ((index=$index+1))
+              identifier=$identifier$index
+          done
+          echo $identifier
+      fi
+  }
+  
+#+end_src
+
+** vg_open
+The next thing to do is to open an encrypted partition. First, we
+check that two arguments were given (the partition ID and the mount
+point). Then, we check that it is not already mounted (using the
+previous function). If it is not open, we use cryptsetup to open it
+(see the [[http://doc.ubuntu-fr.org/cryptsetup][French ubuntu documentation]]).
+
+Remarks: I use ext4 all the time.
+#+begin_src sh :tangle vaugho.sh
+  function vg_open
+  {
+      if (($# < 2));
+      then
+          echo "Too few arguments!"
+          echo "Usage: vg_open /dev/<partition> </mount/point>"
+      else
+          identifier=$(vg_identifier $1)
+          sudo cryptsetup luksOpen $1 $identifier
+          sudo mount -t ext4 /dev/mapper/$identifier $2
+          if [[ $(vg_is_open $2) == "yes" ]]; then
+              echo $2" opened successfully."
+          else
+              echo $2" opening failed. "$2" is NOT open."
+          fi
+      fi  
+  }
+#+end_src
+
+** vg_close                                                       :function:
+When I am done, I close the partition. First, I unmount it and then I
+tell cryptsetup to really close it. As before, we need the name of the
+partition (to get its identifier) and the mount-point.
+#+begin_src sh :tangle vaugho.sh
+  function vg_close
+  {
+      if (($# < 2));
+      then
+          echo "Too few arguments!"
+          echo "Usage: vg_close /dev/<partition> </mount/point>"
+      else
+          identifier=$(vg_identifier $1)
+          sudo umount $2
+          sudo cryptsetup luksClose $identifier
+          if [[ $(vg_is_open $2) == "no" ]]; then
+              echo $2" closed successfully."
+          else
+              echo $2" closing failed. "$2" is NOT closed."
+          fi
+      fi
+  }
+  
+#+end_src
+* Dealing with the vault
+** vg_VAULT_MOUNT_POINT                                          :constant:
+The vault folder being actually a symbolic link, we must make sure
+that the encrypted partition is always mounted at the correct
+point. Since I usually open it using nautilus, this script must put
+it at the same place (however ugly the name turns out to be).
+#+begin_src sh :tangle vaugho.sh
+    vg_VAULT_MOUNT_POINT="/media/aa341e43-5375-473d-8ef7-21ba586c74a4"
+#+end_src
+** vg_VAULT_PARTITION                                            :constant:
+The partition on which the vault is.
+#+begin_src sh :tangle vaugho.sh
+  vg_VAULT_PARTITION=/dev/sda7
+#+end_src
+
+** vg_open_vault                                                  :function:
+In order to open the vault, we simply call vg_open with the correct
+arguments.
+#+begin_src sh :tangle vaugho.sh
+  function vg_open_vault
+  {
+      vg_open $vg_VAULT_PARTITION $vg_VAULT_MOUNT_POINT
+  }
+#+end_src
+** vg_close_vault                                                 :function:
+To close the vault, it is the same: we simply call vg_close with the
+correct arguments.
+#+begin_src sh :tangle vaugho.sh
+  function vg_close_vault
+  {
+      vg_close $vg_VAULT_PARTITION $vg_VAULT_MOUNT_POINT
+  }
+#+end_src
+* Dealing with the ghost
+** vg_GHOST_MOUNT_POINT                                          :constant:
+The place where the vault must be mounted in order for the symbolic
+links to work.
+#+begin_src sh :tangle vaugho.sh
+    vg_GHOST_MOUNT_POINT=/media/4cb875da-6fbf-48eb-b450-122c345489c1
+#+end_src
+
+** vg_open_ghost                                                  :function:
+In order to open the ghost, we simply call vg_open with the correct
+arguments. However, we need first to find the name of the partition
+containing the ghost using, for instance `fdisk -l`.
+#+begin_src sh :tangle vaugho.sh
+  function vg_open_ghost
+  {
+      if [[ $# < 1 ]]
+      then
+          echo "[FAIL] I need the name of the partition containing the ghost"
+      else
+          vg_open $1 $vg_GHOST_MOUNT_POINT
+      fi
+  }
+#+end_src
+** vg_close_ghost                                                 :function:
+To close the ghost, it is the same: we simply call vg_close with the
+correct arguments.
+#+begin_src sh :tangle vaugho.sh
+  function vg_close_ghost
+  {
+      if [[ $# < 1 ]]
+      then
+          echo "[FAIL] I need the name of the partition containing the ghost"
+      else
+          vg_close $1 $vg_GHOST_MOUNT_POINT
+      fi
+  }
+#+end_src
+
+** vg_clone                                                       :function:
+The whole point of the ghost is to contain a clone of my
+home. Therefore, it needs a function to copy it! I use rsync to
+achieve this. Further, rsync does not follow symbolic links (or
+rather, I don't want to turn on the option). Therefore, I copy the
+vault in a separate instruction.
+#+begin_src sh :tangle vaugho.sh
+  function vg_clone
+  {
+      echo "**$****** Copying ~/ ************"
+      rsync -r -P -t -F ~/ $vg_GHOST_MOUNT_POINT
+      echo ""
+      echo "******** Copying vault **********"
+      echo ""
+      rsync -r -P -t -F $vg_VAULT_MOUNT_POINT/ $vg_GHOST_MOUNT_POINT/vault
+      echo ""
+      echo "[DONE]"
+      date > ~/last-clone
+  }
+#+end_src
