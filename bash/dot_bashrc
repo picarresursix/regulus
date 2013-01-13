@@ -1,3 +1,5 @@
+# -*-sh-*- ; Time-stamp: <2013-01-13 17:00:50 leo>
+
 # ~/.bashrc: executed by bash(1) for non-login shells.  see
 # /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -57,10 +59,7 @@ fi
 #---------------------
 # REGULUS is in charge
 
-regulus_bash_dir=~/regulus/bash
-for script in $(ls $regulus_bash_dir"/"*.sh); do
-    . $script
-done
+. ~/regulus/bash/internal.sh
 PROMPT_COMMAND=reg_prompt
 
 # END REGULUS
@@ -100,6 +99,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias em='emacsclient'
+alias meuporg="python /home/leo/.meuporg"
 
 
 # Alias definitions.

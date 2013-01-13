@@ -1,4 +1,4 @@
-; -*-lisp-*- ; Time-stamp: <2013-01-10 09:40:19 leo>
+; -*-lisp-*- ; Time-stamp: <2013-01-13 18:18:43 leo>
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -97,7 +97,7 @@
              )
 
 ;  Loads my custom files in .emacs.d/my-functions.
-(load "roadmap.el")
+(load "meuporg.el")
 (load "my-cpp.el")
 (load "my-latex.el")
 (load "my-org.el")
