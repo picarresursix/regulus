@@ -1,4 +1,9 @@
+# Time-stamp: <>
+# AUTHOR: Léo Perrin <leoperrin@picarresursix.fr>
+
 CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
+
+# !TODO! Write the instructions for compilation.
 
 # the complete project
 PROJECT(<PROJECT_NAME>)

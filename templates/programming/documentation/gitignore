@@ -1,0 +1,12 @@
+# compiled files
+*.o
+*.a
+*.pyc
+
+# backup files
+*~
+*#
+
+# content of the "build" folder
+build/*
+

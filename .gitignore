@@ -1,3 +1,8 @@
 # backup files
 *~
+*#
+
+# emacs internals
 *semanticdb*
+*session*
+

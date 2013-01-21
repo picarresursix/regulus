@@ -1,0 +1,55 @@
+#+TITLE: Regulus
+#+DESCRIPTION: Versionning of my main config files and custom scripts
+#+AUTHOR: Léo Perrin <leoperrin@picarresursix.fr>
+#+DATE: Time-stamp: <2013-01-21 21:49:15 leo>
+#+STARTUP: hidestars indent align
+
+
+
+
+* Project description
+The project contains elisp code, literate programmed bash with
+org-babel and notes in org-mode format. The only part of the directory
+which is not to be maintained directly is the content of the emacs.d.
+
+The templates folder contains plenty of files with items but I don't
+want them to show up here.
+
+INCLUDE: el sh org
+EXCLUDE: emacs_dot_d templates
+
+* Ideas (IDEA)
+Here is a list of the possible improvements.
+** Use [[http://www.emacswiki.org/emacs/AceJump][Acejump]] for emacs.
+** Items
+* [0/0] Emacs configuration (emacs)
+The configuration emacs, both the .emacs file and the content of the
+.emacs.d folder.
+
+* [0/2] Appearances (appearance)
+As many of the data I use is in the vault, I should copy the
+appearance related stuff in a folder here.
+** TODO wallpaper
+Move the file here.
+** [0/3] TODO conky
++ [ ] Move conky to regulus.
++ [ ] Move the conky script to regulus.
++ [ ] Update it.
+* [0/1] Bash scripts (bash)
+** [[./yell/yell.org][yell]] (yell)
+A program to warn me when something is done.
+To be replaced by [[http://mumak.net/undistract-me/][undistract-me]] when switching to 13.04.
+** TODO [0/1] [[./vaugho/vaugho.org][vaugho]] (vaugho)
+A program to deal with encrypted partition and (encrypted) backups in
+CLI.
+*** TODO Write main function.
+** Items
+*** TODO
+1. [[file:./bash/bash.org::252][Write the main part of the internal.sh script.]] (./bash/bash.org::252)
+* [0/3] LaTeX (latex)
+Basic templates and macros for LaTeX.
+** TODO Implement automatic link to centralised macro file.
+** TODO [0/3] Write script to start new...
++ [ ] article
++ [ ] presentation
++ [ ] note

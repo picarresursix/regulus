@@ -1,0 +1,63 @@
+% Time-stamp: <2012-12-11 09:58:58 leo>
+
+% This is a common preamble for the presentations I'll make during my
+%  master thesis. It is fairly basic but does the job.
+
+
+% being able to highlight rows in tables is good
+\PassOptionsToPackage{table,dvipsnames}{xcolor}
+
+% This is a presentation
+\documentclass{beamer}
+
+
+% links are good for you
+% \usepackage{hyperref}
+% \hypersetup{
+%   colorlinks=true,
+%   citecolor=blue
+%   }
+
+% This is math
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{bussproofs}
+
+% Adding pictures is nice
+\usepackage{graphicx}
+
+%\usepackage[table]{xcolor}
+
+% A nice and simple theme
+\usetheme{Boadilla}
+
+% Depth of the table of content
+\setcounter{tocdepth}{1}
+
+% adding the table of content at the beginning of each section
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+
+% coloured words
+\newcommand\introduceterm[1]{\purple{#1}}
+\newcommand\darkgreen[1]{\colorize{OliveGreen}{{#1}}}
+
+% include references in the slides but not the biblio itself
+\usepackage{bibentry}
+\newcommand\includebiblio{
+  \bibliographystyle{alpha}
+  \nobibliography{biblio.bib}
+}
+
+% To remove the navigation buttons
+\setbeamertemplate{navigation symbols}{}
+
+% To be able to draw a coloured line in a table
+\newcommand\coloredtableline[1]{\arrayrulecolor{#1} \hline \arrayrulecolor{black}}

@@ -1,5 +1,0 @@
-!IDEA! Modify anordnakod:
-! * template files in .anordnakod
-! * documentation generated in .anordnakod/documentation/project/html
-! * file anordnakod.org containing data previously written in /var/www
-! * anordnakod -h returns the path to the said org-mode file

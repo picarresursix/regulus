@@ -1,5 +1,6 @@
 #!/bin/bash
-#; Time-stamp: <2012-12-23 20:41:23 leo>
+# AUTHOR: Léo Perrin <leoperrin@picarresursix.fr>
+# Time-stamp: <2013-01-21 21:16:45 leo>
 
-# !TODO! write it!
-# !TODO! document it!
+# !TODO! Write bash script.
+# !TODO! Write documentation of the bash script.

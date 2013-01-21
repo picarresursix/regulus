@@ -1,0 +1,48 @@
+% Time-stamp: <2012-11-15 09:16:25 leo>
+
+% This is a common preamble for the notes I am taking and the proofs I
+% am writing during my master thesis. It is fairly basic but does the
+% job.
+
+
+% First, we state that this is an article written in English on A4
+% paper.
+
+\documentclass[11pt,twoside,a4paper,notitlepage]{article}
+\usepackage[a4paper,margin=1.0in]{geometry}
+\usepackage[english]{babel}
+
+
+% Then it includes the packages I need to write a decent paper with
+% latex, namely math related stuff and also the hyperref package to
+% have nice links within the file. Basic configuration is also
+% performed.
+
+
+% links are good for you
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  citecolor=blue
+  }
+
+% This is math
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{bussproofs}
+\numberwithin{equation}{section}
+
+% For including PostScript figures and having subfigures
+\usepackage{graphics}
+\usepackage[sf,SF]{subfigure}
+
+% nice titles are nice
+\usepackage{sectsty}
+\allsectionsfont{\sffamily}
+
+% being able to highlight rows in tables is good
+\usepackage[table]{xcolor}
+
+% being able to have tables spanning over several pages is good too.
+\usepackage{longtable}

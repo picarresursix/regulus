@@ -1,4 +1,4 @@
-# -*-org-*- ; Time-stamp: <2012-12-08 23:00:41 leo>
+# -*-org-*- ; Time-stamp: <2013-01-13 00:42:17 leo>
 
 
 The softwares I need to be able to "operate" properly.
@@ -6,7 +6,7 @@ The softwares I need to be able to "operate" properly.
 * emacs                                                                :text:
   What else? And the version must be at least 24
   Dependencies: emacs
-* geek                                                          :programming:
+* programming                                                   :programming:
 ** guake                                                           :terminal:
   A simple terminal emulator, easy to access.
   Dependencies: guake
@@ -18,6 +18,10 @@ The softwares I need to be able to "operate" properly.
    Sometimes I work with people using svn. Not my thing but hey, it
    works too!
    Dependencies: subversion
+** git                                                          :versionning:
+   My favorite version manager system. Perfect since my projects are
+   hosted on github anyway.
+   Dependencies: git
 * crypto                                                             :crypto:
 ** keepassx
    Awesome to store and retrieve easily password and other top-secret
@@ -43,7 +47,13 @@ The softwares I need to be able to "operate" properly.
      Dependencies: latex-beamer
    + Auctex, when used with emacs, simply rocks.
      Dependencies: auctex
-   + Sometimes I write in French, in which xelatex is a better option.
-     Dependencies: texlive-xetex
+   + Sometimes I write in French, in which case xelatex is a better
+     option.
+     Dependencies: texlive-xete
    + Adding pictures are nice
      Dependencies: texlive-pictures
+
+* Media readers                                                       :media:
+** vlc
+   Because vlc. Period.
+   Dependencies: vlc

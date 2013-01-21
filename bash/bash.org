@@ -1,0 +1,256 @@
+#+ -*-org-*- ; Time-stamp: <2013-01-01 00:10:34 leo>
+
+              BASH BY REGULUS
+
+
+* Introduction                                                :documentation:
+  As time goes, I spend more and more time using a terminal. Over time,
+  I wrote some functions I finally found the courage to store in one
+  place and to document.
+
+  This file is an example of [[http://en.wikipedia.org/wiki/Literate_programming][Literate programming]] done using emacs's
+  org-mode and, in particular [[http://orgmode.org/worg/org-contrib/babel/intro.html#literate-programming][org-babel]]. So the code snippet below *are*
+  the ones loaded by bash!
+
+  Babel actually generates code from the content of this file (an
+  operation called "tangling"). To generate the files, run /M-x
+  org-babel-tangle/ or, much simpler, /C-c C-v t/. To edit a snippet
+  of code, move the cursor into it and press /C-c '/. This will open a
+  small frame in the correct mode to edit it. When done with the
+  frame, press /C-c '/ again.
+
+  Here, you will find what I call the internal of regulus,
+  i.e. miscellaneous functions that are loaded as is: I can call them
+  directly from a shell but they are not scripts stored in my
+  $PATH.
+
+  However, I also use such scripts and I wrote them in the same
+  way (literate programming with org-babel). Here is a list of them:
+  + [[file:../yell/yell.org][yell.org]]
+  + [[file:../vault/vault.org][vault.org]]
+  + [[file:../roadmap/roadmap.org][roadmap.org]]
+
+* Basic functions                                                 :internals:
+** Directories                                                     :constant:
+*** reg_DIR
+    The path to the root directory of regulus.
+    #+begin_src sh :tangle internal.sh
+      export reg_DIR=~/regulus
+    #+end_src
+
+** reg_install                                                     :function:
+**** Usage
+     In order to move a bash script script.sh into /usr/local/bin and
+     make executable, simply run the following command (roots rights
+     will be asked for during execution):
+     >-$ reg_install script.sh
+**** Implementation
+     It is very straightforward: we want to give the application
+     execution rights and then to move it /usr/local/bin. The
+     extension of the script and its path are removed during the copy
+     using an actually simple regexp: we want what is between the last
+     '/' and the last '.'.
+     #+begin_src sh :tangle internal.sh
+       function reg_install
+       {
+           if [[ $# < 1 ]]
+           then
+               reg_msg_fail I need to know which script to install.
+               echo "Usage: reg_install <script>"
+           else
+               chmod +x $1
+               script_name=$(sed "s/\(.*\)\/\(.*\)\.\(.*\)/\2/" <<< $1)
+               sudo cp $1 /usr/local/bin/$script_name
+               if [[ $? == 0 ]]
+               then
+                   reg_msg_success "$1 successfully moved to /usr/local/bin/"$script_name
+               else
+                   reg_msg_fail "Problem when copying. Do you have the correct rights?"
+               fi
+           fi
+       }
+     #+end_src
+
+** Colors                                                          :constant:
+    By enclosing a string between "$reg_XXX" and "reg_RESET_COLOR", one
+    can simply output a string in color XXX in a terminal.
+    #+begin_src sh :tangle internal.sh
+      export reg_RED=$(tput setaf 1)
+      export reg_GREEN=$(tput setaf 2)
+      export reg_YELLOW=$(tput setaf 3)
+      export reg_BLUE=$(tput setaf 4)
+      export reg_PURPLE=$(tput setaf 5)
+      export reg_CYAN=$(tput setaf 6)
+      export reg_RESET_COLOR=$(tput sgr0)
+    #+end_src
+** Message display                                                :screen:io:
+   Using the colours defined before, we create two small macros to
+   display colourful messages corresponding to success (green) and
+   failure (red).
+*** Usage
+    They are used in the same way:
+    >$ msg_func Message to display, simple as that.
+*** Implementation
+    It relies very simply on the colours defined before.
+    #+begin_src sh :tangle internal.sh
+          function reg_msg_fail
+          {
+              echo $reg_RED"[FAIL]"$reg_RESET_COLOR $1
+          }
+          
+          function reg_msg_success
+          {
+              echo $reg_GREEN"[OK]"$reg_RESET_COLOR $1
+          }
+    #+end_src
+
+* Dependencies management                                         :internals:
+  The idea is to be able to easily install at once all the packages
+  necessary not only for the scripts to work but also for *me* to work
+  easily.
+
+  The core idea is to have a function listing the dependencies and
+  outputing them as a simple space separated list which can easily be
+  fed to /apt-get install/.
+
+  It needs each sub-component here to contain a line with the text
+  "Dependencies\:" (note the ':') followed by a space separated list of
+  the packages needed.
+** reg_list_dependencies                                           :function:
+   Lists the dependencies of the scripts generated from this file and
+   the packages I need to work properly and greps it using the first
+   argument. As a byproduct, lists all of the dependencies if the
+   first argument is absent.
+   #+begin_src sh :tangle internal.sh
+     function reg_list_dependencies
+     {
+         files=$(find $reg_DIR -name "[^.\#]*.org")
+         res=""
+         for file in $files; do
+             if (($# < 1)); then
+                 for dependency in $(grep "Dependencies\:" $file | cut -d ":" -f 2); do
+                     res=$res" "$dependency
+                 done
+             else
+                 for dependency in $(grep "Dependencies\:" $file | grep $1 | cut -d ":" -f 2); do
+                     res=$res" "$dependency
+                 done
+             fi
+         done
+         echo $res        
+     }
+     
+   #+end_src
+** reg_is_installed                                                :function:
+   Checks that a package is installed by seeing if it is in the output
+   of "dpkg --get-selections".
+   #+begin_src sh :tangle internal.sh
+     function reg_is_installed
+     {
+         if [[ $(dpkg --get-selections | grep $1) == "" ]]; then
+             echo "no"
+         else
+             echo "yes"
+         fi
+     }
+   #+end_src
+
+** reg_check_dependencies                                          :function:
+   Once we know the dependencies of Regulus's scripts, we need to
+   check if they are install. To achieve this, we loop through the
+   output of reg_list_dependencies and check that each item is
+   installed using is_installed.
+   #+begin_src sh :tangle internal.sh
+     function reg_check_dependencies
+     {
+         for dependency in $(reg_list_dependencies); do
+             if [[ $(reg_is_installed $dependency) == "yes" ]]; then
+                 echo $dependency' '$reg_GREEN'[yes]'$reg_RESET_COLOR
+             else
+                 echo $dependency' '$reg_RED'[no]'$reg_RESET_COLOR
+             fi
+         done
+     }
+     
+   #+end_src
+* Prompt                                                          :internals:
+  I like having a prompt with colours since I often deal with fairly
+  long outputs: it is easier to spot the command lines. I also find
+  that having a description of the last commit as soon as I am in a
+  git repo is both useful for planning my next move and encouraging
+  for commiting often.
+** Dependencies: git
+** reg_git_current_branch                                          :function:
+   I want to print the name of the current branch, so I ask git to
+   print it. If the command fails, then I am not in a repo: I don't
+   care. Otherwise, if the command work, I can chain another using
+   "&&" which will again ask for the name but this time will keep it.
+   #+begin_src sh :tangle internal.sh
+        function reg_git_current_branch
+        {
+            git branch >/dev/null 2>/dev/null && echo $(git branch | grep \* | cut -d " " -f 2)
+        }
+   #+end_src
+** reg_last_commit_description                                     :function:
+   When in a git repo, I want to see the short description of the last
+   commit. To do so, when in a git repo, I call /git log/ with the
+   correct parameters and strip the description from the rest using
+   cut.
+   #+begin_src sh :tangle internal.sh
+        function reg_last_commit_description
+        {
+            description=$(git log -n 1 --oneline | cut -d " " -f 2-)
+            echo $description | sed 's/\$/\\\$/g'
+        }
+   #+end_src
+** reg_last_commit_date                                            :function:
+   In a similar fashion as reg_last_commit_description, strips the
+   last commit date from the command /git log/.
+   #+begin_src sh :tangle internal.sh
+        function reg_last_commit_date
+        {
+            git log -n 1 --format="%cd" | cut -d " " -f 2-5
+        }
+   #+end_src
+** reg_prompt                                                      :function:
+   This function is supposed to be called *every time* a prompt is to
+   be printed. In other words, you must add it to the /PROMPT_COMMAND/
+   variable. Here there be dragons, I warn you (it works just fine
+   though).  The "\[" and "\]" all over the place *are*
+   important. Remove them and scrolling up your bash history will be a
+   hell. Trust me. Don't do that.
+   It modifies the prompt directly (by changing the /PS1/ variable).
+   #+begin_src sh :tangle internal.sh
+        function reg_prompt
+        {
+            branch=$(reg_git_current_branch)
+            if [[ $branch == "" ]]; then
+                # not in a git repository
+                PS1='\n\['$reg_RED'\]\t \['$reg_BLUE'\]\u (\w) \n-$\['$reg_RESET_COLOR'\] '
+            else
+                PS1='\n\['$reg_RED'\]\t \['$reg_BLUE'\]\u (\w)\['$reg_RESET_COLOR'\] last commit: ['$(reg_last_commit_date)']\n[\['$reg_RED'\]'$branch'\['$reg_RESET_COLOR'\]] \['$UBlack'\]'$(reg_last_commit_description)'\['$reg_RESET_COLOR'\]\['$reg_BLUE'\n-$\['$reg_RESET_COLOR'\] '
+            fi
+        }     
+   #+end_src
+* Setting up                                                      :internals:
+  Running this script will setup regulus completely, backup and
+  replace the following files with symbolic links to files in this
+  directory.
+  |---------------+-------------------------|
+  | original file | link points to          |
+  |---------------+-------------------------|
+  | ~/.emacs      | [[../emacs/emacs.el][$reg_DIR/emacs/emacs.el]] |
+  | ~/.emacs.d    | [[../emacs/emacs.d][$reg_DIR/emacs/emacs.d]]  |
+  | ~/.bashrc     | [[./bashrc.el][$reg_DIR/bash/bashrc.el]] |
+  |---------------+-------------------------|
+
+  It will also install the following scripts:
+  + [[file:yell/yell.org][yell.org]]
+  + [[file:vault/vault.org][vault.org]]
+  + [[file:roadmap/roadmap.org][roadmap.org]]
+  
+  !TODO! Write the main part of the internal.sh script.
+  (lambda ()
+  (font-lock-add-keywords nil
+                 '(("!\(TODO\)!" 1
+                    font-lock-warning-face t))))

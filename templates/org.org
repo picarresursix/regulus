@@ -1,6 +1,9 @@
-#; -*-org-*- Time-stamp: <2012-10-07 12:11:07 leo>
+#+TITLE: TITLE
+#+DESCRIPTION: description
+#+AUTHOR: Léo Perrin <leoperrin@picarresursix.fr>
+#+DATE: Time-stamp: <>
+#+STARTUP: indent hidestars align
 
 
-                   <TITLE>
 
 * Section 1

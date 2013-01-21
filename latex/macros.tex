@@ -1,0 +1,92 @@
+% Time-stamp: <2012-12-14 13:57:27 leo>
+
+
+% Contains latex macros intended to be useful when talking about the
+% differential spectrum of some classes of monomials.
+
+
+% colors
+\newcommand\colorize[2]{{\color{#1}{#2}}}
+\newcommand\red[1]{\colorize{red}{{#1}}}
+\newcommand\purple[1]{\colorize{purple}{{#1}}}
+\newcommand\blue[1]{\colorize{blue}{{#1}}}
+\newcommand\green[1]{\colorize{green}{{#1}}}
+\newcommand\yellow[1]{\colorize{yellow}{{#1}}}
+\newcommand\orange[1]{\colorize{orange}{{#1}}}
+
+
+% Set macros
+\newcommand\Zz[1]{\mathbb{Z}/{#1}\mathbb{Z}}
+\newcommand\galois[1]{\mathbb{F}_{2^{#1}}}
+\newcommand\boolfield{\mathbb{F}_2}
+\newcommand\boolfuncset[1]{\mathcal{B}_{#1}}
+\newcommand\diffspectrum[1]{\mathbb{S}_{#1}}
+\newcommand\restrdiffspectrum[1]{\overline{\mathbb{S}_{#1}}}
+\newcommand\minus{\backslash}
+
+% Miscellaneous macros
+\newcommand\multgen{a}
+\newcommand\round[1]{\lfloor #1 \rfloor}
+
+% binary operator macros
+\newcommand\xor{\oplus}
+\newcommand\bigxor{\bigoplus}
+\newcommand\comp{\circ}
+\newcommand\trace{\mathbf{Tr}}
+\newcommand\mobius[1]{{#1}^{\circ}}
+\newcommand\smaller{\preceq}
+\newcommand\larger{\succeq}
+
+% unary operator macros
+\newcommand\derivative[2]{\mathbb{D}_{#2}{#1}}
+\newcommand\delt[1]{\delta^{#1}}
+\newcommand\uniformity[1]{u({#1})}
+\newcommand\im[1]{\text{Im}({#1})}
+\newcommand\image[2]{\text{Im}_{#1}({#2})}
+\renewcommand\ker[1]{\text{Ker}({#1})}
+\newcommand\dual[1]{{#1}^{\bot}}
+
+% words within equations
+\newcommand\modulo[1]{~(\text{mod}~{#1})}
+\newcommand\pgcd[2]{\text{gcd}({#1},~{#2})}
+\newcommand\minimum{\text{min}}
+\newcommand\maximum{\text{max}}
+\newcommand\algto{~\textbf{to}~}
+
+% polynomials
+\newcommand{\hel}{\mathcal{L}}
+\newcommand{\lin}{L}
+\newcommand{\corpsR}{\mathcal{F}}
+\newcommand{\corpsRzero}{\mathcal{F}_0}
+\newcommand{\corpsRun}{\mathcal{F}_1}
+\newcommand{\Ginv}{\mathcal{G}}
+\newcommand{\solutions}{\mathcal{U}}
+\newcommand\rDickson[1]{RD_{#1}}
+
+% environments
+% Note: we do not redefine them if they already are defined
+\ifx\theorem\undefined
+        \newtheorem{theorem}{Theorem}
+\fi
+\ifx\lemma\undefined
+        \newtheorem{lemma}{Lemma}
+\fi
+\ifx\corollary\undefined
+        \newtheorem{corollary}{Corollary}
+\fi
+\ifx\definition\undefined
+        \newtheorem{definition}{Definition}
+\fi
+\ifx\conjecture\undefined
+        \newtheorem{conjecture}{Conjecture}
+\fi
+
+% we do not redefine this if it was already defined
+\ifx\includebiblio\undefined
+        \newcommand\includebiblio{
+        \newpage
+        \nocite{*}
+        \bibliographystyle{alpha}
+        \bibliography{biblio.bib}
+        }
+\fi

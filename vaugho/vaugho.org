@@ -1,8 +1,7 @@
 #+TITLE: VAULT-GHOST
-#+AUTHOR: Léo Perrin
-#+DATE: Time-stamp: <2013-01-06 18:18:18 leo>
 #+DESCRIPTION: Bash functions to open/close the vault and deal with its ghost.
-#+KEYWORDS: bash script internal crypto cryptsetup vault ghost backup
+#+AUTHOR: Léo Perrin
+#+DATE: Time-stamp: <2013-01-21 21:35:07 leo>
 #+STARTUP: hidestars indent align
 
 
@@ -207,4 +206,4 @@ vault in a separate instruction.
 * Main function
 We now have all the functions we need. All that is left to do is to
 glue them together in nice interface using getopt.
-!TODO! Write the main function of the vault script.
+# !TODO! Write the main function of the vault script.

@@ -1,9 +1,7 @@
 /**
  * @file main.cpp
  * @author Leo "picarresursix" Perrin <leoperrin@picarresursix.fr>
- * @date Time-stamp: <2012-12-23 20:58:02 leo>
- *
- * @brief The main function of the program.
+ * @date Time-stamp: <>
  */
 
 
@@ -11,8 +9,8 @@
 /**
  * @brief
  *
- * !TODO! write it!
- * !TODO! document it!
+ * !TODO! Write main function.
+ * !TODO! Write documentation of the main function.
  * 
  * @param argc The number of CLI arguments.
  * @param argv The CLI arguments themselves.

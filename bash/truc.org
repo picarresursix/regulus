@@ -1,2 +1,0 @@
-** TODO list
-   + [[file:/home/leo/regulus/bash/./config.org::375][ write script." > $1]] (./config.org:375)
