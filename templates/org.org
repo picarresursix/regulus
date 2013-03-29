@@ -1,6 +1,6 @@
 #+TITLE: TITLE
 #+DESCRIPTION: description
-#+AUTHOR: Léo Perrin <leoperrin@picarresursix.fr>
+#+AUTHOR: Leo Perrin <leoperrin@picarresursix.fr>
 #+DATE: Time-stamp: <>
 #+STARTUP: indent hidestars align
 

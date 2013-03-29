@@ -1,7 +1,7 @@
 #+TITLE: Regulus
 #+DESCRIPTION: Versionning of my main config files and custom scripts
 #+AUTHOR: Léo Perrin <leoperrin@picarresursix.fr>
-#+DATE: Time-stamp: <2013-01-21 21:49:15 leo>
+#+DATE: Time-stamp: <2013-02-17 21:09:39 leo>
 #+STARTUP: hidestars indent align
 
 
@@ -21,10 +21,15 @@ EXCLUDE: emacs_dot_d templates
 * Ideas (IDEA)
 Here is a list of the possible improvements.
 ** Use [[http://www.emacswiki.org/emacs/AceJump][Acejump]] for emacs.
+** When switching to 13.04
+*** Install [[http://mumak.net/undistract-me/][undistract-me]]
+*** Install [[http://www.ubuntuser.com/2013/01/29/mechanig-un-outil-clair-et-complet-de-personnalisation/][unity-tweak-tool]]
+*** Install [[http://www.webupd8.org/2013/02/terra-drop-down-terminal-emulator-with.html][terra-terminal]]
 ** Items
-* [0/0] Emacs configuration (emacs)
+* [0/1] Emacs configuration (emacs)
 The configuration emacs, both the .emacs file and the content of the
 .emacs.d folder.
+** TODO Look at [[https://github.com/redguardtoo/cpputils-cmake/][cpputils-cmake]]
 
 * [0/2] Appearances (appearance)
 As many of the data I use is in the vault, I should copy the
@@ -46,7 +51,7 @@ CLI.
 ** Items
 *** TODO
 1. [[file:./bash/bash.org::252][Write the main part of the internal.sh script.]] (./bash/bash.org::252)
-* [0/3] LaTeX (latex)
+* [0/2] LaTeX (latex)
 Basic templates and macros for LaTeX.
 ** TODO Implement automatic link to centralised macro file.
 ** TODO [0/3] Write script to start new...

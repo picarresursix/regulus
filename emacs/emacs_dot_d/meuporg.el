@@ -1,5 +1,5 @@
 
-(setq meuporg-command "python ~/.meuporg ")
+(setq meuporg-command "python2.7 ~/.meuporg ")
 
 (defun meuporg-reload()
   "Reload the current meuporg."
@@ -34,22 +34,34 @@ empty string if there is no such meuporg."
       )
   )
 
-(defun meuporg-insert-todo()
-  "Inserts a TODO meuporg item."
-  (interactive)
-  (insert "!TODO! ")
-  )
-
 (defun meuporg-insert-idea()
   "Inserts an IDEA meuporg item."
   (interactive)
   (insert "!IDEA! ")
   )
 
+(defun meuporg-insert-todo()
+  "Inserts a TODO meuporg item."
+  (interactive)
+  (insert "!TODO! ")
+  )
+
+(defun meuporg-insert-continue()
+  "Inserts a TOCHECK meuporg item."
+  (interactive)
+  (insert "!CONTINUE! ")
+  )
+
 (defun meuporg-insert-tocheck()
   "Inserts a TOCHECK meuporg item."
   (interactive)
   (insert "!TOCHECK! ")
+  )
+
+(defun meuporg-insert-polish()
+  "Inserts a TOCHECK meuporg item."
+  (interactive)
+  (insert "!POLISH! ")
   )
 
 (defun meuporg-insert-fixref()
@@ -104,20 +116,43 @@ empty string if there is no such meuporg."
     )
   )
 
-(defun meuporg-list-items-in-file()
+(defun meuporg-list-patterns-in-buffer(pattern)
+  "Lists all the strings matching a given pattern and display them in
+a new buffer."
   (setq meuporg-listed-buffer (current-buffer))
-  (interactive)
   (meuporg-kill-item-list)
   (delete-other-windows)
-  (occur "![A-Za-z0-9_]+!")
+  (occur pattern)
   (switch-to-buffer "*Occur*")
   (rename-buffer "!List!")
+  (beginning-of-buffer)
+  (setq inhibit-read-only t)
+  (kill-line)
+  (insert "[up] move to previous occurrence; [down] move to next one\n")
+  (setq inhibit-read-only nil)
+  (setq read-only t)
   (meuporg-list-mode)
   (occur-next)
   (switch-to-buffer meuporg-listed-buffer)
-  (highlight-lines-matching-regexp "![A-Za-z0-9_]+!")
+  (highlight-lines-matching-regexp pattern)
   (other-window 1)
   (next-line)
+  )
+
+(defun meuporg-list-items-in-buffer()
+  "Lists the items in the current buffer and displays them in a new
+buffer."
+  (interactive)
+  (meuporg-list-patterns-in-buffer "![A-Za-z0-9_]+!")
+  )
+
+(defun meuporg-list-specific-items-in-buffer()
+  "Prompts for a string and lists all the items in the file whose name
+contains the said string"
+  (interactive)
+  (setq pattern
+        (read-from-minibuffer "Search for items whose names contain: "))
+  (meuporg-list-patterns-in-buffer (concat "![A-zA-Z0-9]*" pattern "[A-zA-Z0-9]*!"))
   )
 
 (defun meuporg-kill-item-list()
@@ -172,11 +207,14 @@ highlighting."
      (,(kbd "C-! m")   . meuporg-open-main)
      (,(kbd "C-! n")   . meuporg-go-to-next-item)
      (,(kbd "C-! p")   . meuporg-go-to-previous-item)
-     (,(kbd "C-! l")   . meuporg-list-items-in-file)
+     (,(kbd "C-! l")   . meuporg-list-items-in-buffer)
+     (,(kbd "C-! s")   . meuporg-list-specific-items-in-buffer)
      (,(kbd "C-! q")   . meuporg-kill-item-list)
-     (,(kbd "C-! i t") . meuporg-insert-todo)
      (,(kbd "C-! i i") . meuporg-insert-idea)
-     (,(kbd "C-! i c") . meuporg-insert-tocheck)
+     (,(kbd "C-! i t") . meuporg-insert-todo)
+     (,(kbd "C-! i c") . meuporg-insert-continue)
+     (,(kbd "C-! i h") . meuporg-insert-tocheck)
+     (,(kbd "C-! i p") . meuporg-insert-polish)
      (,(kbd "C-! i f") . meuporg-insert-fixref)
      )
    )

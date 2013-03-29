@@ -1,4 +1,4 @@
-; -*-lisp-*- ; Time-stamp: <2013-01-13 18:18:43 leo>
+; -*-lisp-*- ; Time-stamp: <2013-03-29 11:20:07 leo>
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -9,11 +9,12 @@
  '(blink nil)
  '(blink-cursor-mode 0)
  '(custom-enabled-themes (quote (regulus)))
- '(custom-safe-themes (quote ("a8fc1fdda80ba5e1c4826ada861b435f925821d64fd629568949ec77907c69ed" "01ee89f1896f49acd06d123a24b13b75441ead9e403d9a18e6f003093367d68a" "9a5e4e08a54df15ebcb51be47725235b8750d766bf870b8adc6c62bc888feadc" "29e741f5b9aa5fefb23ef09c5003d77451ccdfd6a7672edce11e50ddeaa80d40" "b00a66a298e5d44177716355d913bea3800e16d063817844d686448840ddb860" "8fe9d28b73e603d93deb76d88c28acbdb6c0f8e7a75907395041e04a54911128" "67f0a818d19139ef8a698243253433fcaee9f46204a7dc29341d1fddf4edbc21" "c8abc1244cb812733e364c12c880fd69b3d4a25e5566b09c69bbfa93531bc592" "1fcfa39a64873fd915a27e523e0fa7cfb817c96391fcd461731ec82dffa1a08e" "539db3e3bb06406669e2a7b4a7c3ee7e52b588cc1bdc583a1d8f6e6f1a881797" "7128cde9218ae893852b289a60273a9193f8b30b90fc0b5cb14dc1740136ba17" default)))
+ '(custom-safe-themes (quote ("72cc9ae08503b8e977801c6d6ec17043b55313cda34bcf0e6921f2f04cf2da56" "71b172ea4aad108801421cc5251edb6c792f3adbaecfa1c52e94e3d99634dee7" "5e1d1564b6a2435a2054aa345e81c89539a72c4cad8536cfe02583e0b7d5e2fa" "501caa208affa1145ccbb4b74b6cd66c3091e41c5bb66c677feda9def5eab19c" "d2622a2a2966905a5237b54f35996ca6fda2f79a9253d44793cfe31079e3c92b" "8b7221368020ebdf63bf464ea73e0a0e57953b710e1602e9c3a506d30226773d" "ebf6314f5c7c71034ffe2d67db489c6d868be3cf8cdba02e5a936808c5df75c8" "a8fc1fdda80ba5e1c4826ada861b435f925821d64fd629568949ec77907c69ed" "01ee89f1896f49acd06d123a24b13b75441ead9e403d9a18e6f003093367d68a" "9a5e4e08a54df15ebcb51be47725235b8750d766bf870b8adc6c62bc888feadc" "29e741f5b9aa5fefb23ef09c5003d77451ccdfd6a7672edce11e50ddeaa80d40" "b00a66a298e5d44177716355d913bea3800e16d063817844d686448840ddb860" "8fe9d28b73e603d93deb76d88c28acbdb6c0f8e7a75907395041e04a54911128" "67f0a818d19139ef8a698243253433fcaee9f46204a7dc29341d1fddf4edbc21" "c8abc1244cb812733e364c12c880fd69b3d4a25e5566b09c69bbfa93531bc592" "1fcfa39a64873fd915a27e523e0fa7cfb817c96391fcd461731ec82dffa1a08e" "539db3e3bb06406669e2a7b4a7c3ee7e52b588cc1bdc583a1d8f6e6f1a881797" "7128cde9218ae893852b289a60273a9193f8b30b90fc0b5cb14dc1740136ba17" default)))
  '(inhibit-startup-buffer-menu t)
  '(inhibit-startup-screen t)
  '(initial-buffer-choice "~/org/todo.org")
  '(initial-scratch-message ";; Scratch buffer")
+ '(org-hide-leading-stars t)
  '(org-link-frame-setup (quote ((vm . vm-visit-folder-other-frame) (gnus . org-gnus-no-new-news) (file . find-file) (wl . wl-other-frame))))
  '(safe-local-variable-values (quote ((class-name . 0)))))
 (custom-set-faces
@@ -71,6 +72,9 @@
 ;  Remove scroll-bar
 (scroll-bar-mode -1)
 (menu-bar-mode -1)
+
+;  Activate loccur
+(load "~/.emacs.d/elpa/loccur-1.1.1/loccur")
 
 ;  Activate smart auto-completion when switching buffer
 (iswitchb-mode 1)
@@ -161,11 +165,35 @@
 
 ;  Define org-mode shorctus available in every modes.
 (global-unset-key (kbd "C-d"))
-(global-set-key (kbd "C-d a") 'put-a-ring)
+(global-set-key (kbd "C-d a") 'take-all)
 (global-set-key (kbd "C-d g") 'goto-line)
-(global-set-key (kbd "C-d l") 'goto-todo-list)
-(global-set-key (kbd "C-d t") 'put-time-stamp)
+(global-set-key (kbd "C-d f") 'ffap)
+(global-set-key (kbd "C-d m") 'goto-todo-list)
 (global-set-key (kbd "C-d c") 'org-store-link)
 (global-set-key (kbd "C-d v") 'org-insert-link-global)
-(global-set-key (kbd "C-d m") 'put-mail-address)
 (global-set-key (kbd "C-d o") 'org-open-at-point-global)
+
+
+; external search
+(global-set-key (kbd "C-d s f") 'search-word-at-point-wikipedia-fr)
+(global-set-key (kbd "C-d s w") 'search-word-at-point-wikipedia-en)
+(global-set-key (kbd "C-d s g") 'search-word-at-point-google)
+(global-set-key (kbd "C-d s i") 'search-word-at-point-image)
+
+; insertion
+(global-set-key (kbd "C-d i a") 'put-a-ring)
+(global-set-key (kbd "C-d i t") 'put-time-stamp)
+(global-set-key (kbd "C-d i m") 'put-mail-address)
+
+; loccur
+(global-set-key (kbd "C-d l") 'loccur)
+(global-set-key (kbd "C-d C-l") 'loccur-current)
+
+
+
+
+;  load solarized theme
+; (load-theme 'solarized-light)
+
+
+

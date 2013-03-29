@@ -1,0 +1,67 @@
+# default stuff, see http://doc.ubuntu-fr.org/conky
+total_run_times 0
+out_to_console no
+double_buffer yes
+no_buffers yes
+text_buffer_size 2048
+update_interval 1
+cpu_avg_samples 4
+net_avg_samples 2
+
+# Size and position
+alignment bottom_left
+minimum_size 1200
+maximum_width 2000
+gap_x 220
+gap_y -90
+
+# characteritics of the display
+draw_shades no
+draw_outline no
+draw_borders no
+
+
+# other fixed stuff
+background yes
+own_window yes
+own_window_type override # normal / override / desktop
+own_window_transparent yes
+use_xft yes
+xftalpha .1
+override_utf8_locale yes # force UTF8
+
+# text characteritics
+xftfont Ubuntu Mono:size=9
+uppercase no
+color1 300231
+color2 F6A54C
+color3 D58CFC
+
+
+
+TEXT
+${color1}${font ubuntu:size=50}CPU${color2}${font ubuntu:size=12}
+${voffset -75}
+${goto 160}${color2}${cpubar cpu0 7,55}  ${voffset -2}${goto 230}${color3}${font ubuntu:size=8}${top cpu 1} ${goto 270}${top name 1}
+${voffset -12}
+${goto 160}${color2}${cpubar cpu1 7,55}  ${voffset -2}${goto 230}${color3}${font ubuntu:size=8}${top cpu 2} ${goto 270}${top name 2}
+${voffset -12}
+${goto 160}${color2}${cpubar cpu2 7,55}  ${voffset -2}${goto 230}${color3}${font ubuntu:size=8}${top cpu 3} ${goto 270}${top name 3}
+${voffset -12}
+${goto 160}${color2}${cpubar cpu3 7,55}  ${voffset -2}${goto 230}${color3}${font ubuntu:size=8}${top cpu 4} ${goto 270}${top name 4}
+
+${voffset -75}${goto 370}${color1}${font ubuntu:size=50}MEM${color2}${font ubuntu:size=12}
+${voffset -75}
+${voffset -2}${goto 620}${color3}${font ubuntu:size=8}${top_mem mem 1} ${goto 660}${top_mem name 1}
+${voffset -16}
+${goto 550}${color2}${membar 7,55}  ${voffset 2}${goto 620}${color3}${font ubuntu:size=8}${top_mem mem 2} ${goto 660}${top_mem name 2}
+${voffset -8}
+${goto 550}${color2}${swapbar 7,55}  ${voffset -6}${goto 620}${color3}${font ubuntu:size=8}${top_mem mem 3} ${goto 660}${top_mem name 3}
+${voffset -12}
+${voffset -2}${goto 620}${color3}${font ubuntu:size=8}${top_mem mem 4} ${goto 660}${top_mem name 4}
+
+${voffset -75}
+${goto 780}${color2}${font ubuntu:size=11}Entropy:${goto 890}${color3}${entropy_avail}
+${goto 780}${color2}${font ubuntu:size=11}Temperature:${goto 890}${color3}$acpitemp °C
+${goto 780}${color2}${font ubuntu:size=11}Uptime:${goto 890}${color3}$uptime
+

@@ -1,4 +1,9 @@
-# -*-org-*- ; Time-stamp: <2013-01-13 00:42:17 leo>
+#+TITLE: Softwares
+#+DESCRIPTION: A list of the softwares and extensions I need.
+#+AUTHOR: Léo Perrin <leoperrin@picarresursix.fr>
+#+DATE: Time-stamp: <2013-03-13 18:46:03 leo>
+#+STARTUP: hidestars indent align
+
 
 
 The softwares I need to be able to "operate" properly.
@@ -6,7 +11,7 @@ The softwares I need to be able to "operate" properly.
 * emacs                                                                :text:
   What else? And the version must be at least 24
   Dependencies: emacs
-* programming                                                   :programming:
+* work                                                                 :work:
 ** guake                                                           :terminal:
   A simple terminal emulator, easy to access.
   Dependencies: guake
@@ -22,7 +27,10 @@ The softwares I need to be able to "operate" properly.
    My favorite version manager system. Perfect since my projects are
    hosted on github anyway.
    Dependencies: git
-* crypto                                                             :crypto:
+** gnuplot                                                            :plot:
+To draw plots from CLI org-mode.
+Dependencies: gnuplot
+* crypto                                                      :crypto:parano:
 ** keepassx
    Awesome to store and retrieve easily password and other top-secret
    data.
@@ -52,7 +60,24 @@ The softwares I need to be able to "operate" properly.
      Dependencies: texlive-xete
    + Adding pictures are nice
      Dependencies: texlive-pictures
+   + To have fancy classes for creating books an CV's.
+     Dependencies: texlive-publishers
 
+* Web                                                          :web:internet:
+** Browser
+Firefox is awesome.
+Dependencies: firefox
+** Extensions
+*** Noscript                                   :security:javascript:parano:
+Allows safe browsing. Can be obtained [[http://noscript.net/getit][here]].
+*** Ubuntu persona                                             :appearance:
+Looking nice is nice. Persona available [[http://www.getpersonas.com/fr/persona/250496][here]].
+
+*** Tree-style tab                                             :appearance:
+Having tabs on the side instead of on the tab is better; especially
+when you can organize/hide them. Download [[https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab/][here]].
+*** Hide bookmark bar                                          :appearance:
+This bar is useless 90% of the time. To hide it, go [[https://addons.mozilla.org/fr/firefox/addon/hide-bookmarksbar/][here]].
 * Media readers                                                       :media:
 ** vlc
    Because vlc. Period.

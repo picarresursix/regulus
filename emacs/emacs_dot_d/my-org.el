@@ -1,38 +1,34 @@
-; -*-emacs-lisp-*- Time-stamp: <2013-01-04 15:11:49 leo>
+; -*-emacs-lisp-*- Time-stamp: <2013-03-14 21:43:29 leo>
 ; Several functions which should be useful with org-mode
 
 
-;; ====================== exporting to latex =======================)
-
 (require 'org)
-(require 'org-latex)
 
-;; 'djcb-org-article' for export org documents to the LaTex 'article', using
-;; XeTeX and some fancy fonts; requires XeTeX (see org-latex-to-pdf-process)
-(add-to-list 'org-export-latex-classes
-  '("djcb-org-article"
-"\\documentclass[11pt,a4paper]{article}
-\\usepackage[T1]{fontenc}
-\\usepackage{fontspec}
-\\usepackage{graphicx} 
-\\defaultfontfeatures{Mapping=tex-text}
-\\setmonofont[Scale=0.8]{DejaVu Sans Mono}
-\\usepackage{geometry}
-\\geometry{a4paper, textwidth=6.5in, textheight=10in,
-            marginparsep=7pt, marginparwidth=.6in}
-\\pagestyle{empty}
-\\title{}"
-     ("\\section{%s}" . "\\section*{%s}")
-     ("\\subsection{%s}" . "\\subsection*{%s}")
-     ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-     ("\\paragraph{%s}" . "\\paragraph*{%s}")
-     ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))
-)
+;; ======================== settings =========================
 
-(setq org-latex-to-pdf-process 
-  '("xelatex %f"
-     "xelatex %f")
-) ;; for multiple passes
+
+(require 'org-install)
+(setq ac-modes (append '(org-mode) ac-modes))
+(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+(setq org-log-done t)
+
+;  Have two spaces of indentation and turning off auto-fill
+(add-hook 'org-mode-hook
+          'turn-off-auto-fill
+          'org-indent-mode)
+
+;  Open pdf with evince [[http://stackoverflow.com/a/8836108/789593]]
+(add-hook 'org-mode-hook
+      '(lambda ()
+         (delete '("\\.pdf\\'" . default) org-file-apps)
+         (add-to-list 'org-file-apps '("\\.pdf\\'" . "evince %s"))))
+(setq org-return-follows-link t)
+
+
+;  Using my own keywords
+(setq org-todo-keywords
+'((sequence "IDEA" "TODO" "CONTINUE" "TOCHECK" "POLISH"
+            "|" "DONE" "ABANDONNED" "IRRELEVANT")))
 
 
 ;; ============= reftex related configuration ===============
@@ -72,27 +68,6 @@
 )
 
 (add-hook 'org-mode-hook 'org-mode-reftex-setup)
-
-
-;; ======================== settings =========================
-
-
-(require 'org-install)
-(setq ac-modes (append '(org-mode) ac-modes))
-(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
-(setq org-log-done t)
-
-;  Have two spaces of indentation and turning off auto-fill
-(add-hook 'org-mode-hook
-          'turn-off-auto-fill
-          'org-indent-mode)
-
-;  Open pdf with evince (http://stackoverflow.com/a/8836108/789593)
-(add-hook 'org-mode-hook
-      '(lambda ()
-         (delete '("\\.pdf\\'" . default) org-file-apps)
-         (add-to-list 'org-file-apps '("\\.pdf\\'" . "evince %s"))))
-(setq org-return-follows-link t)
 
 
 ;; ===================== Shortcuts ===========================

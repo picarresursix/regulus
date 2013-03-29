@@ -2,24 +2,24 @@
 ; Several functions which should be useful with latex
 
 
-; ----------------------- functions --------------------------
+; ----------------------- Parenthesis --------------------------
 
 
 (defun latex-big-parenthesis()
   "Inserts big parenthesis and moves the cursor in between them"
   (interactive)
-  (insert "\\big(  \\big)")
-  (backward-char 6)
+  (my-insert-symmetric-symbols "\\big( " " \\big)")
 )
 
 
 (defun latex-very-big-parenthesis()
   "Inserts Big parenthesis and moves the cursor in between them"
   (interactive)
-  (insert "\\Big(  \\Big)")
-  (backward-char 6)
+  (my-insert-symmetric-symbols "\\Big( " " \\Big)")
 )
 
+
+; ----------------------- Environments --------------------------
 
 
 (defun latex-my-figure()
@@ -51,6 +51,28 @@
 ")
   )
 
+
+; ------------------------- Beamer ------------------------------
+
+(defun latex-beamer-toggle-pause()
+  "Replaces '\pause' by '% \pause' and sets latex-pause-on to
+nil if latex-pause-on is t, replaces '% \pause' by '\pause'
+and sets latex-pause-on to t otherwise."
+  ; !TODO! Modify latex-beamer-toggle-pause to check if there is a '%
+  ; !\pause' instead of using the global variable.
+  (interactive)
+  (if latex-pause-on
+      (progn
+        (replace-string "\pause" "% \pause")
+        (setq late-pause-on nil)
+        )
+    (progn
+      (replace-string "% \pause" "\pause")
+      (setq late-pause-on t)
+      )
+    )
+  )
+
 ; ------------------------ settings -----------------------------
 
 (add-hook 'LaTeX-mode-hook
@@ -60,6 +82,8 @@
             (local-set-key (kbd "C-l b") 'latex-big-parenthesis)
             (local-set-key (kbd "C-l B") 'latex-very-big-parenthesis)
             (local-set-key (kbd "C-l t") 'latex-my-table)
+            (local-set-key (kbd "C-l p") 'latex-beamer-toggle-pause)
+            (setq latex-pause-on t)
             )
           )
 (setq TeX-PDF-mode t)

@@ -1,0 +1,13 @@
+#+TITLE: Firefox confiuration
+#+DESCRIPTION: description
+#+AUTHOR: Leo Perrin <leoperrin@picarresursix.fr>
+#+DATE: Time-stamp: <2013-02-02 18:34:07 leo>
+#+STARTUP: indent hidestars align
+
+
+
+* Keysnail
+It is a firefox extension to have emacs-like shortcuts and
+configuration in FF.
+
+It is hosted on [[https://github.com/mooz/keysnail/wiki][github]].
