@@ -1,39 +1,56 @@
-;; Time-stamp: <2013-03-29 11:42:14 leo>
+;; Time-stamp: <2013-03-31 00:04:09 leo>
 ;; Miscellaneous functions to be used in every buffers.
 
 
 ; -------------------------------------------------- List tags
 
-(defun my-list-C-functions()
+
+(defun pi2-6/list-C-functions()
   "Displays only the lines corresponding to a function
 declaration in a C file."
-  (loccur "[A-Za-z0-9_:]+ +[A-Za-z0-9_:]+(.*)$")
-  )
+  (loccur-no-highlight "[A-Za-z0-9_:\*]+ +[A-Za-z0-9_:]+(.*)$"))
 
-(defun my-list-Python-functions()
+(defun pi2-6/list-Python-functions()
   "Displays only the lines corresponding to functions or class
 declarations in a python file."
-  (loccur "\\(^ *class \\)\\|\\(^ *def \\)")
-  )
+  (loccur-no-highlight "\\(^ *class \\)\\|\\(^ *def \\)"))
 
-(defun my-list-LaTeX-sections()
+(defun pi2-6/list-LaTeX-sections()
   "Displays only the lines corresponding to
 section/subsection/subsubsubsection headings."
-  (loccur "\\.*section\{.*\}")
-  )
+  (loccur-no-highlight "\\.*section\{.*\}"))
 
-(defun my-list-tags()
+(defun pi2-6/list-elisp-tags()
+  "Displays only the lines corresponding to
+function definition in an elisp file"
+  (loccur-no-highlight "(def"))
+
+(defun pi2-6/list-tags()
   "Calls the function listing the tags corresponding to the
 current mode; displays an error message if there is not any."
   (interactive)
-  ; !TODO! write my-list-tags
-  )
+  (let (current-major-mode)
+    (setq current-major-mode (with-current-buffer (current-buffer) major-mode))
+    (if (string= current-major-mode "c-mode")
+        (pi2-6/list-C-functions))
+
+    (if (string= current-major-mode "c++-mode")
+        (pi2-6/list-C-functions))
+
+    (if (string= current-major-mode "python-mode")
+        (pi2-6/list-Python-functions))
+
+    (if (string= current-major-mode "latex-mode")
+        (pi2-6/list-LaTeX-sections))
+
+    (if (string= current-major-mode "emacs-lisp-mode")
+        (pi2-6/list-elisp-tags))))
 
 
 
 ; -------------------------------------------------- delimiters related
 
-(defun my-insert-symmetric-symbols(left right)
+(defun pi2-6/insert-symmetric-symbols(left right)
   "Inserts a pair of symbol and moves cursor between them or, if
   a region is selected, puts them around it."
   (if (region-active-p)
@@ -42,72 +59,60 @@ current mode; displays an error message if there is not any."
         (goto-char end)
         (insert right)
         (goto-char begin)
-        (insert left)
-        )
+        (insert left))
     (progn
       (insert left right)
-      (backward-char (length right))
-      )
-    )
-  )
+      (backward-char (length right)))))
 
-(defun my-insert-parenthesis()
+(defun pi2-6/insert-parenthesis()
   "Inserts () and) moves the cursor in between."
   (interactive)
-  (my-insert-symmetric-symbols "(" ")")
-)
+  (pi2-6/insert-symmetric-symbols "(" ")"))
 
-(defun my-insert-braces()
+(defun pi2-6/insert-braces()
   "Inserts [] and moves the cursor in between."
   (interactive)
-  (my-insert-symmetric-symbols "[" "]")
-)
+  (pi2-6/insert-symmetric-symbols "[" "]"))
 
-(defun my-insert-curly-braces()
+(defun pi2-6/insert-curly-braces()
   "Inserts {} and moves the cursor in between."
   (interactive)
-  (my-insert-symmetric-symbols "{" "}")
-)
+  (pi2-6/insert-symmetric-symbols "{" "}"))
 
-(defun my-insert-backslashed-curly-braces()
+(defun pi2-6/insert-backslashed-curly-braces()
   "Inserts \{\} and moves the cursor in between."
   (interactive)
-  (my-insert-symmetric-symbols "\\{ " " \\}")
-)
+  (pi2-6/insert-symmetric-symbols "\\{ " " \\}"))
 
-(defun my-insert-double-quotation-marks()
+(defun pi2-6/insert-double-quotation-marks()
   "Inserts \"\" and moves the cursor in between."
   (interactive)
-  (my-insert-symmetric-symbols "\"" "\"")
-)
+  (pi2-6/insert-symmetric-symbols "\"" "\""))
 
-(defun my-insert-quotation-marks()
+(defun pi2-6/insert-quotation-marks()
   "Inserts '' and moves the cursor in between."
   (interactive)
-  (my-insert-symmetric-symbols "'" "'")
-)
+  (pi2-6/insert-symmetric-symbols "'" "'"))
 
-(defun my-insert-dollars()
+(defun pi2-6/insert-dollars()
   "Inserts $$ and moves the cursor in between."
   (interactive)
-  (my-insert-symmetric-symbols "$" "$")
-)
+  (pi2-6/insert-symmetric-symbols "$" "$"))
 
-(defun my-insert-pipes()
+(defun pi2-6/insert-pipes()
   "Inserts $$ and moves the cursor in between."
   (interactive)
-  (my-insert-symmetric-symbols "| " " |")
-)
+  (pi2-6/insert-symmetric-symbols "| " " |"))
 
 
-(global-set-key (kbd "C-)" ) 'my-insert-parenthesis)
-(global-set-key (kbd "C-]" ) 'my-insert-braces)
-(global-set-key (kbd "C-}" ) 'my-insert-curly-braces)
-(global-set-key (kbd "C-{" ) 'my-insert-backslashed-curly-braces)
-(global-set-key (kbd "C-\"") 'my-insert-double-quotation-marks)
-(global-set-key (kbd "C-'")  'my-insert-quotation-marks)
-(global-set-key (kbd "C-$" ) 'my-insert-dollars)
-(global-set-key (kbd "C-|" ) 'my-insert-pipes)
+(global-set-key (kbd "C-)" ) 'pi2-6/insert-parenthesis)
+(global-set-key (kbd "C-]" ) 'pi2-6/insert-braces)
+(global-set-key (kbd "C-}" ) 'pi2-6/insert-curly-braces)
+(global-set-key (kbd "C-{" ) 'pi2-6/insert-backslashed-curly-braces)
+(global-set-key (kbd "C-\"") 'pi2-6/insert-double-quotation-marks)
+(global-set-key (kbd "C-'")  'pi2-6/insert-quotation-marks)
+(global-set-key (kbd "C-$" ) 'pi2-6/insert-dollars)
+(global-set-key (kbd "C-|" ) 'pi2-6/insert-pipes)
 
 
 
@@ -116,14 +121,12 @@ current mode; displays an error message if there is not any."
 (defun larger-window ()
   "Makes the current window as tall as possible."
   (interactive)
-  (enlarge-window 80)
-)
+  (enlarge-window 80))
 
 (defun smaller-window ()
   "Makes the current window as small as possible."
   (interactive)
-  (shrink-window 80)
-)
+  (shrink-window 80))
 
 ; -------------------------------------------------- org-mode related
 
@@ -136,13 +139,9 @@ current mode; displays an error message if there is not any."
     (setq buf (pop l))
     (when (string-equal (buffer-name buf) "todo.org")
          (setq nofile nil)
-         (switch-to-buffer buf)
-         )
-    )
+         (switch-to-buffer buf)))
     (if nofile
-        (find-file "~/org/todo.org")
-      )
-)
+        (find-file "~/org/todo.org")))
 
 
 (defun get-link-to-current-file()
@@ -152,31 +151,27 @@ current mode; displays an error message if there is not any."
   (insert buffer-file-name)
   (insert "][")
   (insert (buffer-name))
-  (insert "]] ")
-)
+  (insert "]] "))
 
 
 ; -------------------------------------------------- insertion related
 
 (defun put-a-ring()
-  "inserts the å character"
+  "Inserts the å character"
   (interactive)
-  (insert "å")
-)
+  (insert "å"))
 
 
 (defun put-time-stamp()
   "Inserts an empty time-stamp mark"
   (interactive)
-  (insert "Time-stamp: <>")
-)
+  (insert "Time-stamp: <>"))
 
 
 (defun put-mail-address()
   "Inserts my mail address between '<' and '>'."
   (interactive)
-  (insert "<leoperrin@picarresursix.fr>")
-)
+  (insert "<leoperrin@picarresursix.fr>"))
 
 
 ; -------------------------------------------------- elisp related
@@ -190,10 +185,7 @@ current mode; displays an error message if there is not any."
       (prin1 (eval (read (current-kill 0)))
              (current-buffer))
     (error (message "Invalid expression")
-           (insert (current-kill 0))
-           )
-    )
-  )
+           (insert (current-kill 0)))))
 
 
 ; -------------------------------------------------- web related
@@ -206,42 +198,34 @@ selection or the word at point"
     (setq myWord
           (if (region-active-p)
               (buffer-substring-no-properties (region-beginning) (region-end))
-            (thing-at-point 'symbol)
-            )
-          )
+            (thing-at-point 'symbol)))
     (setq myWord (replace-regexp-in-string " " "%20" myWord))
     (setq myUrl (concat search-url myWord))
-    (browse-url myUrl)
-    )
-  )
+    (browse-url myUrl)))
 
 (defun search-word-at-point-wikipedia-en()
   "Look up the word at point or the content of the current
 selection on wikipedia (english)."
   (interactive)
-  (search-word-at-point "http://en.wikipedia.org/wiki/")
-  )
+  (search-word-at-point "http://en.wikipedia.org/wiki/"))
 
 (defun search-word-at-point-wikipedia-fr()
   "Look up the word at point or the content of the current
 selection on wikipedia (french)."
   (interactive)
-  (search-word-at-point "http://fr.wikipedia.org/wiki/")
-  )
+  (search-word-at-point "http://fr.wikipedia.org/wiki/"))
 
 (defun search-word-at-point-google()
   "Look up the word at point or the content of the current
 selection on google."
   (interactive)
-  (search-word-at-point "http://www.google.fr/search?hl=fr&q=")
-  )
+  (search-word-at-point "http://www.google.fr/search?hl=fr&q="))
 
 (defun search-word-at-point-image()
   "Look up the word at point or the content of the current
 selection on google image."
   (interactive)
-  (search-word-at-point "http://www.google.fr/search?tbm=isch&hl=fr&q=")
-  )
+  (search-word-at-point "http://www.google.fr/search?tbm=isch&hl=fr&q="))
 
 
 ; -------------------------------------------------- mail related
@@ -249,5 +233,4 @@ selection on google image."
 (defun take-all()
   "Copies the whole current buffer to the clipboard."
   (interactive)
-  (kill-ring-save 1 (buffer-size))
-  )
+  (kill-ring-save 1 (buffer-size)))

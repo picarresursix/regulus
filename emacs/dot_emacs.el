@@ -1,4 +1,4 @@
-; -*-lisp-*- ; Time-stamp: <2013-03-29 11:20:07 leo>
+; -*-lisp-*- ; Time-stamp: <2013-03-31 00:04:36 leo>
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -186,6 +186,7 @@
 (global-set-key (kbd "C-d i m") 'put-mail-address)
 
 ; loccur
+(global-set-key (kbd "C-d t") 'pi2-6/list-tags)
 (global-set-key (kbd "C-d l") 'loccur)
 (global-set-key (kbd "C-d C-l") 'loccur-current)
 
