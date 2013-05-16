@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=Emacs
+Name[fr]=Emacs
+Comment=Edit the world
+GenericName=Emacs
+Exec=emacs %u
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=emacs
+MimeType=text/html;text/xml;text/*
+StartupNotify=true
+Actions=NewWindow;

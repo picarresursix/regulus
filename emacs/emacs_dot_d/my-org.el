@@ -1,4 +1,4 @@
-; -*-emacs-lisp-*- Time-stamp: <2013-03-14 21:43:29 leo>
+; -*-emacs-lisp-*- Time-stamp: <2013-05-10 19:27:00 leo>
 ; Several functions which should be useful with org-mode
 
 
@@ -27,7 +27,7 @@
 
 ;  Using my own keywords
 (setq org-todo-keywords
-'((sequence "IDEA" "TODO" "CONTINUE" "TOCHECK" "POLISH"
+'((sequence "TODO" "CONTINUE" "IMPROVE" "CHECK" "FIXME"
             "|" "DONE" "ABANDONNED" "IRRELEVANT")))
 
 
@@ -35,42 +35,56 @@
 
 ; from [[http://tincman.wordpress.com/2011/01/04/research-paper-management-with-emacs-org-mode-and-reftex/] [the intertubz]]
 
-(defun org-mode-reftex-search ()
-  ;;jump to the notes for the paper pointed to at from reftex search
-  (interactive)
-  (org-open-link-from-string
-   (format "[[notes:%s]]" (reftex-citation t))
-   )
-)
+;; (defun org-mode-reftex-search ()
+;;   ;;jump to the notes for the paper pointed to at from reftex search
+;;   (interactive)
+;;   (org-open-link-from-string
+;;    (format "[[notes:%s]]" (reftex-citation t))
+;;    )
+;; )
 
-(defun org-mode-reftex-setup ()
-  (load-library "reftex")
-  (and (buffer-file-name) (file-exists-p (buffer-file-name))
-       (progn
-	 ;enable auto-revert-mode to update reftex when bibtex file changes on disk
-	 (global-auto-revert-mode t)
-	 (reftex-parse-all)
-	 ;add a custom reftex cite format to insert links
-	 (reftex-set-cite-format
-	  '((?b . "[[bib:%l][%l-bib]]")
-	    (?n . "[[notes:%l][%l-notes]]")
-	    (?p . "[[papers:%l][%l-paper]]")
-	    (?t . "%t")
-	    (?h . "** %t\n:PROPERTIES:\n:Custom_ID: %l\n:END:\n[[papers:%l][%l-paper]]")))))
-  (define-key org-mode-map (kbd "C-c )") 'reftex-citation)
-  (define-key org-mode-map (kbd "C-c (") 'org-mode-reftex-search)
-)
+;; (defun org-mode-reftex-setup ()
+;;   (load-library "reftex")
+;;   (and (buffer-file-name) (file-exists-p (buffer-file-name))
+;;        (progn
+;; 	 ;enable auto-revert-mode to update reftex when bibtex file changes on disk
+;; 	 (global-auto-revert-mode t)
+;; 	 (reftex-parse-all)
+;; 	 ;add a custom reftex cite format to insert links
+;; 	 (reftex-set-cite-format
+;; 	  '((?b . "[[bib:%l][%l-bib]]")
+;; 	    (?n . "[[notes:%l][%l-notes]]")
+;; 	    (?p . "[[papers:%l][%l-paper]]")
+;; 	    (?t . "%t")
+;; 	    (?h . "** %t\n:PROPERTIES:\n:Custom_ID: %l\n:END:\n[[papers:%l][%l-paper]]")))))
+;;   (define-key org-mode-map (kbd "C-c )") 'reftex-citation)
+;;   (define-key org-mode-map (kbd "C-c (") 'org-mode-reftex-search)
+;; )
 
-(setq org-link-abbrev-alist
-      '(("bib" . "~/vault/bibliotheque/scientific_papers/exjobb/refs/biblio.bib::%s")
-	("notes" . "~/vault/bibliotheque/scientific_papers/exjobb/refs/comments.org::#%s")
-	("papers" . "~/vault/bibliotheque/scientific_papers/exjobb/%s.pdf"))
-)
+;; (setq org-link-abbrev-alist
+;;       '(("bib" . "~/vault/bibliotheque/scientific_papers/exjobb/refs/biblio.bib::%s")
+;; 	("notes" . "~/vault/bibliotheque/scientific_papers/exjobb/refs/comments.org::#%s")
+;; 	("papers" . "~/vault/bibliotheque/scientific_papers/exjobb/%s.pdf"))
+;; )
 
-(add-hook 'org-mode-hook 'org-mode-reftex-setup)
+;; (add-hook 'org-mode-hook 'org-mode-reftex-setup)
 
 
-;; ===================== Shortcuts ===========================
+;; ===================== Org presentation ===========================
+
+
+(add-to-list 'load-path "~/regulus/emacs/emacs_dot_d/org/org-present.el")
+(autoload 'org-present "~/regulus/emacs/emacs_dot_d/org/org-present.el" nil t)
+
+(add-hook 'org-present-mode-hook
+          (lambda ()
+            (org-present-big)
+            (org-display-inline-images)))
+
+(add-hook 'org-present-mode-quit-hook
+          (lambda ()
+            (org-present-small)
+            (org-remove-inline-images)))
 
 
 

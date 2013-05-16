@@ -23,7 +23,6 @@ key.suspendKey           = "<f2>";
 
 // ================================= Hooks ================================= //
 
-
 hook.setHook('KeyBoardQuit', function (aEvent) {
     if (key.currentKeySequence.length) return;
 
@@ -48,7 +47,6 @@ hook.setHook('KeyBoardQuit', function (aEvent) {
         key.generateKey(aEvent.originalTarget, KeyEvent.DOM_VK_ESCAPE, true);
     }
 });
-
 
 // ============================= Key bindings ============================== //
 
@@ -188,9 +186,13 @@ key.setViewKey([['M-j'], ['<left>']], function (ev) {
                 key.generateKey(ev.originalTarget, KeyEvent.DOM_VK_LEFT, true);
             }, 'Scroll left');
 
-key.setViewKey([['M-u'], ['u']], function (ev) {
+key.setViewKey('M-u', function (ev) {
                 goDoCommand("cmd_scrollPageUp");
             }, 'Scroll page up');
+
+key.setViewKey('a', function (ev) {
+    command.focusToById("urlbar");
+}, 'Focus to the location bar', true);
 
 key.setViewKey('M-o', function (ev) {
                 goDoCommand("cmd_scrollPageDown");

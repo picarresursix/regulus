@@ -1,0 +1,8 @@
+# contributor: Leo "picarresursix" Perrin <leoperrin@picarresursix.fr>
+# name: \begin{equation*} ... \end{equation*}
+# key: es
+# --
+
+\begin{equation*}
+  $0
+\end{equation*}

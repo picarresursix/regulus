@@ -1,4 +1,4 @@
-; -*-emacs-lisp-*- Time-stamp: <2012-12-21 22:29:06 leo>
+; -*-emacs-lisp-*- Time-stamp: <2013-05-08 21:03:21 leo>
 ; Several functions which should be useful when coding in C++
 
 ;; ====================== Simple insertion  =========================
@@ -132,11 +132,11 @@
 
 ;; =================== CEDET STUFF ====================
 
-(semantic-mode)
-(global-semantic-idle-completions-mode t)
-(global-semantic-decoration-mode t)
-(global-semantic-highlight-func-mode t)
-(global-semantic-show-unmatched-syntax-mode t)
+;; (semantic-mode)
+;; (global-semantic-idle-completions-mode t)
+;; (global-semantic-decoration-mode t)
+;; (global-semantic-highlight-func-mode t)
+;; (global-semantic-show-unmatched-syntax-mode t)
 
 
 ;; ====================== Settings ========================
@@ -156,19 +156,12 @@
 ;  Adding te hooks
 (add-hook 'c++-mode-hook
           '(lambda ()
-             (semantic-mode t)
              (doc-mode)
              (subword-mode 1)
-             (highlight-parentheses-mode)
-             )
-          )
+             (highlight-parentheses-mode)))
 (add-hook 'c-mode-hook
           '(lambda ()
-             (semantic-mode t)
-             (doc-mode)
-             (highlight-parentheses-mode)
-             )
-          )
+             (doc-mode)))
 
 ;; ====================== Keyboard shorcuts ========================
 

@@ -1,7 +1,7 @@
 #+TITLE: Regulus
 #+DESCRIPTION: Versionning of my main config files and custom scripts
 #+AUTHOR: Léo Perrin <leoperrin@picarresursix.fr>
-#+DATE: Time-stamp: <2013-02-17 21:09:39 leo>
+#+DATE: Time-stamp: <2013-04-24 23:53:53 leo>
 #+STARTUP: hidestars indent align
 
 
@@ -23,7 +23,6 @@ Here is a list of the possible improvements.
 ** Use [[http://www.emacswiki.org/emacs/AceJump][Acejump]] for emacs.
 ** When switching to 13.04
 *** Install [[http://mumak.net/undistract-me/][undistract-me]]
-*** Install [[http://www.ubuntuser.com/2013/01/29/mechanig-un-outil-clair-et-complet-de-personnalisation/][unity-tweak-tool]]
 *** Install [[http://www.webupd8.org/2013/02/terra-drop-down-terminal-emulator-with.html][terra-terminal]]
 ** Items
 * [0/1] Emacs configuration (emacs)
@@ -31,15 +30,17 @@ The configuration emacs, both the .emacs file and the content of the
 .emacs.d folder.
 ** TODO Look at [[https://github.com/redguardtoo/cpputils-cmake/][cpputils-cmake]]
 
-* [0/2] Appearances (appearance)
+* [2/2] Appearances (appearance)
 As many of the data I use is in the vault, I should copy the
 appearance related stuff in a folder here.
-** TODO wallpaper
+** DONE wallpaper
+CLOSED: [2013-04-18 jeu. 17:19]
 Move the file here.
-** [0/3] TODO conky
-+ [ ] Move conky to regulus.
-+ [ ] Move the conky script to regulus.
-+ [ ] Update it.
+** DONE [3/3] TODO conky
+CLOSED: [2013-04-18 jeu. 17:19]
++ [X] Move conky to regulus.
++ [X] Move the conky script to regulus.
++ [X] Update it.
 * [0/1] Bash scripts (bash)
 ** [[./yell/yell.org][yell]] (yell)
 A program to warn me when something is done.

@@ -1,0 +1,8 @@
+# contributor: Leo "picarresursix" Perrin <leoperrin@picarresursix.fr>
+# name: \begin{frame} ... \end{frame}
+# key: f
+# --
+
+\begin{frame}
+  \frametitle{${1:name}} % Frame No: 
+\end{frame}

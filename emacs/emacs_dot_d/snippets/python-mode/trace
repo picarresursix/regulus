@@ -1,0 +1,4 @@
+# name: trace()
+# key: tr
+# --
+trace() $0

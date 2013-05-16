@@ -1,0 +1,94 @@
+#+TITLE: Softwares
+#+DESCRIPTION: A list of the softwares and extensions I need.
+#+AUTHOR: Léo Perrin <leoperrin@picarresursix.fr>
+#+DATE: Time-stamp: <2013-04-18 17:36:56 leo>
+#+STARTUP: hidestars indent align
+
+
+
+The softwares I need to be able to "operate" properly.
+
+* emacs                                                                :text:
+  What else? And the version must be at least 24
+  Dependencies: emacs
+* work                                                                 :work:
+** guake                                                           :terminal:
+  A simple terminal emulator, easy to access.
+  Dependencies: guake
+** doxygen                                                    :documentation:
+   A very powerful tool to generate doc from javadoc style
+   comment. Works with many languages.
+   Dependencies: doxygen
+** subversion                                                   :versionning:
+   Sometimes I work with people using svn. Not my thing but hey, it
+   works too!
+   Dependencies: subversion
+** git                                                          :versionning:
+   My favorite version manager system. Perfect since my projects are
+   hosted on github anyway.
+   Dependencies: git
+** gnuplot                                                            :plot:
+To draw plots from CLI org-mode.
+Dependencies: gnuplot
+* images                                                         :pdf:images:
+** pdftk
+Command line sofware to manipulate pdf documents.
+Dependencies: pdftk
+* Customization                                               :customization:
+** conky                                                              :info:
+Display nicely formatted info about the state of the computer.
+Dependencies: conky
+** nautilus-action                                                :shortcut:
+Add elements in the right-click menu of nautilus. See [[~/vault/projets/Code/pi2-6-nautilus-actions/][my scripts]].
+* crypto                                                      :crypto:parano:
+** keepassx
+   Awesome to store and retrieve easily password and other top-secret
+   data.
+   Dependencies: keepassx
+** enigmail
+   I sign my mails using GPG and don't like doing it by hand. It is a
+   thunderbird extension.
+   Dependencies: enigmail
+* LaTeX                                                         :typesetting:
+  LaTeX, *the* text formatting sofware. I use plenty of
+  sub-packages, the aim is to add them here as soon as I download
+  them to remember.
+** Basic installation                                               :package:
+   Granted, I want the basic stuff: latex and bibtex.
+   Dependencies: texlive-latex-base biblatex texlive-generic-extra
+   Dependencies: texlive-latex-recommended texlive-extra-utils
+** Math related                                                     :package:
+   I do math (hopefully as a living at some point), so I need these.
+   Dependencies: texlive-math-extra texlive-science
+** Miscellaneous packages                                           :package:
+   + Beamer allows to make presentations, which is important.
+     Dependencies: latex-beamer
+   + Auctex, when used with emacs, simply rocks.
+     Dependencies: auctex
+   + Sometimes I write in French, in which case xelatex is a better
+     option.
+     Dependencies: texlive-xete
+   + Adding pictures is nice
+     Dependencies: texlive-pictures
+   + To have fancy classes for creating books an CV's.
+     Dependencies: texlive-publishers
+
+* Web                                                          :web:internet:
+** Browser
+Firefox is awesome.
+Dependencies: firefox
+** Extensions
+*** Noscript                                   :security:javascript:parano:
+Allows safe browsing. Can be obtained [[http://noscript.net/getit][here]].
+*** Ubuntu persona                                             :appearance:
+Looking nice is nice. Persona available [[http://www.getpersonas.com/fr/persona/250496][here]].
+
+*** Tree-style tab                                             :appearance:
+Having tabs on the side instead of on the tab is better; especially
+when you can organize/hide them. Download [[https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab/][here]].
+*** Hide bookmark bar                                          :appearance:
+This bar is useless 90% of the time. To hide it, go [[https://addons.mozilla.org/fr/firefox/addon/hide-bookmarksbar/][here]].
+* Media readers                                                       :media:
+** vlc
+   Because vlc. Period.
+   Dependencies: vlc

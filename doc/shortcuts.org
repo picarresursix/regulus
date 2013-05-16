@@ -1,0 +1,38 @@
+#+TITLE: Shortcuts
+#+DESCRIPTION: A list of all the shortcuts in my desktop --- in case I have to set it up by hand again.
+#+AUTHOR: Léo Perrin <leoperrin@picarresursix.fr>
+#+DATE: Time-stamp: <2013-04-06 15:23:18 leo>
+#+STARTUP: hidestars indent align
+
+
+* Introduction
+  I try to remap all unity functions to keys involving super ("window"
+  key, denoted "s") rather than Alt in order to "free" Alt for emacs
+  use.
+* Shortcuts
+  |----------------------+--------------+----------------------------------------------------------------------|
+  | CATEGORY             | Shortcut     | Description                                                          |
+  |----------------------+--------------+----------------------------------------------------------------------|
+  | Desktops             | C-s [ijkl]   | Move to desktop [up/left/down/right]                                 |
+  |----------------------+--------------+----------------------------------------------------------------------|
+  | Moving windows[fn:1] | C-S-s [ijkl] | Move to desktop [up/left/down/right] and take along current window   |
+  |                      | C-s [uo]     | Resize current window to a half screen and puts it on the left/right |
+  |----------------------+--------------+----------------------------------------------------------------------|
+  | Modify windows[fn:2] | C-s _        | Close window                                                         |
+  |                      | C-s ç        | Minimize window                                                      |
+  |                      | C-s à        | Maximize window                                                      |
+  |----------------------+--------------+----------------------------------------------------------------------|
+  | Launch emacs         | C-s e        | Starts emacsclient at ~/org/*todo.org                                |
+  |                      | C-s a        | Starts emacsclient at ~/org/agenda.org                               |
+  |                      | S-s e        | Opens a new emacs instance at ~/org/*todo.org                        |
+  |----------------------+--------------+----------------------------------------------------------------------|
+
+* Footnotes
+[fn:1] [ijkl] is how [[http://www.ergoemacs.org/emacs/ergonomic_emacs_keybinding.html][ergoemacs]] defines up/left/down/right, so I keep
+the same for consistency. [uo] is left-word right-word, so I also keep
+that one.
+
+[fn:2] The idea of these is to mimic the disposition of
+close/minimize/maximize buttons in default unity. Indeed, _çà are
+aligned in this way on AZERTY keyboards.
+

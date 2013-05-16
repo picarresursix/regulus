@@ -1,0 +1,6 @@
+# contributor: Leo "picarresursix" Perrin <leoperrin@picarresursix.fr>
+# name: \section{}
+# key: s
+# --
+
+\section{${1:title}}

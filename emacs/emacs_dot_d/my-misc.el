@@ -1,54 +1,13 @@
-;; Time-stamp: <2013-03-31 00:04:09 leo>
+;; Time-stamp: <2013-05-08 21:13:24 leo>
 ;; Miscellaneous functions to be used in every buffers.
 
 
-; -------------------------------------------------- List tags
+; !SECTION! Delimiters Related
+; ============================
 
 
-(defun pi2-6/list-C-functions()
-  "Displays only the lines corresponding to a function
-declaration in a C file."
-  (loccur-no-highlight "[A-Za-z0-9_:\*]+ +[A-Za-z0-9_:]+(.*)$"))
-
-(defun pi2-6/list-Python-functions()
-  "Displays only the lines corresponding to functions or class
-declarations in a python file."
-  (loccur-no-highlight "\\(^ *class \\)\\|\\(^ *def \\)"))
-
-(defun pi2-6/list-LaTeX-sections()
-  "Displays only the lines corresponding to
-section/subsection/subsubsubsection headings."
-  (loccur-no-highlight "\\.*section\{.*\}"))
-
-(defun pi2-6/list-elisp-tags()
-  "Displays only the lines corresponding to
-function definition in an elisp file"
-  (loccur-no-highlight "(def"))
-
-(defun pi2-6/list-tags()
-  "Calls the function listing the tags corresponding to the
-current mode; displays an error message if there is not any."
-  (interactive)
-  (let (current-major-mode)
-    (setq current-major-mode (with-current-buffer (current-buffer) major-mode))
-    (if (string= current-major-mode "c-mode")
-        (pi2-6/list-C-functions))
-
-    (if (string= current-major-mode "c++-mode")
-        (pi2-6/list-C-functions))
-
-    (if (string= current-major-mode "python-mode")
-        (pi2-6/list-Python-functions))
-
-    (if (string= current-major-mode "latex-mode")
-        (pi2-6/list-LaTeX-sections))
-
-    (if (string= current-major-mode "emacs-lisp-mode")
-        (pi2-6/list-elisp-tags))))
-
-
-
-; -------------------------------------------------- delimiters related
+;   !SUBSECTION! Main function
+;   --------------------------
 
 (defun pi2-6/insert-symmetric-symbols(left right)
   "Inserts a pair of symbol and moves cursor between them or, if
@@ -63,6 +22,10 @@ current mode; displays an error message if there is not any."
     (progn
       (insert left right)
       (backward-char (length right)))))
+
+
+;   !SUBSECTION! Delimiters dependent sub-functions
+;   -----------------------------------------
 
 (defun pi2-6/insert-parenthesis()
   "Inserts () and) moves the cursor in between."
@@ -104,6 +67,14 @@ current mode; displays an error message if there is not any."
   (interactive)
   (pi2-6/insert-symmetric-symbols "| " " |"))
 
+(defun pi2-6/insert-backquotes()
+  "Inserts `` and moves the cursor in between."
+  (interactive)
+  (pi2-6/insert-symmetric-symbols "`" "`"))
+
+
+;   !SUBSECTION! Keyboard shortcuts
+;   -------------------------------
 
 (global-set-key (kbd "C-)" ) 'pi2-6/insert-parenthesis)
 (global-set-key (kbd "C-]" ) 'pi2-6/insert-braces)
@@ -113,10 +84,12 @@ current mode; displays an error message if there is not any."
 (global-set-key (kbd "C-'")  'pi2-6/insert-quotation-marks)
 (global-set-key (kbd "C-$" ) 'pi2-6/insert-dollars)
 (global-set-key (kbd "C-|" ) 'pi2-6/insert-pipes)
+(global-set-key (kbd "C-`" ) 'pi2-6/insert-backquotes)
 
 
 
-; -------------------------------------------------- frame related
+; !SECTION! Frame/Window Related
+; =======================
 
 (defun larger-window ()
   "Makes the current window as tall as possible."
@@ -128,7 +101,12 @@ current mode; displays an error message if there is not any."
   (interactive)
   (shrink-window 80))
 
-; -------------------------------------------------- org-mode related
+(global-set-key (kbd "M-é") 'kill-buffer-and-window)
+
+
+
+; !SECTION! Org-Mode Related
+; ==========================
 
 (defun goto-todo-list ()
   "Opens the todo list and, if it already is, switches to its buffer"
@@ -154,41 +132,42 @@ current mode; displays an error message if there is not any."
   (insert "]] "))
 
 
-; -------------------------------------------------- insertion related
 
-(defun put-a-ring()
+; !SECTION! Insertion Related
+; ===========================
+
+(defun pi2-6/insert-a-ring()
   "Inserts the å character"
   (interactive)
   (insert "å"))
 
 
-(defun put-time-stamp()
+(defun pi2-6/insert-time-stamp()
   "Inserts an empty time-stamp mark"
   (interactive)
   (insert "Time-stamp: <>"))
 
 
-(defun put-mail-address()
+(defun pi2-6/insert-mail-address()
   "Inserts my mail address between '<' and '>'."
   (interactive)
   (insert "<leoperrin@picarresursix.fr>"))
 
 
-; -------------------------------------------------- elisp related
-
-
-(defun eval-and-replace ()
-  "Replace the preceding sexp with its value."
+(defun pi2-6/insert-current-day()
+  "Inserts the current day at point"
   (interactive)
-  (backward-kill-sexp)
-  (condition-case nil
-      (prin1 (eval (read (current-kill 0)))
-             (current-buffer))
-    (error (message "Invalid expression")
-           (insert (current-kill 0)))))
+  (insert (calendar-date-string (calendar-current-date) nil)))
+
+(defun pi2-6/insert-current-hour()
+  "Inserts a string made of the current hour and
+  minute (local-time)"
+  (interactive)
+  (insert (format-time-string "[%H:%M]")))
 
 
-; -------------------------------------------------- web related
+; !SECTION! Web Related
+; =====================
 
 ; source: www.ergoemacs.org/emacs/elisp_examples2.html
 (defun search-word-at-point(search-url)
@@ -215,6 +194,12 @@ selection on wikipedia (french)."
   (interactive)
   (search-word-at-point "http://fr.wikipedia.org/wiki/"))
 
+(defun search-word-at-point-wordreference()
+  "Look up the word at point or the content of the current
+selection on word reference (English to French)."
+  (interactive)
+  (search-word-at-point "http://www.wordreference.com/enfr/"))
+
 (defun search-word-at-point-google()
   "Look up the word at point or the content of the current
 selection on google."
@@ -228,7 +213,8 @@ selection on google image."
   (search-word-at-point "http://www.google.fr/search?tbm=isch&hl=fr&q="))
 
 
-; -------------------------------------------------- mail related
+; !SECTION! Mail Related
+; ======================
 
 (defun take-all()
   "Copies the whole current buffer to the clipboard."

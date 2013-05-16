@@ -13,7 +13,7 @@ alignment bottom_right
 minimum_size 1200
 maximum_width 2000
 gap_x -50
-gap_y -90
+gap_y -120
 
 # characteritics of the display
 draw_shades no
@@ -33,9 +33,9 @@ override_utf8_locale yes # force UTF8
 # text characteritics
 xftfont Ubuntu Mono:size=9
 uppercase no
-color1 000000
-color2 DDDDDD
-color3 888888
+color1 FCB852
+color2 FFFFFF
+color3 BDDBDC
 
 
 

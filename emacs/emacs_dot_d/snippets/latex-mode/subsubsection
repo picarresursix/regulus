@@ -1,0 +1,6 @@
+# contributor: Leo "picarresursix" Perrin <leoperrin@picarresursix.fr>
+# name: \subsubsection{}
+# key: sss
+# --
+
+\subsubsection{${1:title}}

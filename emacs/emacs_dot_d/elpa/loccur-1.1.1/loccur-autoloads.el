@@ -3,11 +3,6 @@
 ;;; Code:
 
 
-;;;### (autoloads nil nil ("loccur-pkg.el" "loccur.el") (20758 9379
-;;;;;;  337551))
-
-;;;***
-
 (provide 'loccur-autoloads)
 ;; Local Variables:
 ;; version-control: never

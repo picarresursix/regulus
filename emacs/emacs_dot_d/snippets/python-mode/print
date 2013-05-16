@@ -1,0 +1,6 @@
+# name: print()...
+# key: p
+# --
+print("{}".format(
+    $0
+))

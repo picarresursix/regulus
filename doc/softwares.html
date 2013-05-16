@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Softwares</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="title" content="Softwares"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2013-03-13"/>
+<meta name="author" content="Léo Perrin &lt;leoperrin@picarresursix.fr&gt;"/>
+<meta name="description" content="A list of the softwares and extensions I need."/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  div.inlinetask {
+    padding:10px;
+    border:2px solid gray;
+    margin:10px;
+    background: #ffffcc;
+  }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+
+</head>
+<body>
+
+<div id="preamble">
+
+</div>
+
+<div id="content">
+<h1 class="title">Softwares</h1>
+
+
+
+<p>
+The softwares I need to be able to "operate" properly.
+</p>
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 emacs</a></li>
+<li><a href="#sec-2">2 work</a>
+<ul>
+<li><a href="#sec-2-1">2.1 guake</a></li>
+<li><a href="#sec-2-2">2.2 doxygen</a></li>
+<li><a href="#sec-2-3">2.3 subversion</a></li>
+<li><a href="#sec-2-4">2.4 git</a></li>
+<li><a href="#sec-2-5">2.5 gnuplot</a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3 crypto</a>
+<ul>
+<li><a href="#sec-3-1">3.1 keepassx</a></li>
+<li><a href="#sec-3-2">3.2 enigmail</a></li>
+</ul>
+</li>
+<li><a href="#sec-4">4 LaTeX</a>
+<ul>
+<li><a href="#sec-4-1">4.1 Basic installation</a></li>
+<li><a href="#sec-4-2">4.2 Math related</a></li>
+<li><a href="#sec-4-3">4.3 Miscellaneous packages</a></li>
+</ul>
+</li>
+<li><a href="#sec-5">5 Web</a>
+<ul>
+<li><a href="#sec-5-1">5.1 Browser</a></li>
+<li><a href="#sec-5-2">5.2 Extensions</a>
+<ul>
+<li><a href="#sec-5-2-1">5.2.1 Noscript</a></li>
+<li><a href="#sec-5-2-2">5.2.2 Ubuntu persona</a></li>
+<li><a href="#sec-5-2-3">5.2.3 Tree-style tab</a></li>
+<li><a href="#sec-5-2-4">5.2.4 Hide bookmark bar</a></li>
+</ul></li>
+</ul>
+</li>
+<li><a href="#sec-6">6 Media readers</a>
+<ul>
+<li><a href="#sec-6-1">6.1 vlc</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> emacs &nbsp;&nbsp;&nbsp;<span class="tag"><span class="text">text</span></span></h2>
+<div class="outline-text-2" id="text-1">
+
+<p>  What else? And the version must be at least 24
+  Dependencies: emacs
+</p></div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> work &nbsp;&nbsp;&nbsp;<span class="tag"><span class="work">work</span></span></h2>
+<div class="outline-text-2" id="text-2">
+
+
+</div>
+
+<div id="outline-container-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> guake &nbsp;&nbsp;&nbsp;<span class="tag"><span class="terminal">terminal</span></span></h3>
+<div class="outline-text-3" id="text-2-1">
+
+<p>  A simple terminal emulator, easy to access.
+  Dependencies: guake
+</p></div>
+
+</div>
+
+<div id="outline-container-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> doxygen &nbsp;&nbsp;&nbsp;<span class="tag"><span class="documentation">documentation</span></span></h3>
+<div class="outline-text-3" id="text-2-2">
+
+<p>   A very powerful tool to generate doc from javadoc style
+   comment. Works with many languages.
+   Dependencies: doxygen
+</p></div>
+
+</div>
+
+<div id="outline-container-2-3" class="outline-3">
+<h3 id="sec-2-3"><span class="section-number-3">2.3</span> subversion &nbsp;&nbsp;&nbsp;<span class="tag"><span class="versionning">versionning</span></span></h3>
+<div class="outline-text-3" id="text-2-3">
+
+<p>   Sometimes I work with people using svn. Not my thing but hey, it
+   works too!
+   Dependencies: subversion
+</p></div>
+
+</div>
+
+<div id="outline-container-2-4" class="outline-3">
+<h3 id="sec-2-4"><span class="section-number-3">2.4</span> git &nbsp;&nbsp;&nbsp;<span class="tag"><span class="versionning">versionning</span></span></h3>
+<div class="outline-text-3" id="text-2-4">
+
+<p>   My favorite version manager system. Perfect since my projects are
+   hosted on github anyway.
+   Dependencies: git
+</p></div>
+
+</div>
+
+<div id="outline-container-2-5" class="outline-3">
+<h3 id="sec-2-5"><span class="section-number-3">2.5</span> gnuplot &nbsp;&nbsp;&nbsp;<span class="tag"><span class="plot">plot</span></span></h3>
+<div class="outline-text-3" id="text-2-5">
+
+<p>To draw plots from CLI org-mode.
+Dependencies: gnuplot
+</p></div>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> crypto &nbsp;&nbsp;&nbsp;<span class="tag"><span class="crypto">crypto</span>&nbsp;<span class="parano">parano</span></span></h2>
+<div class="outline-text-2" id="text-3">
+
+
+</div>
+
+<div id="outline-container-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> keepassx</h3>
+<div class="outline-text-3" id="text-3-1">
+
+<p>   Awesome to store and retrieve easily password and other top-secret
+   data.
+   Dependencies: keepassx
+</p></div>
+
+</div>
+
+<div id="outline-container-3-2" class="outline-3">
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> enigmail</h3>
+<div class="outline-text-3" id="text-3-2">
+
+<p>   I sign my mails using GPG and don't like doing it by hand. It is a
+   thunderbird extension.
+   Dependencies: enigmail
+</p></div>
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> LaTeX &nbsp;&nbsp;&nbsp;<span class="tag"><span class="typesetting">typesetting</span></span></h2>
+<div class="outline-text-2" id="text-4">
+
+<p>  LaTeX, <b>the</b> text formatting sofware. I use plenty of
+  sub-packages, the aim is to add them here as soon as I download
+  them to remember.
+</p>
+</div>
+
+<div id="outline-container-4-1" class="outline-3">
+<h3 id="sec-4-1"><span class="section-number-3">4.1</span> Basic installation &nbsp;&nbsp;&nbsp;<span class="tag"><span class="package">package</span></span></h3>
+<div class="outline-text-3" id="text-4-1">
+
+<p>   Granted, I want the basic stuff: latex and bibtex.
+   Dependencies: texlive-latex-base biblatex texlive-generic-extra
+   Dependencies: texlive-latex-recommended texlive-extra-utils
+</p></div>
+
+</div>
+
+<div id="outline-container-4-2" class="outline-3">
+<h3 id="sec-4-2"><span class="section-number-3">4.2</span> Math related &nbsp;&nbsp;&nbsp;<span class="tag"><span class="package">package</span></span></h3>
+<div class="outline-text-3" id="text-4-2">
+
+<p>   I do math (hopefully as a living at some point), so I need these.
+   Dependencies: texlive-math-extra texlive-science
+</p></div>
+
+</div>
+
+<div id="outline-container-4-3" class="outline-3">
+<h3 id="sec-4-3"><span class="section-number-3">4.3</span> Miscellaneous packages &nbsp;&nbsp;&nbsp;<span class="tag"><span class="package">package</span></span></h3>
+<div class="outline-text-3" id="text-4-3">
+
+<ul>
+<li>Beamer allows to make presentations, which is important.
+     Dependencies: latex-beamer
+</li>
+<li>Auctex, when used with emacs, simply rocks.
+     Dependencies: auctex
+</li>
+<li>Sometimes I write in French, in which case xelatex is a better
+     option.
+     Dependencies: texlive-xete
+</li>
+<li>Adding pictures are nice
+     Dependencies: texlive-pictures
+</li>
+<li>To have fancy classes for creating books an CV's.
+     Dependencies: texlive-publishers
+</li>
+</ul>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Web &nbsp;&nbsp;&nbsp;<span class="tag"><span class="web">web</span>&nbsp;<span class="internet">internet</span></span></h2>
+<div class="outline-text-2" id="text-5">
+
+
+</div>
+
+<div id="outline-container-5-1" class="outline-3">
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> Browser</h3>
+<div class="outline-text-3" id="text-5-1">
+
+<p>Firefox is awesome.
+Dependencies: firefox
+</p></div>
+
+</div>
+
+<div id="outline-container-5-2" class="outline-3">
+<h3 id="sec-5-2"><span class="section-number-3">5.2</span> Extensions</h3>
+<div class="outline-text-3" id="text-5-2">
+
+
+</div>
+
+<div id="outline-container-5-2-1" class="outline-4">
+<h4 id="sec-5-2-1"><span class="section-number-4">5.2.1</span> Noscript &nbsp;&nbsp;&nbsp;<span class="tag"><span class="security">security</span>&nbsp;<span class="javascript">javascript</span>&nbsp;<span class="parano">parano</span></span></h4>
+<div class="outline-text-4" id="text-5-2-1">
+
+<p>Allows safe browsing. Can be obtained <a href="http://noscript.net/getit">here</a>.
+</p></div>
+
+</div>
+
+<div id="outline-container-5-2-2" class="outline-4">
+<h4 id="sec-5-2-2"><span class="section-number-4">5.2.2</span> Ubuntu persona &nbsp;&nbsp;&nbsp;<span class="tag"><span class="appearance">appearance</span></span></h4>
+<div class="outline-text-4" id="text-5-2-2">
+
+<p>Looking nice is nice. Persona available <a href="http://www.getpersonas.com/fr/persona/250496">here</a>.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-5-2-3" class="outline-4">
+<h4 id="sec-5-2-3"><span class="section-number-4">5.2.3</span> Tree-style tab &nbsp;&nbsp;&nbsp;<span class="tag"><span class="appearance">appearance</span></span></h4>
+<div class="outline-text-4" id="text-5-2-3">
+
+<p>Having tabs on the side instead of on the tab is better; especially
+when you can organize/hide them. Download <a href="https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab/">here</a>.
+</p></div>
+
+</div>
+
+<div id="outline-container-5-2-4" class="outline-4">
+<h4 id="sec-5-2-4"><span class="section-number-4">5.2.4</span> Hide bookmark bar &nbsp;&nbsp;&nbsp;<span class="tag"><span class="appearance">appearance</span></span></h4>
+<div class="outline-text-4" id="text-5-2-4">
+
+<p>This bar is useless 90% of the time. To hide it, go <a href="https://addons.mozilla.org/fr/firefox/addon/hide-bookmarksbar/">here</a>.
+</p></div>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Media readers &nbsp;&nbsp;&nbsp;<span class="tag"><span class="media">media</span></span></h2>
+<div class="outline-text-2" id="text-6">
+
+
+</div>
+
+<div id="outline-container-6-1" class="outline-3">
+<h3 id="sec-6-1"><span class="section-number-3">6.1</span> vlc</h3>
+<div class="outline-text-3" id="text-6-1">
+
+<p>   Because vlc. Period.
+   Dependencies: vlc
+</p></div>
+</div>
+</div>
+</div>
+
+<div id="postamble">
+<p class="date">Date: 2013-03-13</p>
+<p class="author">Author: Léo Perrin &lt;leoperrin@picarresursix.fr&gt;</p>
+<p class="creator">Org version 7.8.11 with Emacs version 24</p>
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
+</div>
+</body>
+</html>

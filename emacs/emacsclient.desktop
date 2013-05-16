@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=Emacs Client
+Name[fr]=Client Emacs
+Comment=Edit the world
+GenericName=Emacs client
+Exec=emacsclient -c ~/org/*todo.org
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=emacs
+MimeType=text/html;text/xml;text/*
+StartupNotify=true
+Actions=NewWindow;
