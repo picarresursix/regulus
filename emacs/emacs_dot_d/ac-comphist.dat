@@ -1,4 +1,16 @@
-((("BASE_DIR" .
+((("search-forward" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0])
+  ("pi2-6/find-next-delimiter" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("pi2-6/find-prev-delimiter" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("search-backward-regexp" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("key-chord-define-global" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0])
+  ("key-chord-define" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("BASE_DIR" .
    [1 0 0 0 0 0 0 0])
   ("file*" .
    [2 0 0 0 0])
@@ -299,7 +311,7 @@
   ("n_roots" .
    [0 0 0 1 1 0 0])
   ("interactive" .
-   [0 0 0 0 0 0 0 0 0 0 1])
+   [0 0 0 0 0 0 1 0 0 0 1])
   ("enlarge-window" .
    [0 0 0 0 0 0 0 0 0 0 0 0 0 1])
   ("larger-window" .
@@ -307,7 +319,7 @@
   ("enlarge" .
    [1 0 0 0 0 0 0])
   ("defun" .
-   [1 0 0 0 0])
+   [3 0 0 0 0])
   ("count_1" .
    [1 0 0 0 0 0 1])
   ("count_0" .

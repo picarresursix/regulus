@@ -1,4 +1,4 @@
-;; Time-stamp: <2013-05-06 11:30:12 leo>
+;; Time-stamp: <2013-05-18 16:06:28 leo>
 ;; AUTHOR: Leo "picarresursix" Perrin, <leoperrin@picarresursix.fr>
 ;; 
 ;; Helpers when programming. They are usually bound to C-l <something>
@@ -92,12 +92,7 @@ current mode; displays an error message if there is not any."
 
 
 ; !SECTION! Inserting stuff
-; ================================
-
-(defun insert-dot ()
-  "Inserts a simple dot at point."
-  (interactive)
-  (insert "."))
+; =========================
 
 (defun pi2-6/insert-block-braces()
   "Inserts indented braces and places cursor between them."
@@ -127,8 +122,7 @@ current mode; displays an error message if there is not any."
 (add-hook 'prog-mode-hook
           (lambda()
             (highlight-parentheses-mode)
-;            (which-function-mode)
-            (local-set-key (kbd "ù") 'insert-dot)
+            (which-function-mode)
             (local-set-key (kbd "C-l t") 'pi2-6/list-tags)))
 
 
