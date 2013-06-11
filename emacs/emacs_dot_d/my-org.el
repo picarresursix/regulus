@@ -1,10 +1,12 @@
-; -*-emacs-lisp-*- Time-stamp: <2013-05-10 19:27:00 leo>
+; -*-emacs-lisp-*- Time-stamp: <2013-05-21 15:45:08 leo>
 ; Several functions which should be useful with org-mode
 
 
 (require 'org)
 
-;; ======================== settings =========================
+
+;!SECTION!  settings
+;===================
 
 
 (require 'org-install)
@@ -31,7 +33,23 @@
             "|" "DONE" "ABANDONNED" "IRRELEVANT")))
 
 
-;; ============= reftex related configuration ===============
+
+;!SECTION! Opening paper from their ~name
+;========================================
+(org-add-link-type "paper" 'org-paper-open)
+
+(defun org-paper-open(path)
+  "Opens the paper with the approximative name given.
+
+The name must be a string whose letters and digit match an
+  article in ~/Bibliotheque/scientific_papers"
+  (setq approx-name (replace-regexp-in-string "[\.\+]" "\*" path))
+  (setq command (concat "~/regulus/emacs/open-paper.sh \"" approx-name "\""))
+  (call-process-shell-command command nil 0 nil))
+
+
+;!SECTION!  reftex related configuration
+;=======================================
 
 ; from [[http://tincman.wordpress.com/2011/01/04/research-paper-management-with-emacs-org-mode-and-reftex/] [the intertubz]]
 
@@ -70,7 +88,9 @@
 ;; (add-hook 'org-mode-hook 'org-mode-reftex-setup)
 
 
-;; ===================== Org presentation ===========================
+
+;!SECTION!  Org presentation
+;===========================
 
 
 (add-to-list 'load-path "~/regulus/emacs/emacs_dot_d/org/org-present.el")
