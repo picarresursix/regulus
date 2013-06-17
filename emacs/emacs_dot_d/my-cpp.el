@@ -1,4 +1,4 @@
-; -*-emacs-lisp-*- Time-stamp: <2013-05-08 21:03:21 leo>
+; -*-emacs-lisp-*- Time-stamp: <2013-05-30 10:36:47 leo>
 ; Several functions which should be useful when coding in C++
 
 ;; ====================== Simple insertion  =========================

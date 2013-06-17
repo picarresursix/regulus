@@ -1,11 +1,13 @@
 #!/bin/bash
 # Author: Leo "picarresursix" Perrin <leoperrin@picarresursix.fr>
-# Time-stamp: <2013-06-14 23:37:50 leo>
+# Time-stamp: <2013-06-17 21:28:49 leo>
+
 
 
 # Opens the paper whose name is given as the second argument if the
 # first argument is -o, echoes the name of the first paper matching
 # otherwise.
+
 
 if [[ "$1" == "-o" ]]
     then

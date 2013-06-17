@@ -1,4 +1,4 @@
-; -*-lisp-*- ; Time-stamp: <2013-05-06 12:01:38 leo>
+; -*-lisp-*- ; Time-stamp: <2013-05-30 10:37:17 leo>
 
 ; !SECTION! Variables set by the customize command.
 ; =================================================
@@ -64,8 +64,8 @@
 (setq-default indent-tabs-mode nil)
 
 ;  Split the window horizontally instead of vertically
-(setq split-height-threshold nil)
-(setq split-width-threshold 0)
+;; (setq split-height-threshold nil)
+;; (setq split-width-threshold 0)
 
 ;  Prevent the cursor from jumping around
 (setq scroll-step 1)
@@ -110,7 +110,7 @@
 (define-key yas-minor-mode-map [(tab)] nil)
 (define-key yas-minor-mode-map (kbd "TAB") nil)
 (setq yas/trigger-key (kbd "C-_"))
-
+(defun yas/current-snippet-table())
 
 
 ;  Loads my custom files in .emacs.d/my-functions.

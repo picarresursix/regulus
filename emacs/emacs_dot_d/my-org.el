@@ -1,4 +1,4 @@
-; -*-emacs-lisp-*- Time-stamp: <2013-06-15 12:25:50 leo>
+; -*-emacs-lisp-*- Time-stamp: <2013-06-17 21:48:40 leo>
 ; Several functions which should be useful with org-mode
 
 
@@ -34,29 +34,12 @@
 
 
 
-;!SECTION! Opening paper from their ~name
-;========================================
-(org-add-link-type "paper" 'org-paper-open 'org-paper-export)
+;!SECTION! Loading files
+;=======================
+ 
+(load-file "~/regulus/emacs/emacs_dot_d/org/org-2-pdf.el")
+(load-file "~/regulus/emacs/emacs_dot_d/org/org-papers.el")
 
-(defun org-paper-open(path)
-  "Opens the paper with the approximative name given.
-
-The name must be a string whose letters and digit match an
-  article in ~/Bibliotheque/scientific_papers"
-  (setq approx-name (replace-regexp-in-string "[\.\+]" "\*" path))
-  (setq command (concat "~/regulus/emacs/open-paper.sh -o \"" approx-name "\""))
-  (call-process-shell-command command nil 0 nil))
-
-; Explanations about this can be found [[http://stackoverflow.com/questions/14684263/how-to-org-mode-image-absolute-path-of-export-html][here]]
-
-(defun org-paper-export(path desc format)
-  "Returns a link to a paper correctly formatted."
-  (cond
-   ((eq format 'html)
-    (format
-     "<a href=\"/home/leo/doctoral_studies/ressources/papers/%s\">[%s]</a>"
-     path
-     (nth 1 (split-string desc ":"))))))
 
 
 ;!SECTION!  reftex related configuration

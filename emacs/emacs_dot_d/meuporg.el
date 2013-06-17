@@ -232,7 +232,7 @@ moving to the location of the item."
 
 (defvar meuporg/command
   "The command running the python part of meuporg.")
-(setq meuporg/command "python2.7 ~/.meuporg ")
+(setq meuporg/command "python2.7 ~/.config/meuporg ")
 
 
 (defun meuporg/update()
