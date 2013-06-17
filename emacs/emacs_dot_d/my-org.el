@@ -1,11 +1,11 @@
-; -*-emacs-lisp-*- Time-stamp: <2013-05-21 15:45:08 leo>
+; -*-emacs-lisp-*- Time-stamp: <2013-06-15 12:25:50 leo>
 ; Several functions which should be useful with org-mode
 
 
 (require 'org)
 
 
-;!SECTION!  settings
+;!SECTION! Settings
 ;===================
 
 
@@ -30,13 +30,13 @@
 ;  Using my own keywords
 (setq org-todo-keywords
 '((sequence "TODO" "CONTINUE" "IMPROVE" "CHECK" "FIXME"
-            "|" "DONE" "ABANDONNED" "IRRELEVANT")))
+            "|" "DONE" "ABANDONNED")))
 
 
 
 ;!SECTION! Opening paper from their ~name
 ;========================================
-(org-add-link-type "paper" 'org-paper-open)
+(org-add-link-type "paper" 'org-paper-open 'org-paper-export)
 
 (defun org-paper-open(path)
   "Opens the paper with the approximative name given.
@@ -44,8 +44,19 @@
 The name must be a string whose letters and digit match an
   article in ~/Bibliotheque/scientific_papers"
   (setq approx-name (replace-regexp-in-string "[\.\+]" "\*" path))
-  (setq command (concat "~/regulus/emacs/open-paper.sh \"" approx-name "\""))
+  (setq command (concat "~/regulus/emacs/open-paper.sh -o \"" approx-name "\""))
   (call-process-shell-command command nil 0 nil))
+
+; Explanations about this can be found [[http://stackoverflow.com/questions/14684263/how-to-org-mode-image-absolute-path-of-export-html][here]]
+
+(defun org-paper-export(path desc format)
+  "Returns a link to a paper correctly formatted."
+  (cond
+   ((eq format 'html)
+    (format
+     "<a href=\"/home/leo/doctoral_studies/ressources/papers/%s\">[%s]</a>"
+     path
+     (nth 1 (split-string desc ":"))))))
 
 
 ;!SECTION!  reftex related configuration
@@ -89,7 +100,7 @@ The name must be a string whose letters and digit match an
 
 
 
-;!SECTION!  Org presentation
+;!SECTION! Org presentation
 ;===========================
 
 

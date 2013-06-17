@@ -1,8 +1,17 @@
+#!/bin/bash
 # Author: Leo "picarresursix" Perrin <leoperrin@picarresursix.fr>
-# Time-stamp: <2013-05-22 10:57:49 leo>
+# Time-stamp: <2013-06-14 23:37:50 leo>
 
 
-# Opens the paper whose name is given as the first argument
+# Opens the paper whose name is given as the second argument if the
+# first argument is -o, echoes the name of the first paper matching
+# otherwise.
 
-papers=$(find ~/Bibliotheque/scientific_papers/ -name "$1*pdf")
-evince "$papers" &
+if [[ "$1" == "-o" ]]
+    then
+    papers=$(find ~/doctoral_studies/ressources/papers -name "$2*pdf")
+    evince "$papers" &
+    else
+    papers=$(find ~/doctoral_studies/ressources/papers -name "$1*pdf")
+    echo $papers | sed "s/ /\\\\ /g"
+fi
