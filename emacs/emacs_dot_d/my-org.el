@@ -1,4 +1,4 @@
-; -*-emacs-lisp-*- Time-stamp: <2013-05-21 15:45:08 leo>
+; -*-emacs-lisp-*- Time-stamp: <2013-06-17 11:56:41 leo>
 ; Several functions which should be useful with org-mode
 
 
@@ -34,8 +34,11 @@
 
 
 
-;!SECTION! Opening paper from their ~name
-;========================================
+;!SECTION! Custom links
+;====================== 
+
+;!SUBSECTION! Opening paper from their ~name
+;-------------------------------------------
 (org-add-link-type "paper" 'org-paper-open)
 
 (defun org-paper-open(path)
@@ -46,6 +49,8 @@ The name must be a string whose letters and digit match an
   (setq approx-name (replace-regexp-in-string "[\.\+]" "\*" path))
   (setq command (concat "~/regulus/emacs/open-paper.sh \"" approx-name "\""))
   (call-process-shell-command command nil 0 nil))
+
+(load-file "~/regulus/emacs/emacs_dot_d/org/org-2-pdf.el")
 
 
 ;!SECTION!  reftex related configuration
