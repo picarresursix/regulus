@@ -1,4 +1,4 @@
-; Time-stamp: <2013-06-17 21:42:13 leo>
+; Time-stamp: <2013-06-24 10:53:20 leo>
 ; AUTHOR: Leo Perrin <leoperrin@picarresursix.fr>
 ; DESCRIPTION: Utils to easily insert links to papers in org files
 
@@ -24,6 +24,6 @@ The name must be a string whose letters and digit match an
      path
      (nth 1 (split-string desc ":"))))
    ((eq format 'latex)
-    (format "[%s]" desc))))
+    (format "\\cite{%s}" path))))
 
 (org-add-link-type "paper" 'org-paper-open 'org-paper-export)

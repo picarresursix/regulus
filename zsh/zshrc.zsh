@@ -44,5 +44,8 @@ plugins=(git yell meuporg extract)
 
 source $ZSH/oh-my-zsh.sh
 
+# Setting default editor to be emacs in graphical mode
+export EDITOR="emacsclient -c"
+
 # Customize to your needs...
 export PATH=$PATH:/usr/local/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
