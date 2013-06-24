@@ -1,11 +1,11 @@
-; -*-emacs-lisp-*- Time-stamp: <2013-06-17 11:56:41 leo>
+; -*-emacs-lisp-*- Time-stamp: <2013-06-17 21:48:40 leo>
 ; Several functions which should be useful with org-mode
 
 
 (require 'org)
 
 
-;!SECTION!  settings
+;!SECTION! Settings
 ;===================
 
 
@@ -30,27 +30,16 @@
 ;  Using my own keywords
 (setq org-todo-keywords
 '((sequence "TODO" "CONTINUE" "IMPROVE" "CHECK" "FIXME"
-            "|" "DONE" "ABANDONNED" "IRRELEVANT")))
+            "|" "DONE" "ABANDONNED")))
 
 
 
-;!SECTION! Custom links
-;====================== 
-
-;!SUBSECTION! Opening paper from their ~name
-;-------------------------------------------
-(org-add-link-type "paper" 'org-paper-open)
-
-(defun org-paper-open(path)
-  "Opens the paper with the approximative name given.
-
-The name must be a string whose letters and digit match an
-  article in ~/Bibliotheque/scientific_papers"
-  (setq approx-name (replace-regexp-in-string "[\.\+]" "\*" path))
-  (setq command (concat "~/regulus/emacs/open-paper.sh \"" approx-name "\""))
-  (call-process-shell-command command nil 0 nil))
-
+;!SECTION! Loading files
+;=======================
+ 
 (load-file "~/regulus/emacs/emacs_dot_d/org/org-2-pdf.el")
+(load-file "~/regulus/emacs/emacs_dot_d/org/org-papers.el")
+
 
 
 ;!SECTION!  reftex related configuration
@@ -94,7 +83,7 @@ The name must be a string whose letters and digit match an
 
 
 
-;!SECTION!  Org presentation
+;!SECTION! Org presentation
 ;===========================
 
 

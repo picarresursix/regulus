@@ -1,4 +1,4 @@
-; Time-stamp: <2013-06-17 14:40:57 leo>
+; Time-stamp: <2013-06-17 21:39:35 leo>
 ; AUTHOR: Leo Perrin <leoperrin@picarresursix.fr>
 ; DESCRIPTION: Some utilities I created to make a neater export from org to pdf
 
@@ -7,6 +7,7 @@
 ;========================================
 
 (defun strip-text-properties(txt)
+  "Removes properties from a string."
   (set-text-properties 0 (length txt) nil txt)
       txt)
 
@@ -18,6 +19,7 @@
 
 
 (defun org-ref-link-export (path desc format)
+  "Exports cross references within a file correctly."
   (cond
    ((eq format 'latex)
     (concat "\\ref{" (strip-text-properties path) "}"))
