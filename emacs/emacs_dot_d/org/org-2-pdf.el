@@ -1,4 +1,4 @@
-; Time-stamp: <2013-06-29 17:50:08 leo>
+; Time-stamp: <2013-06-29 17:55:30 leo>
 ; AUTHOR: Leo Perrin <leoperrin@picarresursix.fr>
 ; DESCRIPTION: Some utilities I created to make a neater export from org to pdf
 
@@ -37,7 +37,9 @@
 
 
 ;!SUBSECTION! Export command 
-(setq org-latex-to-pdf-process '("pdflatex %f" "pdflatex %f" "pdflatex %f"))
+(setq org-latex-to-pdf-process '("latex-compile %f"))
+
+; '("pdflatex %f" "pdflatex %f" "pdflatex %f")
 
 
 ;!SUBSECTION! Support for code listings
