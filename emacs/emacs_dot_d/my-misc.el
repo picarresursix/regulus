@@ -1,4 +1,4 @@
-;; Time-stamp: <2013-05-08 21:13:24 leo>
+;; Time-stamp: <2013-07-01 23:25:27 leo>
 ;; Miscellaneous functions to be used in every buffers.
 
 
@@ -165,6 +165,45 @@
   (interactive)
   (insert (format-time-string "[%H:%M]")))
 
+
+; !SECTION! Text manipulation related
+; ===================================
+
+(defun pi2-6/concat-with-next-line()
+  "Puts the content of the next line minus indentation at the end
+of the current line."
+  (interactive)
+  (next-line)
+  (delete-indentation))
+
+
+(defun pi2-6/move-line-up()
+  "Exchanges the content of the current line and the one above
+and moves the cursor to the line above."
+  (interactive)
+  (goto-char (line-beginning-position))
+  (kill-line)
+  (delete-char 1)
+  (previous-line)
+  (yank)
+  (newline-and-indent)
+  (previous-line))
+
+(defun pi2-6/move-line-down()
+  "Exchanges the content of the current line and the one below
+and moves the cursor to the line below."
+  (interactive)
+  (goto-char (line-beginning-position))
+  (kill-line)
+  (delete-char 1)
+  (goto-char (line-end-position))
+  (newline-and-indent)
+  (yank)
+  (goto-char (line-beginning-position)))
+
+;; (defun pi2-6/change-variable()
+;;   (interactive)
+;;   ())
 
 ; !SECTION! Web Related
 ; =====================

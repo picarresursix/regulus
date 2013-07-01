@@ -1,4 +1,4 @@
-; -*-lisp-*- ; Time-stamp: <2013-05-30 10:37:17 leo>
+; -*-lisp-*- ; Time-stamp: <2013-07-01 23:24:37 leo>
 
 ; !SECTION! Variables set by the customize command.
 ; =================================================
@@ -214,3 +214,6 @@
 (global-set-key (kbd "M-\" n") 'open-in-desktop)
 (global-set-key (kbd "M-\" m") 'goto-todo-list)
 (global-set-key (kbd "M-\" j") 'ace-jump-mode)
+(global-set-key (kbd "M-@")    'pi2-6/concat-with-next-line)
+(global-set-key (kbd "M-<up>")   'pi2-6/move-line-up)
+(global-set-key (kbd "M-<down>") 'pi2-6/move-line-down)
