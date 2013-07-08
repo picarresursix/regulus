@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: matrix3
+# key: matrix3
+# author: picarresursix <leoperrin@picarresursix.fr>
+# --
+std::vector<std::vector<std::vector<$1> > > $2(
+        $3,
+        std::vector<std::vector<$1> >(
+                $4,
+                std::vector<$1>($5)));
+$0

@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: matrix1
+# key: matrix1
+# author: picarresursix <leoperrin@picarresursix.fr>
+# --
+$1 $2[$3];
+$2  = malloc($3 * sizeof($1));
+$0
+free($2);

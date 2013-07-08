@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: file
+# key: file
+# author: picarresursix <leoperrin@picarresursix.fr>
+# --
+/**
+ * @name ${1:`(buffer-name (current-buffer))`}
+ * @author Leo "picarresursix" Perrin <leoperrin@picarresursix.fr>
+ * @date Time-stamp: <>
+ * @brief $0
+ */
+

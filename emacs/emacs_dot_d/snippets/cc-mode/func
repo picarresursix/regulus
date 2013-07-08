@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: func
+# key: func
+# author: picarresursix <leoperrin@picarresursix.fr>
+# --
+/**
+ * $0
+ *
+ * @param $1
+ * @return $2
+ */
