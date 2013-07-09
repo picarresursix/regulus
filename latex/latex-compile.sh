@@ -15,4 +15,7 @@ else
     if [[ $(ls *.aux) ]]; then rm *.aux; fi
     if [[ $(ls *.bbl) ]]; then rm *.bbl; fi
     if [[ $(ls *.blg) ]]; then rm *.blg; fi
+    if [[ $(ls *.lot) ]]; then rm *.lot; fi
+    if [[ $(ls *.lof) ]]; then rm *.lof; fi
+    if [[ $(ls *.log) ]]; then rm *.log; fi
 fi
