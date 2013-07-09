@@ -3,6 +3,10 @@
 # Compiles a latex document by running pdflatex, bibtex, pdflatex and
 # pdflatex again and removing the files generated (except the pdf).
 
+# If the file's name is "notes.tex", appends instruction to add lists
+# of figures and tables as well as bibliography using my standard PhD
+# bibliography as the bib file.
+
 if [[ $# < 1 ]]
 then
     echo "Need a .tex file to compile!"

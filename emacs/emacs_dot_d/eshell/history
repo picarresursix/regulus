@@ -1,0 +1,11 @@
+cd
+ping google.com
+emacsclient bla.cpp
+ls
+cd regulus/emacs/
+ls
+cd emacs_dot_d/
+ls
+rm session.10*
+ls
+ping google.com

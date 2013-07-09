@@ -1,0 +1,5 @@
+# name: std::vector
+# key: vector
+# --
+std::vector<$1> $2($3);
+$0
