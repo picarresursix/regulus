@@ -1,4 +1,4 @@
-; -*-lisp-*- ; Time-stamp: <2013-07-01 23:24:37 leo>
+; -*-lisp-*- ; Time-stamp: <2013-07-28 22:26:54 leo>
 
 ; !SECTION! Variables set by the customize command.
 ; =================================================
@@ -29,6 +29,9 @@
  )
 
 
+
+;!SECTION! Loading modules and configurations
+ 
 ;  Load emacs.d
 (add-to-list 'load-path "~/.emacs.d")
 (add-to-list 'load-path "~/.emacs.d/elpa")
@@ -116,26 +119,31 @@
 ;  Loads my custom files in .emacs.d/my-functions.
 (load "meuporg.el")
 (load "my-prog.el")
-(load "my-cpp.el")
 (load "my-latex.el")
 (load "my-org.el")
 (load "my-misc.el")
+(load "my-crypto.el")
 
 
 
-;; ========================= SHORTCUTS =============================
+;!SECTION! Keyboard shortcuts 
+;============================
 
 
-;  Sets up ergoemacs.
+;!SUBSECTION!  Sets up ergoemacs.
 (setenv "ERGOEMACS_KEYBOARD_LAYOUT" "us") ; US
 (load "~/.emacs.d/ergoemacs-keybindings-5.3.9/ergoemacs-mode")
 (ergoemacs-mode 1)
 
+
+;!SUBSECTION! Frame size 
 ;  Adds shortcus used to enlarge to the max (or shrink to the
 ;  min) the current frame.
 (global-set-key (kbd "C-x w +"    ) 'larger-window)
 (global-set-key (kbd "C-x w -"    ) 'smaller-window)
 
+
+;!SUBSECTION! General shortcuts 
 ;  Adds shortcut to be able to perform a command n times
 (global-set-key (kbd "C-0") 'digit-argument)
 (global-set-key (kbd "C-1") 'digit-argument)
@@ -167,6 +175,8 @@
 ;; (global-set-key (kbd "C-à a") 'semantic-analyze-current-context)
 ;; (global-set-key (kbd "C-à r") 'semantic-force-refresh)
 
+
+;!SUBSECTION! Completing ergoemacs 
 ;   Adds some shortcuts that are not part of ergoemacs and do not
 ; fit in any particular category.
 (global-set-key (kbd "C-t") 'transpose-chars)
@@ -177,7 +187,8 @@
 (global-set-key (kbd "M-m") 'end-of-line)
 (global-set-key (kbd "C-x x e") 'eval-and-replace)
 
-;  Define org-mode shorctus available in every modes.
+
+;!SUBSECTION! Define org-mode shorctus available in every modes.
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-ca" 'org-agenda)
@@ -188,6 +199,9 @@
 (global-set-key (kbd "M-\" v") 'org-insert-link-global)
 (global-set-key (kbd "M-\" o") 'org-open-at-point-global)
 
+
+;!SUBSECTION! My own functions.
+ 
 ; external search
 (global-set-key (kbd "M-\" s f") 'search-word-at-point-wikipedia-fr)  ; fr
 (global-set-key (kbd "M-\" s w") 'search-word-at-point-wikipedia-en)  ; wikipedia
@@ -217,3 +231,9 @@
 (global-set-key (kbd "M-@")    'pi2-6/concat-with-next-line)
 (global-set-key (kbd "M-<up>")   'pi2-6/move-line-up)
 (global-set-key (kbd "M-<down>") 'pi2-6/move-line-down)
+
+; working on crypto
+(global-set-key (kbd "M-\" y h") 'pi2-6/crypto/print-hamming-weight)
+
+
+
