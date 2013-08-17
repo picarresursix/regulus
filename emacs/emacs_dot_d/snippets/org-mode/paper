@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: paper
+# key: paper
+# author: picarresursix <leoperrin@picarresursix.fr>
+# --
+[[paper:$1]] $0

@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: tab
+# key: tab
+# author: picarresursix <leoperrin@picarresursix.fr>
+# --
+Table [[tab.$1]] 
+
+#+CAPTION: $0
+#+LABEL: tab.$1
+| 
+|-

@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: fig
+# key: fig
+# author: picarresursix <leoperrin@picarresursix.fr>
+# --
+Figure [[fig.$1]] 
+
+#+CAPTION: $0
+#+LABEL: fig.$1
+[[./figures/$1.png]]
